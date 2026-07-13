@@ -14,52 +14,61 @@
     </head>
     <body>
         <div class="wrap">
-            <header>
-                <div class="container mx-auto px-5 md:px-10 lg:px-15">
-                    <div>
-                        <div>
+            <header class="w-full bg-transparent">
+                <div
+                    class="container mx-auto px-5 md:px-10 lg:px-15 flex justify-between items-center py-5"
+                >
+                    <div class="flex items-center gap-7 md:gap-10">
+                        <div class="">
                             <a href="#!">
                                 <img src="./Image/logo.svg" alt="logo image" />
                             </a>
                         </div>
-                        <nav>
+                        <nav class="hidden lg:flex items-center gap-4 md:gap-8">
                             <a
                                 href="./Pages/About/about.html"
-                                class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551]"
+                                class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-500"
                                 >About Us</a
                             >
                             <a
                                 href="./Pages/Courses/courses.html"
-                                class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551]"
+                                class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A]"
                                 >Courses</a
                             >
                             <a
                                 href="./Pages/Events/events.html"
-                                class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551]"
+                                class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A]"
                                 >Events</a
                             >
                             <a
                                 href="./Pages/Blogs/blogs.html"
-                                class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551]"
+                                class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A]"
                                 >Blog</a
                             >
                             <a
                                 href="./Pages/Contacts/contacts.html"
-                                class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551]"
+                                class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A]"
                                 >Contacts</a
                             >
                         </nav>
-                        <div>
-                            <a href="./Pages/Contacts/contacts.html" class="font-[Lato] font-bold text-[16px] leading-[52px] tracking-[0.5px] text-white bg-gradient-to-r from-[#FF3F3A] to-[#F75E05] px-10 h-[52px]">
-                                Get consultation
-                            </a>
-                            <div>
-                                <a href="#!">
-                                    <img src="./Image/Profile.svg" alt="profile icon">
-                                    Log in / Register
-                                </a>
-                            </div>
-                        </div>
+                    </div>
+                    <div class="flex items-center gap-3 md:gap-4">
+                        <a
+                            href="./Pages/Contacts/contacts.html"
+                            class="font-[Lato] font-bold text-[12px] lg:py-1 leading-8 tracking-[0.5px] text-white bg-gradient-to-r from-[#FF3F3A] to-[#F75E05] px-5 rounded-[4px] hidden sm:inline-block"
+                        >
+                            Get consultation
+                        </a>
+                        <a
+                            href="#!"
+                            class="hidden lg:flex gap-2 items-center font-[Lato] font-bold text-4 leading-[160%] text-gray-800"
+                        >
+                            <img src="./Image/Profile.svg" alt="profile icon" />
+                            Log in / Register
+                        </a>
+                        <button class="block lg:hidden">
+                            <img src="./Image/stash--burger-classic-light.svg" alt="burger icon">
+                        </button>
                     </div>
                 </div>
             </header>
