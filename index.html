@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Creat Ex</title>
         <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -13,66 +14,179 @@
         />
     </head>
     <body>
-        <div class="wrap">
-            <header class="w-full bg-transparent">
-                <div
-                    class="container mx-auto px-5 md:px-10 lg:px-15 flex justify-between items-center py-5"
-                >
-                    <div class="flex items-center gap-7 md:gap-10">
-                        <div class="">
-                            <a href="#!">
-                                <img src="./Image/logo.svg" alt="logo image" />
-                            </a>
-                        </div>
-                        <nav class="hidden lg:flex items-center gap-4 md:gap-8">
-                            <a
-                                href="./Pages/About/about.html"
-                                class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-500"
-                                >About Us</a
-                            >
-                            <a
-                                href="./Pages/Courses/courses.html"
-                                class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A]"
-                                >Courses</a
-                            >
-                            <a
-                                href="./Pages/Events/events.html"
-                                class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A]"
-                                >Events</a
-                            >
-                            <a
-                                href="./Pages/Blogs/blogs.html"
-                                class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A]"
-                                >Blog</a
-                            >
-                            <a
-                                href="./Pages/Contacts/contacts.html"
-                                class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A]"
-                                >Contacts</a
-                            >
-                        </nav>
+        <header class="w-full bg-transparent absolute top-0 left-0">
+            <div
+                class="container mx-auto px-5 md:px-10 lg:px-20 flex justify-between items-center py-5"
+            >
+                <div class="flex items-center gap-7 md:gap-10">
+                    <div class="">
+                        <a href="#">
+                            <img
+                                src="./Image/HomePagePhoto/logo.svg"
+                                alt="logo image"
+                            />
+                        </a>
                     </div>
-                    <div class="flex items-center gap-3 md:gap-4">
+                    <nav class="hidden lg:flex items-center gap-4 md:gap-8">
+                        <a
+                            href="./Pages/About/about.html"
+                            class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-500"
+                            >About Us</a
+                        >
+                        <a
+                            href="./Pages/Courses/courses.html"
+                            class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A]"
+                            >Courses</a
+                        >
+                        <a
+                            href="./Pages/Events/events.html"
+                            class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A]"
+                            >Events</a
+                        >
+                        <a
+                            href="./Pages/Blogs/blogs.html"
+                            class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A]"
+                            >Blog</a
+                        >
                         <a
                             href="./Pages/Contacts/contacts.html"
-                            class="font-[Lato] font-bold text-[12px] lg:py-1 leading-8 tracking-[0.5px] text-white bg-gradient-to-r from-[#FF3F3A] to-[#F75E05] px-5 rounded-[4px] hidden sm:inline-block"
+                            class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A]"
+                            >Contacts</a
                         >
-                            Get consultation
-                        </a>
-                        <a
-                            href="#!"
-                            class="hidden lg:flex gap-2 items-center font-[Lato] font-bold text-4 leading-[160%] text-gray-800"
-                        >
-                            <img src="./Image/Profile.svg" alt="profile icon" />
-                            Log in / Register
-                        </a>
-                        <button class="block lg:hidden">
-                            <img src="./Image/stash--burger-classic-light.svg" alt="burger icon">
-                        </button>
+                    </nav>
+                </div>
+                <div class="flex items-center gap-3 md:gap-4">
+                    <a
+                        href="./Pages/Contacts/contacts.html"
+                        class="font-[Lato] font-bold text-[12px] lg:py-1 leading-8 tracking-[0.5px] text-white bg-gradient-to-r from-[#FF3F3A] to-[#F75E05] px-5 rounded-[4px] hidden sm:inline-block hover:bg-gradient-to-l hover:from-[#F75E05] hover:to-[#FF3F3A]"
+                    >
+                        Get consultation
+                    </a>
+                    <a
+                        href="#!"
+                        class="hidden lg:flex gap-2 items-center font-[Lato] font-bold text-4 leading-[160%] text-gray-800"
+                    >
+                        <img
+                            src="./Image/HomePagePhoto/Profile.svg"
+                            alt="profile icon"
+                        />
+                        Log in / Register
+                    </a>
+                    <button class="block lg:hidden">
+                        <img
+                            src="./Image/HomePagePhoto/stash--burger-classic-light.svg"
+                            alt="burger icon"
+                        />
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section
+                class="pt-[100px] pb-[80px] bg-[url(Image/HomePagePhoto/background.svg)]"
+            >
+                <div class="container mx-auto px-5 md:px-10 lg:px-20">
+                    <div class="flex justify-between items-center mb-[40px]">
+                        <div>
+                            <div class="flex items-center gap-[16px]">
+                                <a
+                                    href="#!"
+                                    class="w-[52px] h-[52px] bg-[#FF3F3A] rounded-full flex justify-center items-center hover:ring-[16px] hover:ring-[#FEC8C0] transition-all duration-300"
+                                >
+                                    <img
+                                        src="./Image/HomePagePhoto/mdi--play.svg"
+                                        alt="video play icon"
+                                    />
+                                </a>
+                                <span
+                                    class="font-[Lato] font-bold text-[14px] leading-[150%] text-[#1E212C]"
+                                    >Play showreel</span
+                                >
+                            </div>
+                            <h1
+                                class="max-w-[500px] font-[Lato] font-black text-[64px] leading-[130%] tracking-[1px] mt-[24px] mb-[60px]"
+                            >
+                                Enjoy studying with Createx Online Courses
+                            </h1>
+                            <div class="flex items-center gap-[24px]">
+                                <a
+                                    href="./Pages/About/about.html"
+                                    class="py-1 px-[40px] font-[Lato] font-normal text-[16px] leading-8 tracking-[0.5px] text-[#F75E05] border-[1px] border-[#F75E05] rounded-[4px] hover:bg-[#F75E05] hover:text-white transition-all duration-300 hover:shadow-[0px_4px_4px_0px_#F75E0580]"
+                                    >About Us</a
+                                >
+                                <a
+                                    href="./Pages/Courses/courses.html"
+                                    class="py-1 px-[40px] font-[Lato] font-normal text-[16px] leading-8 tracking-[0.5px] text-white border-[1px] border-[#F75E05] rounded-[4px] bg-[#F75E05] transition-all duration-300 hover:shadow-[0px_4px_4px_0px_#F75E0580]"
+                                    >Explore courses</a
+                                >
+                            </div>
+                        </div>
+                        <div>
+                            <img
+                                src="./Image/HomePagePhoto/hero-section-image.svg"
+                                alt="hero section image"
+                            />
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <h1
+                                class="font-[Lato] font-black text-[46px] text-[#1E212C] leading-[130%]"
+                            >
+                                1200
+                            </h1>
+                            <p
+                                class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#1E212C]"
+                            >
+                                Students graduated
+                            </p>
+                        </div>
+                        <div class="w-2 h-2 bg-[#FF3F3A] rounded-full"></div>
+                        <div class="flex items-center gap-3">
+                            <h1
+                                class="font-[Lato] font-black text-[46px] text-[#1E212C] leading-[130%]"
+                            >
+                                84
+                            </h1>
+                            <p
+                                class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#1E212C]"
+                            >
+                                Completed courses
+                            </p>
+                        </div>
+                        <div class="w-2 h-2 bg-[#FF3F3A] rounded-full"></div>
+                        <div class="flex items-center gap-3">
+                            <h1
+                                class="font-[Lato] font-black text-[46px] text-[#1E212C] leading-[130%]"
+                            >
+                                61
+                            </h1>
+                            <p
+                                class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#1E212C]"
+                            >
+                                Qualified tutors
+                            </p>
+                        </div>
+                        <div class="w-2 h-2 bg-[#FF3F3A] rounded-full"></div>
+                        <div class="flex items-center gap-3">
+                            <h1
+                                class="font-[Lato] font-black text-[46px] text-[#1E212C] leading-[130%]"
+                            >
+                                5
+                            </h1>
+                            <p
+                                class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#1E212C]"
+                            >
+                                Years of experience
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </header>
-        </div>
+            </section>
+
+            
+        </main>
 
         <script src="index.js"></script>
     </body>
