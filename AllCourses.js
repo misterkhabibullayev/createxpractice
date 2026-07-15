@@ -1,11 +1,11 @@
-const allCourses = [
+export const allCourses = [
     {
         id: 0,
         backColor: "#F52F6E",
         curatorTitleImg: "Image/HomePagePhoto/curatorSuleyma.png",
         coursePrice: "240",
         curator: {
-            curatorSulyemanMain: "Image/HomePagePhoto/circles.svg",
+            curatorSulyemanMainImage: "Image/HomePagePhoto/circles.svg",
             curatorName: "Suleyman Amanov",
             rate: 4.9,
             courses: 4,
