@@ -1,3 +1,3 @@
 const allCourses = {
-    
+    salom: "salom",
 }
