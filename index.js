@@ -9,3 +9,4 @@ window.addEventListener('scroll', function() {
         header.classList.add('absolute')
     }
 })
+
