@@ -1,4 +1,3 @@
 const allCourses = {
     
-    malo: "akfjghdf"
 }
