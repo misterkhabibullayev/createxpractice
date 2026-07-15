@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", () => {
-    // const currentLanguage = en;
+    const currentLanguage = en;
 
     const locale = {
         en: {
@@ -7,6 +7,21 @@ window.addEventListener("DOMContentLoaded", () => {
                 intro: {
                     title: "Enjoy your studying!",
                     header: "Our online courses",
+                },
+            },
+
+            testimonials: {
+                intro: {
+                    badge: "TESTIMONIALS",
+                    title: "What our students say",
+                },
+
+                comment: {
+                    opinion:
+                        "Suleyman's online course is an absolute game-changer! The material is presented in a very clear, structured way, and the practical assignments help you master the concepts quickly. He is an incredibly supportive tutor who always answers questions promptly. I highly recommend this course to everyone",
+                    image: "",
+                    name: "Eleanor Pena",
+                    completedCourse: "Position, Course",
                 },
             },
         },
@@ -18,8 +33,6 @@ window.addEventListener("DOMContentLoaded", () => {
     function updateCards() {
         const categories = document.querySelectorAll(".category");
         const people = document.querySelectorAll(".person");
-
-       
 
         categories.forEach((category) => {
             category.addEventListener("click", (e) => {
@@ -48,6 +61,14 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 
     updateCards();
+
+    function testimonialHeader() {
+        const intro = locale
+
+
+        const badge = document.getElementById("testimonials-badge");
+        const description = document.getElementById("testimonials-description");
+    }
+
+    testimonialHeader();
 });
-
-

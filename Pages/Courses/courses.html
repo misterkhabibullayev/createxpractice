@@ -34,65 +34,70 @@
     </head>
     <body>
         <div>
-            <header class="container mx-auto px-4 py-4">
-                <div class="flex items-center justify-between">
-                    <div>
-                        <img src="../../Image/logo.svg" alt="" />
+            <header class="w-full bg-transparent absolute top-0 left-0">
+                <div
+                    class="container mx-auto px-5 md:px-10 lg:px-20 flex justify-between items-center py-5"
+                >
+                    <div class="flex items-center gap-7 md:gap-10">
+                        <div class="">
+                            <a href="../../index.html">
+                                <img
+                                    src="../../Image/HomePagePhoto/logo.svg"
+                                    alt="logo image"
+                                />
+                            </a>
+                        </div>
+                        <nav class="hidden lg:flex items-center gap-4 md:gap-8">
+                            <a
+                                href="../../Pages/About/about.html"
+                                class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-500"
+                                >About Us</a
+                            >
+                            <a
+                                href="./Pages/Courses/courses.html"
+                                class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A]"
+                                >Courses</a
+                            >
+                            <a
+                                href="./Pages/Events/events.html"
+                                class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A]"
+                                >Events</a
+                            >
+                            <a
+                                href="./Pages/Blogs/blogs.html"
+                                class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A]"
+                                >Blog</a
+                            >
+                            <a
+                                href="./Pages/Contacts/contacts.html"
+                                class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A]"
+                                >Contacts</a
+                            >
+                        </nav>
                     </div>
-
-                    <nav
-                        class="hidden font-bold text-[#424551] desktop992:flex desktop992:items-center"
-                    >
+                    <div class="flex items-center gap-3 md:gap-4">
                         <a
-                            href="#"
-                            class="py-4 px-5 hover:text-red-600 transition duration-300 whitespace-nowrap"
-                            >About Us</a
-                        >
-                        <a
-                            href="#"
-                            class="py-4 px-5 hover:text-red-600 transition duration-300"
-                            >Courses</a
-                        >
-                        <a
-                            href="#"
-                            class="py-4 px-5 hover:text-red-600 transition duration-300"
-                            >Events</a
-                        >
-                        <a
-                            href="#"
-                            class="py-4 px-5 hover:text-red-600 transition duration-300"
-                            >Blog</a
-                        >
-                        <a
-                            href="#"
-                            class="py-4 px-5 hover:text-red-600 transition duration-300"
-                            >Contacts</a
-                        >
-                    </nav>
-
-                    <div class="flex items-center">
-                        <button
-                            type="button"
-                            class="hidden sm:block font-bold whitespace-nowrap leading-[52px] tracking-[0.5px] bg-[#FF3F3A] text-white px-8 lg:py-1 rounded"
+                            href="./Pages/Contacts/contacts.html"
+                            class="font-[Lato] font-bold text-[12px] lg:py-1 leading-8 tracking-[0.5px] text-white bg-gradient-to-r from-[#FF3F3A] to-[#F75E05] px-5 rounded-[4px] hidden sm:inline-block hover:bg-gradient-to-l hover:from-[#F75E05] hover:to-[#FF3F3A]"
                         >
                             Get consultation
-                        </button>
-
+                        </a>
                         <a
-                            href="#"
-                            class="hidden desktop992:flex desktop992:items-center"
+                            href="#!"
+                            class="hidden lg:flex gap-2 items-center font-[Lato] font-bold text-4 leading-[160%] text-gray-800"
                         >
                             <img
-                                src="../../Image/Person.png"
-                                alt="User"
-                                class="w-8 h-8 object-cover ml-6"
+                                src="../../Image/HomePagePhoto/Profile.svg"
+                                alt="profile icon"
                             />
-
-                            <span
-                                class="whitespace-nowrap text-[rgb(255,63,58)] font-bold leading-[160%]"
-                                >Log in / Register</span
-                            >
+                            Log in / Register
                         </a>
+                        <button class="block lg:hidden">
+                            <img
+                                src="../../Image/HomePagePhoto/stash--burger-classic-light.svg"
+                                alt="burger icon"
+                            />
+                        </button>
                     </div>
                 </div>
             </header>
@@ -100,27 +105,35 @@
             <!-- main -->
             <main>
                 <!--====================== ONLINE COURSES SECTION ======================-->
-                <section class="container mx-auto mt-20 px-4">
+                <section
+                    class="container mx-auto px-5 md:px-10 lg:px-20 pt-[152px]"
+                >
                     <div class="flex flex-col items-center">
                         <h5
-                            class="font-bold leading-[150%] text-[#1E212C] uppercase tracking-[1px]"
+                            class="max-[576px]:text-base max-[576px]:font-bold font-bold leading-[150%] text-[#1E212C] uppercase tracking-[1px]"
                         >
                             Enjoy your studying!
                         </h5>
 
                         <p
-                            class="mt-2 font-extrabold lg:text-[2.875rem] leading-[130%] text-[##1E212C]"
+                            class="mt-2 max-[576px]:text-3xl max-[576px]:font-black font-extrabold lg:text-[2.875rem] leading-[130%] text-[##1E212C]"
                         >
                             Our online courses
                         </p>
                     </div>
 
-                    <div class="flex items-center justify-between mt-16 mb-14">
+                    <!-- ! LG -->
+                    <div
+                        class="flex items-center justify-between max-[576px]:mt-6 lg:mt-16 mb-14 max-[576px]:flex-col max-[576px]:gap-6 max-[576px]:px-4"
+                    >
                         <div
                             id="categories"
-                            class="flex items-center gap-3 font-bold leading-[160%] text-[#9A9CA5]"
+                            class="flex items-center gap-3 font-bold leading-[160%] max-w-[475px] text-[#9A9CA5] overflow-x-auto custom-scrollbar pb-2 flex-1 pr-3 xl:overflow-x-hidden xl:max-w-[100%]"
                         >
-                            <a class="category py-2 px-4 border border-transparent rounded-md" href="#" data-category="all"
+                            <a
+                                class="category py-2 px-4 border border-transparent rounded-md"
+                                href="#"
+                                data-category="all"
                                 >All <span></span
                             ></a>
                             <a
@@ -130,15 +143,21 @@
                                 >Marketing <span></span
                             ></a>
                             <a
-                                class="category  py-2 px-4 border border-transparent rounded-md"
+                                class="category py-2 px-4 border border-transparent rounded-md"
                                 href="#"
                                 data-category="management"
                                 >Management</a
                             >
-                            <a class="category py-2 px-4 border border-transparent rounded-md" href="#" data-category="hr"
+                            <a
+                                class="category py-2 px-4 border border-transparent rounded-md whitespace-nowrap"
+                                href="#"
+                                data-category="hr"
                                 >HR & Recruting <span></span
                             ></a>
-                            <a class="category py-2 px-4 border border-transparent rounded-md" href="#" data-category="design"
+                            <a
+                                class="category py-2 px-4 border border-transparent rounded-md"
+                                href="#"
+                                data-category="design"
                                 >Design <span></span
                             ></a>
                             <a
@@ -150,10 +169,10 @@
                         </div>
 
                         <div
-                            class="border border-[#D7DADD] rounded flex items-center"
+                            class="border max-[576px]:ml-[0px] max-[576px]:w-full border-[#D7DADD] rounded flex items-center ml-[30px] md:ml-[100px]"
                         >
                             <input
-                                class="px-4 py-2 outline-none min-w-[270px]"
+                                class="px-4 py-2 outline-none min-w-[100px] md:max-w-[150px] max-[576px]:w-full"
                                 type="text"
                                 name=""
                                 id=""
@@ -542,6 +561,44 @@
                     </div>
                 </section>
                 <!--====================== ONLINE COURSES SECTION ======================-->
+
+
+
+
+
+
+
+                
+                <!-- ====================== Slider SECTION ====================== -->
+                <section class="mt-[120px]">
+                    <div class="container mx-auto  px-5 md:px-10 lg:px-20">
+                        
+                        <h6 id="testimonials-badge" class="text-center">TESTIMONIALS</h6>
+                        <h6 id="testimonials-description" class="text-center">What our students say</h6>
+
+                        <div class="testimonialSlider-container">
+
+                            <div class="testimonail-content">
+                                <div class="testimonial-itself">
+                                    <p id="testimonials-opinion">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.</p>
+
+                                    <div>
+                                        <div>
+                                            <img src="../../Image/" alt="">
+                                        </div>
+                                        <div>
+                                            <p>Eleanor Pena</p>
+                                            <p>Position, Course</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ====================== Slider SECTION ====================== -->
             </main>
         </div>
 
