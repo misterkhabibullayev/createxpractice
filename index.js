@@ -1,4 +1,5 @@
-// import { allCourses } from "./AllCourses";
+import { allCourses } from "./AllCourses.js";
+console.log(allCourses);
 
 const translateData = {
     en: {
@@ -26,6 +27,7 @@ const translateData = {
         why4: "Etiam duis lobortis in fames ultrices commodo nibh.",
         why5: "Tincidunt sagittis neque sem ac eget.",
         why6: "Ultricies amet justo et eget quisque purus vulputate dapibus tortor.",
+        moreAboutUs: "More about us",
         readytolearn: "Ready to learn?",
         featuredCourses: "Featured Courses",
         viewAllCourses: "View all courses",
@@ -92,12 +94,13 @@ const translateData = {
         experienceYears: "Лет опыта",
         whoweare: "Кто мы",
         whyCreateX: "Почему Createx?",
-        why1: "A fermentum in morbi pretium aliquam adipiscing donec tempus.",
-        why2: "Vulputate placerat amet pulvinar lorem nisl.",
-        why3: "Consequat feugiat habitant gravida quisque elit bibendum id adipiscing sed.",
-        why4: "Etiam duis lobortis in fames ultrices commodo nibh.",
-        why5: "Tincidunt sagittis neque sem ac eget.",
-        why6: "Ultricies amet justo et eget quisque purus vulputate dapibus tortor.",
+        why1: "Вы получаете самые актуальные практические знания от экспертов рынка.",
+        why2: "Индивидуальный подход к каждому студенту и менторская поддержка на протяжении всего курса.",
+        why3: "Пожизненный доступ к учебным материалам и лекциям в режиме 24/7.",
+        why4: "Реальные кейсы и практические домашние задания для закрепления теории.",
+        why5: "Международный сертификат после успешного окончания обучения.",
+        why6: "Возможность прохождения стажировки и трудоустройства в топовые компании.",
+        moreAboutUs: "Подробнее о нас",
         readytolearn: "Готовы учиться?",
         featuredCourses: "Рекомендуемые курсы",
         viewAllCourses: "Посмотреть все курсы",
@@ -163,12 +166,13 @@ const translateData = {
         experienceYears: "Yillik tajriba",
         whoweare: "Biz kimmiz",
         whyCreateX: "Nega aynan Createx?",
-        why1: "A fermentum in morbi pretium aliquam adipiscing donec tempus.",
-        why2: "Vulputate placerat amet pulvinar lorem nisl.",
-        why3: "Consequat feugiat habitant gravida quisque elit bibendum id adipiscing sed.",
-        why4: "Etiam duis lobortis in fames ultrices commodo nibh.",
-        why5: "Tincidunt sagittis neque sem ac eget.",
-        why6: "Ultricies amet justo et eget quisque purus vulputate dapibus tortor.",
+        why1: "Eng so'nggi va dolzarb amaliy bilimlarni bozor ekspertlaridan o'rganasiz.",
+        why2: "Har bir talabaga individual yondashuv va dars davomida mentorlik ko'magi.",
+        why3: "O'quv materiallari va ma'ruzalarga 24/7 rejimida umrbod kirish imkoniyati.",
+        why4: "Nazariyani mustahkamlovchi real keyslar va amaliy uy vazifalari.",
+        why5: "Kursni muvaffaqiyatli tugatgandan so'ng xalqaro darajadagi sertifikat.",
+        why6: "Eng yaxshi kompaniyalarda amaliyot o'tash va ishga joylashish imkoniyati.",
+        moreAboutUs: "Biz haqimizda batafsil",
         readytolearn: "O'rganishga tayyormisiz?",
         featuredCourses: "Saralangan Kurslar",
         viewAllCourses: "Barcha kurslarni ko'rish",
@@ -218,9 +222,8 @@ const translateData = {
 };
 let currentLang = localStorage.getItem("selectedLang") || "en";
 
-
+// header
 const headerMain = document.querySelector("#headerMain");
-
 headerMain.innerHTML = `
     <div
         class="container mx-auto px-5 md:px-10 lg:px-20 flex justify-between items-center py-5"
@@ -297,6 +300,266 @@ headerMain.innerHTML = `
         </div>
     </div>
 `;
+// header end
+
+// hero Section
+const heroSection = document.querySelector("#heroSection");
+heroSection.innerHTML = `
+    <div class="container mx-auto px-5 md:px-10 lg:px-20">
+        <div
+            class="flex flex-col-reverse items-center gap-8 lg:flex lg:flex-row lg:justify-between lg:items-center lg:mb-[40px]"
+        >
+            <div>
+                <div
+                    class="flex justify-center items-center lg:flex lg:items-center lg:justify-start gap-[16px]"
+                >
+                    <a
+                        href="#!"
+                        class="w-[52px] h-[52px] bg-[#FF3F3A] rounded-full flex justify-center items-center hover:ring-[16px] hover:ring-[#FEC8C0] transition-all duration-300"
+                    >
+                        <img
+                            src="./Image/HomePagePhoto/mdi--play.svg"
+                            alt="video play icon"
+                        />
+                    </a>
+                    <span
+                        class="font-[Lato] font-bold text-[14px] leading-[150%] text-[#1E212C]"
+                    >${translateData[currentLang].playShowreel}</span>
+                </div>
+                <h1
+                    class="w-full text-center md:text-start text-[40px] lg:max-w-[500px] font-[Lato] font-black xl:text-[64px] leading-[130%] tracking-[1px] mt-[24px] mb-[60px]"
+                >
+                    ${translateData[currentLang].heroSectionH1}
+                </h1>
+                <div
+                    class="flex flex-col items-center justify-center md:flex-row md:justify-center lg:justify-start gap-[24px]"
+                >
+                    <a
+                        href="./Pages/About/about.html"
+                        class="py-1 px-[40px] font-[Lato] font-normal text-[16px] leading-8 tracking-[0.5px] text-[#F75E05] border-[1px] border-[#F75E05] rounded-[4px] hover:bg-[#F75E05] hover:text-white transition-all duration-300 hover:shadow-[0px_4px_4px_0px_#F75E0580]"
+                    >${translateData[currentLang].navAbout}</a>
+                    <a
+                        href="./Pages/Courses/courses.html"
+                        class="py-1 px-[40px] font-[Lato] font-normal text-[16px] leading-8 tracking-[0.5px] text-white border-[1px] border-[#F75E05] rounded-[4px] bg-[#F75E05] transition-all duration-300 hover:shadow-[0px_4px_4px_0px_#F75E0580]"
+                    >${translateData[currentLang].exploreCourses}</a>
+                </div>
+            </div>
+            <div>
+                <img
+                    src="./Image/HomePagePhoto/hero-section-image.svg"
+                    alt="hero section image"
+                />
+            </div>
+        </div>
+        <div class="hidden lg:flex items-center justify-between">
+            <div
+                class="flex flex-col xl:flex-row items-center gap-3"
+            >
+                <h1
+                    class="font-[Lato] font-black text-[46px] text-[#1E212C] leading-[130%]"
+                >
+                    1200
+                </h1>
+                <p
+                    class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#1E212C]"
+                >
+                    ${translateData[currentLang].studentGraduet}
+                </p>
+            </div>
+            <div class="w-2 h-2 bg-[#FF3F3A] rounded-full"></div>
+            <div
+                class="flex flex-col xl:flex-row items-center gap-3"
+            >
+                <h1
+                    class="font-[Lato] font-black text-[46px] text-[#1E212C] leading-[130%]"
+                >
+                    84
+                </h1>
+                <p
+                    class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#1E212C]"
+                >
+                    ${translateData[currentLang].commlatedCourses}
+                </p>
+            </div>
+            <div class="w-2 h-2 bg-[#FF3F3A] rounded-full"></div>
+            <div
+                class="flex flex-col xl:flex-row items-center gap-3"
+            >
+                <h1
+                    class="font-[Lato] font-black text-[46px] text-[#1E212C] leading-[130%]"
+                >
+                    61
+                </h1>
+                <p
+                    class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#1E212C]"
+                >
+                    ${translateData[currentLang].qualifiedTutors}
+                </p>
+            </div>
+            <div class="w-2 h-2 bg-[#FF3F3A] rounded-full"></div>
+            <div
+                class="flex flex-col xl:flex-row items-center gap-3"
+            >
+                <h1
+                    class="font-[Lato] font-black text-[46px] text-[#1E212C] leading-[130%]"
+                >
+                    5
+                </h1>
+                <p
+                    class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#1E212C]"
+                >
+                    ${translateData[currentLang].experienceYears}
+                </p>
+            </div>
+        </div>
+    </div>
+`;
+// hero Section end
+
+// whoweare Section
+const whoweare = document.querySelector("#whoweare");
+whoweare.innerHTML = `
+    <div
+        class="container mx-auto px-5 md:px-10 lg:px-20 my-[180px] flex flex-col gap-[30px] md:flex-row md:justify-between"
+    >
+        <div class="w-full md:w-[50%] h-[50%]">
+            <img
+                src="./Image/HomePagePhoto/whoweare.svg"
+                alt="who we are image"
+                class="w-full h-full object-cover"
+            />
+        </div>
+        <div class="w-full md:w-[40%]">
+            <div class="mb-[40px]">
+                <h6
+                    class="font-[Lato] font-bold text-[16px] text-[#1E212C] leading-[150%] tracking-[1px] mb-[8px]"
+                >
+                    ${translateData[currentLang].whoweare.toUpperCase()}
+                </h6>
+                <h1
+                    class="font-[Lato] font-black text-[46px] text-[#1E212C] leading-[130%]"
+                >
+                    ${translateData[currentLang].whyCreateX}
+                </h1>
+            </div>
+            <ul
+                class="flex flex-col gap-[12px] max-w-[400px] mb-[48px]"
+            >
+                <li
+                    class="flex items-start gap-[16px] font-[Lato] font-normal text-[16px] leading-[160%]"
+                >
+                    <img
+                        src="./Image/HomePagePhoto/galochka.svg"
+                        alt="check icon"
+                        class="h-full mt-2"
+                    />
+                    ${translateData[currentLang].why1}
+                </li>
+                <li
+                    class="flex items-start gap-[16px] font-[Lato] font-normal text-[16px] leading-[160%]"
+                >
+                    <img
+                        src="./Image/HomePagePhoto/galochka.svg"
+                        alt="check icon"
+                        class="h-full mt-2"
+                    />
+                    ${translateData[currentLang].why2}
+                </li>
+                <li
+                    class="flex items-start gap-[16px] font-[Lato] font-normal text-[16px] leading-[160%]"
+                >
+                    <img
+                        src="./Image/HomePagePhoto/galochka.svg"
+                        alt="check icon"
+                        class="h-full mt-2"
+                    />
+                    ${translateData[currentLang].why3}
+                </li>
+                <li
+                    class="flex items-start gap-[16px] font-[Lato] font-normal text-[16px] leading-[160%]"
+                >
+                    <img
+                        src="./Image/HomePagePhoto/galochka.svg"
+                        alt="check icon"
+                        class="h-full mt-2"
+                    />
+                    ${translateData[currentLang].why4}
+                </li>
+                <li
+                    class="flex items-start gap-[16px] font-[Lato] font-normal text-[16px] leading-[160%]"
+                >
+                    <img
+                        src="./Image/HomePagePhoto/galochka.svg"
+                        alt="check icon"
+                        class="h-full mt-2"
+                    />
+                    ${translateData[currentLang].why5}
+                </li>
+                <li
+                    class="flex items-start gap-[16px] font-[Lato] font-normal text-[16px] leading-[160%]"
+                >
+                    <img
+                        src="./Image/HomePagePhoto/galochka.svg"
+                        alt="check icon"
+                        class="h-full mt-2"
+                    />
+                    ${translateData[currentLang].why6}
+                </li>
+            </ul>
+
+            <div>
+                <a
+                    href="./Pages/About/about.html"
+                    class="inline-block py-2 px-[32px] font-[Lato] font-normal text-[16px] leading-8 tracking-[0.5px] text-white border-[1px] border-[#F75E05] rounded-[4px] bg-[#F75E05] transition-all duration-300 hover:shadow-[0px_4px_4px_0px_#F75E0580]"
+                >
+                    ${translateData[currentLang].moreAboutUs}
+                </a>
+            </div>
+        </div>
+    </div>
+`;
+// whoweare Section end
+
+// featured Courses
+const featuredCoursesSection = document.querySelector(
+    "#featuredCoursesSection",
+);
+featuredCoursesSection.innerHTML = `
+    <div class="container mx-auto px-5 md:px-10 lg:px-20">
+        <div>
+            <span class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] text-[#1E212C] mb-2">${translateData[currentLang].readytolearn.toUpperCase()}</span>
+        </div>
+        <div class="flex justify-between items-center mb-11">
+            <h1 class="font-[Lato] font-black text-[46px] leading-[130%] text-[#1E212C]">${translateData[currentLang].featuredCourses}</h1>
+            <a href="./Pages/Courses/courses.html" class="px-[40px] font-[Lato] font-bold text-[16px] leading-[52px] tracking-[0.5px] text-[#F75E05] border border-[#F75E05] rounded-[4px] hover:bg-[#FF3F3A] hover:text-white transition-all duration-300">${translateData[currentLang].viewAllCourses}</a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-[30px]">
+            ${allCourses.slice(0, 6).map((item) => {
+                const currentLangData = item[currentLang]
+                return `
+                    <a href="Pages/Courses/course/course.html" class="w-full md:flex  rounded-[4px] overflow-hidden">
+                        <div class="w-full aspect-video md:w-1/3 md:aspect-square">
+                            <img
+                                src='${item.curatorTitleImg}'
+                                alt='curator images'
+                                class="w-full h-full object-cover"
+                            />
+                        </div>
+                        <div class="p-[32px] border border-[#E5E8ED] flex-1">
+                            <span class="bg-[${item.backColor}] text-white px-2 font-[Lato] font-normal text-[14px] leading-[150%] rounded-[4px]">${currentLangData.category}</span>
+                            <h1 class="w-full font-[Lato] font-bold text-5 leading-[150%] text-[#1E212C] my-4">${currentLangData.courseTitle}</h1>
+                            <div class="flex items-center gap-2">
+                                <span class="text-[#FF4242] font-[Lato] font-bold text-[18px] leading-[150%]">$${item.coursePrice}</span>
+                                <p class="font-[Lato] font-normal text-[18px] leading-[150%] text-[#787A80]">| ${currentLangData.curator}</p>
+                            </div>
+                        </div>
+                    </a>
+                `;
+            }).join(' ')}
+        </div>
+    </div>
+`;
+
 window.addEventListener("scroll", function () {
     const header = document.querySelector("header");
     if (window.scrollY > 300) {
@@ -321,8 +584,6 @@ window.addEventListener("scroll", function () {
         header.classList.add("absolute", "bg-transparent");
     }
 });
-
-
 
 const langBtn = document.querySelector("#langBtn");
 const langModal = document.querySelector("#langModal");
@@ -392,5 +653,3 @@ document.addEventListener("click", () => {
     if (downSpan) downSpan.classList.remove("rotate-180");
 });
 updateLangModal();
-
-

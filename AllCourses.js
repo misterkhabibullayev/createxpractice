@@ -281,11 +281,11 @@ export const allCourses = [
     },
     {
         id: 1,
-        backColor: "",
-        curatorTitleImg: "",
+        backColor: "#03CEA4",
+        curatorTitleImg: "Image/courses-photo/people/tutor1.png",
         coursePrice: "100",
         curator: {
-            curatorSulyemanMainImage: "",
+            curatorSulyemanMainImage: "Image/HomePagePhoto/suleymanMainImage.png",
             curatorName: "Jerome Bell",
             rate: 4.8,
             courses: 3,
@@ -561,11 +561,11 @@ export const allCourses = [
     },
     {
         id: 2,
-        backColor: "",
-        curatorTitleImg: "",
+        backColor: "#5A87FC",
+        curatorTitleImg: "Image/courses-photo/people/tutor2.png",
         coursePrice: "480",
         curator: {
-            curatorSulyemanMainImage: "",
+            curatorSulyemanMainImage: "Image/HomePagePhoto/suleymanMainImage.png",
             curatorName: "Marvin McKinney",
             rate: 4.9,
             courses: 5,
@@ -841,11 +841,11 @@ export const allCourses = [
     },
     {
         id: 3,
-        backColor: "",
-        curatorTitleImg: "",
+        backColor: "#F3982D",
+        curatorTitleImg: "Image/courses-photo/people/tutor3.png",
         coursePrice: "200",
         curator: {
-            curatorSulyemanMainImage: "",
+            curatorSulyemanMainImage: "Image/HomePagePhoto/suleymanMainImage.png",
             curatorName: "Leslie Alexander Li",
             rate: 4.7,
             courses: 2,
@@ -1121,11 +1121,11 @@ export const allCourses = [
     },
     {
         id: 4,
-        backColor: "",
-        curatorTitleImg: "",
+        backColor: "#14C8A4",
+        curatorTitleImg: "Image/courses-photo/people/tutor4.png",
         coursePrice: "530",
         curator: {
-            curatorSulyemanMainImage: "",
+            curatorSulyemanMainImage: "Image/HomePagePhoto/suleymanMainImage.png",
             curatorName: "Kristin Watson",
             rate: 4.9,
             courses: 6,
@@ -1401,11 +1401,11 @@ export const allCourses = [
     },
     {
         id: 5,
-        backColor: "",
-        curatorTitleImg: "",
+        backColor: "#5D88F8",
+        curatorTitleImg: "Image/courses-photo/people/tutor5.png",
         coursePrice: "400",
         curator: {
-            curatorSulyemanMainImage: "",
+            curatorSulyemanMainImage: "Image/HomePagePhoto/suleymanMainImage.png",
             curatorName: "Dianne Russell",
             rate: 4.8,
             courses: 3,
