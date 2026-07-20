@@ -534,9 +534,11 @@ featuredCoursesSection.innerHTML = `
             <a href="./Pages/Courses/courses.html" class="px-[40px] font-[Lato] font-bold text-[16px] leading-[52px] tracking-[0.5px] text-[#F75E05] border border-[#F75E05] rounded-[4px] hover:bg-[#FF3F3A] hover:text-white transition-all duration-300">${translateData[currentLang].viewAllCourses}</a>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-[30px]">
-            ${allCourses.slice(0, 6).map((item) => {
-                const currentLangData = item[currentLang]
-                return `
+            ${allCourses
+                .slice(0, 6)
+                .map((item) => {
+                    const currentLangData = item[currentLang];
+                    return `
                     <a href="Pages/Courses/course/course.html" class="w-full md:flex  rounded-[4px] overflow-hidden">
                         <div class="w-full aspect-video md:w-1/3 md:aspect-square">
                             <img
@@ -555,7 +557,8 @@ featuredCoursesSection.innerHTML = `
                         </div>
                     </a>
                 `;
-            }).join(' ')}
+                })
+                .join(" ")}
         </div>
     </div>
 `;
@@ -627,7 +630,7 @@ function updateLangModal() {
 function mainLangButton() {
     langBtn.innerHTML = `
         <img
-            src="${translateData[currentLang].flag}"
+            src="${translateData[currentLang].header.flag}"
             alt="language button icon"
         />
         <span class="downSpan transition-all duration-300">

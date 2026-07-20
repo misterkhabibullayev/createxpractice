@@ -285,7 +285,8 @@ export const allCourses = [
         curatorTitleImg: "Image/courses-photo/people/tutor1.png",
         coursePrice: "100",
         curator: {
-            curatorSulyemanMainImage: "Image/HomePagePhoto/suleymanMainImage.png",
+            curatorSulyemanMainImage:
+                "Image/HomePagePhoto/suleymanMainImage.png",
             curatorName: "Jerome Bell",
             rate: 4.8,
             courses: 3,
@@ -565,7 +566,8 @@ export const allCourses = [
         curatorTitleImg: "Image/courses-photo/people/tutor2.png",
         coursePrice: "480",
         curator: {
-            curatorSulyemanMainImage: "Image/HomePagePhoto/suleymanMainImage.png",
+            curatorSulyemanMainImage:
+                "Image/HomePagePhoto/suleymanMainImage.png",
             curatorName: "Marvin McKinney",
             rate: 4.9,
             courses: 5,
@@ -845,7 +847,8 @@ export const allCourses = [
         curatorTitleImg: "Image/courses-photo/people/tutor3.png",
         coursePrice: "200",
         curator: {
-            curatorSulyemanMainImage: "Image/HomePagePhoto/suleymanMainImage.png",
+            curatorSulyemanMainImage:
+                "Image/HomePagePhoto/suleymanMainImage.png",
             curatorName: "Leslie Alexander Li",
             rate: 4.7,
             courses: 2,
@@ -1125,7 +1128,8 @@ export const allCourses = [
         curatorTitleImg: "Image/courses-photo/people/tutor4.png",
         coursePrice: "530",
         curator: {
-            curatorSulyemanMainImage: "Image/HomePagePhoto/suleymanMainImage.png",
+            curatorSulyemanMainImage:
+                "Image/HomePagePhoto/suleymanMainImage.png",
             curatorName: "Kristin Watson",
             rate: 4.9,
             courses: 6,
@@ -1405,7 +1409,8 @@ export const allCourses = [
         curatorTitleImg: "Image/courses-photo/people/tutor5.png",
         coursePrice: "400",
         curator: {
-            curatorSulyemanMainImage: "Image/HomePagePhoto/suleymanMainImage.png",
+            curatorSulyemanMainImage:
+                "Image/HomePagePhoto/suleymanMainImage.png",
             curatorName: "Dianne Russell",
             rate: 4.8,
             courses: 3,
