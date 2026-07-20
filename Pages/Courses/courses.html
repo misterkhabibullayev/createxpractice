@@ -27,8 +27,6 @@
         <style>
             body {
                 font-family: "Lato", sans-serif;
-
-                margin-bottom: 1000px !important;
             }
         </style>
     </head>
@@ -110,63 +108,23 @@
                 >
                     <div class="flex flex-col items-center">
                         <h5
+                            id="online-course-badge"
                             class="max-[576px]:text-base max-[576px]:font-bold font-bold leading-[150%] text-[#1E212C] uppercase tracking-[1px]"
-                        >
-                            Enjoy your studying!
-                        </h5>
+                        ></h5>
 
                         <p
+                            id="online-course-title"
                             class="mt-2 max-[576px]:text-3xl max-[576px]:font-black font-extrabold lg:text-[2.875rem] leading-[130%] text-[##1E212C]"
-                        >
-                            Our online courses
-                        </p>
+                        ></p>
                     </div>
 
-                    <!-- ! LG -->
                     <div
                         class="flex items-center justify-between max-[576px]:mt-6 lg:mt-16 mb-14 max-[576px]:flex-col max-[576px]:gap-6 max-[576px]:px-4"
                     >
                         <div
                             id="categories"
-                            class="flex items-center gap-3 font-bold leading-[160%] max-w-[475px] text-[#9A9CA5] overflow-x-auto custom-scrollbar pb-2 flex-1 pr-3 xl:overflow-x-hidden xl:max-w-[100%]"
-                        >
-                            <a
-                                class="category py-2 px-4 border border-transparent rounded-md"
-                                href="#"
-                                data-category="all"
-                                >All <span></span
-                            ></a>
-                            <a
-                                class="category py-2 px-4 border border-transparent rounded-md"
-                                href="#"
-                                data-category="marketing"
-                                >Marketing <span></span
-                            ></a>
-                            <a
-                                class="category py-2 px-4 border border-transparent rounded-md"
-                                href="#"
-                                data-category="management"
-                                >Management</a
-                            >
-                            <a
-                                class="category py-2 px-4 border border-transparent rounded-md whitespace-nowrap"
-                                href="#"
-                                data-category="hr"
-                                >HR & Recruting <span></span
-                            ></a>
-                            <a
-                                class="category py-2 px-4 border border-transparent rounded-md"
-                                href="#"
-                                data-category="design"
-                                >Design <span></span
-                            ></a>
-                            <a
-                                class="category py-2 px-4 border border-transparent rounded-md"
-                                href="#"
-                                data-category="development"
-                                >Development <span></span
-                            ></a>
-                        </div>
+                            class="flex items-center gap-3 font-bold leading-[160%] max-[520px]:max-w-[300px] max-[520px]:gap-1 max-w-[475px] text-[#9A9CA5] overflow-x-auto custom-scrollbar pb-2 flex-1 pr-3 xl:overflow-x-hidden xl:max-w-[100%]"
+                        ></div>
 
                         <div
                             class="border max-[576px]:ml-[0px] max-[576px]:w-full border-[#D7DADD] rounded flex items-center ml-[30px] md:ml-[100px]"
@@ -204,404 +162,146 @@
 
                     <!-- TUTORS PART STARTS - where all people -->
                     <div
+                        id="tutors"
                         class="grid grid-cols-1 gap-y-4 gap-x-3 min-[576px]:grid-cols-2 md:grid-cols-2 desktop992:grid-cols-3 lg:grid-cols-3 lg:gap-x-7"
-                    >
-                        <!-- each card1-->
-                        <div
-                            data-category="marketing"
-                            class="person group flex flex-col h-full shadow-lg hover:shadow-xl rounded transition-shadow duration-100"
-                        >
-                            <div class="w-full overflow-hidden">
-                                <a href="#" class="block w-full">
-                                    <img
-                                        src="../../Image/courses-photo/people/tutor1.png"
-                                        alt=""
-                                        class="w-full h-auto align-middle transition-transform duration-300 ease-in-out will-change-transform group-hover:scale-[1.08] cursor-pointer"
-                                    />
-                                </a>
-                            </div>
-                            <div
-                                class="flex flex-col flex-1 p-6 gap-5 sm:px-6 sm:pt-6 sm:pb-[1px] md:w-full"
-                            >
-                                <a
-                                    class="self-start font-normal text-sm leading-[1.5] text-[#FFFF] px-2 py-[1px] bg-[#03CEA4] rounded"
-                                >
-                                    Marketing
-                                </a>
-                                <a
-                                    class="inline-block w-auto min-h-[25px] font-bold text-xl leading-[1.5] text-[#1E212C] sm:max-w-[200px] border-black md:max-w-none md:w-full lg:min-h-[60px] lg:max-w-full hover:text-red-500 transition-colors duration-500 ease-in-out cursor-pointer"
-                                    >The Ultimate Google Ads Training Course</a
-                                >
-
-                                <p
-                                    class="mt-auto font-bold text-red-500 leading-[1.5] sm:pb-6 sm:pt-2"
-                                >
-                                    $100
-                                    <span
-                                        class="leading-[1.5] text-[#787A80] border-l border-l-gray-300 pl-1"
-                                        >by Jerome Bell</span
-                                    >
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- each card2-->
-                        <div
-                            data-category="management"
-                            class="person group flex flex-col h-full shadow-lg hover:shadow-xl rounded transition-shadow duration-100"
-                        >
-                            <div class="w-full overflow-hidden">
-                                <a href="#" class="block w-full">
-                                    <img
-                                        src="../../Image/courses-photo/people/tutor2.png"
-                                        alt=""
-                                        class="w-full h-auto align-middle transition-transform duration-300 ease-in-out will-change-transform group-hover:scale-[1.08] cursor-pointer"
-                                    />
-                                </a>
-                            </div>
-                            <div
-                                class="flex flex-col flex-1 p-6 gap-5 sm:px-6 sm:pt-6 sm:pb-[1px] md:w-full"
-                            >
-                                <a
-                                    class="self-start font-normal text-sm leading-[1.5] text-[#FFFF] px-2 py-[1px] bg-[#5A87FC] rounded"
-                                >
-                                    Management
-                                </a>
-                                <a
-                                    class="inline-block w-auto min-h-[25px] font-bold text-xl leading-[1.5] text-[#1E212C] sm:max-w-[200px] border-black md:max-w-none md:w-full lg:min-h-[60px] lg:max-w-full hover:text-red-500 transition-colors duration-500 ease-in-out cursor-pointer"
-                                    >Prduct Management Fundamentals</a
-                                >
-
-                                <p
-                                    class="mt-auto font-bold text-red-500 leading-[1.5] sm:pb-6 sm:pt-2"
-                                >
-                                    $480
-                                    <span
-                                        class="leading-[1.5] text-[#787A80] border-l border-l-gray-300 pl-1"
-                                        >by Marvin McKinney</span
-                                    >
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- each card3-->
-                        <div
-                            data-category="hr"
-                            class="person group flex flex-col h-full shadow-lg hover:shadow-xl rounded transition-shadow duration-100"
-                        >
-                            <div class="w-full overflow-hidden">
-                                <a href="#" class="block w-full">
-                                    <img
-                                        src="../../Image/courses-photo/people/tutor3.png"
-                                        alt=""
-                                        class="w-full h-auto align-middle transition-transform duration-300 ease-in-out will-change-transform group-hover:scale-[1.08] cursor-pointer"
-                                    />
-                                </a>
-                            </div>
-                            <div
-                                class="flex flex-col flex-1 p-6 gap-5 sm:px-6 sm:pt-6 sm:pb-[1px] md:w-full"
-                            >
-                                <a
-                                    class="self-start font-normal text-sm leading-[1.5] text-[#FFFF] px-2 py-[1px] bg-[#F89828] rounded"
-                                >
-                                    HR & Recruting
-                                </a>
-                                <a
-                                    class="inline-block w-auto min-h-[25px] font-bold text-xl leading-[1.5] text-[#1E212C] sm:max-w-[200px] border-black md:max-w-none md:w-full lg:min-h-[60px] lg:max-w-full hover:text-red-500 transition-colors duration-500 ease-in-out cursor-pointer"
-                                    >HR Management and Analytics</a
-                                >
-
-                                <p
-                                    class="mt-auto font-bold text-red-500 leading-[1.5] sm:pb-6 sm:pt-2"
-                                >
-                                    $200
-                                    <span
-                                        class="leading-[1.5] text-[#787A80] border-l border-l-gray-300 pl-1"
-                                        >by Leslie Alexander Li</span
-                                    >
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- each card4-->
-                        <div
-                            data-category="marketing"
-                            class="person group flex flex-col h-full shadow-lg hover:shadow-xl rounded transition-shadow duration-100"
-                        >
-                            <div class="w-full overflow-hidden">
-                                <a href="#" class="block w-full">
-                                    <img
-                                        src="../../Image/courses-photo/people/tutor4.png"
-                                        alt=""
-                                        class="w-full h-auto align-middle transition-transform duration-300 ease-in-out will-change-transform group-hover:scale-[1.08] cursor-pointer"
-                                    />
-                                </a>
-                            </div>
-                            <div
-                                class="flex flex-col flex-1 p-6 gap-5 sm:px-6 sm:pt-6 sm:pb-[1px] md:w-full"
-                            >
-                                <a
-                                    class="self-start font-normal text-sm leading-[1.5] text-[#FFFF] px-2 py-[1px] bg-[#03CEA4] rounded"
-                                >
-                                    Marketing
-                                </a>
-                                <a
-                                    class="inline-block w-auto min-h-[25px] font-bold text-xl leading-[1.5] text-[#1E212C] sm:max-w-[200px] border-black md:max-w-none md:w-full lg:min-h-[60px] lg:max-w-full hover:text-red-500 transition-colors duration-500 ease-in-out cursor-pointer"
-                                    >Brand Management & PR Communications</a
-                                >
-
-                                <p
-                                    class="mt-auto font-bold text-red-500 leading-[1.5] sm:pb-6 sm:pt-2"
-                                >
-                                    $530
-                                    <span
-                                        class="leading-[1.5] text-[#787A80] border-l border-l-gray-300 pl-1"
-                                        >by Kristin Watson</span
-                                    >
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- each card5-->
-                        <div
-                            data-category="design"
-                            class="person group flex flex-col h-full shadow-lg hover:shadow-xl rounded transition-shadow duration-100"
-                        >
-                            <div class="w-full overflow-hidden">
-                                <a href="#" class="block w-full">
-                                    <img
-                                        src="../../Image/courses-photo/people/tutor5.png"
-                                        alt=""
-                                        class="w-full h-auto align-middle transition-transform duration-300 ease-in-out will-change-transform group-hover:scale-[1.08] cursor-pointer"
-                                    />
-                                </a>
-                            </div>
-                            <div
-                                class="flex flex-col flex-1 p-6 gap-5 sm:px-6 sm:pt-6 sm:pb-[1px] md:w-full"
-                            >
-                                <a
-                                    class="self-start font-normal text-sm leading-[1.5] text-[#FFFF] px-2 py-[1px] bg-[#F52F6E] rounded"
-                                >
-                                    Design
-                                </a>
-                                <a
-                                    class="inline-block w-auto min-h-[25px] font-bold text-xl leading-[1.5] text-[#1E212C] sm:max-w-[200px] border-black md:max-w-none md:w-full lg:min-h-[60px] lg:max-w-full hover:text-red-500 transition-colors duration-500 ease-in-out cursor-pointer"
-                                    >Graphic Design Basic</a
-                                >
-
-                                <p
-                                    class="mt-auto font-bold text-red-500 leading-[1.5] sm:pb-6 sm:pt-2"
-                                >
-                                    $500
-                                    <span
-                                        class="leading-[1.5] text-[#787A80] border-l border-l-gray-300 pl-1"
-                                        >by Guy Hawkins</span
-                                    >
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- each card6-->
-                        <div
-                            data-category="management"
-                            class="person group flex flex-col h-full shadow-lg hover:shadow-xl rounded transition-shadow duration-100"
-                        >
-                            <div class="w-full overflow-hidden">
-                                <a href="#" class="block w-full">
-                                    <img
-                                        src="../../Image/courses-photo/people/tutor6.png"
-                                        alt=""
-                                        class="w-full h-auto align-middle transition-transform duration-300 ease-in-out will-change-transform group-hover:scale-[1.08] cursor-pointer"
-                                    />
-                                </a>
-                            </div>
-                            <div
-                                class="flex flex-col flex-1 p-6 gap-5 sm:px-6 sm:pt-6 sm:pb-[1px] md:w-full"
-                            >
-                                <a
-                                    class="self-start font-normal text-sm leading-[1.5] text-[#FFFF] px-2 py-[1px] bg-[#5A87FC] rounded"
-                                >
-                                    Management
-                                </a>
-                                <a
-                                    class="inline-block w-auto min-h-[25px] font-bold text-xl leading-[1.5] text-[#1E212C] sm:max-w-[200px] border-black md:max-w-none md:w-full lg:min-h-[60px] lg:max-w-full hover:text-red-500 transition-colors duration-500 ease-in-out cursor-pointer"
-                                    >Business Development Management</a
-                                >
-
-                                <p
-                                    class="mt-auto font-bold text-red-500 leading-[1.5] sm:pb-6 sm:pt-2"
-                                >
-                                    $400
-                                    <span
-                                        class="leading-[1.5] text-[#787A80] border-l border-l-gray-300 pl-1"
-                                        >by Dianne Russell</span
-                                    >
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- each card7-->
-                        <div
-                            data="development"
-                            class="person group flex flex-col h-full shadow-lg hover:shadow-xl rounded transition-shadow duration-100"
-                        >
-                            <div class="w-full overflow-hidden">
-                                <a href="#" class="block w-full">
-                                    <img
-                                        src="../../Image/courses-photo/people/tutor7.png"
-                                        alt=""
-                                        class="w-full h-auto align-middle transition-transform duration-300 ease-in-out will-change-transform group-hover:scale-[1.08] cursor-pointer"
-                                    />
-                                </a>
-                            </div>
-                            <div
-                                class="flex flex-col flex-1 p-6 gap-5 sm:px-6 sm:pt-6 sm:pb-[1px] md:w-full"
-                            >
-                                <a
-                                    class="self-start font-normal text-sm leading-[1.5] text-[#FFFF] px-2 py-[1px] bg-[#5A87FC] rounded"
-                                >
-                                    Development
-                                </a>
-                                <a
-                                    class="inline-block w-auto min-h-[25px] font-bold text-xl leading-[1.5] text-[#1E212C] sm:max-w-[200px] border-black md:max-w-none md:w-full lg:min-h-[60px] lg:max-w-full hover:text-red-500 transition-colors duration-500 ease-in-out cursor-pointer"
-                                    >Highload Software Architecture</a
-                                >
-
-                                <p
-                                    class="mt-auto font-bold text-red-500 leading-[1.5] sm:pb-6 sm:pt-2"
-                                >
-                                    $600
-                                    <span
-                                        class="leading-[1.5] text-[#787A80] border-l border-l-gray-300 pl-1"
-                                        >by Brooklyn Simmons</span
-                                    >
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- each card8-->
-                        <div
-                            data-category="hr"
-                            class="person group flex flex-col h-full shadow-lg hover:shadow-xl rounded transition-shadow duration-100"
-                        >
-                            <div class="w-full overflow-hidden">
-                                <a href="#" class="block w-full">
-                                    <img
-                                        src="../../Image/courses-photo/people/tutor8.png"
-                                        alt=""
-                                        class="w-full h-auto align-middle transition-transform duration-300 ease-in-out will-change-transform group-hover:scale-[1.08] cursor-pointer"
-                                    />
-                                </a>
-                            </div>
-                            <div
-                                class="flex flex-col flex-1 p-6 gap-5 sm:px-6 sm:pt-6 sm:pb-[1px] md:w-full"
-                            >
-                                <a
-                                    class="self-start font-normal text-sm leading-[1.5] text-[#FFFF] px-2 py-[1px] bg-[#F89828] rounded"
-                                >
-                                    HR & Recruting
-                                </a>
-                                <a
-                                    class="inline-block w-auto min-h-[25px] font-bold text-xl leading-[1.5] text-[#1E212C] sm:max-w-[200px] border-black md:max-w-none md:w-full lg:min-h-[60px] lg:max-w-full hover:text-red-500 transition-colors duration-500 ease-in-out cursor-pointer"
-                                    >Human Resources – Selection and
-                                    Recruitment</a
-                                >
-
-                                <p
-                                    class="mt-auto font-bold text-red-500 leading-[1.5] sm:pb-6 sm:pt-2"
-                                >
-                                    $150
-                                    <span
-                                        class="leading-[1.5] text-[#787A80] border-l border-l-gray-300 pl-1"
-                                        >by Kathryn Murphy</span
-                                    >
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- each card Me-->
-                        <div
-                            data-category="development"
-                            class="person group flex flex-col h-full shadow-lg hover:shadow-xl rounded transition-shadow duration-100"
-                        >
-                            <div class="w-full overflow-hidden">
-                                <a href="#" class="block w-full">
-                                    <img
-                                        src="../../Image/courses-photo/people/tutor9.png"
-                                        alt=""
-                                        class="align-middle transition-transform duration-300 ease-in-out will-change-transform group-hover:scale-[1.08] cursor-pointer w-full h-[304px] object-cover min-[576px]:h-[147.688px] sm:h-[167.383px] md:h-[206.766px] desktop992:h-[177.227px] lg:h-[183.789px] xl:h-[236.305px] 2xl:h-[288.82px]"
-                                    />
-                                </a>
-                            </div>
-                            <div
-                                class="flex flex-col flex-1 p-6 gap-5 sm:px-6 sm:pt-6 sm:pb-[1px] md:w-full"
-                            >
-                                <a
-                                    class="self-start font-normal text-sm leading-[1.5] text-[#FFFF] px-2 py-[1px] bg-[#03CEA4] rounded"
-                                >
-                                    Development
-                                </a>
-                                <a
-                                    class="inline-block w-auto min-h-[25px] font-bold text-xl leading-[1.5] text-[#1E212C] sm:max-w-[200px] md:max-w-none md:w-full lg:min-h-[60px] lg:max-w-full hover:text-red-500 transition-colors duration-500 ease-in-out cursor-pointer"
-                                    >Frontend developer with different moder web
-                                    experience</a
-                                >
-
-                                <p
-                                    class="mt-auto font-bold text-red-500 leading-[1.5] sm:pb-6 sm:pt-2"
-                                >
-                                    $1000
-                                    <span
-                                        class="leading-[1.5] text-[#787A80] border-l border-l-gray-300 pl-1"
-                                        >by Amanov Suleyman</span
-                                    >
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                    ></div>
                 </section>
                 <!--====================== ONLINE COURSES SECTION ======================-->
 
+                <!-- ====================== TESTIMONIALS SECTION  ====================== -->
+                <section class="mt-[120px] bg-[rgb(240,240,240)]">
+                    <div
+                        class="container mx-auto md:px-10 lg:px-4 flex flex-col items-center justify-center pt-24 xl:px-[15px] xl:pb-12"
+                    >
+                        <div class="relative w-full">
+                            <h6
+                                id="testimonials-badge"
+                                class="w-full text-center font-bold leading-[150%] tracking-[1px] text-[#1E212C] mb-2"
+                            ></h6>
 
+                            <h1
+                                id="testimonials-description"
+                                class="text-center text-2xl mb-12 pb-2 font-black sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl leading-[130%] text-[#1E212C]"
+                            ></h1>
 
+                            <!-- slider -->
 
+                            <div
+                                class="slider-wrapper flex items-center justify-center max-w-full pb-6"
+                            >
+                                <!-- Next Btn -->
+                                <div
+                                    id="nextBtn"
+                                    class="absolute w-10 h-10 z-50 rounded-full bg-transparent text-black hidden md:-right-[40px] lg:top-[280px] lg:-right-[20px] xl:top-[280px] xl:right-0 md:flex md:items-center md:justify-center cursor-pointer hover:bg-[#FF3F3A] hover:text-white transition-colors duration-300 active:scale-105 select-none"
+                                >
+                                    <p class="text-2xl">→</p>
+                                </div>
 
+                                <!-- circle image -->
+                                <div
+                                    class="absolute sm:-left-[80px] lg:top-[255px] md:-left-[70px] lg:-left-[30px] xl:top-[255px] xl:-left-[65px]"
+                                >
+                                    <img
+                                        src="../../Image/courses-photo/slider-image/circles.png"
+                                        alt=""
+                                    />
+                                </div>
 
+                                <!-- prev Btn -->
+                                <div
+                                    id="prevBtn"
+                                    class="absolute w-10 h-10 z-50 rounded-full md:flex md:items-center md:justify-center bg-transparent text-black hidden md:-left-[40px] lg:top-[280px] lg:-left-[20px] xl:left-0 xl:top-[280px] cursor-pointer hover:bg-[#FF3F3A] hover:text-white transition-colors duration-300 active:scale-105 select-none"
+                                >
+                                    <p class="text-2xl">←</p>
+                                </div>
 
-                
-                <!-- ====================== Slider SECTION ====================== -->
-                <section class="mt-[120px]">
-                    <div class="container mx-auto  px-5 md:px-10 lg:px-20">
-                        
-                        <h6 id="testimonials-badge" class="text-center">TESTIMONIALS</h6>
-                        <h6 id="testimonials-description" class="text-center">What our students say</h6>
-
-                        <div class="testimonialSlider-container">
-
-                            <div class="testimonail-content">
-                                <div class="testimonial-itself">
-                                    <p id="testimonials-opinion">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.</p>
-
-                                    <div>
-                                        <div>
-                                            <img src="../../Image/" alt="">
-                                        </div>
-                                        <div>
-                                            <p>Eleanor Pena</p>
-                                            <p>Position, Course</p>
-                                        </div>
+                                <div
+                                    class="view-port overflow-hidden max-w-[1050px] w-full"
+                                >
+                                    <div
+                                        id="slider-container"
+                                        class="flex transition-transform duration-500"
+                                    >
+                                        <!-- px-6 mb-6 -->
                                     </div>
-
                                 </div>
                             </div>
+
+                            <div
+                                class="absolute bottom-[17px] left-[200px] sm:bottom-[20px] sm:left-[275px] md:bottom-[15px] md:left-[300px] lg:bottom-5 lg:left-[450px] xl:left-[600px] flex items-center justify-center lg:align-top gap-3"
+                                id="indicatorContainer"
+                            ></div>
                         </div>
                     </div>
                 </section>
 
-                <!-- ====================== Slider SECTION ====================== -->
+                <!-- ====================== TESTIMONIALS SECTION ====================== -->
+
+                <!-- ====================== Sertificate Section ====================== -->
+                <section>
+                    <div class="container mx-auto px-4 md:px-6 lg:px-20 pb-12">
+                        <div
+                            class="max-[575px]:flex max-[575px]:flex-col max-[575px]:px-[0px] flex mt-[120px] py-4"
+                        >
+                            <div class="sm:px-[15px]">
+                                <h6 id="sertificate-badge"></h6>
+                                <h1 id="sertificate-title"></h1>
+                                <p id="sertificate-description"></p>
+
+                                <div
+                                    class="flex items-center gap-10 mb-4"
+                                    id="our-collaborations"
+                                ></div>
+                            </div>
+
+                            <div id="certificaPart"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ====================== Sertificate Section  ======================-->
+
+                <!-- ====================== Subscribe Section ====================== -->
+                <section
+                    id="subscribe"
+                    class="relative overflow-hidden bg-[url('../../Image/courses-photo/subscribe/background.png')] bg-cover bg-no-repeat bg-center"
+                >
+                    <div
+                        class="container mx-auto px-5 md:px-10 lg:px-20 flex flex-col items-center justify-center pt-[96px]"
+                    >
+                        <div class="flex flex-col items-center mb-12">
+                            <h6
+                                class="font-bold leading-[150%] tracking-[1px] uppercase text-[#1E212C] mb-2"
+                                id="subscribe-badge"
+                            ></h6>
+                            <h1
+                                class="font-black leading-[130%] text-[#1E212C] max-w-[810px] text-center text-[34px] md:text-[37px] lg:text-[40px] xl:text-5xl pb-2"
+                                id="subscribe-title"
+                            ></h1>
+                        </div>
+                        <div id="inputContainer"></div>
+                    </div>
+                </section>
+                <!-- ====================== Subscribe Section ====================== -->
             </main>
+
+            <footer class="bg-[#1E212C]">
+                <div class="container mx-auto px-5 md:px-10 lg:px-20 pt-12">
+                    <div
+                        id="footer-content"
+                        class="grid grid-cols-1 items-center justify-items-center gap-y-[50px] sm:grid-cols-2 sm:gap-y-[35px] md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5"
+                    ></div>
+                </div>
+
+                <div class="bg-[#292C37] mt-[60px]">
+                    <div
+                        id="copyrightPart"
+                        class="container mx-auto px-5 md:px-10 lg:px-20"
+                    ></div>
+                </div>
+            </footer>
         </div>
 
-        <script src="courses.js"></script>
+        <script type="module" src="courses.js"></script>
     </body>
 </html>
