@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Course</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+            rel="stylesheet"
+        />
+
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        screens: {
+                            desktop992: "992px",
+                        },
+                    },
+                },
+            };
+        </script>
+
+        <style>
+            body {
+                font-family: "Lato", sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="w-full bg-transparent absolute top-0 left-0">
+            <div
+                class="container mx-auto px-5 md:px-10 lg:px-20 flex justify-between items-center py-5"
+            >
+                <div class="flex items-center gap-7 md:gap-10">
+                    <div class="">
+                        <a href="../../../index.html">
+                            <img
+                                src="../../../Image/HomePagePhoto/logo.svg"
+                                alt="logo image"
+                            />
+                        </a>
+                    </div>
+                    <nav class="hidden lg:flex items-center gap-4 md:gap-8">
+                        <a
+                            href="../../Pages/About/about.html"
+                            class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-500"
+                            >About Us</a
+                        >
+                        <a
+                            href="./Pages/Courses/courses.html"
+                            class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A]"
+                            >Courses</a
+                        >
+                        <a
+                            href="./Pages/Events/events.html"
+                            class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A]"
+                            >Events</a
+                        >
+                        <a
+                            href="./Pages/Blogs/blogs.html"
+                            class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A]"
+                            >Blog</a
+                        >
+                        <a
+                            href="./Pages/Contacts/contacts.html"
+                            class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A]"
+                            >Contacts</a
+                        >
+                    </nav>
+                </div>
+                <div class="flex items-center gap-3 md:gap-4">
+                    <a
+                        href="./Pages/Contacts/contacts.html"
+                        class="font-[Lato] font-bold text-[12px] lg:py-1 leading-8 tracking-[0.5px] text-white bg-gradient-to-r from-[#FF3F3A] to-[#F75E05] px-5 rounded-[4px] hidden sm:inline-block hover:bg-gradient-to-l hover:from-[#F75E05] hover:to-[#FF3F3A]"
+                    >
+                        Get consultation
+                    </a>
+                    <a
+                        href="#!"
+                        class="hidden lg:flex gap-2 items-center font-[Lato] font-bold text-4 leading-[160%] text-gray-800"
+                    >
+                        <img
+                            src="../../../Image/HomePagePhoto/Profile.svg"
+                            alt="profile icon"
+                        />
+                        Log in / Register
+                    </a>
+                    <button class="block lg:hidden">
+                        <img
+                            src="../../../Image/HomePagePhoto/stash--burger-classic-light.svg"
+                            alt="burger icon"
+                        />
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- *************** Hero section *************** -->
+            <section style="background-color: rgb(247, 194, 185)">
+                <div
+                    id="hero-container"
+                    class="relative container mx-auto px-5 md:px-10 lg:px-20 pt-[70px]"
+                >
+                    <p id="hero-badge"></p>
+                    <p id="hero-title"></p>
+                </div>
+            </section>
+            <!-- *************** Hero section *************** -->
+
+            <!-- *************** About the course section *************** -->
+            <section>
+                <div class="container mx-auto px-5 md:px-10 lg:px-20">
+                    <div id="aboutTheCourse"></div>
+                </div>
+            </section>
+            <!-- *************** About the course section *************** -->
+        </main>
+
+        <script type="module" src="course.js"></script>
+    </body>
+</html>
