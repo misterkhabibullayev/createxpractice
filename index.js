@@ -530,8 +530,8 @@ featuredCoursesSection.innerHTML = `
             <span class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] text-[#1E212C] mb-2">${translateData[currentLang].readytolearn.toUpperCase()}</span>
         </div>
         <div class="flex justify-between items-center mb-11">
-            <h1 class="font-[Lato] font-black text-[46px] leading-[130%] text-[#1E212C]">${translateData[currentLang].featuredCourses}</h1>
-            <a href="./Pages/Courses/courses.html" class="px-[40px] font-[Lato] font-bold text-[16px] leading-[52px] tracking-[0.5px] text-[#F75E05] border border-[#F75E05] rounded-[4px] hover:bg-[#FF3F3A] hover:text-white transition-all duration-300">${translateData[currentLang].viewAllCourses}</a>
+            <h1 class="font-[Lato] font-black text-[30px] md:text-[46px] leading-[130%] text-[#1E212C]">${translateData[currentLang].featuredCourses}</h1>
+            <a href="./Pages/Courses/courses.html" class="hidden md:block px-[40px] font-[Lato] font-bold text-[16px] leading-[52px] tracking-[0.5px] text-[#F75E05] border border-[#F75E05] rounded-[4px] hover:bg-[#FF3F3A] hover:text-white transition-all duration-300">${translateData[currentLang].viewAllCourses}</a>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-[30px]">
             ${allCourses
@@ -643,11 +643,11 @@ const benefitsData = {
 };
 ourBenefits.innerHTML = `
     <div class="container mx-auto px-5 md:px-10 lg:px-20">
-        <div class="flex flex-col items-center gap-2 mb-[60px]">
+        <div class="flex flex-col md:items-center gap-2 mb-[60px]">
             <span class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] text-[#1E212C]">${translateData[currentLang].ourbenefits.toUpperCase()}</span>
-            <h1 class="font-[Lato] font-black text-[46px] leading-[130%] text-[#1E212C]">${translateData[currentLang].thatshowwedoit}</h1>
+            <h1 class="font-[Lato] font-black text-[28px] sm:text-[36px] md:text-[46px] leading-[130%] text-[#1E212C]">${translateData[currentLang].thatshowwedoit}</h1>
         </div>
-        <div class="grid grid-cols-4">
+        <div class="w-full grid grid-cols-2 gap-4 pb-4 lg:pb-0 lg:grid lg:grid-cols-4 scrollbar-hide">
             <button class="w-full flex items-center justify-center gap-2 py-2.5 rounded-[4px] transition-all duration-300 border border-[#FF3F3A]" id="exTutorBtn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" class="text-[#FF3F3A]" id="benefitSVG1">
                     <path d="M0 0h24v24H0z" fill="none" />
@@ -677,8 +677,8 @@ ourBenefits.innerHTML = `
                 <span class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#9A9CA5]" id="benefitSpan4">${translateData[currentLang].community}</span>
             </button>
         </div>
-        <div class="flex justify-between items-center mt-[60px]">
-            <div class="w-1/2">
+        <div class="flex flex-col-reverse gap-10 md:flex-row md:justify-between md:items-center mt-[60px]">
+            <div class="w-full md:w-1/2">
                 <h1 id="benefitDataH1" class="font-[Lato] font-black text-[32px] leading-[130%] text-[#1E212C] max-w-[495px] mb-[24px]"></h1>
                 <p id="benefitDataP" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#424551] max-w-[495px]"></p>
             </div>
