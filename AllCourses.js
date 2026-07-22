@@ -5,7 +5,7 @@ export const allCourses = [
         curatorTitleImg: "/Image/HomePagePhoto/curatorSuleyma.png",
         coursePrice: "1000",
         curator: {
-            curatorSulyemanMainImage: "Image/HomePagePhoto/circles.svg",
+            curatorSulyemanMainImage: "/Image/HomePagePhoto/curatorSuleyma.png",
             curatorName: "Suleyman Amanov",
             courseLessonInfo: [
                 {
