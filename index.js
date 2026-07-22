@@ -1,4 +1,5 @@
 import { allCourses } from "./AllCourses.js";
+import { allEvents } from "./AllEvents.js";
 console.log(allCourses);
 
 const translateData = {
@@ -280,7 +281,7 @@ headerMain.innerHTML = `
                     ${translateData[currentLang].loginRegister}
                 </a>
             </div>
-            <div class="hidden min-[300px]:block relative">
+            <div class=" relative">
                 <button
                     class=" flex items-center gap-1 px-2 rounded-[20px]"
                     id="langBtn"
@@ -679,10 +680,10 @@ ourBenefits.innerHTML = `
         </div>
         <div class="flex flex-col-reverse gap-10 md:flex-row md:justify-between md:items-center mt-[60px]">
             <div class="w-full md:w-1/2">
-                <h1 id="benefitDataH1" class="font-[Lato] font-black text-[32px] leading-[130%] text-[#1E212C] max-w-[495px] mb-[24px]"></h1>
-                <p id="benefitDataP" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#424551] max-w-[495px]"></p>
+                <h1 id="benefitDataH1" class="font-[Lato] font-black text-[32px] leading-[130%] text-[#1E212C] max-w-[495px] mb-[24px] transition-all duration-300"></h1>
+                <p id="benefitDataP" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#424551] max-w-[495px] transition-all duration-300"></p>
             </div>
-            <div id="benefitDataImg">
+            <div id="benefitDataImg" class="w-full md:w-1/2 transition-all duration-300">
             </div>
         </div>
     </div>
@@ -719,14 +720,19 @@ const benefitSpan4 = document.querySelector("#benefitSpan4");
 const benefitItems = [
     { btn: exTutorBtn, svg: benefitSVG1, span: benefitSpan1, key: "experiend" },
     { btn: feedSupBtn, svg: benefitSVG2, span: benefitSpan2, key: "feedBack" },
-    { btn: onlineLibBtn, svg: benefitSVG3, span: benefitSpan3, key: "onlineLib" },
-    { btn: comunityBtn, svg: benefitSVG4, span: benefitSpan4, key: "comunity" }
+    {
+        btn: onlineLibBtn,
+        svg: benefitSVG3,
+        span: benefitSpan3,
+        key: "onlineLib",
+    },
+    { btn: comunityBtn, svg: benefitSVG4, span: benefitSpan4, key: "comunity" },
 ];
 
 function setActiveTab(selectedKey) {
     currentBenefitBtn = selectedKey;
 
-    benefitItems.forEach(item => {
+    benefitItems.forEach((item) => {
         const isActive = item.key === selectedKey;
 
         item.btn?.classList.toggle("border", isActive);
@@ -739,17 +745,88 @@ function setActiveTab(selectedKey) {
     renderBenefit();
 }
 
-benefitItems.forEach(item => {
-    item.btn?.classList.add("w-full", "flex", "items-center", "justify-center", "gap-2", "py-2.5", "rounded-[4px]", "transition-all", "duration-300");
+benefitItems.forEach((item) => {
+    item.btn?.classList.add(
+        "w-full",
+        "flex",
+        "items-center",
+        "justify-center",
+        "gap-2",
+        "py-2.5",
+        "rounded-[4px]",
+        "transition-all",
+        "duration-300",
+    );
     item.svg?.classList.add("text-[#9A9CA5]", "transition-all", "duration-300");
-    item.span?.classList.add("text-[#9A9CA5]", "transition-all", "duration-300");
+    item.span?.classList.add(
+        "text-[#9A9CA5]",
+        "transition-all",
+        "duration-300",
+    );
 
     item.btn?.addEventListener("click", () => setActiveTab(item.key));
 });
 renderBenefit();
 // ourBenefits Setion end
 
-// 
+// ourEvents Section
+const ourEvents = document.querySelector("#ourEvents");
+ourEvents.innerHTML = `
+    <div class="container mx-auto px-5 md:px-10 lg:px-20">
+        <div class="mb-[60px] md:flex md:flex-col md:items-center md:gap-2">
+            <span class="font-[Lato] font-bold text-[16px] leading-[150%] text-[#1E212C]">${translateData[currentLang].ourevents.toUpperCase()}</span>
+            <h1 class="font-[Lato] font-black text-[46px] leading-[130%] text-[#1E212C]">${translateData[currentLang].lecturesWorkshop}</h1>
+        </div>
+        <div class="grid grid-cols-1 gap-6">
+            ${allEvents
+                .slice(0, 3)
+                .map((item) => {
+                    return `
+                <div class="w-full bg-white px-6 py-3 md:px-10 md:py-8 flex flex-col md:flex-row md:items-center md:gap-10">
+                    <div class="w-full md:w-auto flex items-center gap-5 mb-[12px]">
+                        <p class="font-[Lato] font-black text-[48px] leading-[130%] text-[#FF3F3A]">
+                            ${item.previewListGrid.date < 10 ? `0${item.previewListGrid.date}` : item.previewListGrid.date}
+                        </p>
+                        <div class="flex flex-col gap-1">
+                            <p class="font-[Lato] font-bold text-[20px] leading-[150%] text-[#1E212C]">${item.previewListGrid[currentLang].month}</p>
+                            <p class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#787A80]">${item.previewListGrid.startTime} - ${item.previewListGrid.endTime}</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-center md:flex-1 md:gap-10">
+                        <div>
+                            <a href="./Pages/Events/event.html" class="inline-block flex-shrink-0 font-[Lato] font-bold text-[20px] leading-[150%] text-[#1E212C] pb-[8px]">
+                                ${item.previewListGrid[currentLang].previewTitle}
+                            </a>
+                            <p class="font-[Lato] font-normal text-[16px] leading-[150%] text-[#1E212C]">
+                                ${item.previewListGrid[currentLang].category}
+                            </p>
+                        </div>
+                        <div class="mt-5 md:mt-0 py-2">
+                            <a
+                                href="./Pages/Events/event.html"
+                                class="inline-block w-full md:w-auto text-center py-1 px-[32px] font-[Lato] font-normal text-[16px] leading-8 tracking-[0.5px] text-[#F75E05] border-[1px] border-[#F75E05] rounded-[4px] bg-transparent  transition-all duration-300 hover:shadow-[0px_4px_4px_0px_#F75E0580] hover:bg-[#F75E05] hover:text-white whitespace-nowrap">
+                                ${item.previewListGrid[currentLang].viewMore}
+                            </a>
+                        </div> 
+                    </div> 
+                </div>
+            `;
+                })
+                .join(" ")}
+        </div>
+        <div class="mt-[60px] flex justify-center">
+            <div class="flex items-center gap-10">
+                <p class="font-[Lato] font-bold text-[28px] leading-[150%] text-[#1E212C]">
+                    ${translateData[currentLang].doyouwatnmore}
+                </p>
+                <a href="./Pages/Events/events.html" class="inline-block py-2 px-[32px] font-[Lato] font-normal text-[16px] leading-8 tracking-[0.5px] text-white border-[1px] border-[#F75E05] rounded-[4px] bg-[#F75E05] transition-all duration-300 hover:shadow-[0px_4px_4px_0px_#F75E0580]">
+                    ${translateData[currentLang].exploreAllEvents}
+                </a>
+            </div>
+            <div>
+        </div>
+    </div>
+`;
 
 window.addEventListener("scroll", function () {
     const header = document.querySelector("header");
@@ -818,7 +895,7 @@ function updateLangModal() {
 function mainLangButton() {
     langBtn.innerHTML = `
         <img
-            src="${translateData[currentLang].header.flag}"
+            src="${translateData[currentLang].flag}"
             alt="language button icon"
         />
         <span class="downSpan transition-all duration-300">
