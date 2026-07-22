@@ -826,6 +826,12 @@ ourEvents.innerHTML = `
             <div>
         </div>
     </div>
+    <div class="absolute top-[-10%] right-0 opacity-20 rotate-[-90deg]">
+        <img src="Image/HomePagePhoto/circles (1).svg" alt="circles decoration" />
+    </div>
+    <div class="absolute bottom-0 left-0">
+        <img src="Image/HomePagePhoto/dots (1).svg" alt="dots decoration" />
+    </div>
 `;
 
 window.addEventListener("scroll", function () {
