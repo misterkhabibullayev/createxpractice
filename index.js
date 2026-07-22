@@ -818,7 +818,7 @@ function updateLangModal() {
 function mainLangButton() {
     langBtn.innerHTML = `
         <img
-            src="${translateData[currentLang].flag}"
+            src="${translateData[currentLang].header.flag}"
             alt="language button icon"
         />
         <span class="downSpan transition-all duration-300">

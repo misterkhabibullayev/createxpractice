@@ -11,342 +11,59 @@
             href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
             rel="stylesheet"
         />
+        <link rel="stylesheet" href="about.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"
+        />
     </head>
     <body>
-        <header class="w-full bg-transparent">
-            <div
-                class="container mx-auto px-5 md:px-10 lg:px-15 flex justify-between items-center py-5"
-            >
-                <div class="flex items-center gap-7 md:gap-10">
-                    <div class="">
-                        <a href="#!">
-                            <img
-                                src="../../Image/HomePagePhoto/logo.svg"
-                                alt="logo image"
-                            />
-                        </a>
-                    </div>
-                    <nav class="hidden lg:flex items-center gap-4 md:gap-8">
-                        <a
-                            href="./Pages/About/about.html"
-                            class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-500"
-                            >About Us</a
-                        >
-                        <a
-                            href="./Pages/Courses/courses.html"
-                            class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A]"
-                            >Courses</a
-                        >
-                        <a
-                            href="./Pages/Events/events.html"
-                            class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A]"
-                            >Events</a
-                        >
-                        <a
-                            href="./Pages/Blogs/blogs.html"
-                            class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A]"
-                            >Blog</a
-                        >
-                        <a
-                            href="./Pages/Contacts/contacts.html"
-                            class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A]"
-                            >Contacts</a
-                        >
-                    </nav>
-                </div>
-                <div class="flex items-center gap-3 md:gap-4">
-                    <a
-                        href="./Pages/Contacts/contacts.html"
-                        class="font-[Lato] font-bold text-[12px] lg:py-1 leading-8 tracking-[0.5px] text-white bg-gradient-to-r from-[#FF3F3A] to-[#F75E05] px-5 rounded-[4px] hidden sm:inline-block"
-                    >
-                        Get consultation
-                    </a>
-                    <a
-                        href="#!"
-                        class="hidden lg:flex gap-2 items-center font-[Lato] font-bold text-4 leading-[160%] text-gray-800"
-                    >
-                        <img
-                            src="../../Image/HomePagePhoto/Profile.svg"
-                            alt="profile icon"
-                        />
-                        Log in / Register
-                    </a>
-                    <button class="block lg:hidden">
-                        <img
-                            src="/Image/HomePagePhoto/stash--burger-classic-light.svg"
-                            alt="burger icon"
-                        />
-                    </button>
-                </div>
-            </div>
-        </header>
+        <header
+            id="headerMain"
+            class="w-full bg-transparent absolute top-0 left-0"
+        ></header>
         <main>
+            <!-- section 1 -->
+            <section id="heroSection"></section>
+
+            <!-- section 2 -->
             <section
-                class="container mx-auto px-5 lg:items-start lg:text-left lg:flex lg:flex-row lg:justify-between lg:px-15 lg:mt-20 lg:mb-24 md:text-left md:flex md:flex-row md:justify-between md:items-start md:px-10 md:mt-14 md:mb-14 sm:flex-col sm:text-center sm:mt-8 sm:mb-8 sm:px-5 sm:items-center"
-            >
-                <div>
-                    <h6
-                        class="text-[#1E212C] font-bold text-base leading-[150%]"
-                    >
-                        ABOUT US
-                    </h6>
-                    <h1
-                        class="text-[#1E212C] lg:font-black lg:text-5xl lg:leading-[130%] md:font-extrabold md:text-3xl md:leading-[100%] sm:font-bold sm:text-3xl sm:leading-[130%]"
-                    >
-                        Createx Online School
-                    </h1>
-                    <h5
-                        class="text-[#1E212C] font-bold lg:text-base lg:leading-[150%] lg:max-w-lg lg:mt-12 lg:mb-6 md:leading-[130%] md:text-base md:max-w-sm md:mt-7 md:mb-4 sm:leading-[130%] sm:text-base sm:mb-5"
-                    >
-                        Createx Online School is a leader in online studying.
-                        We have lots of courses and programs from the main
-                        market experts.
-                    </h5>
-                    <p
-                        class="text-[#424551] font-normal lg:text-base lg:leading-[150%] lg:max-w-xl lg:mb-14 md:leading-[130%] md:text-sm md:max-w-lg md:mb-8 sm:mb-5"
-                    >
-                        We provide relevant approaches to online learning,
-                        internships and employment in the largest companies
-                        in the country. Our educational programs help you get a
-                        new specialty from scratch. During your studies, we will
-                        help you find a job. Check the courses and online events
-                        that we organise.
-                    </p>
+                id="section2"
+                class="container mx-auto px-5 md:px-10 mb-5 md:mb-20 lg:px-15"
+            ></section>
 
-                    <div
-                        class="flex gap-[24px] items-center sm:mx-auto sm:mb-7"
-                    >
-                        <button
-                            class="text-[#F75E05] border border-[#FF3F3A] hover:text-[white] hover:bg-[#FF3F3A] rounded-md transition-all duration-500 lg:font-semibold lg:leading-[46px] lg:px-[40px] md:font-semibold md:leading-[40px] md:px-[30px] sm:font-semibold sm:leading-[40px] sm:px-[30px]"
-                        >
-                            Explore events
-                        </button>
-                        <button
-                            class="text-[#FFFFFF] bg-[#F75E05] border border-[#FF3F3A] hover:text-[#F75E05] hover:bg-[white] rounded-md transition-all duration-500 lg:font-semibold lg:leading-[46px] lg:px-[40px] md:font-semibold md:leading-[40px] md:px-[30px] sm:font-semibold sm:leading-[40px] sm:px-[30px]"
-                        >
-                            Browse courses
-                        </button>
-                    </div>
-                </div>
-                <div>
-                    <img
-                        class="w-full object-contain lg:max-w-[460px] md:max-w-[350px] ms:max-w-[400px] sm:max-h-[400px]"
-                        src="../../Image/aboutUs-photo/about.section1.img.png"
-                        alt="image"
-                    />
-                </div>
-            </section>
-            <!-- <section class="container mx-auto px-5 md:px-10 lg:px-15 lg:mb-20">
-                <div class="lg:flex lg:gap-4 lg:items-center lg:mb-7">
-                    <a
-                        href="#!"
-                        class="w-[52px] h-[52px] bg-[#FF3F3A] rounded-full flex justify-center items-center hover:ring-[16px] hover:ring-[#FEC8C0] transition-all duration-300"
-                    >
-                        <img
-                            src="../../Image/aboutUs-photo/about.section2Video.img.png"
-                            alt="video play icon"
-                        />
-                    </a>
-
-                    <span>Watch Video</span>
-                </div>
-
-                <div class="lg:flex lg:justify-between lg:items-center">
-                    <div>
-                        <img
-                            class="lg:w-full lg:max-w-[700px] lg:object-contain"
-                            src="../../Image/aboutUs-photo/about.section2.img.png"
-                            alt="image"
-                        />
-                    </div>
-                    <div>
-                        <div class="lg:flex lg:gap-4 lg:items-center">
-                            <h1
-                                class="lg:font-black lg:text-5xl lg:leading-[130%] lg:text-[#FF3F3A]"
-                            >
-                                1200
-                            </h1>
-                            <p
-                                class="lg:font-bold lg:text-lg lg:leading-[150%] lg:text-[#1E212C]"
-                            >
-                                students graduated
-                            </p>
-                        </div>
-                        <div class="lg:flex lg:gap-4 lg:items-center">
-                            <h1
-                                class="lg:font-black lg:text-5xl lg:leading-[130%] lg:text-[#FF3F3A]"
-                            >
-                                84
-                            </h1>
-                            <p
-                                class="lg:font-bold lg:text-lg lg:leading-[150%] lg:text-[#1E212C]"
-                            >
-                                completed courses
-                            </p>
-                        </div>
-                        <div class="lg:flex lg:gap-4 lg:items-center">
-                            <h1
-                                class="lg:font-black lg:text-5xl lg:leading-[130%] lg:text-[#FF3F3A]"
-                            >
-                                16
-                            </h1>
-                            <p
-                                class="lg:font-bold lg:text-lg lg:leading-[150%] lg:text-[#1E212C]"
-                            >
-                                qualified tutors
-                            </p>
-                        </div>
-                        <div class="lg:flex lg:gap-4 lg:items-center">
-                            <h1
-                                class="lg:font-black lg:text-5xl lg:leading-[130%] lg:text-[#FF3F3A]"
-                            >
-                                5
-                            </h1>
-                            <p
-                                class="lg:font-bold lg:text-lg lg:leading-[150%] lg:text-[#1E212C]"
-                            >
-                                years of experience
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <!-- section 3 -->
             <section
-                class="container mx-auto px-5 md:px-10 lg:px-15 lg:mt-24 lg:mb-24"
-            >
-                <div class="lg:mx-auto lg:items-center lg:text-center lg:mb-8">
-                    <h6
-                        class="lg:font-bold lg:text-base lg:leading-[150%] lg:text-[#1E212C] md:font-bold md:text-base md:leading-[130%] md:text-[#1E212C]"
-                    >
-                        WE ALWAYS STAND FOR
-                    </h6>
-                    <h1
-                        class="lg:font-black lg:text-5xl lg:leading-[130%] lg:text-[#1E212C] md:font-extrabold md:text-4xl md:leading-[100%] md:text-[#1E212C]"
-                    >
-                        Our core values
-                    </h1>
-                </div>
+                id="section3"
+                class="container mx-auto px-5 mb-5 mt-8 md:px-10 md:mt-24 md:mb-24 lg:px-15"
+            ></section>
 
-                <div class="lg:flex justify-between">
-                    <div class="lg:mx-auto lg:items-center lg:text-center">
-                        <img
-                            class="lg:mb-3 lg:mx-auto"
-                            src="../../Image/aboutUs-photo/about.section3.structure.svg"
-                            alt="image"
-                        />
-                        <h5
-                            class="lg:text-base lg:font-bold lg:leading-[150%] lg:text-[#1E212C]"
-                        >
-                            Structured Approach
-                        </h5>
-                        <p
-                            class="lg:text-base lg:font-normal lg:leading-[140%] lg:text-[#787A80] lg:w-full lg:max-w-60"
-                        >
-                            Aenean urna dictum adipiscing nec, cras quisque.
-                            Nunc in mauris.
-                        </p>
-                    </div>
-                    <div class="lg:border-r lg:border-grey-700"></div>
+            <!-- section 4 -->
+            <section
+                id="section4"
+                class="container mx-auto px-5 mb-10 md:px-10 lg:px-15"
+            ></section>
 
-                    <div class="lg:mx-auto lg:items-center lg:text-center">
-                        <img
-                            class="lg:mb-3 lg:mx-auto"
-                            src="../../Image/aboutUs-photo/about.section3.chat.svg"
-                            alt="image"
-                        />
-                        <h5
-                            class="lg:text-base lg:font-bold lg:leading-[150%] lg:text-[#1E212C]"
-                        >
-                            Professional Feedbacks
-                        </h5>
-                        <p
-                            class="lg:text-base lg:font-normal lg:leading-[140%] lg:text-[#787A80] lg:w-full lg:max-w-60"
-                        >
-                            Culpa nostrud commodo ea consequat reprehenderit
-                            aliquip.
-                        </p>
-                    </div>
-                    <div class="lg:border-r lg:border-grey-700"></div>
+            <!-- section 5 -->
+            <section
+                id="section5"
+                class="container mx-auto px-5 flex flex-col-reverse text-left items-center mt-8 mb-10 md:flex md:flex-row md:justify-between md:px-10 md:mt-14 md:mb-14 lg:px-15 lg:mt-20 lg:mb-24"
+            ></section>
 
-                    <div class="lg:mx-auto lg:items-center lg:text-center">
-                        <img
-                            class="lg:mb-3 lg:mx-auto"
-                            src="../../Image/aboutUs-photo/about.section3.target.svg"
-                            alt="image"
-                        />
-                        <h5
-                            class="lg:text-base lg:font-bold lg:leading-[150%] lg:text-[#1E212C]"
-                        >
-                            Efficiency
-                        </h5>
-                        <p
-                            class="lg:text-base lg:font-normal lg:leading-[140%] lg:text-[#787A80] lg:w-full lg:max-w-60"
-                        >
-                            Viverra scelerisque consequat net. Adipisicing esse
-                            consequat.
-                        </p>
-                    </div>
-                    <div class="lg:border-r lg:border-grey-700"></div>
+            <!-- section 6 -->
+            <section
+                id="section6"
+                class="container mx-auto px-5 mb-8 md:mb-16 md:px-10 lg:px-15"
+            ></section>
 
-                    <div class="lg:mx-auto lg:items-center lg:text-center">
-                        <img
-                            class="lg:mb-3 lg:mx-auto"
-                            src="../../Image/aboutUs-photo/about.section3.calendar.svg"
-                            alt="image"
-                        />
-                        <h5
-                            class="lg:text-base lg:font-bold lg:leading-[150%] lg:text-[#1E212C]"
-                        >
-                            Flexible Shedule
-                        </h5>
-                        <p
-                            class="lg:text-base lg:font-normal lg:leading-[140%] lg:text-[#787A80] lg:w-full lg:max-w-60"
-                        >
-                            Aute eiusmod dolore dolore deserunt veniam ad
-                            deserunt.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="container mx-auto px-5 md:px-10 lg:px-15 lg:mb-24">
-                <div class="lg:mx-auto lg:items-center lg:text-center lg:mb-8">
-                    <h6
-                        class="lg:font-bold lg:text-base lg:leading-[150%] lg:text-[#1E212C] md:font-bold md:text-base md:leading-[130%] md:text-[#1E212C]"
-                    >
-                        OUR MAIN DIRECTIONS
-                    </h6>
-                    <h1
-                        class="lg:font-black lg:text-5xl lg:leading-[130%] lg:text-[#1E212C] md:font-extrabold md:text-4xl md:leading-[100%] md:text-[#1E212C]"
-                    >
-                        What do we teach
-                    </h1>
-                </div>
-                <div>
-                    <div>
-                        <img
-                            src="../../Image/aboutUs-photo/about.section4.card1.png"
-                            alt="image"
-                        />
-                        <div>
-                            <button>Marketing</button>
-                            <p>
-                                Odio posuere netus quisque faucibus lectus arcu
-                                donec. Eget dictum eu viverra faucibus. Viverra
-                                scelerisque consequat.
-                            </p>
-                        </div>
-                        <button>Check courses</button>
-                        <img
-                            src="../../Image/aboutUs-photo/about.section4.strelka.svg"
-                            alt="image icon"
-                        />
-                        <span></span>
-                    </div>
-                </div>
-            </section> -->
+            <!-- section 7 -->
+            <section
+                id="section7"
+                class="py-20 bg-[url('../../Image/aboutUs-photo/Background.png')] bg-cover bg-center h-screen"
+            ></section>
         </main>
         <footer></footer>
-        <script src="about.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+        <script type="module" src="about.js"></script>
     </body>
 </html>
