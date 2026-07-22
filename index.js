@@ -833,6 +833,43 @@ ourEvents.innerHTML = `
         <img src="Image/HomePagePhoto/dots (1).svg" alt="dots decoration" />
     </div>
 `;
+// our Events Section end
+
+// certificates Section
+const creatXCertificateSection = document.querySelector("#creatXCertificate");
+creatXCertificateSection.innerHTML = `
+    <div class="container mx-auto px-5 md:px-10 lg:px-20 lg:flex lg:justify-between lg:items-start">
+        <div class="mb-[16px]">
+            <div>
+                <span class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] text-[#1E212C] mb-[8px]">
+                    ${translateData[currentLang].createXCertificate.toUpperCase()}
+                </span>
+            </div>
+            <div>
+                <h1 class="font-[Lato] font-black text-[26px] w-full md:text-[36px] lg:text-[46px] leading-[130%] text-[#1E212C] mb-[18px] md:max-w-[400px]">
+                    ${translateData[currentLang].createXCertificateH1}
+                </h1>
+                <p class="font-[Lato] font-normal text-[16px] w-full md:max-w-[400px] leading-[160%] text-[#424551]">
+                    ${translateData[currentLang].createXCertificateP}
+                </p>
+            </div>
+            <div class="flex items-center gap-10 mt-[32px]">
+                <a href="#!" class="w-[105px] h-[50px] inline-block">
+                    <img src="./Image/HomePagePhoto/certificat-section-img-1.svg" alt="certificate image" class="w-full h-full object-cover" />
+                </a>
+                <a href="#!" class="w-[105px] h-[50px] inline-block">
+                    <img src="./Image/HomePagePhoto/certificat-section-img-2.svg" alt="certificate image" class="w-full h-full object-cover" />
+                </a>
+                <a href="#!" class="w-[105px] h-[50px] inline-block">
+                    <img src="./Image/HomePagePhoto/certificat-section-img-3.svg" alt="certificate image" class="w-full h-full object-cover" />
+                </a>
+            </div>
+        </div>
+        <div class="w-full lg:w-[60%]">
+            <img src="./Image/HomePagePhoto/certificate.jpg" alt="certificate image" class="w-full h-full object-cover z-10" />
+        </div>
+    </div>
+`
 
 window.addEventListener("scroll", function () {
     const header = document.querySelector("header");
