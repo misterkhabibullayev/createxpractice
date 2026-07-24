@@ -525,7 +525,6 @@ headerMain.innerHTML = `
             </div>
             <nav class="hidden lg:flex items-center gap-4 xl:gap-8">
                 <a
-                    href="../../Pages/About/about.html"
                     class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
                 >${translateLang[currentLang].header.navAbout}</a>
                 <a
