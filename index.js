@@ -937,6 +937,11 @@ var swiper = new Swiper(".mySwiper", {
 });
 // bestTutors Section end
 
+
+// testimonials Section
+
+// testimonials Section end
+
 window.addEventListener("scroll", function () {
     const header = document.querySelector("header");
     if (window.scrollY > 300) {
