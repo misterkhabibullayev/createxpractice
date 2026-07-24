@@ -865,11 +865,59 @@ creatXCertificateSection.innerHTML = `
                 </a>
             </div>
         </div>
-        <div class="w-full lg:w-[60%]">
-            <img src="./Image/HomePagePhoto/certificate.jpg" alt="certificate image" class="w-full h-full object-cover z-10" />
+        <div class="w-full h-auto lg:w-[60%]">
+            <img src="./Image/HomePagePhoto/certificate.jpg" alt="certificate image" class="w-full h-full object-cover z-10 shadow-lg rounded" />
+        </div>
+    </div>
+`;
+// certificates Section end
+
+// bestTutors Section
+const bestTutors = document.querySelector("#bestTutors");
+bestTutors.innerHTML = `
+    <div class="container mx-auto px-5 md:px-10 lg:px-20">
+        <div>
+            <span class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] text-[#1E212C] mb-2">
+                ${translateData[currentLang].bestTutorsHere.toUpperCase()}
+            </span>
+        </div>
+        <div class="flex justify-between items-center mb-[60px]">
+            <h1 class="font-[Lato] font-black text-[30px] md:text-[46px] leading-[130%] text-[#1E212C]">
+                ${translateData[currentLang].meetOurTema}
+            </h1>
+            <div class="flex items-center gap-3">
+                <button class="w-[48px] h-[48px] flex items-center justify-center rounded-full hover:bg-[#FF3F3A] transition-all duration-300 group">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16" class="rotate-180 text-[#424551] group-hover:text-[#FFFFFF] transition-all duration-300">
+	                    <path d="M0 0h16v16H0z" fill="none" />
+	                    <path fill="currentColor" fill-rule="evenodd" d="M1.25 8A.75.75 0 0 1 2 7.25h10.19L9.47 4.53a.75.75 0 0 1 1.06-1.06l4 4a.75.75 0 0 1 0 1.06l-4 4a.75.75 0 1 1-1.06-1.06l2.72-2.72H2A.75.75 0 0 1 1.25 8" clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <button class="w-[48px] h-[48px] flex items-center justify-center rounded-full hover:bg-[#FF3F3A] transition-all duration-300 group">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16" class="text-[#424551] group-hover:text-[#FFFFFF] transition-all duration-300">
+	                    <path d="M0 0h16v16H0z" fill="none" />
+                        <path fill="currentColor" fill-rule="evenodd" d="M1.25 8A.75.75 0 0 1 2 7.25h10.19L9.47 4.53a.75.75 0 0 1 1.06-1.06l4 4a.75.75 0 0 1 0 1.06l-4 4a.75.75 0 1 1-1.06-1.06l2.72-2.72H2A.75.75 0 0 1 1.25 8" clip-rule="evenodd" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="flex gap-[30px] overflow-hidden">
+            ${allCourses.map((item) => {
+                return `
+                    <div class="w-full md:max-w-[285px]]">
+                        <div class="w-full aspect-[3/4]">
+                            <img src="${item.curatorTitleImg}" alt="tutor image" class="w-full h-full object-cover" />
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-[Lato] font-bold text-[20px] leading-[150%] text-[#424551]">${item[currentLang].curator}</h3>
+                            <p class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#787A80]">${item.curator[currentLang].jobs}</p>
+                        </div>
+                    </div>
+                `
+            }).join(" ")}
         </div>
     </div>
 `
+// bestTutors Section end
 
 window.addEventListener("scroll", function () {
     const header = document.querySelector("header");
