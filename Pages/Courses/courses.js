@@ -630,34 +630,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
     updateSubscribe();
 
-    function updateDecorations() {
-        const photoData = locale[currentLanguage].subscribe.positioned;
-        const subscribeContainer = document.getElementById("subscribe");
-
-        const decoration1 = document.createElement("div");
-        const decoration2 = document.createElement("div");
-        subscribeContainer.appendChild(decoration1);
-        subscribeContainer.appendChild(decoration2);
-
-        decoration1.className = "absolute bottom-0 left-0";
-        decoration2.className = "absolute bottom-0 right-0";
-
-        const decorationImage1 = document.createElement("img");
-        const decorationImage2 = document.createElement("img");
-
-        decorationImage1.src = photoData.image1;
-        decorationImage2.src = photoData.image2;
-
-        decorationImage1.classList =
-            "max-w-[80px] max-h-[120px] sm:max-h-[150px] md:max-w-[180px] max-[1345px]:max-w-full lg:max-w-[170px] min-[1346px]:max-w-none block";
-
-        decorationImage2.classList =
-            "max-w-[80px] max-h-[120px] sm:max-h-[150px] md:max-w-[180px] max-[1345px]:max-w-full lg:max-w-[170px] min-[1346px]:max-w-none block";
-
-        decoration1.appendChild(decorationImage1);
-        decoration2.appendChild(decorationImage2);
-    }
-    updateDecorations();
     //  ====================== Subscribe Section ======================
 
     // ****************** FOOTER ******************
