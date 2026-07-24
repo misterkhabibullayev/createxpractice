@@ -727,20 +727,32 @@ window.addEventListener("DOMContentLoaded", () => {
 
       
             <form class='flex gap-10 mt-10'> 
-            <div class='flex flex-col'>
-               <label for='user-name'>${earlyBirdsData.inputsInfo.input1}</label>
-               <input type="text" id='user-name' name='name' placeholder="${earlyBirdsData.inputsInfo.inputPlaceholder1}">
+            <div class='px-[15px]'>
+                    <div class='flex flex-col mb-6'> 
+                        <label for='user-name' class='mb-2'>${earlyBirdsData.inputsInfo.input1}</label>
+                        <input
+                        class='w-full outline-none px-4 py-2.5 text-[0.875rem] border-gray-300 border-[1px] rounded text-[#424551] transition-all duration-300  focus:border-red-400/80'
+                        type="text" id='user-name' name='name' placeholder="${earlyBirdsData.inputsInfo.inputPlaceholder1}">
+                    </div>
             </div>
 
-            <div class='flex flex-col'>
-                <label for='user-email'>${earlyBirdsData.inputsInfo.input2}</label>
-                <input type="email" id='user-email' name='email' placeholder="${earlyBirdsData.inputsInfo.inputPlaceholder2}">
-             </div>
+            <div class='px-[15px]'>
+                    <div class='flex flex-col mb-6'> 
+                        <label for='user-name' class='mb-2'>${earlyBirdsData.inputsInfo.input2}</label>
+                        <input
+                        class='w-full outline-none px-4 py-2.5 text-[0.875rem] border-gray-300 border-[1px] rounded text-[#424551] transition-all duration-300  focus:border-red-400/80'
+                        type="text" id='user-name' name='name' placeholder="${earlyBirdsData.inputsInfo.inputPlaceholder2}">
+                    </div>
+            </div>
 
-            <div class='flex flex-col'>
-                <label for='user-phone'>${earlyBirdsData.inputsInfo.input3}</label>
-                <input type="tel" id='user-phone' name='phone' placeholder="${earlyBirdsData.inputsInfo.inputPlaceholder3}">
-             </div>
+            <div class='px-[15px]'>
+                    <div class='flex flex-col mb-6'> 
+                        <label for='user-name' class='mb-2'>${earlyBirdsData.inputsInfo.input3}</label>
+                        <input
+                        class='w-full outline-none px-4 py-2.5 text-[0.875rem] border-gray-300 border-[1px] rounded text-[#424551] transition-all duration-300  focus:border-red-400/80'
+                        type="text" id='user-name' name='name' placeholder="${earlyBirdsData.inputsInfo.inputPlaceholder3}">
+                    </div>
+            </div2
                
             <button type='submit'>${earlyBirdsData.inputsInfo.button}</button>
         
