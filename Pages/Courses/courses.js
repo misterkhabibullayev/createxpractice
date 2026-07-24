@@ -108,7 +108,7 @@ window.addEventListener("DOMContentLoaded", () => {
                         image: "../../Image/courses-photo/people/tutor9.png",
                         major: "Development",
                         category: "development",
-                        majorBackgroundColor: "#03CEA4",
+                        courseNameBackgroundColor: "#03CEA4",
                         courseName:
                             "Frontend developer with different moder web experience",
                         currency: "$",
@@ -325,7 +325,7 @@ window.addEventListener("DOMContentLoaded", () => {
                                 class="flex flex-col flex-1 p-6 gap-5 sm:px-6 sm:pt-6 sm:pb-[1px] md:w-full"
                             >
                                 <a
-                                    class="self-start font-normal text-sm leading-[1.5] text-[#FFFF] px-2 py-[1px] bg-[${card.majorBackgroundColor}] rounded"
+                                    class="self-start font-normal text-sm leading-[1.5] text-[#fefefe] px-2 py-[1px] bg-[${card.courseNameBackgroundColor}] rounded"
                                 >
                                     ${card.major}
                                 </a>
