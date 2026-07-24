@@ -1,7 +1,7 @@
 import { allCourses } from "./AllCourses.js";
+import { allEvents } from "./AllEvents.js";
 console.log(allCourses);
-
-const translateData = {
+ const translateData = {
     en: {
         langTitle: "EN",
         flag: "Image/HomePagePhoto/twemoji--flag-united-states.svg",
@@ -280,7 +280,7 @@ headerMain.innerHTML = `
                     ${translateData[currentLang].loginRegister}
                 </a>
             </div>
-            <div class="hidden min-[300px]:block relative">
+            <div class=" relative">
                 <button
                     class=" flex items-center gap-1 px-2 rounded-[20px]"
                     id="langBtn"
@@ -520,7 +520,7 @@ whoweare.innerHTML = `
 `;
 // whoweare Section end
 
-// featured Courses
+// featured Courses Section
 const featuredCoursesSection = document.querySelector(
     "#featuredCoursesSection",
 );
@@ -530,8 +530,8 @@ featuredCoursesSection.innerHTML = `
             <span class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] text-[#1E212C] mb-2">${translateData[currentLang].readytolearn.toUpperCase()}</span>
         </div>
         <div class="flex justify-between items-center mb-11">
-            <h1 class="font-[Lato] font-black text-[46px] leading-[130%] text-[#1E212C]">${translateData[currentLang].featuredCourses}</h1>
-            <a href="./Pages/Courses/courses.html" class="px-[40px] font-[Lato] font-bold text-[16px] leading-[52px] tracking-[0.5px] text-[#F75E05] border border-[#F75E05] rounded-[4px] hover:bg-[#FF3F3A] hover:text-white transition-all duration-300">${translateData[currentLang].viewAllCourses}</a>
+            <h1 class="font-[Lato] font-black text-[30px] md:text-[46px] leading-[130%] text-[#1E212C]">${translateData[currentLang].featuredCourses}</h1>
+            <a href="./Pages/Courses/courses.html" class="hidden md:block px-[40px] font-[Lato] font-bold text-[16px] leading-[52px] tracking-[0.5px] text-[#F75E05] border border-[#F75E05] rounded-[4px] hover:bg-[#FF3F3A] hover:text-white transition-all duration-300">${translateData[currentLang].viewAllCourses}</a>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-[30px]">
             ${allCourses
@@ -562,6 +562,361 @@ featuredCoursesSection.innerHTML = `
         </div>
     </div>
 `;
+// featured Courses Section end
+
+// ourBenefits Setion
+const ourBenefits = document.querySelector("#ourBenefits");
+
+const benefitsData = {
+    experiend: {
+        img: "Image/HomePagePhoto/benefit1.svg",
+        en: {
+            title: "Only practicing tutors",
+            description:
+                "Urna nisi, arcu cras nunc. Aenean quam est lobortis mi non fames dictum suspendisse. Morbi mauris cras massa ut dolor quis sociis mollis augue. Nunc, sodales tortor sit diam mi amet massa. Fermentum diam diam sociis vestibulum. Nulla nisl accumsan, id dignissim massa ut amet. Amet enim, nisi tempus vehicula.",
+        },
+        ru: {
+            title: "Только практикующие репетиторы",
+            description:
+                "На нашей платформе преподают только специалисты с реальным опытом и активной практикой. Изучайте теорию вместе с практикой, получайте точные ответы на интересующие вас вопросы и эффективно повышайте свой уровень знаний.",
+        },
+        uz: {
+            title: "Faqat amaliyotchi repetitorlar",
+            description:
+                "Bizning platformamizda faqat real tajribaga ega bo'lgan va o'z sohasida faoliyat yuritayotgan mutaxassislar dars berishadi. Nazariya va amaliyotni birgalikda o'rganing, o'zlaringizni qiziqtirgan barcha savollarga aniq javoblar oling hamda bilimingizni samarali oshiring.",
+        },
+    },
+    feedBack: {
+        img: "Image/HomePagePhoto/benefit2.svg",
+        en: {
+            title: "Always in touch, ready to support",
+            description:
+                "Faucibus erat massa elementum nec fermentum augue. Ante pellentesque dis et malesuada mauris, faucibus est et a. Gravida malesuada ut varius eu pretium vitae eu. Volutpat nullam posuere eget felis at dui neque. Neque vitae, pulvinar donec integer lacus, fermentum, faucibus. Lorem porttitor hendrerit vel interdum arcu arcu mollis massa. Velit nulla felis ornare elit a platea malesuada.",
+        },
+        ru: {
+            title: "Всегда на связи, готовы поддержать",
+            description:
+                "По любым вопросам или трудностям, возникшим в процессе обучения, вы всегда можете обратиться в нашу службу поддержки. Мы готовы оперативно помочь вам, чтобы ваше обучение проходило непрерывно и максимально эффективно.",
+        },
+        uz: {
+            title: "Har doim aloqadamiz, qo'llab-quvvatlashga tayyormiz",
+            description:
+                "O'quv jarayonida yuzaga kelgan har qanday savol yoki muammo bo'yicha bizning qo'llab-quvvatlash jamoamizga murojaat qilishingiz mumkin. Biz sizga tezkor yordam berishga va o'qishingizni uzluksiz hamda samarali davom ettirishingizga har doim tayyormiz.",
+        },
+    },
+    onlineLib: {
+        img: "Image/HomePagePhoto/benefit3.svg",
+        en: {
+            title: "The most carefully selected materials",
+            description:
+                "Senectus magnis diam tellus nibh elit ac ac. Elit eget faucibus urna, feugiat arcu mattis viverra tempor id. Vivamus nunc quam donec non amet nulla etiam ullamcorper posuere. Venenatis commodo molestie eleifend nulla faucibus in. In sed felis adipiscing pharetra, etiam. Molestie euismod consectetur eu sed. Sit magnis sed sed ipsum vulputate pellentesque nullam faucibus.",
+        },
+        ru: {
+            title: "Самые тщательно отобранные материалы",
+            description:
+                "Наши учебные программы и материалы тщательно отобраны экспертами отрасли. Без лишней «воды» — мы предоставляем только самые актуальные, необходимые и применимые на практике знания.",
+        },
+        uz: {
+            title: "Eng sinchiklab tanlab olingan materiallar",
+            description:
+                "Bizning o'quv dasturlarimiz va darsliklarimiz soha mutaxassislari tomonidan puxta saralab olingan. Ortqiqcha ma'lumotlarsiz, faqat eng zarur, zamonaviy va amaliyotda qo'llaniladigan sifatli bilimlar bilan ta'minlaymiz.",
+        },
+    },
+    comunity: {
+        img: "Image/HomePagePhoto/benefit4.svg",
+        en: {
+            title: "Student communication",
+            description:
+                "Eu placerat magna elementum nulla egestas id. Non sit enim tortor massa id tristique vel tincidunt sit. Tellus, ridiculus dictum purus nibh sed bibendum. In eleifend ac convallis convallis lectus. Urna semper ac non eros, donec accumsan egestas ipsum. Arcu at morbi.",
+        },
+        ru: {
+            title: "Общение между студентами",
+            description:
+                "Активное общение между студентами и преподавателями помогает лучше усваивать материал. Делитесь опытом, задавайте вопросы и развивайтесь вместе в сообществе единомышленников.",
+        },
+        uz: {
+            title: "O'quvchilar bilan muloqot",
+            description:
+                "O'quvchilarimiz va repetitorlar o'rtasidagi faol muloqot bilamlarni yanada mustahkamlashga yordam beradi. Tajriba almashing, savollar bering va hamfikrlar jamiyatida birgalikda rivojlaning.",
+        },
+    },
+};
+ourBenefits.innerHTML = `
+    <div class="container mx-auto px-5 md:px-10 lg:px-20">
+        <div class="flex flex-col md:items-center gap-2 mb-[60px]">
+            <span class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] text-[#1E212C]">${translateData[currentLang].ourbenefits.toUpperCase()}</span>
+            <h1 class="font-[Lato] font-black text-[28px] sm:text-[36px] md:text-[46px] leading-[130%] text-[#1E212C]">${translateData[currentLang].thatshowwedoit}</h1>
+        </div>
+        <div class="w-full grid grid-cols-2 gap-4 pb-4 lg:pb-0 lg:grid lg:grid-cols-4 scrollbar-hide">
+            <button class="w-full flex items-center justify-center gap-2 py-2.5 rounded-[4px] transition-all duration-300 border border-[#FF3F3A]" id="exTutorBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" class="text-[#FF3F3A]" id="benefitSVG1">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.12 2.12 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.12 2.12 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.12 2.12 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.12 2.12 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.12 2.12 0 0 0 1.597-1.16z" />
+                </svg>
+                <span class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#FF3F3A]" id="benefitSpan1">${translateData[currentLang].experiencedTutors}</span>
+            </button>
+            <button class="w-full flex items-center justify-center gap-2 py-2.5 rounded-[4px] transition-all duration-300" id="feedSupBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" class="text-[#9A9CA5]" id="benefitSVG2">
+	                <path d="M0 0h24v24H0z" fill="none" />
+	                <path fill="currentColor" d="M5 9v12H1V9zm4 12a2 2 0 0 1-2-2V9c0-.55.22-1.05.59-1.41L14.17 1l1.06 1.06c.27.27.44.64.44 1.05l-.03.32L14.69 8H21a2 2 0 0 1 2 2v2c0 .26-.05.5-.14.73l-3.02 7.05C19.54 20.5 18.83 21 18 21zm0-2h9.03L21 12v-2h-8.79l1.13-5.32L9 9.03z" />
+                </svg>
+                <span class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#9A9CA5]" id="benefitSpan2">${translateData[currentLang].feedbackSupports}</span>
+            </button>
+            <button class="w-full flex items-center justify-center gap-2 py-2.5 rounded-[4px] transition-all duration-300" id="onlineLibBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" class="text-[#9A9CA5]" id="benefitSVG3">
+	                <path d="M0 0h24v24H0z" fill="none" />
+	                <path fill="currentColor" d="m6 8l6 3l6-3l-6-3zm6.489-4.884l7.993 4.076c.486.248.661.81.391 1.257a.97.97 0 0 1-.39.359l-7.994 4.076a1.09 1.09 0 0 1-.978 0L3.518 8.808c-.486-.248-.661-.81-.391-1.257a.97.97 0 0 1 .39-.359l7.994-4.076c.304-.155.674-.155.978 0m0 13.766a1.07 1.07 0 0 1-.978 0l-7.993-4.147c-.486-.252-.661-.824-.391-1.278a1 1 0 0 1 .39-.365a.82.82 0 0 1 .755 0l7.24 3.755c.303.158.673.158.977 0l7.239-3.755a.82.82 0 0 1 .754 0c.486.252.661.824.391 1.278a1 1 0 0 1-.39.365zm0 4a1.07 1.07 0 0 1-.978 0l-7.993-4.147c-.486-.252-.661-.824-.391-1.278a1 1 0 0 1 .39-.365a.82.82 0 0 1 .755 0l7.24 3.755c.303.158.673.158.977 0l7.239-3.755a.82.82 0 0 1 .754 0c.486.252.661.824.391 1.278a1 1 0 0 1-.39.365z" />
+                </svg>
+                <span class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#9A9CA5]" id="benefitSpan3">${translateData[currentLang].onlineLibrary}</span>
+            </button>
+            <button class="w-full flex items-center justify-center gap-2 py-2.5 rounded-[4px] transition-all duration-300" id="comunityBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256" class="text-[#9A9CA5]" id="benefitSVG4">
+	                <path d="M0 0h256v256H0z" fill="none" />
+	                <path fill="currentColor" d="M128 24a104 104 0 0 0-91.82 152.88l-11.35 34.05a16 16 0 0 0 20.24 20.24l34.05-11.35A104 104 0 1 0 128 24m0 192a87.87 87.87 0 0 1-44.06-11.81a8 8 0 0 0-6.54-.67L40 216l12.47-37.4a8 8 0 0 0-.66-6.54A88 88 0 1 1 128 216" />
+                </svg>
+                <span class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#9A9CA5]" id="benefitSpan4">${translateData[currentLang].community}</span>
+            </button>
+        </div>
+        <div class="flex flex-col-reverse gap-10 md:flex-row md:justify-between md:items-center mt-[60px]">
+            <div class="w-full md:w-1/2">
+                <h1 id="benefitDataH1" class="font-[Lato] font-black text-[32px] leading-[130%] text-[#1E212C] max-w-[495px] mb-[24px] transition-all duration-300"></h1>
+                <p id="benefitDataP" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#424551] max-w-[495px] transition-all duration-300"></p>
+            </div>
+            <div id="benefitDataImg" class="w-full md:w-1/2 transition-all duration-300">
+            </div>
+        </div>
+    </div>
+`;
+
+let currentBenefitBtn = "experiend";
+const exTutorBtn = document.querySelector("#exTutorBtn");
+const feedSupBtn = document.querySelector("#feedSupBtn");
+const onlineLibBtn = document.querySelector("#onlineLibBtn");
+const comunityBtn = document.querySelector("#comunityBtn");
+
+function renderBenefit() {
+    const benefitDataH1 = document.querySelector("#benefitDataH1");
+    const benefitDataP = document.querySelector("#benefitDataP");
+    const benefitDataImg = document.querySelector("#benefitDataImg");
+
+    const currentBen = benefitsData[currentBenefitBtn][currentLang];
+    const currentBenImg = benefitsData[currentBenefitBtn].img;
+    if (benefitDataH1) benefitDataH1.textContent = currentBen.title;
+    if (benefitDataP) benefitDataP.textContent = currentBen.description;
+    if (benefitDataImg) {
+        benefitDataImg.innerHTML = `<img src="${currentBenImg}" alt="${currentBen.title}"/>`;
+    }
+}
+
+const benefitSVG1 = document.querySelector("#benefitSVG1");
+const benefitSVG2 = document.querySelector("#benefitSVG2");
+const benefitSVG3 = document.querySelector("#benefitSVG3");
+const benefitSVG4 = document.querySelector("#benefitSVG4");
+const benefitSpan1 = document.querySelector("#benefitSpan1");
+const benefitSpan2 = document.querySelector("#benefitSpan2");
+const benefitSpan3 = document.querySelector("#benefitSpan3");
+const benefitSpan4 = document.querySelector("#benefitSpan4");
+const benefitItems = [
+    { btn: exTutorBtn, svg: benefitSVG1, span: benefitSpan1, key: "experiend" },
+    { btn: feedSupBtn, svg: benefitSVG2, span: benefitSpan2, key: "feedBack" },
+    {
+        btn: onlineLibBtn,
+        svg: benefitSVG3,
+        span: benefitSpan3,
+        key: "onlineLib",
+    },
+    { btn: comunityBtn, svg: benefitSVG4, span: benefitSpan4, key: "comunity" },
+];
+
+function setActiveTab(selectedKey) {
+    currentBenefitBtn = selectedKey;
+
+    benefitItems.forEach((item) => {
+        const isActive = item.key === selectedKey;
+
+        item.btn?.classList.toggle("border", isActive);
+        item.btn?.classList.toggle("border-[#FF3F3A]", isActive);
+
+        item.svg?.classList.toggle("text-[#FF3F3A]", isActive);
+        item.span?.classList.toggle("text-[#FF3F3A]", isActive);
+    });
+
+    renderBenefit();
+}
+
+benefitItems.forEach((item) => {
+    item.btn?.classList.add(
+        "w-full",
+        "flex",
+        "items-center",
+        "justify-center",
+        "gap-2",
+        "py-2.5",
+        "rounded-[4px]",
+        "transition-all",
+        "duration-300",
+    );
+    item.svg?.classList.add("text-[#9A9CA5]", "transition-all", "duration-300");
+    item.span?.classList.add(
+        "text-[#9A9CA5]",
+        "transition-all",
+        "duration-300",
+    );
+
+    item.btn?.addEventListener("click", () => setActiveTab(item.key));
+});
+renderBenefit();
+// ourBenefits Setion end
+
+// ourEvents Section
+const ourEvents = document.querySelector("#ourEvents");
+ourEvents.innerHTML = `
+    <div class="container mx-auto px-5 md:px-10 lg:px-20">
+        <div class="mb-[60px] md:flex md:flex-col md:items-center md:gap-2">
+            <span class="font-[Lato] font-bold text-[16px] leading-[150%] text-[#1E212C]">${translateData[currentLang].ourevents.toUpperCase()}</span>
+            <h1 class="font-[Lato] font-black text-[46px] leading-[130%] text-[#1E212C]">${translateData[currentLang].lecturesWorkshop}</h1>
+        </div>
+        <div class="grid grid-cols-1 gap-6">
+            ${allEvents
+                .slice(0, 3)
+                .map((item) => {
+                    return `
+                <div class="w-full bg-white px-6 py-3 md:px-10 md:py-8 flex flex-col md:flex-row md:items-center md:gap-10">
+                    <div class="w-full md:w-auto flex items-center gap-5 mb-[12px]">
+                        <p class="font-[Lato] font-black text-[48px] leading-[130%] text-[#FF3F3A]">
+                            ${item.previewListGrid.date < 10 ? `0${item.previewListGrid.date}` : item.previewListGrid.date}
+                        </p>
+                        <div class="flex flex-col gap-1">
+                            <p class="font-[Lato] font-bold text-[20px] leading-[150%] text-[#1E212C]">${item.previewListGrid[currentLang].month}</p>
+                            <p class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#787A80]">${item.previewListGrid.startTime} - ${item.previewListGrid.endTime}</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-center md:flex-1 md:gap-10">
+                        <div>
+                            <a href="./Pages/Events/event.html" class="inline-block flex-shrink-0 font-[Lato] font-bold text-[20px] leading-[150%] text-[#1E212C] pb-[8px]">
+                                ${item.previewListGrid[currentLang].previewTitle}
+                            </a>
+                            <p class="font-[Lato] font-normal text-[16px] leading-[150%] text-[#1E212C]">
+                                ${item.previewListGrid[currentLang].category}
+                            </p>
+                        </div>
+                        <div class="mt-5 md:mt-0 py-2">
+                            <a
+                                href="./Pages/Events/event.html"
+                                class="inline-block w-full md:w-auto text-center py-1 px-[32px] font-[Lato] font-normal text-[16px] leading-8 tracking-[0.5px] text-[#F75E05] border-[1px] border-[#F75E05] rounded-[4px] bg-transparent  transition-all duration-300 hover:shadow-[0px_4px_4px_0px_#F75E0580] hover:bg-[#F75E05] hover:text-white whitespace-nowrap">
+                                ${item.previewListGrid[currentLang].viewMore}
+                            </a>
+                        </div> 
+                    </div> 
+                </div>
+            `;
+                })
+                .join(" ")}
+        </div>
+        <div class="mt-[60px] flex justify-center">
+            <div class="flex items-center gap-10">
+                <p class="font-[Lato] font-bold text-[28px] leading-[150%] text-[#1E212C]">
+                    ${translateData[currentLang].doyouwatnmore}
+                </p>
+                <a href="./Pages/Events/events.html" class="inline-block py-2 px-[32px] font-[Lato] font-normal text-[16px] leading-8 tracking-[0.5px] text-white border-[1px] border-[#F75E05] rounded-[4px] bg-[#F75E05] transition-all duration-300 hover:shadow-[0px_4px_4px_0px_#F75E0580]">
+                    ${translateData[currentLang].exploreAllEvents}
+                </a>
+            </div>
+            <div>
+        </div>
+    </div>
+    <div class="absolute top-[-10%] right-0 opacity-20 rotate-[-90deg]">
+        <img src="Image/HomePagePhoto/circles (1).svg" alt="circles decoration" />
+    </div>
+    <div class="absolute bottom-0 left-0">
+        <img src="Image/HomePagePhoto/dots (1).svg" alt="dots decoration" />
+    </div>
+`;
+// our Events Section end
+
+// certificates Section
+const creatXCertificateSection = document.querySelector("#creatXCertificate");
+creatXCertificateSection.innerHTML = `
+    <div class="container mx-auto px-5 md:px-10 lg:px-20 lg:flex lg:justify-between lg:items-start">
+        <div class="mb-[16px]">
+            <div>
+                <span class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] text-[#1E212C] mb-[8px]">
+                    ${translateData[currentLang].createXCertificate.toUpperCase()}
+                </span>
+            </div>
+            <div>
+                <h1 class="font-[Lato] font-black text-[26px] w-full md:text-[36px] lg:text-[46px] leading-[130%] text-[#1E212C] mb-[18px] md:max-w-[400px]">
+                    ${translateData[currentLang].createXCertificateH1}
+                </h1>
+                <p class="font-[Lato] font-normal text-[16px] w-full md:max-w-[400px] leading-[160%] text-[#424551]">
+                    ${translateData[currentLang].createXCertificateP}
+                </p>
+            </div>
+            <div class="flex items-center gap-10 mt-[32px]">
+                <a href="#!" class="w-[105px] h-[50px] inline-block">
+                    <img src="./Image/HomePagePhoto/certificat-section-img-1.svg" alt="certificate image" class="w-full h-full object-cover" />
+                </a>
+                <a href="#!" class="w-[105px] h-[50px] inline-block">
+                    <img src="./Image/HomePagePhoto/certificat-section-img-2.svg" alt="certificate image" class="w-full h-full object-cover" />
+                </a>
+                <a href="#!" class="w-[105px] h-[50px] inline-block">
+                    <img src="./Image/HomePagePhoto/certificat-section-img-3.svg" alt="certificate image" class="w-full h-full object-cover" />
+                </a>
+            </div>
+        </div>
+        <div class="w-full h-auto lg:w-[60%]">
+            <img src="./Image/HomePagePhoto/certificate.jpg" alt="certificate image" class="w-full h-full object-cover z-10 shadow-lg rounded" />
+        </div>
+    </div>
+`;
+// certificates Section end
+
+// bestTutors Section
+const bestTutors = document.querySelector("#bestTutors");
+bestTutors.innerHTML = `
+    <div class="container mx-auto px-5 md:px-10 lg:px-20">
+        <div>
+            <span class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] text-[#1E212C] mb-2">
+                ${translateData[currentLang].bestTutorsHere.toUpperCase()}
+            </span>
+        </div>
+        <div class="flex justify-between items-center mb-[60px]">
+            <h1 class="font-[Lato] font-black text-[30px] md:text-[46px] leading-[130%] text-[#1E212C]">
+                ${translateData[currentLang].meetOurTema}
+            </h1>
+            <div class="flex items-center gap-3">
+                <button class="w-[48px] h-[48px] flex items-center justify-center rounded-full hover:bg-[#FF3F3A] transition-all duration-300 group">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16" class="rotate-180 text-[#424551] group-hover:text-[#FFFFFF] transition-all duration-300">
+	                    <path d="M0 0h16v16H0z" fill="none" />
+	                    <path fill="currentColor" fill-rule="evenodd" d="M1.25 8A.75.75 0 0 1 2 7.25h10.19L9.47 4.53a.75.75 0 0 1 1.06-1.06l4 4a.75.75 0 0 1 0 1.06l-4 4a.75.75 0 1 1-1.06-1.06l2.72-2.72H2A.75.75 0 0 1 1.25 8" clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <button class="w-[48px] h-[48px] flex items-center justify-center rounded-full hover:bg-[#FF3F3A] transition-all duration-300 group">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16" class="text-[#424551] group-hover:text-[#FFFFFF] transition-all duration-300">
+	                    <path d="M0 0h16v16H0z" fill="none" />
+                        <path fill="currentColor" fill-rule="evenodd" d="M1.25 8A.75.75 0 0 1 2 7.25h10.19L9.47 4.53a.75.75 0 0 1 1.06-1.06l4 4a.75.75 0 0 1 0 1.06l-4 4a.75.75 0 1 1-1.06-1.06l2.72-2.72H2A.75.75 0 0 1 1.25 8" clip-rule="evenodd" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="flex gap-[30px] overflow-hidden">
+            ${allCourses.map((item) => {
+                return `
+                    <div class="w-full md:max-w-[285px]]">
+                        <div class="w-full aspect-[3/4]">
+                            <img src="${item.curatorTitleImg}" alt="tutor image" class="w-full h-full object-cover" />
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-[Lato] font-bold text-[20px] leading-[150%] text-[#424551]">${item[currentLang].curator}</h3>
+                            <p class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#787A80]">${item.curator[currentLang].jobs}</p>
+                        </div>
+                    </div>
+                `
+            }).join(" ")}
+        </div>
+    </div>
+`
+// bestTutors Section end
 
 window.addEventListener("scroll", function () {
     const header = document.querySelector("header");
@@ -630,7 +985,7 @@ function updateLangModal() {
 function mainLangButton() {
     langBtn.innerHTML = `
         <img
-            src="${translateData[currentLang].header.flag}"
+            src="${translateData[currentLang].flag}"
             alt="language button icon"
         />
         <span class="downSpan transition-all duration-300">
