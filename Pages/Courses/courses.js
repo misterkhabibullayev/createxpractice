@@ -409,9 +409,9 @@ window.addEventListener("DOMContentLoaded", () => {
         commentData.forEach((com) => {
             html += `
             <div
-                                    class="relative max-[450px]:items-center p-6 flex flex-col items-start h-auto sm:items-start testimonial-itself w-full shrink-0 bg-white sm:p-6 my-6 md:p-10 rounded lg:mx-6 xl:mx-12 "
+                                    class="relative p-6 flex flex-col items-start h-auto sm:items-center lg:items-start testimonial-itself w-full shrink-0 bg-white sm:p-6 my-6 md:p-10 rounded"
                                 >
-                                    <div class="absolute left-[20px] md:left-[7px]">
+                                    <div class="absolute left-[20px] md:left-6 lg:left-5 xl:left-10">
                                         <img
                                             src="${com.braces}"
                                             alt="justIcon"
@@ -421,13 +421,13 @@ window.addEventListener("DOMContentLoaded", () => {
                                     
 
                                     <p
-                                        class="max-w-[400px] pl-10 text-sm sm:text-base sm:pl-10 sm:max-w-[500px] md:text-lg md:max-w-[750px] md:justify-self-center lg:text-xl lg:max-w-[900px] w-full lg:pl-10 xl:pl-14"
+                                        class="pl-10 text-sm sm:text-base sm:pl-10 sm:max-w-full md:text-lg md:max-w-full  lg:text-xl lg:max-w-[900px] w-full lg:pl-10 xl:pl-14"
                                         id="testimonials-opinion"
                                     >
                                         ${com.opinion}
                                     </p>
 
-                                    <div class=" sm:ml-[0px] flex items-center gap-5 mt-6 pl-14">
+                                    <div class="ml-[40px] sm:ml-0 lg:ml-10 flex items-start gap-5 mt-6 jusify-itself-start">
                                         <div>
                                             <img
                                                 src="${com.image}"
