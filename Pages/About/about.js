@@ -512,12 +512,12 @@ const headerMain = document.querySelector("#headerMain");
 headerMain.innerHTML = `
 <div class="container mx-auto px-5 md:px-10 lg:px-15 flex justify-between items-center py-5">
     <div class="flex items-center gap-7 md:gap-10">
-            <a href="#">
+            <a href="/index.html">
                 <img
                     src="../../Image/HomePagePhoto/logo.svg" alt="logo image"/>
             </a>
         <nav class="hidden lg:flex items-center gap-4 xl:gap-8">
-            <a class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300">${translateLang[currentLang].header.navAbout}</a>
+            <a href="../../Pages/About/about.html" class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300">${translateLang[currentLang].header.navAbout}</a>
             <a href="../../Pages/Courses/courses.html"
                class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300">
                ${translateLang[currentLang].header.navCourses}
@@ -677,9 +677,9 @@ section3.innerHTML = `
 </div>`;
 // section3 end
 
-// section4 start
-const section4 = document.querySelector("#section4");
-section4.innerHTML = `
+// our main direction start
+const ourMainDirection = document.querySelector("#ourMainDirection");
+ourMainDirection.innerHTML = `
 <div class="mx-auto items-center text-center mb-8 md:mb-8">
     <h6 class="font-[Lato] text-[#1E212C] font-bold text-base leading-[150%]">
         ${translateLang[currentLang].section4.section4_name}</h6>
@@ -762,11 +762,11 @@ section4.innerHTML = `
         ${translateLang[currentLang].section4.section4_last_card}</p>
     </div>
 </div>`;
-// section4 end
+// our main direction end
 
-// section5 start
-const section5 = document.querySelector("#section5");
-section5.innerHTML = `
+// studying process start
+const studyingProcess = document.querySelector("#studyingProcess");
+studyingProcess.innerHTML = `
  <div>
     <div class="mb-5 md:mb-10">
         <h6 class="text-[#1E212C] font-bold text-base leading-[150%]" >
@@ -776,62 +776,62 @@ section5.innerHTML = `
     <div class="relative">
         <div class="absolute left-1 top-2 bottom-2 border bg-[#9A9CA5]" ></div>
             <!-- birinchi -->
-            <div class="relative flex gap-6 pb-5">
-                <div class="w-2 h-2 rounded-full mt-2 bg-[#FF3F3A] shrink-0"></div>
-                <div>
-                    <span class="font-[Lato] text-xs text-[#787A80] font-black leading-[150%]" >
+        <div class="relative flex gap-6 pb-5">
+            <div class="w-2 h-2 rounded-full mt-2 bg-[#FF3F3A] shrink-0"></div>
+            <div>
+                <span class="font-[Lato] text-xs text-[#787A80] font-black leading-[150%]" >
                         ${translateLang[currentLang].section5.step} 1</span>
-                    <h3 class="font-[Lato] text-xl font-bold leading-[150%] text-[#1E212C]">
+                <h3 class="font-[Lato] text-xl font-bold leading-[150%] text-[#1E212C]">
                         ${translateLang[currentLang].section5.step1_title}</h3>
-                    <p class="font-[Lato] text-[#787A80] font-normal text-base leading-[160%]">
+                <p class="font-[Lato] text-[#787A80] font-normal text-base leading-[160%]">
                         ${translateLang[currentLang].section5.step1_text}</p>
-                </div>
             </div>
+        </div>
             <!-- ikkinchi -->
-            <div class="relative flex gap-6 pb-5">
-                <div class="w-2 h-2 rounded-full mt-2 bg-[#FF3F3A] shrink-0"></div>
-                <div>
-                    <span class="font-[Lato] text-xs text-[#787A80] font-black leading-[150%]">
+        <div class="relative flex gap-6 pb-5">
+            <div class="w-2 h-2 rounded-full mt-2 bg-[#FF3F3A] shrink-0"></div>
+            <div>
+                <span class="font-[Lato] text-xs text-[#787A80] font-black leading-[150%]">
                         ${translateLang[currentLang].section5.step} 2</span>
-                    <h3 class="font-[Lato] text-xl font-bold leading-[150%] text-[#1E212C]">
+                <h3 class="font-[Lato] text-xl font-bold leading-[150%] text-[#1E212C]">
                          ${translateLang[currentLang].section5.step2_title}</h3>
-                    <p class="font-[Lato] text-[#787A80] font-normal text-base leading-[160%]">
+                <p class="font-[Lato] text-[#787A80] font-normal text-base leading-[160%]">
                             ${translateLang[currentLang].section5.step2_text}</p>
-                </div>
             </div>
+        </div>
             <!-- uchinchi -->
-            <div class="relative flex gap-6 pb-5">
-                <div class="w-2 h-2 rounded-full mt-2 bg-[#FF3F3A] shrink-0"></div>
-                <div>
-                    <span class="font-[Lato] text-xs text-[#787A80] font-black leading-[150%]">${translateLang[currentLang].section5.step} 3</span>
-                    <h3 class="font-[Lato] text-xl font-bold leading-[150%] text-[#1E212C]">
+        <div class="relative flex gap-6 pb-5">
+            <div class="w-2 h-2 rounded-full mt-2 bg-[#FF3F3A] shrink-0"></div>
+            <div>
+                <span class="font-[Lato] text-xs text-[#787A80] font-black leading-[150%]">${translateLang[currentLang].section5.step} 3</span>
+                <h3 class="font-[Lato] text-xl font-bold leading-[150%] text-[#1E212C]">
                             ${translateLang[currentLang].section5.step3_title}</h3>
-                    <p class="font-[Lato] text-[#787A80] font-normal text-base leading-[160%]">${translateLang[currentLang].section5.step3_text}</p>
-                </div>
+                <p class="font-[Lato] text-[#787A80] font-normal text-base leading-[160%]">${translateLang[currentLang].section5.step3_text}</p>
             </div>
+        </div>
             <!-- tortinchi -->
-            <div class="relative flex gap-6 pb-5">
-                <div class="w-2 h-2 rounded-full mt-2 bg-[#FF3F3A] shrink-0"></div>
-                <div>
-                    <span class="font-[Lato] text-xs text-[#787A80] font-black leading-[150%]">
+        <div class="relative flex gap-6 pb-5">
+            <div class="w-2 h-2 rounded-full mt-2 bg-[#FF3F3A] shrink-0"></div>
+            <div>
+                <span class="font-[Lato] text-xs text-[#787A80] font-black leading-[150%]">
                         ${translateLang[currentLang].section5.step} 4</span>
-                    <h3 class="font-[Lato] text-xl font-bold leading-[150%] text-[#1E212C]">
+                <h3 class="font-[Lato] text-xl font-bold leading-[150%] text-[#1E212C]">
                         ${translateLang[currentLang].section5.step4_title}</h3>
-                    <p class="font-[Lato] text-[#787A80] font-normal text-base leading-[160%]">
+                <p class="font-[Lato] text-[#787A80] font-normal text-base leading-[160%]">
                         ${translateLang[currentLang].section5.step4_text}</p>
-                </div>
             </div>
         </div>
     </div>
-    <div>
+</div>
+<div>
     <img class="w-full object-contain max-h-[500px] mb-5 md:mb-0" 
         src="../../Image/aboutUs-photo/illustration.png"/>
 </div>`;
-// section5 end
+// studying process end
 
-// section 6 start
-const section6 = document.querySelector("#section6");
-section6.innerHTML = `
+// best tutors start
+const bestTutors = document.querySelector("#bestTutors");
+bestTutors.innerHTML = `
 <div class="mx-auto items-center text-center mb-8 md:mb-8">
     <h6 class="font-[Lato] text-[#1E212C] font-bold text-base leading-[150%]">
         ${translateLang[currentLang].section6.section6_name}
@@ -996,11 +996,11 @@ section6.innerHTML = `
         </div>
     </div>
 </div>`;
-// section 6 end
+// best tutors end
 
-// section 7 start
-const section7 = document.querySelector("#section7");
-section7.innerHTML = `
+// testimonials start
+const testimonials = document.querySelector("#testimonials");
+testimonials.innerHTML = `
  <div class="container mx-auto px-5 md:px-10 lg:px-15">
     <div class="mx-auto items-center text-center mb-5 md:mb-8">
         <h6 class="font-[Lato] text-[#1E212C] font-bold text-base leading-[150%]">
@@ -1015,57 +1015,49 @@ section7.innerHTML = `
             <div class="swiper w-full max-w-lg lg:max-w-4xl overflow-hidden">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide w-auto mx-auto bg-[#FFFFFF] p-5 lg:p-10 rounded shadow-lg">
-                            <div class="flex gap-3 md:gap-6">
-                                <img class="w-5 h-5 md:w-7 md:h-7"
-                                     src="../../Image/aboutUs-photo/braces.svg" />
-                                <div>
-                                    <p class="text-[#424551] text-sm leading-5">
-                                        ${translateLang[currentLang].section7.comment}
-                                    </p>
-                                    <div class="flex items-center gap-4 mt-5">
-                                        <img src="../../Image/aboutUs-photo/commentor-img2.png"
-                                             class="w-16 h-16 rounded-full"/>
-                                        <div>
-                                            <h3 class="font-bold">
-                                                ${translateLang[currentLang].section7.elenor}
-                                            </h3>
-                                            <p class="text-gray-500 text-sm">
-                                                ${translateLang[currentLang].section7.elenors}
-                                            </p>
-                                        </div>
+                        <div class="flex gap-3 md:gap-6">
+                            <img class="w-5 h-5 md:w-7 md:h-7"
+                                 src="../../Image/aboutUs-photo/braces.svg" />
+                            <div>
+                                <p class="text-[#424551] text-sm leading-5">
+                                    ${translateLang[currentLang].section7.comment}</p>
+                                <div class="flex items-center gap-4 mt-5">
+                                    <img src="../../Image/aboutUs-photo/commentor-img2.png"
+                                        class="w-16 h-16 rounded-full"/>
+                                    <div>
+                                        <h3 class="font-bold">
+                                            ${translateLang[currentLang].section7.elenor}</h3>
+                                        <p class="text-gray-500 text-sm">
+                                            ${translateLang[currentLang].section7.elenors}</p>
                                     </div>
                                 </div>
-                            </div>
+                             </div>
                         </div>
-
+                    </div>
                                     <!-- Ikkinchi slide -->
-                        <div class="swiper-slide w-auto mx-auto bg-[#FFFFFF] p-5 lg:p-10 rounded shadow-lg">
-                            <div class="flex gap-3 md:gap-6">
-                                <img class="w-5  h-5 md:w-7 md:h-7"
+                    <div class="swiper-slide w-auto mx-auto bg-[#FFFFFF] p-5 lg:p-10 rounded shadow-lg">
+                        <div class="flex gap-3 md:gap-6">
+                            <img class="w-5  h-5 md:w-7 md:h-7"
                                     src="../../Image/aboutUs-photo/braces.svg" />
-                                <div>
-                                    <p class="text-[#424551] text-sm leading-5">
-                                        ${translateLang[currentLang].section7.comment}
-                                    </p>
-                                    <div class="flex items-center gap-4 mt-5">
-                                        <img src="../../Image/aboutUs-photo/commentor-img1.jpg"
-                                            class="w-16 h-16 rounded-full"/>
-                                        <div>
-                                            <h3 class="font-bold">Courtney Alexander</h3>
-                                            <p class="text-gray-500 text-sm">
-                                                ${translateLang[currentLang].section7.elenors}
-                                            </p>
-                                        </div>
+                            <div>
+                                <p class="text-[#424551] text-sm leading-5">
+                                 ${translateLang[currentLang].section7.comment}</p>
+                                <div class="flex items-center gap-4 mt-5">
+                                    <img src="../../Image/aboutUs-photo/commentor-img1.jpg"
+                                         class="w-16 h-16 rounded-full"/>
+                                    <div>
+                                        <h3 class="font-bold">Courtney Alexander</h3>
+                                        <p class="text-gray-500 text-sm">
+                                           ${translateLang[currentLang].section7.elenors}</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-            <!-- Next -->
-            <div class="swiper-button-next !right-0 -mr-5 active:text-[#FFFFFF] text-[#424551] after:!w-6 !h-6">
             </div>
+            <!-- Next -->
+            <div class="swiper-button-next !right-0 -mr-5 active:text-[#FFFFFF] text-[#424551] after:!w-6 !h-6"></div>
         </div> 
     </div>
 </div>`;
@@ -1084,19 +1076,17 @@ const swiper = new Swiper(".swiper", {
         nextEl: ".swiper-button-next",
     },
 });
-// section 7 end
+// testimonials end
 
-// section 8 start
-const section8 = document.querySelector("#section8");
-section8.innerHTML = `
+// best jobs start
+const bestJobs = document.querySelector("#bestJobs");
+bestJobs.innerHTML = `
 <div class="container mx-auto px-5 md:px-10 lg:px-15">
     <div class="mx-auto items-center text-center mb-5 md:mb-8">
         <h6 class="font-[Lato] text-[#1E212C] font-bold text-base leading-[150%]">
-        ${translateLang[currentLang].section8.section8_name}
-        </h6>
+        ${translateLang[currentLang].section8.section8_name}</h6>
         <h1 class="font-[Lato] text-[#1E212C] font-extrabold text-xl sm:leading-[130%] sm:text-3xl lg:font-black lg:text-4xl">
-        ${translateLang[currentLang].section8.section8_title}
-        </h1>
+        ${translateLang[currentLang].section8.section8_title}</h1>
     </div>
     <div class="grid grid-cols-4 gap-4 md:grid-cols-6 md:gap-6">
         <img class="mx-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer"
@@ -1124,35 +1114,30 @@ section8.innerHTML = `
         <img class="mx-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer"
             src="https://createx.createx.studio/assets/img/online-courses/logo/exxon.svg"/>
     </div>
-</div>
-`;
-// section 8 end
+</div>`;
+// best jobs end
 
-// section 9 start
-const section9 = document.querySelector("#section9");
-section9.innerHTML = `
+// our blog start
+const ourBlog = document.querySelector("#ourBlog");
+ourBlog.innerHTML = `
 <div class="mx-auto mb-5 md:mb-10">
     <h6 class="font-[Lato] text-[#1E212C] font-bold text-base leading-[150%]">
-        ${translateLang[currentLang].section8.ourBlog}
-    </h6>
+        ${translateLang[currentLang].section8.ourBlog}</h6>
     <div class="flex justify-between items-center">
-        <h1 class="font-[Lato] text-[#1E212C] font-extrabold text-xl sm:leading-[130%] sm:text-3xl lg:font-black lg:text-4xl">${translateLang[currentLang].section8.latestPosts}
-        </h1>
+        <h1 class="font-[Lato] text-[#1E212C] font-extrabold text-xl sm:leading-[130%] sm:text-3xl lg:font-black lg:text-4xl">${translateLang[currentLang].section8.latestPosts}</h1>
         <a href="../Blogs/blogs.html">
             <button class="bg-[#F75E05] text-white px-4 md:py-2 md:px-7 rounded hover:bg-white hover:text-[#F75E05] hover:border border-[#F75E05]" >
-                  ${translateLang[currentLang].section8.goBlog}
-            </button>
+                  ${translateLang[currentLang].section8.goBlog}</button>
         </a>
     </div>
 </div>
 <div class="grid sm:grid-cols-3 gap-5">
         <!-- birinchi -->
     <div class="group relative overflow-hidden rounded-xl">
-        <a class="flex gap-1 top-4 absolute left-3 z-20 bg-white rounded-md"                    href="../Blogs/blogs.html">
-        <img class="absolute left-1" src="../../Image/aboutUs-photo/mic.svg" />
-        <button class="bg-[#FFFFFF] text-sm font-normal pl-2 pr-1 rounded-md ml-3">
-            ${translateLang[currentLang].section8.podcast}
-        </button>
+        <a class="flex gap-1 top-4 absolute left-3 z-20 bg-white rounded-md"                  href="../Blogs/blogs.html">
+            <img class="absolute left-1" src="../../Image/aboutUs-photo/mic.svg" />
+            <button class="bg-[#FFFFFF] text-sm font-normal pl-2 pr-1 rounded-md ml-3">
+                ${translateLang[currentLang].section8.podcast}</button>
         </a>
         <img
             class="w-full transition-transform duration-500 hover:scale-105"
@@ -1162,7 +1147,7 @@ section9.innerHTML = `
             <img class="ml-2" src="../../Image/aboutUs-photo/Vector (Stroke).svg"/>
             <span class="font-[Lato] font-semibold text-sm leading-[100%] text-[#787A80] pr-2 border-r border-[#787A80]">${translateLang[currentLang].section8.september} 4, 2020   </span>
             <img class="ml-2" src="../../Image/aboutUs-photo/Union.svg"/>
-             <span class="font-[Lato] font-semibold text-sm leading-[100%] text-[#787A80]"> 36      ${translateLang[currentLang].section8.min}</span>
+             <span class="font-[Lato] font-semibold text-sm leading-[100%] text-[#787A80]"> 36     ${translateLang[currentLang].section8.min}</span>
         </div>
         <div>
             <h6 class="font-[Lato] font-bold text-sm md:text-lg leading-[120%] py-2 text-[#1E212C]"
@@ -1171,7 +1156,7 @@ section9.innerHTML = `
                 ${translateLang[currentLang].section8.section8_card1_text}</p>
             <a href="../Blogs/blogs.html" class="flex gap-3 items-center">
                 <button class="font-semibold text-base leading-[160%] text-[#1E212C] hover:text-red-500 font-[Lato]">${translateLang[currentLang].section8.listen}
-                /button>
+                </button>
                 <img src="../../Image/aboutUs-photo/about.section4.strelka.svg"/>
             </a>
         </div>
@@ -1226,7 +1211,7 @@ section9.innerHTML = `
         </div>
         <div>
             <h6 class="font-[Lato] font-bold text-sm md:text-lg leading-[120%] py-2 text-[#1E212C]"
-                > ${translateLang[currentLang].section8.section8_card1_title}/h6>
+                > ${translateLang[currentLang].section8.section8_card1_title}</h6>
             <p class="font-[Lato] font-normal text-sm leading-[130%] text-[#424551] mb-2">
                 ${translateLang[currentLang].section8.section8_card1_text}</p>
             <a href="../Blogs/blogs.html" class="flex gap-3 items-center">
@@ -1236,7 +1221,7 @@ section9.innerHTML = `
         </div>
     </div>
 </div>`;
-// section 9 end
+// our blog end
 // section10
 // LANGUAGE BUTTON
 window.addEventListener("scroll", function () {
