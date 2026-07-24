@@ -246,7 +246,6 @@ window.addEventListener("DOMContentLoaded", () => {
                     "left-0",
                     "bg-white",
                     "shadow-[0px_8px_8px_0px_rgba(0,0,0,0.1)]",
-                    "z-10",
                 );
                 header.classList.add("absolute", "bg-transparent");
             }
