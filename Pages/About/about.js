@@ -516,7 +516,7 @@ headerMain.innerHTML = `
     >
         <div class="flex items-center gap-7 md:gap-10">
             <div class="">
-                <a href="#">
+                <a href="../../index.html">
                     <img
                         src="../../Image/HomePagePhoto/logo.svg"
                         alt="logo image"
@@ -525,6 +525,7 @@ headerMain.innerHTML = `
             </div>
             <nav class="hidden lg:flex items-center gap-4 xl:gap-8">
                 <a
+                    href="../../Pages/About/about.html"
                     class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
                 >${translateLang[currentLang].header.navAbout}</a>
                 <a
