@@ -1446,7 +1446,7 @@ export const allCourses = [
     {
         id: 5,
         backColor: "#5D88F8",
-        curatorTitleImg: "Image/courses-photo/people/tutor5.png",
+        curatorTitleImg: "Image/courses-photo/people/tutor6.png",
         coursePrice: "400",
         curator: {
             curatorSulyemanMainImage:
@@ -1728,11 +1728,11 @@ export const allCourses = [
     },
     {
         id: 6,
-        backColor: "",
-        curatorTitleImg: "",
+        backColor: "#F52F6E",
+        curatorTitleImg: "Image/courses-photo/people/tutor5.png",
         coursePrice: "500",
         curator: {
-            curatorSulyemanMainImage: "",
+            curatorSulyemanMainImage: "Image/courses-photo/people/tutor5.png",
             curatorName: "Guy Hawkins",
             rate: 4.9,
             courses: 4,

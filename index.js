@@ -1,7 +1,7 @@
 import { allCourses } from "./AllCourses.js";
 import { allEvents } from "./AllEvents.js";
 console.log(allCourses);
- const translateData = {
+const translateData = {
     en: {
         langTitle: "EN",
         flag: "Image/HomePagePhoto/twemoji--flag-united-states.svg",
@@ -885,13 +885,13 @@ bestTutors.innerHTML = `
                 ${translateData[currentLang].meetOurTema}
             </h1>
             <div class="flex items-center gap-3">
-                <button class="w-[48px] h-[48px] flex items-center justify-center rounded-full hover:bg-[#FF3F3A] transition-all duration-300 group">
+                <button class="custom-prev-btn w-[48px] h-[48px] flex items-center justify-center rounded-full hover:bg-[#FF3F3A] transition-all duration-300 group">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16" class="rotate-180 text-[#424551] group-hover:text-[#FFFFFF] transition-all duration-300">
 	                    <path d="M0 0h16v16H0z" fill="none" />
 	                    <path fill="currentColor" fill-rule="evenodd" d="M1.25 8A.75.75 0 0 1 2 7.25h10.19L9.47 4.53a.75.75 0 0 1 1.06-1.06l4 4a.75.75 0 0 1 0 1.06l-4 4a.75.75 0 1 1-1.06-1.06l2.72-2.72H2A.75.75 0 0 1 1.25 8" clip-rule="evenodd" />
                     </svg>
                 </button>
-                <button class="w-[48px] h-[48px] flex items-center justify-center rounded-full hover:bg-[#FF3F3A] transition-all duration-300 group">
+                <button class="custom-next-btn w-[48px] h-[48px] flex items-center justify-center rounded-full hover:bg-[#FF3F3A] transition-all duration-300 group">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16" class="text-[#424551] group-hover:text-[#FFFFFF] transition-all duration-300">
 	                    <path d="M0 0h16v16H0z" fill="none" />
                         <path fill="currentColor" fill-rule="evenodd" d="M1.25 8A.75.75 0 0 1 2 7.25h10.19L9.47 4.53a.75.75 0 0 1 1.06-1.06l4 4a.75.75 0 0 1 0 1.06l-4 4a.75.75 0 1 1-1.06-1.06l2.72-2.72H2A.75.75 0 0 1 1.25 8" clip-rule="evenodd" />
@@ -899,23 +899,41 @@ bestTutors.innerHTML = `
                 </button>
             </div>
         </div>
-        <div class="flex gap-[30px] overflow-hidden">
-            ${allCourses.map((item) => {
-                return `
-                    <div class="w-full md:max-w-[285px]]">
-                        <div class="w-full aspect-[3/4]">
-                            <img src="${item.curatorTitleImg}" alt="tutor image" class="w-full h-full object-cover" />
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="font-[Lato] font-bold text-[20px] leading-[150%] text-[#424551]">${item[currentLang].curator}</h3>
-                            <p class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#787A80]">${item.curator[currentLang].jobs}</p>
-                        </div>
+        <div class="w-full h-full swiper mySwiper">
+            <div class="swiper-wrapper">
+            ${allCourses
+                .map((item) => {
+                    return `
+                <div class="w-full swiper-slide text-center">
+                    <div class="w-full aspect-[3/4] mb-4 overflow-hidden">
+                        <img src="${item.curatorTitleImg}" alt="tutor image" class="w-full h-full object-cover" />
                     </div>
-                `
-            }).join(" ")}
+                    <div class="flex-1">
+                        <h3 class="font-[Lato] font-bold text-[20px] leading-[150%] text-[#424551]">${item[currentLang].curator}</h3>
+                        <p class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#787A80]">${item.curator[currentLang].jobs}</p>
+                    </div>
+                </div>
+            `;
+                })
+                .join(" ")}
+            </div>
         </div>
     </div>
-`
+`;
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    loop: true,
+    navigation: {
+        nextEl: ".custom-next-btn",
+        prevEl: ".custom-prev-btn",
+    },
+    breakpoints: {
+        640: { slidesPerView: 2, spaceBetween: 20 },
+        768: { slidesPerView: 3, spaceBetween: 25 },
+        1024: { slidesPerView: 4, spaceBetween: 30 },
+    },
+});
 // bestTutors Section end
 
 window.addEventListener("scroll", function () {
