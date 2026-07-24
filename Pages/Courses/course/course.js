@@ -108,6 +108,12 @@ window.addEventListener("DOMContentLoaded", () => {
                     },
                 ],
             },
+            benefits: {
+                intro: {
+                    badge: "For whom?",
+                    title: "Who will benefit from the course:",
+                },
+            },
         },
     };
 
@@ -695,12 +701,12 @@ window.addEventListener("DOMContentLoaded", () => {
 
         let earlyBirdsContentHTML = "";
         earlyBirdsContentHTML += `
-        <div class='discount__text__inputs__container px-12 py-2'> 
+        <div class='discount__text__inputs__container desktop992:px-12 py-2'> 
         <div class=' BIGG'>
 
-        <div class='flex justify-between'> 
+        <div class='flex flex-col items-center md:flex-row md:justify-between'> 
             <div>
-                <h2 class='text-3xl font-black text-[rgb(30,33,44)] leading-[41.6px] '>${earlyBirdsData.title}</h2>
+                <h2 class='mb-6 lg:whitespace-nowrap text-3xl font-black text-[rgb(30,33,44)] leading-[41.6px] '>${earlyBirdsData.title}</h2>
             </div>
 
                 <div class='flex gap-4'>
@@ -726,44 +732,93 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
       
-            <form class='flex gap-10 items-center mt-10 border-2 border-black'> 
-            <div class='px-[15px]'>
-                    <div class='flex flex-col mb-6'> 
-                        <label for='user-name' class='mb-2'>${earlyBirdsData.inputsInfo.input1}</label>
+            <form class='grid max-[576px]:grid-cols-1 grid-cols-2 desktop992:grid-cols-4 items-center mt-10'> 
+            <div class='min-[576px]:px-[15px]'>
+                    <div class='flex flex-col mb-6 pt-6 relative z-0'> 
+                        <label for='user-name' class='absolute top-0 left-0 mb-2'>${earlyBirdsData.inputsInfo.input1}</label>
                         <input
                         class='w-full outline-none px-4 py-2.5 text-[0.875rem] border-gray-300 border-[1px] rounded text-[#424551] transition-all duration-300  focus:border-red-400/80'
                         type="text" id='user-name' name='name' placeholder="${earlyBirdsData.inputsInfo.inputPlaceholder1}">
                     </div>
             </div>
 
-            <div class='px-[15px]'>
-                    <div class='flex flex-col mb-6'> 
-                        <label for='user-name' class='mb-2'>${earlyBirdsData.inputsInfo.input2}</label>
+            <div class='min-[576px]:px-[15px]'>
+                    <div class='flex flex-col mb-6 pt-6 relative z-0'> 
+                        <label for='user-email' class='absolute top-0 left-0 mb-2'>${earlyBirdsData.inputsInfo.input2}</label>
                         <input
                         class='w-full outline-none px-4 py-2.5 text-[0.875rem] border-gray-300 border-[1px] rounded text-[#424551] transition-all duration-300  focus:border-red-400/80'
-                        type="text" id='user-name' name='name' placeholder="${earlyBirdsData.inputsInfo.inputPlaceholder2}">
+                        type="email" id='user-email' name='email' placeholder="${earlyBirdsData.inputsInfo.inputPlaceholder2}">
                     </div>
             </div>
 
-            <div class='px-[15px]'>
-                    <div class='flex flex-col mb-6'> 
-                        <label for='user-name' class='mb-2'>${earlyBirdsData.inputsInfo.input3}</label>
+            <div class='min-[576px]:px-[15px]'>
+                    <div class='flex flex-col mb-6 pt-6 relative z-0'> 
+                        <label for='user-phone' class='absolute top-0 left-0 mb-2'>${earlyBirdsData.inputsInfo.input3}</label>
                         <input
                         class='w-full outline-none px-4 py-2.5 text-[0.875rem] border-gray-300 border-[1px] rounded text-[#424551] transition-all duration-300  focus:border-red-400/80'
-                        type="text" id='user-name' name='name' placeholder="${earlyBirdsData.inputsInfo.inputPlaceholder3}">
+                        type="tel" id='user-phone' name='phone' placeholder="${earlyBirdsData.inputsInfo.inputPlaceholder3}">
                     </div>
             </div>
                
-            <div class='button-container px-[15px]'>
-                <button type='submit' class='px-8 pt-2.5 bg-[rgb(255,63,58)0%,]'>${earlyBirdsData.inputsInfo.button}</button>
+                      <div class='min-[576px]:px-[15px]'>
+                    <div class='flex flex-col mb-6 pt-6 relative z-0'> 
+                    <button type='submit' class='w-full text-sm rounded py-2.5 bg-gradient-to-l from-[#F75E05] to-[#FF3F3A] text-white'>${earlyBirdsData.inputsInfo.button}</button>
+                    </div>
             </div>
-            </form>
-      </div>
+
         `;
 
         earlyBirdsContent.innerHTML = earlyBirdsContentHTML;
         console.log(earlyBirds);
     }
     updateEarlyBirds();
-    // *************** EARLY BIRDS section ***************
+    // *************** Benefits section ***************
+    const BENEFITS = document.getElementById("BENEFITS");
+    console.log(BENEFITS);
+
+    function updateBenefits() {
+        const aboutTheCourseData = locale[currentLang].aboutTheCourse.intro.icon;
+        console.log(aboutTheCourseData)
+        const benefitData = locale[currentLang].benefits;
+      const courseWithId0 = allCourses.find((c) => c.id === 0);
+        
+
+        const benefitsContainer = document.createElement("div");
+        benefitsContainer.className =
+            "container mx-auto px-5 md:px-10 lg:px-20 mt-[96px]";
+        BENEFITS.appendChild(benefitsContainer);
+
+        const benefitsContent = document.createElement("div");
+        benefitsContent.className = "benefit-content flex flex-col md:flex-row md:items-center";
+        benefitsContainer.appendChild(benefitsContent);
+
+        let benefitHTML = ``;
+
+        benefitHTML += `
+            <div class='px-[15px]'>
+                <h6 class='font-bold uppercase text-[rgb(30,33,44)] mb-2'>${benefitData.intro.badge}</h6>
+                <h1 class='text-[rgb(30,33,44)] font-black text-3xl lg:text-5xl mb-4'>${benefitData.intro.title}</h1>
+           
+            </div>
+            <div class='each-benefits-container md:ml-[65px] lg:80px xl:ml-[105px] px-[15px]'>
+                ${Object.values(courseWithId0[currentLang].forWhom).map((info) => `
+                        <div class='flex items-start'>
+                            <div class="w-4 h-4 mr-4 mt-2">
+                                <img class='w-full h-full object-cover' src="${aboutTheCourseData}"/>
+                            </div>
+
+                            <div class='flex-1 mb-2'>
+                                <p class='pb-1'>${info}</p>
+                            </div>
+                        </div>
+
+                    `).join(' ')}
+            </div>
+        
+        `;
+
+        benefitsContent.innerHTML = benefitHTML;
+    }
+    updateBenefits();
+    // *************** Benefits section ***************
 });
