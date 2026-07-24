@@ -590,7 +590,7 @@ headerMain.innerHTML = `
 const heroSection = document.querySelector("#heroSection");
 heroSection.innerHTML = `
   <div
-                    class="container mx-auto px-5 flex flex-col-reverse text-center items-center mt-20 mb-10 md:text-left md:flex md:flex-row md:justify-between md:items-start md:px-10 md:mt-20 md:mb-14 lg:px-15 lg:mt-34 lg:mb-24"
+                    class="container mx-auto px-5 flex flex-col-reverse text-center items-center mb-10 md:text-left md:flex md:flex-row md:justify-between md:items-start md:px-10 md:mb-14 lg:px-15 lg:mb-24 pt-[80px]"
                 >
                     <div>
                         <h6
@@ -1814,9 +1814,8 @@ window.addEventListener("scroll", function () {
             "left-0",
             "bg-white",
             "shadow-[0px_8px_8px_0px_rgba(0,0,0,0.1)]",
-            "z-10",
         );
-        header.classList.remove("absolute", "bg-transparent");
+        header.classList.remove("bg-transparent");
     } else {
         header.classList.remove(
             "fixed",
@@ -1824,9 +1823,8 @@ window.addEventListener("scroll", function () {
             "left-0",
             "bg-white",
             "shadow-[0px_8px_8px_0px_rgba(0,0,0,0.1)]",
-            "z-10",
         );
-        header.classList.add("absolute", "bg-transparent");
+        header.classList.add("bg-transparent");
     }
 });
 
