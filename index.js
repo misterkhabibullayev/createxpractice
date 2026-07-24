@@ -814,8 +814,8 @@ ourEvents.innerHTML = `
                 .join(" ")}
         </div>
         <div class="mt-[60px] flex justify-center">
-            <div class="flex items-center gap-10">
-                <p class="font-[Lato] font-bold text-[28px] leading-[150%] text-[#1E212C]">
+            <div class="flex flex-col md:flex-row items-center gap-5 z-[5]">
+                <p class="font-[Lato] font-bold text-[18px] md:text-[28px] leading-[150%] text-[#1E212C] text-center">
                     ${translateData[currentLang].doyouwatnmore}
                 </p>
                 <a href="./Pages/Events/events.html" class="inline-block py-2 px-[32px] font-[Lato] font-normal text-[16px] leading-8 tracking-[0.5px] text-white border-[1px] border-[#F75E05] rounded-[4px] bg-[#F75E05] transition-all duration-300 hover:shadow-[0px_4px_4px_0px_#F75E0580]">
@@ -904,8 +904,8 @@ bestTutors.innerHTML = `
             ${allCourses
                 .map((item) => {
                     return `
-                <div class="w-full swiper-slide text-center">
-                    <div class="relative w-full aspect-[3/4] rounded-lg overflow-hidden group mb-4">
+                <div class="w-full swiper-slide text-center group">
+                    <div class="relative w-full aspect-[3/3.5] rounded-lg overflow-hidden mb-4">
                         <img src="${item.curatorTitleImg}" alt="tutor image" class="w-full h-full object-cover" />
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end justify-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             <div class="flex items-center gap-3 text-[#ACABAB] ">
@@ -927,8 +927,8 @@ bestTutors.innerHTML = `
                         </div>
                     </div>
                     <div class="flex-1">
-                        <h3 class="font-[Lato] font-bold text-[20px] leading-[150%] text-[#424551]">${item[currentLang].curator}</h3>
-                        <p class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#787A80]">${item.curator[currentLang].jobs}</p>
+                        <h3 class="font-[Lato] font-bold text-[20px] leading-[150%] text-[#424551] select-none">${item[currentLang].curator}</h3>
+                        <p class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#787A80] select-none">${item.curator[currentLang].jobs}</p>
                     </div>
                 </div>
             `;
@@ -1073,13 +1073,13 @@ testimonials.innerHTML = `
                                     </div>
                                     <div class="flex-1">
                                         <h2 class="font-[Lato] font-normal text-[20px] leading-[150%] text-[#424551] mb-[24px]">${item.comment}</h2>
-                                        <div class="flex items-center gap-[20px]">
+                                        <div class="flex flex-col md:flex-row items-center gap-[20px]">
                                             <div class="w-[72px] h-[72px] rounded-full overflow-hidden">
                                                 ${item.authorImage}
                                             </div>
                                             <div class="flex-1">
-                                                <h4 class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#1E212C] mb-[4px]">${item[currentLang].authorName}</h4>
-                                                <p class="font-[Lato] font-normal text-[14px] leading-[150%] text-[#787A80]">${item[currentLang].position}, ${item[currentLang].course}</p>
+                                                <h4 class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#1E212C] text-center md:text-left mb-[4px]">${item[currentLang].authorName}</h4>
+                                                <p class="font-[Lato] font-normal text-[14px] leading-[150%] text-[#787A80] text-center md:text-left">${item[currentLang].position}, ${item[currentLang].course}</p>
                                             </div>
                                         </div>
                                     </div>
