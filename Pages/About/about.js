@@ -512,12 +512,10 @@ const headerMain = document.querySelector("#headerMain");
 headerMain.innerHTML = `
 <div class="container mx-auto px-5 md:px-10 lg:px-15 flex justify-between items-center py-5">
     <div class="flex items-center gap-7 md:gap-10">
-        <div>
             <a href="#">
                 <img
                     src="../../Image/HomePagePhoto/logo.svg" alt="logo image"/>
             </a>
-        </div>
         <nav class="hidden lg:flex items-center gap-4 xl:gap-8">
             <a class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300">${translateLang[currentLang].header.navAbout}</a>
             <a href="../../Pages/Courses/courses.html"
@@ -591,59 +589,7 @@ heroSection.innerHTML = `
         <img class="w-full object-contain mb-5 lg:max-w-[460px]"
              src="../../Image/aboutUs-photo/about.section1.img.png"/>
     </div>
-</div>`;
-  <div
-                    class="container mx-auto px-5 flex flex-col-reverse text-center items-center mb-10 md:text-left md:flex md:flex-row md:justify-between md:items-start md:px-10 md:mb-14 lg:px-15 lg:mb-24 pt-[80px]"
-                >
-                    <div>
-                        <h6
-                            class="text-[#1E212C] font-bold text-base leading-[150%]"
-                        >
-                          ${translateLang[currentLang].heroSection.hero_name}
-                        </h6>
-                        <h1
-                            class="font-[Lato] text-[#1E212C] font-bold text-2xl leading-[130%] sm:text-3xl lg:font-black lg:text-4xl"
-                        >
-                           ${translateLang[currentLang].heroSection.heroTitle}
-                        </h1>
-                        <h5
-                            class="font-[Lato] text-[#1E212C] font-bold text-base leading-[130%] mb-3 sm:leading-[150%] md:max-w-sm md:mt-7 md:mb-4 lg:text-xl lg:max-w-xl lg:mt-10 lg:mb-6"
-                        >
-                            ${translateLang[currentLang].heroSection.heroText}
-                        </h5>
-                        <p
-                            class="font-[Lato] text-[#424551] font-normal mb-5 leading-[130%] text-sm md:max-w-lg md:mb-8 lg:text-base lg:leading-[150%] lg:max-w-2xl lg:mb-14"
-                        >
-                            ${translateLang[currentLang].heroSection.heroP}
-                        </p>
-
-                        <div
-                            class="flex flex-col items-center gap-[10px] sm:flex-row sm:mx-auto sm:mb-7 ml-0 sm:ml-32 md:ml-0"
-                        >
-                            <a href="../Events/events.html">
-                                <button
-                                    class="font-[Lato] text-[#F75E05] border border-[#FF3F3A] hover:text-[white] hover:bg-[#FF3F3A] rounded-md transition-all duration-500 font-semibold leading-[40px] px-16 sm:px-[30px] lg:px-[40px]"
-                                >
-                                    ${translateLang[currentLang].heroSection.explore_button}
-                                </button>
-                            </a>
-                            <a href="../Courses/courses.html">
-                                <button
-                                    class="font-[Lato] text-[#FFFFFF] bg-[#F75E05] border border-[#FF3F3A] hover:text-[#F75E05] hover:bg-[white] rounded-md transition-all duration-500 font-semibold leading-[40px] px-16 sm:px-[30px] lg:px-[40px]"
-                                >
-                                    ${translateLang[currentLang].heroSection.browse_button}
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                    <div>
-                        <img
-                            class="w-full object-contain mb-5 lg:max-w-[460px]"
-                            src="../../Image/aboutUs-photo/about.section1.img.png"
-                            alt="image"
-                        />
-                    </div>
-                </div>
+</div>
 `;
 // heroSection end
 
@@ -858,7 +804,7 @@ section5.innerHTML = `
                 <div class="w-2 h-2 rounded-full mt-2 bg-[#FF3F3A] shrink-0"></div>
                 <div>
                     <span class="font-[Lato] text-xs text-[#787A80] font-black leading-[150%]">${translateLang[currentLang].section5.step} 3</span>
-                    <h3 class="font-[Lato] text-xl font-bold leading-[150%] text-[#1E212C">
+                    <h3 class="font-[Lato] text-xl font-bold leading-[150%] text-[#1E212C]">
                             ${translateLang[currentLang].section5.step3_title}</h3>
                     <p class="font-[Lato] text-[#787A80] font-normal text-base leading-[160%]">${translateLang[currentLang].section5.step3_text}</p>
                 </div>
