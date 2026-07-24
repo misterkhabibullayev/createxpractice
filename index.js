@@ -1,8 +1,7 @@
 import { allCourses } from "./AllCourses.js";
 import { allEvents } from "./AllEvents.js";
 console.log(allCourses);
-
-const translateData = {
+ const translateData = {
     en: {
         langTitle: "EN",
         flag: "Image/HomePagePhoto/twemoji--flag-united-states.svg",
