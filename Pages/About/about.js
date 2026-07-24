@@ -505,1288 +505,571 @@ const translateLang = {
         },
     },
 };
-
 let currentLang = localStorage.getItem("selectedLang") || "en";
 
 // header start
 const headerMain = document.querySelector("#headerMain");
 headerMain.innerHTML = `
-    <div
-        class="container mx-auto px-5 md:px-10 lg:px-15 flex justify-between items-center py-5"
-    >
-        <div class="flex items-center gap-7 md:gap-10">
-            <div class="">
-                <a href="#">
-                    <img
-                        src="../../Image/HomePagePhoto/logo.svg"
-                        alt="logo image"
-                    />
-                </a>
-            </div>
-            <nav class="hidden lg:flex items-center gap-4 xl:gap-8">
-                <a
-                    class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
-                >${translateLang[currentLang].header.navAbout}</a>
-                <a
-                    href="../../Pages/Courses/courses.html"
-                    class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
-                >${translateLang[currentLang].header.navCourses}</a>
-                <a
-                    href="../../Pages/Events/events.html"
-                    class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
-                >${translateLang[currentLang].header.navEvents}</a>
-                <a
-                    href="../../Pages/Blogs/blogs.html"
-                    class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
-                >${translateLang[currentLang].header.navBlog}</a>
-                <a
-                    href="../../Pages/Contacts/contacts.html"
-                    class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
-                >${translateLang[currentLang].header.navContacts}</a>
-            </nav>
+<div class="container mx-auto px-5 md:px-10 lg:px-15 flex justify-between items-center py-5">
+    <div class="flex items-center gap-7 md:gap-10">
+        <div>
+            <a href="#">
+                <img
+                    src="../../Image/HomePagePhoto/logo.svg" alt="logo image"/>
+            </a>
         </div>
+        <nav class="hidden lg:flex items-center gap-4 xl:gap-8">
+            <a class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300">${translateLang[currentLang].header.navAbout}</a>
+            <a href="../../Pages/Courses/courses.html"
+               class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300">
+               ${translateLang[currentLang].header.navCourses}
+            </a>
+            <a href="../../Pages/Events/events.html"
+               class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300">
+               ${translateLang[currentLang].header.navEvents} </a>
+            <a href="../../Pages/Blogs/blogs.html"
+               class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300">${translateLang[currentLang].header.navBlog} </a>
+            <a href="../../Pages/Contacts/contacts.html"
+               class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300">
+               ${translateLang[currentLang].header.navContacts}
+            </a>
+        </nav>
+    </div>
+    <div class="flex items-center gap-3 md:gap-4">
         <div class="flex items-center gap-3 md:gap-4">
-            <div class="flex items-center gap-3 md:gap-4">
-                <a
-                    href="./Pages/Contacts/contacts.html"
-                    class="font-[Lato] font-bold text-[12px] lg:py-1 md:leading-6 lg:leading-4 tracking-[0.5px] text-white bg-gradient-to-r from-[#FF3F3A] to-[#F75E05] px-5 lg:px-3 rounded-[4px] hidden sm:inline-block hover:bg-gradient-to-l hover:from-[#F75E05] hover:to-[#FF3F3A]"
-                >
-                    ${translateLang[currentLang].header.getConsultation}
-                </a>
-                <a
-                    href="#!"
-                    class="hidden lg:flex gap-2 items-center font-[Lato] font-bold text-3 lg:text-2 lg:leading-4 text-gray-800"
-                >
-                 <img
-                            src="../../Image/HomePagePhoto/Profile.svg"
-                            alt="profile icon"
-                 />
+            <a href="./Pages/Contacts/contacts.html"
+               class="font-[Lato] font-bold text-[12px] lg:py-1 md:leading-6 lg:leading-4 tracking-[0.5px] text-white bg-gradient-to-r from-[#FF3F3A] to-[#F75E05] px-5 lg:px-3 rounded-[4px] hidden sm:inline-block hover:bg-gradient-to-l hover:from-[#F75E05] hover:to-[#FF3F3A]"
+                >${translateLang[currentLang].header.getConsultation}
+            </a>
+            <a href="#!"
+               class="hidden lg:flex gap-2 items-center font-[Lato] font-bold text-3 lg:text-2 lg:leading-4 text-gray-800">
+               <img src="../../Image/HomePagePhoto/Profile.svg"/>
                     ${translateLang[currentLang].header.loginRegister}
-                </a>
-            </div>
-            <div class="hidden min-[300px]:block relative">
-                <button
-                    class=" flex items-center gap-1 px-2 rounded-[20px]"
-                    id="langBtn"
-                ></button>
-
+            </a>
+        </div>
+        <div class="hidden min-[300px]:block relative">
+            <button class=" flex items-center gap-1 px-2 rounded-[20px]" id="langBtn"></button>
                 <div
                     class="bg-[#F75E05] flex-col items-center gap-1.5 py-1.5 rounded-[10px] absolute top-[30px] w-full hidden"
                     id="langModal"
                 ></div>
-            </div>
-            <button class="block lg:hidden">
-                <img
-                    src="../../Image/HomePagePhoto/stash--burger-classic-light.svg"
-                    alt="burger icon"
-                />
-            </button>
         </div>
+            <button class="block lg:hidden">
+                <img src="../../Image/HomePagePhoto/stash--burger-classic-light.svg"/>
+            </button>
     </div>
-`;
+</div>`;
 // header end
 
 // heroSection start
 const heroSection = document.querySelector("#heroSection");
 heroSection.innerHTML = `
-  <div
-                    class="container mx-auto px-5 flex flex-col-reverse text-center items-center mt-20 mb-10 md:text-left md:flex md:flex-row md:justify-between md:items-start md:px-10 md:mt-20 md:mb-14 lg:px-15 lg:mt-34 lg:mb-24"
-                >
-                    <div>
-                        <h6
-                            class="text-[#1E212C] font-bold text-base leading-[150%]"
-                        >
-                          ${translateLang[currentLang].heroSection.hero_name}
-                        </h6>
-                        <h1
-                            class="font-[Lato] text-[#1E212C] font-bold text-2xl leading-[130%] sm:text-3xl lg:font-black lg:text-4xl"
-                        >
-                           ${translateLang[currentLang].heroSection.heroTitle}
-                        </h1>
-                        <h5
-                            class="font-[Lato] text-[#1E212C] font-bold text-base leading-[130%] mb-3 sm:leading-[150%] md:max-w-sm md:mt-7 md:mb-4 lg:text-xl lg:max-w-xl lg:mt-10 lg:mb-6"
-                        >
-                            ${translateLang[currentLang].heroSection.heroText}
-                        </h5>
-                        <p
-                            class="font-[Lato] text-[#424551] font-normal mb-5 leading-[130%] text-sm md:max-w-lg md:mb-8 lg:text-base lg:leading-[150%] lg:max-w-2xl lg:mb-14"
-                        >
-                            ${translateLang[currentLang].heroSection.heroP}
-                        </p>
-
-                        <div
-                            class="flex flex-col items-center gap-[10px] sm:flex-row sm:mx-auto sm:mb-7 ml-0 sm:ml-32 md:ml-0"
-                        >
-                            <a href="../Events/events.html">
-                                <button
-                                    class="font-[Lato] text-[#F75E05] border border-[#FF3F3A] hover:text-[white] hover:bg-[#FF3F3A] rounded-md transition-all duration-500 font-semibold leading-[40px] px-16 sm:px-[30px] lg:px-[40px]"
-                                >
-                                    ${translateLang[currentLang].heroSection.explore_button}
-                                </button>
-                            </a>
-                            <a href="../Courses/courses.html">
-                                <button
-                                    class="font-[Lato] text-[#FFFFFF] bg-[#F75E05] border border-[#FF3F3A] hover:text-[#F75E05] hover:bg-[white] rounded-md transition-all duration-500 font-semibold leading-[40px] px-16 sm:px-[30px] lg:px-[40px]"
-                                >
-                                    ${translateLang[currentLang].heroSection.browse_button}
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                    <div>
-                        <img
-                            class="w-full object-contain mb-5 lg:max-w-[460px]"
-                            src="../../Image/aboutUs-photo/about.section1.img.png"
-                            alt="image"
-                        />
-                    </div>
-                </div>
-`;
+  <div class="container mx-auto px-5 flex flex-col-reverse text-center items-center mt-20 mb-10 md:text-left md:flex md:flex-row md:justify-between md:items-start md:px-10 md:mt-20 md:mb-14 lg:px-15 lg:mt-34 lg:mb-24">
+    <div>
+        <h6 class="text-[#1E212C] font-bold text-base leading-[150%]">
+            ${translateLang[currentLang].heroSection.hero_name}</h6>
+        <h1 class="font-[Lato] text-[#1E212C] font-bold text-2xl leading-[130%] sm:text-3xl lg:font-black lg:text-4xl">${translateLang[currentLang].heroSection.heroTitle}</h1>
+        <h5 class="font-[Lato] text-[#1E212C] font-bold text-base leading-[130%] mb-3 sm:leading-[150%] md:max-w-sm md:mt-7 md:mb-4 lg:text-xl lg:max-w-xl lg:mt-10 lg:mb-6">
+             ${translateLang[currentLang].heroSection.heroText}</h5>
+        <p class="font-[Lato] text-[#424551] font-normal mb-5 leading-[130%] text-sm md:max-w-lg md:mb-8 lg:text-base lg:leading-[150%] lg:max-w-2xl lg:mb-14">
+            ${translateLang[currentLang].heroSection.heroP}
+        </p>
+        <div class="flex flex-col items-center gap-[10px] sm:flex-row sm:mx-auto sm:mb-7 ml-0 sm:ml-32 md:ml-0">
+            <a href="../Events/events.html">
+                <button class="font-[Lato] text-[#F75E05] border border-[#FF3F3A] hover:text-[white] hover:bg-[#FF3F3A] rounded-md transition-all duration-500 font-semibold leading-[40px] px-16 sm:px-[30px] lg:px-[40px]">
+                    ${translateLang[currentLang].heroSection.explore_button}
+                </button>
+            </a>
+            <a href="../Courses/courses.html">
+                <button class="font-[Lato] text-[#FFFFFF] bg-[#F75E05] border border-[#FF3F3A] hover:text-[#F75E05] hover:bg-[white] rounded-md transition-all duration-500 font-semibold leading-[40px] px-16 sm:px-[30px] lg:px-[40px]" >
+                    ${translateLang[currentLang].heroSection.browse_button}
+                </button>
+            </a>
+        </div>
+    </div>
+    <div>
+        <img class="w-full object-contain mb-5 lg:max-w-[460px]"
+             src="../../Image/aboutUs-photo/about.section1.img.png"/>
+    </div>
+</div>`;
 // heroSection end
 
 // section2 start
 const section2 = document.querySelector("#section2");
 section2.innerHTML = `
- <div
-                    class="mx-auto flex flex-col items-center mb-7 md:flex-row md:gap-4 md:items-center"
-                >
-                    <a
-                        href="#"
-                        class="w-[52px] h-[52px] bg-[#FF3F3A] rounded-full flex justify-center items-center hover:ring-[16px] hover:ring-[#FEC8C0] transition-all duration-300"
-                    >
-                        <img
-                            src="../../Image/aboutUs-photo/about.section2Video.img.png"
-                            alt="video play icon"
-                        />
-                    </a>
-
-                    <span class="font-[Lato]">${translateLang[currentLang].section2.watchVideo}</span>
-                </div>
-
-                <div
-                    class="flex flex-col gap-6 items-center md:flex-row md:gap-14"
-                >
-                    <div>
-                        <img
-                            class="w-full object-contain"
-                            src="../../Image/aboutUs-photo/about.section2.img.png"
-                            alt="image"
-                        />
-                    </div>
-                    <div>
-                        <div class="flex gap-2 items-center md:mb-3 md:gap-4">
-                            <h1
-                                class="font-[Lato] text-[#FF3F3A] leading-[130%] text-2xl font-extrabold sm:text-4xl lg:font-black lg:text-5xl"
-                            >
-                                1200
-                            </h1>
-                            <p
-                                class="font-[Lato] text-[#1E212C] leading-[130%] font-semibold text-base lg:font-bold lg:text-lg"
-                            >
-                               ${translateLang[currentLang].section2.desc1}
-                            </p>
-                        </div>
-                        <div class="flex gap-2 items-center md:mb-3 md:gap-4">
-                            <h1
-                                class="font-[Lato] text-[#FF3F3A] leading-[130%] font-extrabold text-2xl sm:text-4xl lg:font-black lg:text-5xl"
-                            >
-                                84
-                            </h1>
-                            <p
-                                class="font-[Lato] text-[#1E212C] leading-[130%] font-semibold text-base lg:font-bold lg:text-lg"
-                            >
-                                 ${translateLang[currentLang].section2.desc2}
-                            </p>
-                        </div>
-                        <div class="flex gap-2 items-center md:mb-3 md:gap-4">
-                            <h1
-                                class="font-[Lato] text-[#FF3F3A] font-extrabold leading-[130%] text-2xl sm:text-4xl lg:font-black lg:text-5xl"
-                            >
-                                16
-                            </h1>
-                            <p
-                                class="font-[Lato] text-[#1E212C] leading-[130%] font-semibold text-base lg:font-bold lg:text-lg"
-                            >
-                                 ${translateLang[currentLang].section2.desc3}
-                            </p>
-                        </div>
-                        <div class="flex gap-2 items-center md:mb-3 md:gap-4">
-                            <h1
-                                class="font-[Lato] text-[#FF3F3A] leading-[130%] font-extrabold text-2xl sm:text-4xl lg:font-black lg:text-5xl"
-                            >
-                                5
-                            </h1>
-                            <p
-                                class="font-[Lato] text-[#1E212C] leading-[130%] font-semibold text-base lg:font-bold lg:text-lg"
-                            >
-                                 ${translateLang[currentLang].section2.desc4}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-`;
+<div class="mx-auto flex flex-col items-center mb-7 md:flex-row md:gap-4 md:items-center">
+    <a href="#" class="w-[52px] h-[52px] bg-[#FF3F3A] rounded-full flex justify-center items-center hover:ring-[16px] hover:ring-[#FEC8C0] transition-all duration-300">
+        <img src="../../Image/aboutUs-photo/about.section2Video.img.png"/></a>
+    <span class="font-[Lato]">${translateLang[currentLang].section2.watchVideo}</span>
+</div>
+<div class="flex flex-col gap-6 items-center md:flex-row md:gap-14">
+    <div>
+        <img class="w-full object-contain"
+             src="../../Image/aboutUs-photo/about.section2.img.png"/>
+    </div>
+    <div>
+        <div class="flex gap-2 items-center md:mb-3 md:gap-4">
+            <h1 class="font-[Lato] text-[#FF3F3A] leading-[130%] text-2xl font-extrabold  sm:text-4xl lg:font-black lg:text-5xl">1200 </h1>
+            <p class="font-[Lato] text-[#1E212C] leading-[130%] font-semibold text-base lg:font-bold lg:text-lg">${translateLang[currentLang].section2.desc1}</p>
+        </div>
+        <div class="flex gap-2 items-center md:mb-3 md:gap-4">
+            <h1 class="font-[Lato] text-[#FF3F3A] leading-[130%] font-extrabold text-2xl sm:text-4xl lg:font-black lg:text-5xl" >84</h1>
+            <p class="font-[Lato] text-[#1E212C] leading-[130%] font-semibold text-base lg:font-bold lg:text-lg">${translateLang[currentLang].section2.desc2}</p>
+        </div>
+        <div class="flex gap-2 items-center md:mb-3 md:gap-4">
+            <h1 class="font-[Lato] text-[#FF3F3A] font-extrabold leading-[130%] text-2xl sm:text-4xl lg:font-black lg:text-5xl" >16</h1>
+            <p class="font-[Lato] text-[#1E212C] leading-[130%] font-semibold text-base lg:font-bold lg:text-lg">${translateLang[currentLang].section2.desc3}</p>
+        </div>
+        <div class="flex gap-2 items-center md:mb-3 md:gap-4">
+            <h1 class="font-[Lato] text-[#FF3F3A] leading-[130%] font-extrabold text-2xl sm:text-4xl lg:font-black lg:text-5xl">5</h1>
+            <p class="font-[Lato] text-[#1E212C] leading-[130%] font-semibold text-base lg:font-bold lg:text-lg">${translateLang[currentLang].section2.desc4}</p>
+        </div>
+    </div>
+</div>`;
 // section2 end
 
 // section3 start
 const section3 = document.querySelector("#section3");
 section3.innerHTML = `
  <div class="mx-auto items-center text-center mb-8 md:mb-8">
-                    <h6
-                        class="font-[Lato] text-[#1E212C] font-bold text-base leading-[150%]"
-                    >
-                        ${translateLang[currentLang].section3.section3_name}
-                    </h6>
-                    <h1
-                        class="font-[Lato] text-[#1E212C] font-extrabold leading-[130%] text-3xl lg:font-black lg:text-4xl"
-                    >
-                         ${translateLang[currentLang].section3.section3_title}
-                    </h1>
-                </div>
-
-                <div
-                    class="grid grid-cols-1 gap-6 sm:grid-cols-2 justify-between lg:grid-cols-4"
-                >
-                    <!-- birinchi -->
-                    <div
-                        class="mx-auto items-center text-center transition-all duration-300 hover:scale-105 sm:flex sm:flex-row sm:justify-between sm:ml-5 md:ml-10 lg:ml-0"
-                    >
-                        <div>
-                            <img
-                                class="mb-3 mx-auto"
-                                src="../../Image/aboutUs-photo/about.section3.structure.svg"
-                                alt="image"
-                            />
-                            <h5
-                                class="font-[Lato] text-base font-bold leading-[150%] text-[#1E212C]"
-                            >
-                                 ${translateLang[currentLang].section3.section3_card1_title}
-                            </h5>
-                            <p
-                                class="font-[Lato] text-base font-normal leading-[140%] text-[#787A80] w-full max-w-64"
-                            >
-                                 ${translateLang[currentLang].section3.section3_card1_text}
-                            </p>
-                        </div>
-                        <div
-                            class="sm:border-r sm:border-grey-700 sm:h-36 sm:ml-12 lg:ml-4"
-                        ></div>
-                    </div>
-                    <!-- ikkinchi -->
-                    <div
-                        class="mx-auto items-center text-center transition-all duration-300 hover:scale-105 lg:flex lg:flex-row"
-                    >
-                        <div>
-                            <img
-                                class="mb-3 mx-auto"
-                                src="../../Image/aboutUs-photo/about.section3.chat.svg"
-                                alt="image"
-                            />
-                            <h5
-                                class="text-base font-bold leading-[150%] text-[#1E212C]"
-                            >
-                             ${translateLang[currentLang].section3.section3_card2_title}
-                            </h5>
-                            <p
-                                class="font-[Lato] text-base font-normal leading-[140%] text-[#787A80] w-full max-w-64"
-                            >
-                                ${translateLang[currentLang].section3.section3_card2_text}
-                            </p>
-                        </div>
-                        <div
-                            class="lg:border-r lg:border-grey-700 lg:h-36 lg:ml-4"
-                        ></div>
-                    </div>
-                    <!-- uchinchi -->
-                    <div
-                        class="mx-auto items-center text-center transition-all duration-300 hover:scale-105 sm:flex sm:flex-row sm:justify-between sm:ml-5 md:ml-10 lg:ml-0"
-                    >
-                        <div>
-                            <img
-                                class="mb-3 mx-auto"
-                                src="../../Image/aboutUs-photo/about.section3.target.svg"
-                                alt="image"
-                            />
-                            <h5
-                                class="font-[Lato] text-base font-bold leading-[150%] text-[#1E212C]"
-                            >
-                                 ${translateLang[currentLang].section3.section3_card3_title}
-                            </h5>
-                            <p
-                                class="font-[Lato] text-base font-normal leading-[140%] text-[#787A80] w-full max-w-64"
-                            >
-                               ${translateLang[currentLang].section3.section3_card3_text}
-                            </p>
-                        </div>
-                        <div
-                            class="sm:border-r sm:border-grey-700 sm:h-36 sm:ml-12 lg:ml-4"
-                        ></div>
-                    </div>
-                    <!-- tortinchi -->
-                    <div
-                        class="mx-auto items-center text-center transition-all duration-300 hover:scale-105"
-                    >
-                        <img
-                            class="mb-3 mx-auto"
-                            src="../../Image/aboutUs-photo/about.section3.calendar.svg"
-                            alt="image"
-                        />
-                        <h5
-                            class="font-[Lato] text-base font-bold leading-[150%] text-[#1E212C]"
-                        >
-                             ${translateLang[currentLang].section3.section3_card4_title}
-                        </h5>
-                        <p
-                            class="font-[Lato] text-base font-normal leading-[140%] text-[#787A80] w-full max-w-64"
-                        >
-                             ${translateLang[currentLang].section3.section3_card4_text}
-                        </p>
-                    </div>
-                </div>
-`;
+    <h6 class="font-[Lato] text-[#1E212C] font-bold text-base leading-[150%]">
+        ${translateLang[currentLang].section3.section3_name}</h6>
+    <h1 class="font-[Lato] text-[#1E212C] font-extrabold leading-[130%] text-2xl sm:text-3xl   lg:font-black lg:text-4xl">${translateLang[currentLang].section3.section3_title}</h1>
+</div>
+<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 justify-between lg:grid-cols-4">
+        <!-- birinchi -->
+    <div class="mx-auto items-center text-center transition-all duration-300 hover:scale-105 sm:flex sm:flex-row sm:justify-between sm:ml-5 md:ml-10 lg:ml-0">
+        <div>
+            <img class="mb-3 mx-auto" src="../../Image/aboutUs-photo/about.section3.structure.svg"/>
+            <h5 class="font-[Lato] text-base font-bold leading-[150%] text-[#1E212C]">
+                ${translateLang[currentLang].section3.section3_card1_title}</h5>
+            <p class="font-[Lato] text-base font-normal leading-[140%] text-[#787A80] w-full max-w-64">${translateLang[currentLang].section3.section3_card1_text}</p>
+        </div>
+        <div class="sm:border-r sm:border-grey-700 sm:h-36 sm:ml-12 lg:ml-4"></div>
+    </div>
+         <!-- ikkinchi -->
+    <div class="mx-auto items-center text-center transition-all duration-300 hover:scale-105 lg:flex lg:flex-row">
+        <div>
+            <img class="mb-3 mx-auto" src="../../Image/aboutUs-photo/about.section3.chat.svg"/>
+            <h5 class="text-base font-bold leading-[150%] text-[#1E212C]">
+                ${translateLang[currentLang].section3.section3_card2_title}</h5>
+            <p class="font-[Lato] text-base font-normal leading-[140%] text-[#787A80] w-full max-w-64">${translateLang[currentLang].section3.section3_card2_text}</p>
+        </div>
+        <div class="lg:border-r lg:border-grey-700 lg:h-36 lg:ml-4"></div>
+    </div>
+        <!-- uchinchi -->
+    <div class="mx-auto items-center text-center transition-all duration-300 hover:scale-105 sm:flex sm:flex-row sm:justify-between sm:ml-5 md:ml-10 lg:ml-0">
+        <div>
+            <img class="mb-3 mx-auto" src="../../Image/aboutUs-photo/about.section3.target.svg"/>
+            <h5 class="font-[Lato] text-base font-bold leading-[150%] text-[#1E212C]">
+                ${translateLang[currentLang].section3.section3_card3_title}</h5>
+            <p class="font-[Lato] text-base font-normal leading-[140%] text-[#787A80] w-full max-w-64">${translateLang[currentLang].section3.section3_card3_text}</p>
+        </div>
+        <div class="sm:border-r sm:border-grey-700 sm:h-36 sm:ml-12 lg:ml-4"></div>
+    </div>
+        <!-- tortinchi -->
+    <div class="mx-auto items-center text-center transition-all duration-300 hover:scale-105">
+        <img class="mb-3 mx-auto" src="../../Image/aboutUs-photo/about.section3.calendar.svg"/>
+        <h5 class="font-[Lato] text-base font-bold leading-[150%] text-[#1E212C]">
+            ${translateLang[currentLang].section3.section3_card4_title}</h5>
+        <p class="font-[Lato] text-base font-normal leading-[140%] text-[#787A80] w-full max-w-64">
+            ${translateLang[currentLang].section3.section3_card4_text}</p>
+    </div>
+</div>`;
 // section3 end
 
 // section4 start
 const section4 = document.querySelector("#section4");
 section4.innerHTML = `
- <div class="mx-auto items-center text-center mb-8 md:mb-8">
-                    <h6
-                        class="font-[Lato] text-[#1E212C] font-bold text-base leading-[150%]"
-                    >
-                        ${translateLang[currentLang].section4.section4_name}
-                    </h6>
-                    <h1
-                        class="font-[Lato] text-[#1E212C] font-extrabold leading-[130%] text-3xl lg:font-black lg:text-4xl"
-                    >
-                         ${translateLang[currentLang].section4.section4_title}
-                    </h1>
-                </div>
-                <div
-                    class="grid grid-cols-1 gap-5 px-5 sm:px-0 sm:grid sm:grid-cols-2 lg:grid lg:grid-cols-3"
-                >
-                    <!-- birinchi -->
-                    <div
-                        class="transition-all duration-300 hover:scale-105 mx-auto"
-                    >
-                        <img
-                            class="w-full object-contain mx-auto"
-                            src="../../Image/aboutUs-photo/about.section4.card1.png"
-                            alt="image"
-                        />
-                        <div
-                            class="px-3 py-3 sm:px-6 sm:py-6 border border-[#E5E8ED]"
-                        >
-                            <button
-                                class="bg-[#03CEA4] text-[#FFFFFF] hover:bg-[#ffffff] hover:text-[#03CEA4] hover:border font-semibold text-base font-[Lato] leading-[160%] rounded-[4px] px-2 mb-2 sm:mb-5"
-                            >
-                                 ${translateLang[currentLang].section4.marketing_button}
-                            </button>
-                            <p
-                                class="font-normal text-base leading-[130%] text-[#424551] font-[Lato] mb-2 sm:mb-5 sm:leading-[160%]"
-                            >
-                               ${translateLang[currentLang].section4.section4_card_text}
-                            </p>
-                            <a
-                                href="../Courses/courses.html"
-                                class="flex gap-3 items-center"
-                            >
-                                <button
-                                    class="font-semibold text-base leading-[160%] text-[#1E212C] hover:text-red-500 font-[Lato]"
-                                >
-                                   ${translateLang[currentLang].section4.check_button}
-                                </button>
-                                <img
-                                    src="../../Image/aboutUs-photo/about.section4.strelka.svg"
-                                    alt="image icon"
-                                />
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- ikkinchi -->
-                    <div
-                        class="transition-all duration-300 hover:scale-105 mx-auto"
-                    >
-                        <img
-                            class="w-full object-contain mx-auto"
-                            src="../../Image/aboutUs-photo/about.section4.card2.png"
-                            alt="image"
-                        />
-                        <div
-                            class="px-3 py-3 sm:px-6 sm:py-6 border border-[#E5E8ED]"
-                        >
-                            <button
-                                class="bg-[#5A87FC] text-[#FFFFFF] hover:bg-[#ffffff] hover:text-[#5A87FC] hover:border font-semibold text-base font-[Lato] leading-[160%] rounded-[4px] px-2 mb-2 sm:mb-5"
-                            >
-                                ${translateLang[currentLang].section4.management_button}
-                            </button>
-                            <p
-                                class="font-normal text-base leading-[130%] text-[#424551] font-[Lato] mb-2 sm:mb-5 sm:leading-[160%]"
-                            >
-                               ${translateLang[currentLang].section4.section4_card_text}
-                            </p>
-                            <a
-                                href="../Courses/courses.html"
-                                class="flex gap-3 items-center"
-                            >
-                                <button
-                                    class="font-semibold text-base leading-[160%] text-[#1E212C] hover:text-red-500 font-[Lato]"
-                                >
-                                    ${translateLang[currentLang].section4.check_button}
-                                </button>
-                                <img
-                                    src="../../Image/aboutUs-photo/about.section4.strelka.svg"
-                                    alt="image icon"
-                                />
-                            </a>
-                        </div>
-                    </div>
-                    <!-- uchinchi -->
-                    <div
-                        class="transition-all duration-300 hover:scale-105 mx-auto"
-                    >
-                        <img
-                            class="w-full object-contain mx-auto"
-                            src="../../Image/aboutUs-photo/about.section4.card3.png"
-                            alt="image"
-                        />
-                        <div
-                            class="px-3 py-3 sm:px-6 sm:py-6 border border-[#E5E8ED]"
-                        >
-                            <button
-                                class="bg-[#F89828] text-[#FFFFFF] hover:bg-[#ffffff] hover:text-[#F89828] hover:border font-semibold text-base font-[Lato] leading-[160%] rounded-[4px] px-2 mb-2 sm:mb-5"
-                            >
-                                ${translateLang[currentLang].section4.recruting_button}
-                            </button>
-                            <p
-                                class="font-normal text-base leading-[130%] text-[#424551] font-[Lato] mb-2 sm:mb-5 sm:leading-[160%]"
-                            >
-                                ${translateLang[currentLang].section4.section4_card_text}
-                            </p>
-
-                            <a
-                                href="../Courses/courses.html"
-                                class="flex gap-3 items-center"
-                            >
-                                <button
-                                    class="font-semibold text-base leading-[160%] text-[#1E212C] hover:text-red-500 font-[Lato]"
-                                >
-                                    ${translateLang[currentLang].section4.check_button}
-                                </button>
-                                <img
-                                    src="../../Image/aboutUs-photo/about.section4.strelka.svg"
-                                    alt="image icon"
-                            /></a>
-                        </div>
-                    </div>
-                    <!-- tortinchi -->
-                    <div
-                        class="transition-all duration-300 hover:scale-105 mx-auto"
-                    >
-                        <img
-                            class="w-full object-contain mx-auto"
-                            src="../../Image/aboutUs-photo/about.section4.card4.png"
-                            alt="image"
-                        />
-                        <div
-                            class="px-3 py-3 sm:px-6 sm:py-6 border border-[#E5E8ED]"
-                        >
-                            <button
-                                class="bg-[#F52F6E] text-[#FFFFFF] hover:bg-[#ffffff] hover:text-[#F52F6E] hover:border font-semibold text-base font-[Lato] leading-[160%] rounded-[4px] px-2 mb-2 sm:mb-5"
-                            >
-                                ${translateLang[currentLang].section4.design_button}
-                            </button>
-                            <p
-                                class="font-normal text-base leading-[130%] text-[#424551] font-[Lato] mb-2 sm:mb-5 sm:leading-[160%]"
-                            >
-                                ${translateLang[currentLang].section4.section4_card_text}
-                            </p>
-                            <a
-                                href="../Courses/courses.html"
-                                class="flex gap-3 items-center"
-                            >
-                                <button
-                                    class="font-semibold text-base leading-[160%] text-[#1E212C] hover:text-red-500 font-[Lato]"
-                                >
-                                    ${translateLang[currentLang].section4.check_button}
-                                </button>
-                                <img
-                                    src="../../Image/aboutUs-photo/about.section4.strelka.svg"
-                                    alt="image icon"
-                                />
-                            </a>
-                        </div>
-                    </div>
-                    <!-- beshinchi -->
-                    <div
-                        class="transition-all duration-300 hover:scale-105 mx-auto"
-                    >
-                        <img
-                            class="w-full object-contain mx-auto"
-                            src="../../Image/aboutUs-photo/about.section4.card5.png"
-                            alt="image"
-                        />
-                        <div
-                            class="px-3 py-3 sm:px-6 sm:py-6 border border-[#E5E8ED]"
-                        >
-                            <button
-                                class="bg-[#7772F1] text-[#FFFFFF] hover:bg-[#ffffff] hover:text-[#7772F1] hover:border font-semibold text-base font-[Lato] leading-[160%] rounded-[4px] px-2 mb-2 sm:mb-5"
-                            >
-                                ${translateLang[currentLang].section4.development_button}
-                            </button>
-                            <p
-                                class="font-normal text-base leading-[130%] text-[#424551] font-[Lato] mb-2 sm:mb-5 sm:leading-[160%]"
-                            >
-                                ${translateLang[currentLang].section4.section4_card_text}
-                            </p>
-                            <a
-                                href="../Courses/courses.html"
-                                class="flex gap-3 items-center"
-                            >
-                                <button
-                                    class="font-semibold text-base leading-[160%] text-[#1E212C] hover:text-red-500 font-[Lato]"
-                                >
-                                    ${translateLang[currentLang].section4.check_button}
-                                </button>
-                                <img
-                                    src="../../Image/aboutUs-photo/about.section4.strelka.svg"
-                                    alt="image icon"
-                                />
-                            </a>
-                        </div>
-                    </div>
-                    <!-- oltinchi -->
-                    <div
-                        class="bg-[#F4F5F6] mx-auto items-center text-center w-full h-auto transition-all duration-300 hover:scale-105"
-                    >
-                        <p
-                            class="font-[Lato] mx-auto font-semibold text-sm md:text-xl leading-[150%] max-w-60 py-14 text-[#424551] sm:mt-40 sm:py-0"
-                        >
-                            ${translateLang[currentLang].section4.section4_last_card}
-                        </p>
-                    </div>
-                </div>
-`;
+<div class="mx-auto items-center text-center mb-8 md:mb-8">
+    <h6 class="font-[Lato] text-[#1E212C] font-bold text-base leading-[150%]">
+        ${translateLang[currentLang].section4.section4_name}</h6>
+    <h1 class="font-[Lato] text-[#1E212C] font-extrabold leading-[130%] text-2xl sm:text-3xl lg:font-black lg:text-4xl">${translateLang[currentLang].section4.section4_title}</h1>
+</div>
+<div class="grid grid-cols-1 gap-5 px-5 sm:px-0 sm:grid sm:grid-cols-2 lg:grid lg:grid-cols-3">
+         <!-- birinchi -->
+    <div class="transition-all duration-300 hover:scale-105 mx-auto">
+        <img class="w-full object-contain mx-auto"
+             src="../../Image/aboutUs-photo/about.section4.card1.png"/>
+        <div class="px-3 py-3 sm:px-6 sm:py-6 border border-[#E5E8ED]">
+            <button class="bg-[#03CEA4] text-[#FFFFFF] hover:bg-[#ffffff] hover:text-[#03CEA4]  hover:border font-semibold text-base font-[Lato] leading-[160%] rounded-[4px] px-2 mb-2 sm:mb-5">${translateLang[currentLang].section4.marketing_button}
+            </button>
+            <p class="font-normal text-base leading-[130%] text-[#424551] font-[Lato] mb-2 sm:mb-5 sm:leading-[160%]">${translateLang[currentLang].section4.section4_card_text}</p>
+            <a href="../Courses/courses.html" class="flex gap-3 items-center">
+                <button class="font-semibold text-base leading-[160%] text-[#1E212C] hover:text-red-500 font-[Lato]">${translateLang[currentLang].section4.check_button}</button>
+                <img src="../../Image/aboutUs-photo/about.section4.strelka.svg"/>
+            </a>
+        </div>
+    </div>
+            <!-- ikkinchi -->
+    <div class="transition-all duration-300 hover:scale-105 mx-auto">
+        <img class="w-full object-contain mx-auto" 
+             src="../../Image/aboutUs-photo/about.section4.card2.png"/>
+        <div class="px-3 py-3 sm:px-6 sm:py-6 border border-[#E5E8ED]">
+            <button class="bg-[#5A87FC] text-[#FFFFFF] hover:bg-[#ffffff] hover:text-[#5A87FC] hover:border font-semibold text-base font-[Lato] leading-[160%] rounded-[4px] px-2 mb-2 sm:mb-5">${translateLang[currentLang].section4.management_button}</button>
+            <p class="font-normal text-base leading-[130%] text-[#424551] font-[Lato] mb-2 sm:mb-5 sm:leading-[160%]">${translateLang[currentLang].section4.section4_card_text}</p>
+            <a href="../Courses/courses.html" class="flex gap-3 items-center">
+                <button class="font-semibold text-base leading-[160%] text-[#1E212C] hover:text-red-500 font-[Lato]">${translateLang[currentLang].section4.check_button}
+                </button>
+                <img src="../../Image/aboutUs-photo/about.section4.strelka.svg"/>
+            </a>
+        </div>
+    </div>
+            <!-- uchinchi -->
+    <div class="transition-all duration-300 hover:scale-105 mx-auto">
+        <img class="w-full object-contain mx-auto" 
+             src="../../Image/aboutUs-photo/about.section4.card3.png"/>
+        <div class="px-3 py-3 sm:px-6 sm:py-6 border border-[#E5E8ED]">
+            <button class="bg-[#F89828] text-[#FFFFFF] hover:bg-[#ffffff] hover:text-[#F89828] hover:border font-semibold text-base font-[Lato] leading-[160%] rounded-[4px] px-2 mb-2 sm:mb-5">${translateLang[currentLang].section4.recruting_button}</button>
+            <p class="font-normal text-base leading-[130%] text-[#424551] font-[Lato] mb-2 sm:mb-5 sm:leading-[160%]">${translateLang[currentLang].section4.section4_card_text}</p>
+            <a href="../Courses/courses.html" class="flex gap-3 items-center">
+                <button class="font-semibold text-base leading-[160%] text-[#1E212C] hover:text-red-500 font-[Lato]">
+                    ${translateLang[currentLang].section4.check_button}</button>
+                <img src="../../Image/aboutUs-photo/about.section4.strelka.svg"/>
+            </a>
+        </div>
+    </div>
+            <!-- tortinchi -->
+    <div class="transition-all duration-300 hover:scale-105 mx-auto">
+        <img class="w-full object-contain mx-auto"
+             src="../../Image/aboutUs-photo/about.section4.card4.png"/>
+        <div class="px-3 py-3 sm:px-6 sm:py-6 border border-[#E5E8ED]">
+            <button class="bg-[#F52F6E] text-[#FFFFFF] hover:bg-[#ffffff] hover:text-[#F52F6E] hover:border font-semibold text-base font-[Lato] leading-[160%] rounded-[4px] px-2 mb-2 sm:mb-5">${translateLang[currentLang].section4.design_button}</button>
+            <p class="font-normal text-base leading-[130%] text-[#424551] font-[Lato] mb-2 sm:mb-5 sm:leading-[160%]">${translateLang[currentLang].section4.section4_card_text}</p>
+            <a href="../Courses/courses.html" class="flex gap-3 items-center">
+                <button class="font-semibold text-base leading-[160%] text-[#1E212C] hover:text-red-500 font-[Lato]">
+                ${translateLang[currentLang].section4.check_button}</button>
+                <img src="../../Image/aboutUs-photo/about.section4.strelka.svg"/>
+            </a>
+        </div>
+    </div>
+        <!-- beshinchi -->
+    <div class="transition-all duration-300 hover:scale-105 mx-auto">
+        <img class="w-full object-contain mx-auto"
+            src="../../Image/aboutUs-photo/about.section4.card5.png"/>
+        <div class="px-3 py-3 sm:px-6 sm:py-6 border border-[#E5E8ED]">
+            <button class="bg-[#7772F1] text-[#FFFFFF] hover:bg-[#ffffff] hover:text-[#7772F1] hover:border font-semibold text-base font-[Lato] leading-[160%] rounded-[4px] px-2 mb-2 sm:mb-5">${translateLang[currentLang].section4.development_button}</button>
+            <p class="font-normal text-base leading-[130%] text-[#424551] font-[Lato] mb-2 sm:mb-5 sm:leading-[160%]">${translateLang[currentLang].section4.section4_card_text}</p>
+            <a href="../Courses/courses.html" class="flex gap-3 items-center">
+                <button class="font-semibold text-base leading-[160%] text-[#1E212C] hover:text-red-500 font-[Lato]" >
+                    ${translateLang[currentLang].section4.check_button}</button>
+                <img src="../../Image/aboutUs-photo/about.section4.strelka.svg"/>
+            </a>
+        </div>
+    </div>
+            <!-- oltinchi -->
+    <div class="bg-[#F4F5F6] mx-auto items-center text-center w-full h-auto transition-all      duration-300 hover:scale-105">
+        <p class="font-[Lato] mx-auto font-semibold text-sm md:text-xl leading-[150%] max-w-60 py-14 text-[#424551] sm:mt-40 sm:py-0">
+        ${translateLang[currentLang].section4.section4_last_card}</p>
+    </div>
+</div>`;
 // section4 end
 
 // section5 start
 const section5 = document.querySelector("#section5");
 section5.innerHTML = `
  <div>
-                    <div class="mb-5 md:mb-10">
-                        <h6
-                            class="text-[#1E212C] font-bold text-base leading-[150%]"
-                        >
-                    ${translateLang[currentLang].section5.section5_name}
-                        </h6>
-                        <h1
-                            class="font-[Lato] text-[#1E212C] font-bold text-2xl leading-[130%] sm:text-3xl lg:font-black lg:text-4xl"
-                        >
-                         ${translateLang[currentLang].section5.section5_title}
-                        </h1>
-                    </div>
-
-                    <div class="relative">
-                        <div
-                            class="absolute left-1 top-2 bottom-2 border bg-[#9A9CA5]"
-                        ></div>
-
-                        <!-- birinchi -->
-                        <div class="relative flex gap-6 pb-5">
-                            <div
-                                class="w-2 h-2 rounded-full mt-2 bg-[#FF3F3A] shrink-0"
-                            ></div>
-
-                            <div>
-                                <span
-                                    class="font-[Lato] text-xs text-[#787A80] font-black leading-[150%]"
-                                >
-                                     ${translateLang[currentLang].section5.step} 1
-                                </span>
-                                <h3
-                                    class="font-[Lato] text-xl font-bold leading-[150%] text-[#1E212C]"
-                                >
-                                 ${translateLang[currentLang].section5.step1_title}
-                                </h3>
-                                <p
-                                    class="font-[Lato] text-[#787A80] font-normal text-base leading-[160%]"
-                                >
-                                    ${translateLang[currentLang].section5.step1_text}
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- ikkinchi -->
-                        <div class="relative flex gap-6 pb-5">
-                            <div
-                                class="w-2 h-2 rounded-full mt-2 bg-[#FF3F3A] shrink-0"
-                            ></div>
-
-                            <div>
-                                <span
-                                    class="font-[Lato] text-xs text-[#787A80] font-black leading-[150%]"
-                                >
-                                     ${translateLang[currentLang].section5.step} 2
-                                </span>
-                                <h3
-                                    class="font-[Lato] text-xl font-bold leading-[150%] text-[#1E212C]"
-                                >
-                                     ${translateLang[currentLang].section5.step2_title}
-                                </h3>
-                                <p
-                                    class="font-[Lato] text-[#787A80] font-normal text-base leading-[160%]"
-                                >
-                                    ${translateLang[currentLang].section5.step2_text}
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- uchinchi -->
-                        <div class="relative flex gap-6 pb-5">
-                            <div
-                                class="w-2 h-2 rounded-full mt-2 bg-[#FF3F3A] shrink-0"
-                            ></div>
-
-                            <div>
-                                <span
-                                    class="font-[Lato] text-xs text-[#787A80] font-black leading-[150%]"
-                                >
-                                     ${translateLang[currentLang].section5.step} 3
-                                </span>
-                                <h3
-                                    class="font-[Lato] text-xl font-bold leading-[150%] text-[#1E212C]"
-                                >
-                                     ${translateLang[currentLang].section5.step3_title}
-                                </h3>
-                                <p
-                                    class="font-[Lato] text-[#787A80] font-normal text-base leading-[160%]"
-                                >
-                                    ${translateLang[currentLang].section5.step3_text}
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- tortinchi -->
-                        <div class="relative flex gap-6 pb-5">
-                            <div
-                                class="w-2 h-2 rounded-full mt-2 bg-[#FF3F3A] shrink-0"
-                            ></div>
-
-                            <div>
-                                <span
-                                    class="font-[Lato] text-xs text-[#787A80] font-black leading-[150%]"
-                                >
-                                     ${translateLang[currentLang].section5.step} 4
-                                </span>
-                                <h3
-                                    class="font-[Lato] text-xl font-bold leading-[150%] text-[#1E212C]"
-                                >
-                                     ${translateLang[currentLang].section5.step4_title}
-                                </h3>
-                                <p
-                                    class="font-[Lato] text-[#787A80] font-normal text-base leading-[160%]"
-                                >
-                                    ${translateLang[currentLang].section5.step4_text}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div class="mb-5 md:mb-10">
+        <h6 class="text-[#1E212C] font-bold text-base leading-[150%]" >
+            ${translateLang[currentLang].section5.section5_name}</h6>
+        <h1 class="font-[Lato] text-[#1E212C] font-bold text-2xl leading-[130%] sm:text-3xl lg:font-black lg:text-4xl">${translateLang[currentLang].section5.section5_title}</h1>
+    </div>
+    <div class="relative">
+        <div class="absolute left-1 top-2 bottom-2 border bg-[#9A9CA5]" ></div>
+            <!-- birinchi -->
+            <div class="relative flex gap-6 pb-5">
+                <div class="w-2 h-2 rounded-full mt-2 bg-[#FF3F3A] shrink-0"></div>
                 <div>
-                    <img
-                        class="w-full object-contain max-h-[500px] mb-5 md:mb-0"
-                        src="../../Image/aboutUs-photo/illustration.png"
-                        alt="image"
-                    />
+                    <span class="font-[Lato] text-xs text-[#787A80] font-black leading-[150%]" >
+                        ${translateLang[currentLang].section5.step} 1</span>
+                    <h3 class="font-[Lato] text-xl font-bold leading-[150%] text-[#1E212C]">
+                        ${translateLang[currentLang].section5.step1_title}</h3>
+                    <p class="font-[Lato] text-[#787A80] font-normal text-base leading-[160%]">
+                        ${translateLang[currentLang].section5.step1_text}</p>
                 </div>
-`;
+            </div>
+            <!-- ikkinchi -->
+            <div class="relative flex gap-6 pb-5">
+                <div class="w-2 h-2 rounded-full mt-2 bg-[#FF3F3A] shrink-0"></div>
+                <div>
+                    <span class="font-[Lato] text-xs text-[#787A80] font-black leading-[150%]">
+                        ${translateLang[currentLang].section5.step} 2</span>
+                    <h3 class="font-[Lato] text-xl font-bold leading-[150%] text-[#1E212C]">
+                         ${translateLang[currentLang].section5.step2_title}</h3>
+                    <p class="font-[Lato] text-[#787A80] font-normal text-base leading-[160%]">
+                            ${translateLang[currentLang].section5.step2_text}</p>
+                </div>
+            </div>
+            <!-- uchinchi -->
+            <div class="relative flex gap-6 pb-5">
+                <div class="w-2 h-2 rounded-full mt-2 bg-[#FF3F3A] shrink-0"></div>
+                <div>
+                    <span class="font-[Lato] text-xs text-[#787A80] font-black leading-[150%]">${translateLang[currentLang].section5.step} 3</span>
+                    <h3 class="font-[Lato] text-xl font-bold leading-[150%] text-[#1E212C">
+                            ${translateLang[currentLang].section5.step3_title}</h3>
+                    <p class="font-[Lato] text-[#787A80] font-normal text-base leading-[160%]">${translateLang[currentLang].section5.step3_text}</p>
+                </div>
+            </div>
+            <!-- tortinchi -->
+            <div class="relative flex gap-6 pb-5">
+                <div class="w-2 h-2 rounded-full mt-2 bg-[#FF3F3A] shrink-0"></div>
+                <div>
+                    <span class="font-[Lato] text-xs text-[#787A80] font-black leading-[150%]">
+                        ${translateLang[currentLang].section5.step} 4</span>
+                    <h3 class="font-[Lato] text-xl font-bold leading-[150%] text-[#1E212C]">
+                        ${translateLang[currentLang].section5.step4_title}</h3>
+                    <p class="font-[Lato] text-[#787A80] font-normal text-base leading-[160%]">
+                        ${translateLang[currentLang].section5.step4_text}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+    <img class="w-full object-contain max-h-[500px] mb-5 md:mb-0" 
+        src="../../Image/aboutUs-photo/illustration.png"/>
+</div>`;
 // section5 end
 
 // section 6 start
 const section6 = document.querySelector("#section6");
 section6.innerHTML = `
 <div class="mx-auto items-center text-center mb-8 md:mb-8">
-                    <h6
-                        class="font-[Lato] text-[#1E212C] font-bold text-base leading-[150%]"
-                    >
-                        ${translateLang[currentLang].section6.section6_name}
-                    </h6>
-                    <h1
-                        class="font-[Lato] text-[#1E212C] font-extrabold leading-[130%] text-3xl lg:font-black lg:text-4xl"
-                    >
-                         ${translateLang[currentLang].section6.section6_title}
-                    </h1>
+    <h6 class="font-[Lato] text-[#1E212C] font-bold text-base leading-[150%]">
+        ${translateLang[currentLang].section6.section6_name}
+    </h6>
+    <h1 class="font-[Lato] text-[#1E212C] font-extrabold leading-[130%] text-2xl sm:text-3xl  lg:font-black lg:text-4xl">
+        ${translateLang[currentLang].section6.section6_title}
+    </h1>
+</div>
+            <!-- people -->
+<div class="grid grid-cols-2 gap-5  md:grid-cols-4 md:gap-5">
+            <!-- bir -->
+    <div class="group w-auto">
+        <div class="bg-[#FFCF2D] rounded-md">
+            <div class="relative overflow-hidden rounded">
+                <img src="../../Image/aboutUs-photo/person1.png"
+                    class="w-full object-contain px-2 pt-2 md:px-5 md:pt-5" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">     </div>
+                <div class="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+                    <a href="#"><img src="../../Image/aboutUs-photo/1.svg" /></a>
+                    <a href="#"><img src="../../Image/aboutUs-photo/2.svg" /></a>
+                    <a href="#"><img src="../../Image/aboutUs-photo/Linked-In.svg" /></a>
                 </div>
-
-                <!-- people -->
-                <div
-                    class="grid grid-cols-2 gap-5 md:grid md:grid-cols-4 md:gap-5"
-                >
-                    <!-- bir -->
-                    <div class="group w-auto">
-                        <div class="bg-[#FFCF2D] rounded-md">
-                            <div class="relative overflow-hidden rounded">
-                                <img
-                                    src="../../Image/aboutUs-photo/person1.png"
-                                    alt="image"
-                                    class="w-auto object-contain px-2 pt-2 md:px-5 md:pt-5"
-                                />
-
-                                <div
-                                    class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"
-                                ></div>
-
-                                <div
-                                    class="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500"
-                                >
-                                    <a href="#">
-                                        <img
-                                            src="../../Image/aboutUs-photo/1.svg"
-                                            alt="image"
-                                        />
-                                    </a>
-
-                                    <a href="#">
-                                        <img
-                                            src="../../Image/aboutUs-photo/2.svg"
-                                            alt="image"
-                                        />
-                                    </a>
-
-                                    <a href="#">
-                                        <img
-                                            src="../../Image/aboutUs-photo/Linked-In.svg"
-                                            alt="image"
-                                        />
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-center mt-2">
-                            <h3
-                                class="font-[Lato] font-medium text-xs md:font-semibold md:text-lg leading-[100%] text-[#424551]"
-                            >
-                                 ${translateLang[currentLang].section6.jerome}
-                            </h3>
-                            <p
-                                class="font-[Lato] font-normal text-xs leading-[100%] md:text-base text-[#787A80]"
-                            >
-                                 ${translateLang[currentLang].section6.jerome_job}
-                            </p>
-                        </div>
-                    </div>
-                    <!-- ikki -->
-                    <div class="group w-auto">
-                        <div class="bg-[#FFCF2D] rounded-md">
-                            <div class="relative overflow-hidden rounded">
-                                <img
-                                    src="../../Image/aboutUs-photo/person7.png"
-                                    alt="image"
-                                    class="w-auto object-contain px-2 pt-2 md:px-5 md:pt-5"
-                                />
-
-                                <div
-                                    class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"
-                                ></div>
-
-                                <div
-                                    class="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500"
-                                >
-                                    <a href="#">
-                                        <img
-                                            src="../../Image/aboutUs-photo/1.svg"
-                                            alt="image"
-                                        />
-                                    </a>
-
-                                    <a href="#">
-                                        <img
-                                            src="../../Image/aboutUs-photo/2.svg"
-                                            alt="image"
-                                        />
-                                    </a>
-
-                                    <a href="#">
-                                        <img
-                                            src="../../Image/aboutUs-photo/Linked-In.svg"
-                                            alt="image"
-                                        />
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-center mt-2">
-                            <h3
-                                class="font-[Lato] font-medium text-xs md:fontsemi-bold md:text-lg leading-[100%] text-[#424551]"
-                            >
-                                ${translateLang[currentLang].section6.kristin}
-                            </h3>
-                            <p
-                                class="font-[Lato] font-normal text-xs leading-[100%] md:text-base text-[#787A80]"
-                            >
-                                ${translateLang[currentLang].section6.kristin_job}
-                            </p>
-                        </div>
-                    </div>
-                    <!-- uch -->
-                    <div class="group w-auto">
-                        <div class="bg-[#FFCF2D] rounded-md">
-                            <div class="relative overflow-hidden rounded">
-                                <img
-                                    src="../../Image/aboutUs-photo/person2.png"
-                                    alt="image"
-                                    class="w-auto object-contain px-2 pt-2 md:px-5 md:pt-5"
-                                />
-
-                                <div
-                                    class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"
-                                ></div>
-
-                                <div
-                                    class="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500"
-                                >
-                                    <a href="#">
-                                        <img
-                                            src="../../Image/aboutUs-photo/1.svg"
-                                            alt="image"
-                                        />
-                                    </a>
-
-                                    <a href="#">
-                                        <img
-                                            src="../../Image/aboutUs-photo/2.svg"
-                                            alt="image"
-                                        />
-                                    </a>
-
-                                    <a href="#">
-                                        <img
-                                            src="../../Image/aboutUs-photo/Linked-In.svg"
-                                            alt="image"
-                                        />
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-center mt-2">
-                            <h3
-                                class="font-[Lato] font-medium text-xs md:font-semibold md:text-lg leading-[100%] text-[#424551]"
-                            >
-                                ${translateLang[currentLang].section6.marvin}
-                            </h3>
-                            <p
-                                class="font-[Lato] font-normal text-xs leading-[100%] md:text-base text-[#787A80]"
-                            >
-                                 ${translateLang[currentLang].section6.marvin_job}
-                            </p>
-                        </div>
-                    </div>
-                    <!-- tort -->
-                    <div class="group w-auto">
-                        <div class="bg-[#FFCF2D] rounded-md">
-                            <div class="relative overflow-hidden rounded">
-                                <img
-                                    src="../../Image/aboutUs-photo/person3.png"
-                                    alt="image"
-                                    class="w-auto object-contain px-2 pt-2 md:px-5 md:pt-5"
-                                />
-
-                                <div
-                                    class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"
-                                ></div>
-
-                                <div
-                                    class="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500"
-                                >
-                                    <a href="#">
-                                        <img
-                                            src="../../Image/aboutUs-photo/1.svg"
-                                            alt="image"
-                                        />
-                                    </a>
-
-                                    <a href="#">
-                                        <img
-                                            src="../../Image/aboutUs-photo/2.svg"
-                                            alt="image"
-                                        />
-                                    </a>
-
-                                    <a href="#">
-                                        <img
-                                            src="../../Image/aboutUs-photo/Linked-In.svg"
-                                            alt="image"
-                                        />
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-center mt-2">
-                            <h3
-                                class="font-[Lato] font-medium text-xs md:font-semibold md:text-lg leading-[100%] text-[#424551]"
-                            >
-                                 ${translateLang[currentLang].section6.leslie}
-                            </h3>
-                            <p
-                                class="font-[Lato] font-normal text-xs leading-[100%] md:text-base text-[#787A80]"
-                            >
-                                 ${translateLang[currentLang].section6.leslie_job}
-                            </p>
-                        </div>
-                    </div>
-                    <!-- besh -->
-                    <div class="group w-auto">
-                        <div class="bg-[#FFCF2D] rounded-md">
-                            <div class="relative overflow-hidden rounded">
-                                <img
-                                    src="../../Image/aboutUs-photo/person4.png"
-                                    alt="image"
-                                    class="w-auto object-contain px-2 pt-2 md:px-5 md:pt-5"
-                                />
-
-                                <div
-                                    class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"
-                                ></div>
-
-                                <div
-                                    class="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500"
-                                >
-                                    <a href="#">
-                                        <img
-                                            src="../../Image/aboutUs-photo/1.svg"
-                                            alt="image"
-                                        />
-                                    </a>
-
-                                    <a href="#">
-                                        <img
-                                            src="../../Image/aboutUs-photo/2.svg"
-                                            alt="image"
-                                        />
-                                    </a>
-
-                                    <a href="#">
-                                        <img
-                                            src="../../Image/aboutUs-photo/Linked-In.svg"
-                                            alt="image"
-                                        />
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-center mt-2">
-                            <h3
-                                class="font-[Lato] font-medium text-xs md:font-semibold md:text-lg leading-[100%] text-[#424551]"
-                            >
-                                ${translateLang[currentLang].section6.murphy}
-                            </h3>
-                            <p
-                                class="font-[Lato] font-normal text-xs leading-[100%] md:text-base text-[#787A80]"
-                            >
-                                 ${translateLang[currentLang].section6.murphy_job}
-                            </p>
-                        </div>
-                    </div>
-                    <!-- olti -->
-                    <div class="group w-auto">
-                        <div class="bg-[#FFCF2D] rounded-md">
-                            <div class="relative overflow-hidden rounded">
-                                <img
-                                    src="../../Image/aboutUs-photo/person5.png"
-                                    alt="image"
-                                    class="w-auto object-contain px-2 pt-2 md:px-5 md:pt-5"
-                                />
-
-                                <div
-                                    class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"
-                                ></div>
-
-                                <div
-                                    class="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500"
-                                >
-                                    <a href="#">
-                                        <img
-                                            src="../../Image/aboutUs-photo/1.svg"
-                                            alt="image"
-                                        />
-                                    </a>
-
-                                    <a href="#">
-                                        <img
-                                            src="../../Image/aboutUs-photo/2.svg"
-                                            alt="image"
-                                        />
-                                    </a>
-
-                                    <a href="#">
-                                        <img
-                                            src="../../Image/aboutUs-photo/Linked-In.svg"
-                                            alt="image"
-                                        />
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-center mt-2">
-                            <h3
-                                class="font-[Lato] font-medium text-xs md:font-semibold md:text-lg leading-[100%] text-[#424551]"
-                            >
-                                 ${translateLang[currentLang].section6.brooklyn}
-                            </h3>
-                            <p
-                                class="font-[Lato] font-normal text-xs leading-[100%] md:text-base text-[#787A80]"
-                            >
-                                 ${translateLang[currentLang].section6.brooklyn_job}
-                            </p>
-                        </div>
-                    </div>
-                    <!-- yeddi -->
-                    <div class="group w-auto">
-                        <div class="bg-[#FFCF2D] rounded-md">
-                            <div class="relative overflow-hidden rounded">
-                                <img
-                                    src="../../Image/aboutUs-photo/person6.png"
-                                    alt="image"
-                                    class="w-auto object-contain px-2 pt-2 md:px-5 md:pt-5"
-                                />
-
-                                <div
-                                    class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"
-                                ></div>
-
-                                <div
-                                    class="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500"
-                                >
-                                    <a href="#">
-                                        <img
-                                            src="../../Image/aboutUs-photo/1.svg"
-                                            alt="image"
-                                        />
-                                    </a>
-
-                                    <a href="#">
-                                        <img
-                                            src="../../Image/aboutUs-photo/2.svg"
-                                            alt="image"
-                                        />
-                                    </a>
-
-                                    <a href="#">
-                                        <img
-                                            src="../../Image/aboutUs-photo/Linked-In.svg"
-                                            alt="image"
-                                        />
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-center mt-2">
-                            <h3
-                                class="font-[Lato] font-medium text-xs md:font-semibold md:text-lg leading-[100%] text-[#424551]"
-                            >
-                                 ${translateLang[currentLang].section6.cody}
-                            </h3>
-                            <p
-                                class="font-[Lato] font-normal text-xs leading-[100%] md:text-base text-[#787A80]"
-                            >
-                                ${translateLang[currentLang].section6.cody_job}
-                            </p>
-                        </div>
-                    </div>
-                    <!-- sakkiz -->
-                    <div class="group w-auto">
-                        <div class="bg-[#FFCF2D] rounded-md">
-                            <div class="relative overflow-hidden rounded">
-                                <img
-                                    src="../../Image/aboutUs-photo/person1.png"
-                                    alt="image"
-                                    class="w-auto object-contain px-2 pt-2 md:px-5 md:pt-5"
-                                />
-
-                                <div
-                                    class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"
-                                ></div>
-
-                                <div
-                                    class="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500"
-                                >
-                                    <a href="#">
-                                        <img
-                                            src="../../Image/aboutUs-photo/1.svg"
-                                            alt="image"
-                                        />
-                                    </a>
-
-                                    <a href="#">
-                                        <img
-                                            src="../../Image/aboutUs-photo/2.svg"
-                                            alt="image"
-                                        />
-                                    </a>
-
-                                    <a href="#">
-                                        <img
-                                            src="../../Image/aboutUs-photo/Linked-In.svg"
-                                            alt="image"
-                                        />
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-center mt-2">
-                            <h3
-                                class="font-[Lato] font-medium text-xs md:font-semibold md:text-lg leading-[100%] text-[#424551]"
-                            >
-                                ${translateLang[currentLang].section6.jerome}
-                            </h3>
-                            <p
-                                class="font-[Lato] font-normal text-xs leading-[100%] md:text-base text-[#787A80]"
-                            >
-                                 ${translateLang[currentLang].section6.jerome_job}
-                            </p>
-                        </div>
-                    </div>
+            </div>
+        </div>
+        <div class="text-center mt-2">
+            <h3 class="font-[Lato] font-medium text-xs md:font-semibold md:text-lg leading-[100%] text-[#424551]"> ${translateLang[currentLang].section6.jerome}</h3>
+            <p class="font-[Lato] font-normal text-xs md:leading-[100%] md:text-base text-[#787A80]">${translateLang[currentLang].section6.jerome_job}</p>
+        </div>
+    </div>
+            <!-- ikki -->
+    <div class="group w-auto">
+        <div class="bg-[#FFCF2D] rounded-md">
+            <div class="relative overflow-hidden rounded">
+                <img src="../../Image/aboutUs-photo/person7.png"
+                     class="w-full object-contain px-2 pt-2 md:px-5 md:pt-5"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
                 </div>
-`;
+                <div class="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+                    <a href="#"><img src="../../Image/aboutUs-photo/1.svg" /></a>
+                    <a href="#"><img src="../../Image/aboutUs-photo/2.svg" /></a>
+                    <a href="#"><img src="../../Image/aboutUs-photo/Linked-In.svg" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-2">
+            <h3 class="font-[Lato] font-medium text-xs md:font-semibold md:text-lg leading-[100%] text-[#424551]">${translateLang[currentLang].section6.kristin}</h3>
+            <p class="font-[Lato] font-normal text-xs md:leading-[100%] md:text-base text-[#787A80] ">${translateLang[currentLang].section6.kristin_job}</p>
+        </div>
+    </div>
+        <!-- uch -->
+    <div class="group w-auto">
+        <div class="bg-[#FFCF2D] rounded-md">
+            <div class="relative overflow-hidden rounded">
+                <img src="../../Image/aboutUs-photo/person2.png"
+                     class="w-full object-contain px-2 pt-2 md:px-5 md:pt-5"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">     </div>
+                <div class="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+                    <a href="#"><img src="../../Image/aboutUs-photo/1.svg" /></a>
+                    <a href="#"><img src="../../Image/aboutUs-photo/2.svg" /></a>
+                    <a href="#"><img src="../../Image/aboutUs-photo/Linked-In.svg" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-2">
+            <h3 class="font-[Lato] font-medium text-xs md:font-semibold md:text-lg leading-[100%] text-[#424551]">${translateLang[currentLang].section6.marvin}</h3>
+            <p class="font-[Lato] font-normal text-xs md:leading-[100%] md:text-base text-[#787A80]">${translateLang[currentLang].section6.marvin_job}</p>
+        </div>
+    </div>
+            <!-- tort -->
+    <div class="group w-auto">
+        <div class="bg-[#FFCF2D] rounded-md">
+            <div class="relative overflow-hidden rounded">
+                <img src="../../Image/aboutUs-photo/person3.png"
+                     class="w-full object-contain px-2 pt-2 md:px-5 md:pt-5"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">     </div>
+                <div class="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+                    <a href="#"><img src="../../Image/aboutUs-photo/1.svg" /></a>
+                    <a href="#"><img src="../../Image/aboutUs-photo/2.svg" /></a>
+                    <a href="#"><img src="../../Image/aboutUs-photo/Linked-In.svg" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-2">
+            <h3 class="font-[Lato] font-medium text-xs md:font-semibold md:text-lg leading-[100%] text-[#424551]">${translateLang[currentLang].section6.leslie}</h3>
+            <p class="font-[Lato] font-normal text-xs md:leading-[100%] md:text-base text-[#787A80]">${translateLang[currentLang].section6.leslie_job}</p>
+        </div>
+    </div>
+         <!-- besh -->
+    <div class="group w-auto">
+        <div class="bg-[#FFCF2D] rounded-md">
+            <div class="relative overflow-hidden rounded">
+                <img src="../../Image/aboutUs-photo/person4.png"
+                     class="w-full object-contain px-2 pt-2 md:px-5 md:pt-5"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">     </div>
+                <div class="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+                    <a href="#"><img src="../../Image/aboutUs-photo/1.svg" /></a>
+                    <a href="#"><img src="../../Image/aboutUs-photo/2.svg" /></a>
+                    <a href="#"><img src="../../Image/aboutUs-photo/Linked-In.svg" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-2">
+            <h3 class="font-[Lato] font-medium text-xs md:font-semibold md:text-lg leading-[100%] text-[#424551]">${translateLang[currentLang].section6.murphy}</h3>
+            <p class="font-[Lato] font-normal text-xs md:leading-[100%] md:text-base text-[#787A80]">${translateLang[currentLang].section6.murphy_job}</p>
+        </div>
+    </div>
+            <!-- olti -->
+    <div class="group w-auto">
+        <div class="bg-[#FFCF2D] rounded-md">
+            <div class="relative overflow-hidden rounded">
+                <img src="../../Image/aboutUs-photo/person5.png"
+                     class="w-full object-contain px-2 pt-2 md:px-5 md:pt-5" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">     </div>
+                <div class="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+                    <a href="#"><img src="../../Image/aboutUs-photo/1.svg" /></a>
+                    <a href="#"><img src="../../Image/aboutUs-photo/2.svg" /></a>
+                    <a href="#"><img src="../../Image/aboutUs-photo/Linked-In.svg" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-2">
+            <h3 class="font-[Lato] font-medium text-xs md:font-semibold md:text-lg leading-[100%] text-[#424551]">${translateLang[currentLang].section6.brooklyn}</h3>
+            <p class="font-[Lato] font-normal text-xs md:leading-[100%] md:text-base text-[#787A80]">${translateLang[currentLang].section6.brooklyn_job}</p>
+        </div>
+    </div>
+            <!-- yeddi -->
+    <div class="group w-auto">
+        <div class="bg-[#FFCF2D] rounded-md">
+            <div class="relative overflow-hidden rounded">
+                <img src="../../Image/aboutUs-photo/person6.png"
+                     class="w-full object-contain px-2 pt-2 md:px-5 md:pt-5"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">     </div>
+                <div class="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+                  <a href="#"><img src="../../Image/aboutUs-photo/1.svg" /></a>
+                  <a href="#"><img src="../../Image/aboutUs-photo/2.svg" /></a>
+                  <a href="#"><img src="../../Image/aboutUs-photo/Linked-In.svg"/>                  </a>                 
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-2">
+            <h3 class="font-[Lato] font-medium text-xs md:font-semibold md:text-lg leading-[100%] text-[#424551]">${translateLang[currentLang].section6.cody}</h3>
+            <p class="font-[Lato] font-normal text-xs md:leading-[100%] md:text-base text-[#787A80]">${translateLang[currentLang].section6.cody_job}</p>
+        </div>
+    </div>
+            <!-- sakkiz -->
+   <div class="group w-auto">
+        <div class="bg-[#FFCF2D] rounded-md">
+            <div class="relative overflow-hidden rounded">
+                <img src="../../Image/aboutUs-photo/person1.png"
+                     class="w-full object-contain px-2 pt-2 md:px-5 md:pt-5" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20  to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">     </div>
+                <div class="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+                    <a href="#"><img src="../../Image/aboutUs-photo/1.svg" /></a>
+                    <a href="#"><img src="../../Image/aboutUs-photo/2.svg" /></a>
+                    <a href="#"><img src="../../Image/aboutUs-photo/Linked-In.svg" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-2">
+            <h3 class="font-[Lato] font-medium text-xs md:font-semibold md:text-lg leading-[100%] text-[#424551]"> ${translateLang[currentLang].section6.jerome}</h3>
+            <p class="font-[Lato] font-normal text-xs md:leading-[100%] md:text-base text-[#787A80]">${translateLang[currentLang].section6.jerome_job}</p>
+        </div>
+    </div>
+</div>`;
 // section 6 end
 
 // section 7 start
 const section7 = document.querySelector("#section7");
 section7.innerHTML = `
- <div
-                    class="container mx-auto px-5 mb-8 md:mb-16 md:px-10 lg:px-15"
-                >
-                    <div class="mx-auto items-center text-center mb-8 md:mb-8">
-                        <h6
-                            class="font-[Lato] text-[#1E212C] font-bold text-base leading-[150%]"
-                        >
-                            ${translateLang[currentLang].section7.section7_name}
-                        </h6>
-                        <h1
-                            class="font-[Lato] text-[#1E212C] font-extrabold leading-[130%] text-3xl lg:font-black lg:text-4xl"
-                        >
-                            ${translateLang[currentLang].section7.section7_title}
-                        </h1>
-                    </div>
-
-                    <div class="py-6">
-                        <div
-                            class="container mx-auto px-5 relative flex justify-between items-center"
-                        >
-                            <!-- Prev -->
-                            <div
-                                class="swiper-button-prev !left-0 active:text-[#FFFFFF] text-[#424551] after:!w-6 !h-6"
-                            >
-                                
-                            </div>
-                            <div class="swiper w-full max-w-4xl overflow-hidden">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div
-                                            class="max-w-4xl mx-auto bg-[#FFFFFF] p-10 lg:p-16 rounded shadow-sm"
-                                        >
-                                            <!-- Quote -->
-                                            <div class="flex gap-6">
-                                                     <img class="w-7 h-7 mt-2"
-                                                     src="../../Image/aboutUs-photo/braces.svg" />
-
-                                                <div>
-                                                    <p
-                                                        class="text-[#424551] leading-8"
-                                                    >
-                                                        Vero dolores
-                                                        exercitationem...
-                                                    </p>
-
-                                                    <div
-                                                        class="flex items-center gap-4 mt-8"
-                                                    >
-                                                        <img
-                                                            src="./images/person.png"
-                                                            class="w-16 h-16 rounded-full"
-                                                        />
-
-                                                        <div>
-                                                            <h3
-                                                                class="font-bold"
-                                                            >
-                                                                Courtney
-                                                                Alexander
-                                                            </h3>
-
-                                                            <p
-                                                                class="text-gray-500 text-sm"
-                                                            >
-                                                                Position,
-                                                                Company
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Ikkinchi slide -->
-                                    <div class="swiper-slide">
-                                        <div
-                                            class="max-w-4xl mx-auto bg-white p-10 lg:p-16 rounded shadow-sm"
-                                        >
-                                            <!-- Quote -->
-                                            <div class="flex gap-6">
-                                                <img
-                                                    src="./images/quote.svg"
-                                                    class="w-7 h-7 mt-2"
-                                                />
-
-                                                <div>
-                                                    <p
-                                                        class="text-[#424551] leading-8"
-                                                    >
-                                                        Vero dolores
-                                                        exercitationem...
-                                                    </p>
-
-                                                    <div
-                                                        class="flex items-center gap-4 mt-8"
-                                                    >
-                                                        <img
-                                                            src="./images/person.png"
-                                                            class="w-16 h-16 rounded-full"
-                                                        />
-
-                                                        <div>
-                                                            <h3
-                                                                class="font-bold"
-                                                            >
-                                                                Courtney
-                                                                Alexander
-                                                            </h3>
-
-                                                            <p
-                                                                class="text-gray-500 text-sm"
-                                                            >
-                                                                Position,
-                                                                Company
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+ <div class="container mx-auto px-5 md:px-10 lg:px-15">
+    <div class="mx-auto items-center text-center mb-5 md:mb-8">
+        <h6 class="font-[Lato] text-[#1E212C] font-bold text-base leading-[150%]">
+         ${translateLang[currentLang].section7.section7_name}</h6>
+        <h1 class="font-[Lato] text-[#1E212C] font-extrabold leading-[130%] text-2xl sm:text-3xl lg:font-black lg:text-4xl">
+        ${translateLang[currentLang].section7.section7_title}</h1>
+    </div>
+    <div class="md:py-6">
+        <div class="relative flex justify-between items-center">
+            <!-- Prev -->
+            <div class="swiper-button-prev !left-0 active:text-[#FFFFFF] text-[#424551] after:!w-6 !h-6"></div>
+            <div class="swiper w-full max-w-lg lg:max-w-4xl overflow-hidden">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide w-auto mx-auto bg-[#FFFFFF] p-5 lg:p-10 rounded shadow-lg">
+                            <div class="flex gap-3 md:gap-6">
+                                <img class="w-5 h-5 md:w-7 md:h-7"
+                                     src="../../Image/aboutUs-photo/braces.svg" />
+                                <div>
+                                    <p class="text-[#424551] text-sm leading-5">
+                                        ${translateLang[currentLang].section7.comment}
+                                    </p>
+                                    <div class="flex items-center gap-4 mt-5">
+                                        <img src="../../Image/aboutUs-photo/commentor-img2.png"
+                                             class="w-16 h-16 rounded-full"/>
+                                        <div>
+                                            <h3 class="font-bold">
+                                                ${translateLang[currentLang].section7.elenor}
+                                            </h3>
+                                            <p class="text-gray-500 text-sm">
+                                                ${translateLang[currentLang].section7.elenors}
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
-                            <!-- Next -->
-                            <div
-                             class="swiper-button-next !right-0 active:text-[#FFFFFF] text-[#424551] after:!w-6 !h-6"
-                            >
+                                    <!-- Ikkinchi slide -->
+                        <div class="swiper-slide w-auto mx-auto bg-[#FFFFFF] p-5 lg:p-10 rounded shadow-lg">
+                            <div class="flex gap-3 md:gap-6">
+                                <img class="w-5  h-5 md:w-7 md:h-7"
+                                    src="../../Image/aboutUs-photo/braces.svg" />
+                                <div>
+                                    <p class="text-[#424551] text-sm leading-5">
+                                        ${translateLang[currentLang].section7.comment}
+                                    </p>
+                                    <div class="flex items-center gap-4 mt-5">
+                                        <img src="../../Image/aboutUs-photo/commentor-img1.jpg"
+                                            class="w-16 h-16 rounded-full"/>
+                                        <div>
+                                            <h3 class="font-bold">Courtney Alexander</h3>
+                                            <p class="text-gray-500 text-sm">
+                                                ${translateLang[currentLang].section7.elenors}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        
                     </div>
                 </div>
-`;
+
+            <!-- Next -->
+            <div class="swiper-button-next !right-0 -mr-5 active:text-[#FFFFFF] text-[#424551] after:!w-6 !h-6">
+            </div>
+        </div> 
+    </div>
+</div>`;
 
 const swiper = new Swiper(".swiper", {
     slidesPerView: 1,
@@ -1804,6 +1087,158 @@ const swiper = new Swiper(".swiper", {
 });
 // section 7 end
 
+// section 8 start
+const section8 = document.querySelector("#section8");
+section8.innerHTML = `
+<div class="container mx-auto px-5 md:px-10 lg:px-15">
+    <div class="mx-auto items-center text-center mb-5 md:mb-8">
+        <h6 class="font-[Lato] text-[#1E212C] font-bold text-base leading-[150%]">
+        ${translateLang[currentLang].section8.section8_name}
+        </h6>
+        <h1 class="font-[Lato] text-[#1E212C] font-extrabold text-xl sm:leading-[130%] sm:text-3xl lg:font-black lg:text-4xl">
+        ${translateLang[currentLang].section8.section8_title}
+        </h1>
+    </div>
+    <div class="grid grid-cols-4 gap-4 md:grid-cols-6 md:gap-6">
+        <img class="mx-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer"
+            src="https://createx.createx.studio/assets/img/online-courses/logo/albatron.svg"/>
+        <img class="mx-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer"
+            src="https://createx.createx.studio/assets/img/online-courses/logo/orbis.svg"/>
+        <img class="mx-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer"
+            src="https://createx.createx.studio/assets/img/online-courses/logo/rain-x.svg"/>
+        <img class="mx-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer"
+            src="https://createx.createx.studio/assets/img/online-courses/logo/curtis.svg"/>
+        <img class="mx-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer"
+            src="https://createx.createx.studio/assets/img/online-courses/logo/tesla.svg"/>
+        <img class="mx-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer"
+            src="https://createx.createx.studio/assets/img/online-courses/logo/bassett-furniture.svg"/>
+        <img class="mx-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer"
+            src="https://createx.createx.studio/assets/img/online-courses/logo/lotte-g.svg"/>
+        <img class="mx-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer"
+            src="https://createx.createx.studio/assets/img/online-courses/logo/lovato.svg"/>
+        <img class="mx-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer"
+            src="https://createx.createx.studio/assets/img/online-courses/logo/x-rite.svg"/>
+        <img class="mx-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer"
+            src="https://createx.createx.studio/assets/img/online-courses/logo/wisecat.svg"/>
+        <img class="mx-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer"
+            src="https://createx.createx.studio/assets/img/online-courses/logo/gabor.svg"/>
+        <img class="mx-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer"
+            src="https://createx.createx.studio/assets/img/online-courses/logo/exxon.svg"/>
+    </div>
+</div>
+`;
+// section 8 end
+
+// section 9 start
+const section9 = document.querySelector("#section9");
+section9.innerHTML = `
+<div class="mx-auto mb-5 md:mb-10">
+    <h6 class="font-[Lato] text-[#1E212C] font-bold text-base leading-[150%]">
+        ${translateLang[currentLang].section8.ourBlog}
+    </h6>
+    <div class="flex justify-between items-center">
+        <h1 class="font-[Lato] text-[#1E212C] font-extrabold text-xl sm:leading-[130%] sm:text-3xl lg:font-black lg:text-4xl">${translateLang[currentLang].section8.latestPosts}
+        </h1>
+        <a href="../Blogs/blogs.html">
+            <button class="bg-[#F75E05] text-white px-4 md:py-2 md:px-7 rounded hover:bg-white hover:text-[#F75E05] hover:border border-[#F75E05]" >
+                  ${translateLang[currentLang].section8.goBlog}
+            </button>
+        </a>
+    </div>
+</div>
+<div class="grid sm:grid-cols-3 gap-5">
+        <!-- birinchi -->
+    <div class="group relative overflow-hidden rounded-xl">
+        <a class="flex gap-1 top-4 absolute left-3 z-20 bg-white rounded-md"                    href="../Blogs/blogs.html">
+        <img class="absolute left-1" src="../../Image/aboutUs-photo/mic.svg" />
+        <button class="bg-[#FFFFFF] text-sm font-normal pl-2 pr-1 rounded-md ml-3">
+            ${translateLang[currentLang].section8.podcast}
+        </button>
+        </a>
+        <img
+            class="w-full transition-transform duration-500 hover:scale-105"
+            src="../../Image/aboutUs-photo/girl-image.png"/>
+        <div class="flex flex-wrap mt-3">
+            <span class="font-[Lato] font-semibold text-sm leading-[100%] text-[#787A80] pr-2 border-r border-[#787A80]"> ${translateLang[currentLang].section8.marketing}</span>
+            <img class="ml-2" src="../../Image/aboutUs-photo/Vector (Stroke).svg"/>
+            <span class="font-[Lato] font-semibold text-sm leading-[100%] text-[#787A80] pr-2 border-r border-[#787A80]">${translateLang[currentLang].section8.september} 4, 2020   </span>
+            <img class="ml-2" src="../../Image/aboutUs-photo/Union.svg"/>
+             <span class="font-[Lato] font-semibold text-sm leading-[100%] text-[#787A80]"> 36      ${translateLang[currentLang].section8.min}</span>
+        </div>
+        <div>
+            <h6 class="font-[Lato] font-bold text-sm md:text-lg leading-[120%] py-2 text-[#1E212C]"
+                >${translateLang[currentLang].section8.section8_card1_title}</h6>
+            <p class="font-[Lato] font-normal text-sm leading-[130%] text-[#424551] mb-2"> 
+                ${translateLang[currentLang].section8.section8_card1_text}</p>
+            <a href="../Blogs/blogs.html" class="flex gap-3 items-center">
+                <button class="font-semibold text-base leading-[160%] text-[#1E212C] hover:text-red-500 font-[Lato]">${translateLang[currentLang].section8.listen}
+                /button>
+                <img src="../../Image/aboutUs-photo/about.section4.strelka.svg"/>
+            </a>
+        </div>
+    </div>
+            <!-- ikkinchi -->
+    <div class="group relative overflow-hidden rounded-xl">
+        <a class="flex gap-1 top-4 absolute left-3 z-20 bg-white rounded-md" 
+           href="../Blogs/blogs.html">
+            <img class="absolute left-1" src="../../Image/aboutUs-photo/Play.svg"/>
+            <button class="bg-[#FFFFFF] text-sm font-normal pl-2 pr-1 rounded-md ml-3">
+                    ${translateLang[currentLang].section8.video}</button>
+        </a>
+        <img class="w-full transition-transform duration-500 hover:scale-105"
+             src="../../Image/aboutUs-photo/lamp-image.png"/>
+        <div class="flex flex-wrap mt-3">
+            <span class="font-[Lato] font-semibold text-sm leading-[100%] text-[#787A80] pr-2 border-r border-[#787A80]">${translateLang[currentLang].section8.management}
+            </span>
+            <img class="ml-2" src="../../Image/aboutUs-photo/Vector (Stroke).svg"/>
+            <span class="font-[Lato] font-semibold text-sm leading-[100%] text-[#787A80] pr-2 border-r border-[#787A80]">${translateLang[currentLang].section8.august}  25, 2020
+            </span>
+            <img class="ml-2" src="../../Image/aboutUs-photo/Union.svg"/>
+            <span class="font-[Lato] font-semibold text-sm leading-[100%] text-[#787A80]">45
+                  ${translateLang[currentLang].section8.min}</span>
+        </div>
+        <div>
+            <h6 class="font-[Lato] font-bold text-sm md:text-lg leading-[120%] py-2 text-[#1E212C]"
+                > ${translateLang[currentLang].section8.section8_card2_title} </h6>
+            <p class="font-[Lato] font-normal text-sm leading-[130%] text-[#424551] mb-2">
+                ${translateLang[currentLang].section8.section8_card2_text}</p>
+            <a href="../Blogs/blogs.html" class="flex gap-3 items-center">
+                <button class="font-semibold text-base leading-[160%] text-[#1E212C] hover:text-red-500 font-[Lato]">${translateLang[currentLang].section8.watch}
+                </button>
+                <img src="../../Image/aboutUs-photo/about.section4.strelka.svg"/>
+            </a>
+        </div>
+    </div>
+        <!-- uchinchi -->
+    <div class="group relative overflow-hidden rounded-xl">
+        <a class="flex gap-1 top-4 absolute left-3 z-20 bg-white rounded-md"
+           href="../Blogs/blogs.html">
+            <img class="absolute left-1" src="../../Image/aboutUs-photo/Files.svg"/>
+            <button class="bg-[#FFFFFF] text-sm font-normal pl-2 pr-1 rounded-md ml-3"
+                >${translateLang[currentLang].section8.article}</button>
+        </a>
+        <img class="w-full transition-transform duration-500 hover:scale-105"
+             src="../../Image/aboutUs-photo/cap-image.png"/>
+        <div class="flex flex-wrap mt-3">
+            <span class="font-[Lato] font-semibold text-sm leading-[100%] text-[#787A80] pr-2  marker:border-r border-[#787A80]">${translateLang[currentLang].section8.design}</span>
+            <img class="ml-2" src="../../Image/aboutUs-photo/Vector (Stroke).svg"/>
+            <span class="font-[Lato] font-semibold text-sm leading-[100%] text-[#787A80]">
+                  ${translateLang[currentLang].section8.august} 8, 2020</span>
+        </div>
+        <div>
+            <h6 class="font-[Lato] font-bold text-sm md:text-lg leading-[120%] py-2 text-[#1E212C]"
+                > ${translateLang[currentLang].section8.section8_card1_title}/h6>
+            <p class="font-[Lato] font-normal text-sm leading-[130%] text-[#424551] mb-2">
+                ${translateLang[currentLang].section8.section8_card1_text}</p>
+            <a href="../Blogs/blogs.html" class="flex gap-3 items-center">
+                <button class="font-semibold text-base leading-[160%] text-[#1E212C] hover:text-red-500 font-[Lato]">${translateLang[currentLang].section8.read}</button>
+                <img src="../../Image/aboutUs-photo/about.section4.strelka.svg"/>
+            </a>
+        </div>
+    </div>
+</div>`;
+// section 9 end
+// section10
 // LANGUAGE BUTTON
 window.addEventListener("scroll", function () {
     const header = document.querySelector("header");
@@ -1851,12 +1286,8 @@ function updateLangModal() {
             langModalOption.className =
                 "w-full flex items-center justify-center gap-1.5 group hover:bg-[#FF3F3A] rounded transition-all duration-300";
             langModalOption.innerHTML = `
-                <img
-                    src="${translateLang[targetLang].header.flag}"
-                    alt="language button icon"
-                />
-                <span class="text-white text-[12px]">${translateLang[targetLang].header.langTitle}</span>
-            `;
+            <img src="${translateLang[targetLang].header.flag}" />
+            <span class="text-white text-[12px]">${translateLang[targetLang].header.langTitle}<span>`;
 
             langModalOption.addEventListener("click", () => {
                 localStorage.setItem("selectedLang", targetLang);
@@ -1871,17 +1302,10 @@ function updateLangModal() {
 }
 function mainLangButton() {
     langBtn.innerHTML = `
-        <img
-            src="${translateLang[currentLang].header.flag}"
-            alt="language button icon"
-        />
+        <img src="${translateLang[currentLang].header.flag}"/>
         <span class="downSpan transition-all duration-300">
-            <img
-                src="../../Image/HomePagePhoto/icon-park-solid--down-one.svg"
-                alt="down icon"
-            />
-        </span>
-    `;
+            <img src="../../Image/HomePagePhoto/icon-park-solid--down-one.svg"/>
+        </span>`;
 }
 
 langBtn.addEventListener("click", (e) => {
