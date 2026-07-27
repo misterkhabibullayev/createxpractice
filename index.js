@@ -1202,6 +1202,9 @@ var swiper = new Swiper(".swiper3", {
 });
 // ourBlog Section end
 
+
+
+
 window.addEventListener("scroll", function () {
     const header = document.querySelector("header");
     if (window.scrollY > 300) {
