@@ -1,3 +1,4 @@
+import { allBlogPosts } from "./AllBlogPosts.js";
 import { allCourses } from "./AllCourses.js";
 import { allEvents } from "./AllEvents.js";
 console.log(allCourses);
@@ -226,7 +227,7 @@ let currentLang = localStorage.getItem("selectedLang") || "en";
 const headerMain = document.querySelector("#headerMain");
 headerMain.innerHTML = `
     <div
-        class="container mx-auto px-5 md:px-10 lg:px-20 flex justify-between items-center py-5"
+        class="w-full max-w-[1300px] mx-auto px-5 flex justify-between items-center py-5"
     >
         <div class="flex items-center gap-7 md:gap-10">
             <div class="">
@@ -240,7 +241,7 @@ headerMain.innerHTML = `
             <nav class="hidden lg:flex items-center gap-4 xl:gap-8">
                 <a
                     href="./Pages/About/about.html"
-                    class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
+                    class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300 whitespace-nowrap"
                 >${translateData[currentLang].navAbout}</a>
                 <a
                     href="./Pages/Courses/courses.html"
@@ -264,7 +265,7 @@ headerMain.innerHTML = `
             <div class="flex items-center gap-3 md:gap-4">
                 <a
                     href="./Pages/Contacts/contacts.html"
-                    class="font-[Lato] font-bold text-[12px] lg:py-1 md:leading-6 lg:leading-4 tracking-[0.5px] text-white bg-gradient-to-r from-[#FF3F3A] to-[#F75E05] px-5 lg:px-3 rounded-[4px] hidden sm:inline-block hover:bg-gradient-to-l hover:from-[#F75E05] hover:to-[#FF3F3A]"
+                    class="font-[Lato] font-bold text-[12px] py-3 leading-4 tracking-[0.5px] text-white bg-gradient-to-r from-[#FF3F3A] to-[#F75E05] px-5 lg:px-3 rounded-[4px] hidden sm:inline-block hover:bg-gradient-to-l hover:from-[#F75E05] hover:to-[#FF3F3A]"
                 >
                     ${translateData[currentLang].getConsultation}
                 </a>
@@ -305,7 +306,7 @@ headerMain.innerHTML = `
 // hero Section
 const heroSection = document.querySelector("#heroSection");
 heroSection.innerHTML = `
-    <div class="container mx-auto px-5 md:px-10 lg:px-20">
+    <div class="w-full max-w-[1300px] mx-auto px-5">
         <div
             class="flex flex-col-reverse items-center gap-8 lg:flex lg:flex-row lg:justify-between lg:items-center lg:mb-[40px]"
         >
@@ -420,7 +421,7 @@ heroSection.innerHTML = `
 const whoweare = document.querySelector("#whoweare");
 whoweare.innerHTML = `
     <div
-        class="container mx-auto px-5 md:px-10 lg:px-20 my-[180px] flex flex-col gap-[30px] md:flex-row md:justify-between"
+        class="w-full max-w-[1300px] mx-auto px-5 my-[180px] flex flex-col gap-[30px] md:flex-row md:justify-between"
     >
         <div class="w-full md:w-[50%] h-[50%]">
             <img
@@ -525,7 +526,7 @@ const featuredCoursesSection = document.querySelector(
     "#featuredCoursesSection",
 );
 featuredCoursesSection.innerHTML = `
-    <div class="container mx-auto px-5 md:px-10 lg:px-20">
+    <div class="w-full max-w-[1300px] mx-auto px-5">
         <div>
             <span class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] text-[#1E212C] mb-2">${translateData[currentLang].readytolearn.toUpperCase()}</span>
         </div>
@@ -642,7 +643,7 @@ const benefitsData = {
     },
 };
 ourBenefits.innerHTML = `
-    <div class="container mx-auto px-5 md:px-10 lg:px-20">
+    <div class="w-full max-w-[1300px] mx-auto px-5">
         <div class="flex flex-col md:items-center gap-2 mb-[60px]">
             <span class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] text-[#1E212C]">${translateData[currentLang].ourbenefits.toUpperCase()}</span>
             <h1 class="font-[Lato] font-black text-[28px] sm:text-[36px] md:text-[46px] leading-[130%] text-[#1E212C]">${translateData[currentLang].thatshowwedoit}</h1>
@@ -771,7 +772,7 @@ renderBenefit();
 // ourEvents Section
 const ourEvents = document.querySelector("#ourEvents");
 ourEvents.innerHTML = `
-    <div class="container mx-auto px-5 md:px-10 lg:px-20">
+    <div class="w-full max-w-[1300px] mx-auto px-5">
         <div class="mb-[60px] md:flex md:flex-col md:items-center md:gap-2">
             <span class="font-[Lato] font-bold text-[16px] leading-[150%] text-[#1E212C]">${translateData[currentLang].ourevents.toUpperCase()}</span>
             <h1 class="font-[Lato] font-black text-[46px] leading-[130%] text-[#1E212C]">${translateData[currentLang].lecturesWorkshop}</h1>
@@ -837,7 +838,7 @@ ourEvents.innerHTML = `
 // certificates Section
 const creatXCertificateSection = document.querySelector("#creatXCertificate");
 creatXCertificateSection.innerHTML = `
-    <div class="container mx-auto px-5 md:px-10 lg:px-20 lg:flex lg:justify-between lg:items-start">
+    <div class="w-full max-w-[1300px] mx-auto px-5 lg:flex lg:justify-between lg:items-start">
         <div class="mb-[16px]">
             <div>
                 <span class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] text-[#1E212C] mb-[8px]">
@@ -874,7 +875,7 @@ creatXCertificateSection.innerHTML = `
 // bestTutors Section
 const bestTutors = document.querySelector("#bestTutors");
 bestTutors.innerHTML = `
-    <div class="container mx-auto px-5 md:px-10 lg:px-20">
+    <div class="w-full max-w-[1300px] mx-auto px-5">
         <div>
             <span class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] text-[#1E212C] mb-2">
                 ${translateData[currentLang].bestTutorsHere.toUpperCase()}
@@ -1056,7 +1057,7 @@ export const testimonialsData = [
 ];
 const testimonials = document.querySelector("#testimonials");
 testimonials.innerHTML = `
-    <div class="container mx-auto px-5 md:px-10 lg:px-20">
+    <div class="w-full max-w-[1300px] mx-auto px-5">
         <div class="flex flex-col items-center gap-2">
             <span class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] text-[#1E212C]">${translateData[currentLang].testimonials.toUpperCase()}</span>
             <h1 class="font-[Lato] font-black text-[26px] md:text-[36px] lg:text-[46px] leading-[130%] text-[#1E212C]">${translateData[currentLang].whatOurStudentsSay}</h1>
@@ -1089,7 +1090,7 @@ testimonials.innerHTML = `
                         .join(" ")}
                 </div>
             </div>
-            <button class="hidden lg:flex testimonials-prev-btn absolute left-0 z-10 top-1/2 -translate-y-1/2 w-[48px] h-[48px] items-center justify-center rounded-full hover:bg-[#FF3F3A] transition-all duration-300 group">
+            <button class="hidden lg:flex testimonials-prev-btn absolute left-0 z-[2] top-1/2 -translate-y-1/2 w-[48px] h-[48px] items-center justify-center rounded-full hover:bg-[#FF3F3A] transition-all duration-300 group">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16" class="rotate-180 text-[#424551] group-hover:text-[#FFFFFF] transition-all duration-300">
                     <path d="M0 0h16v16H0z" fill="none" />
                     <path fill="currentColor" fill-rule="evenodd" d="M1.25 8A.75.75 0 0 1 2 7.25h10.19L9.47 4.53a.75.75 0 0 1 1.06-1.06l4 4a.75.75 0 0 1 0 1.06l-4 4a.75.75 0 1 1-1.06-1.06l2.72-2.72H2A.75.75 0 0 1 1.25 8" clip-rule="evenodd" />
@@ -1120,6 +1121,86 @@ var swiper1 = new Swiper(".testimonials-swiper", {
     },
 });
 // testimonials Section end
+
+// ourBlog Section
+const ourBlog = document.querySelector("#ourBlog");
+ourBlog.innerHTML = `
+    <div class="w-full max-w-[1300px] mx-auto px-5">
+        <div>
+            <span class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] text-[#1E212C] mb-2">${translateData[currentLang].ourBlog.toUpperCase()}</span>
+        </div>
+        <div class="flex justify-between items-center mb-11">
+            <h1 class="font-[Lato] font-black text-[30px] md:text-[46px] leading-[130%] text-[#1E212C]">${translateData[currentLang].latestPosts}</h1>
+            <a href="./Pages/Courses/courses.html" class="hidden md:block px-[40px] font-[Lato] font-bold text-[16px] leading-[52px] tracking-[0.5px] text-[#F75E05] border border-[#F75E05] rounded-[4px] hover:bg-[#FF3F3A] hover:text-white transition-all duration-300">${translateData[currentLang].goBlog}</a>
+        </div>
+        <div class="swiper swiper3">
+            <div class="swiper-wrapper">
+                ${allBlogPosts
+                    .slice(0, 3)
+                    .map((post) => {
+                        return `
+                    <div class="swiper-slide group">
+                        <div class="w-full h-auto rounded-[4px] relative mb-4 overflow-hidden">
+                            <a href="#!" class="inline-block w-full h-full overflow-hidden rounded-[4px]">
+                                <img src="${post.img}" alt="post img" class="w-full h-full object-cover rounded group-hover:scale-110 transition-all duration-300"/>
+                                <div class="py-[1px] px-[8px] bg-white rounded-[4px] flex items-center gap-[4px] absolute top-3 left-3">
+                                    <img src="${post.en.type === "Podcast" ? "Image/HomePagePhoto/microphone.svg" : post.en.type === "Article" ? "Image/HomePagePhoto/article.svg" : "Image/HomePagePhoto/videoType.svg"}" />
+                                    <span>${post[currentLang].type}</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div>
+                            <div class="flex flex-wrap gap-3 mb-2">
+                                <span class="flex items-center font-[Lato] font-bold text-[14px] leading-[150%] text-[#787A80]">${post[currentLang].category} 
+                                <span class="inline-block w-[1px] h-3 bg-[#787A80] rounded-[1px] ml-3"></span></span>
+                                <div class="flex items-center gap-2">
+                                    <img src="Image/HomePagePhoto/Calendar.svg" />
+                                    <span class="flex items-center whitespace-nowrap font-[Lato] font-bold text-[14px] leading-[150%] text-[#787A80]">${post[currentLang].date}
+                                    <span class="inline-block w-[1px] h-3 bg-[#787A80] rounded-[1px] ml-3"></span></span>
+                                </div>
+                                <span class="flex items-center gap-2 whitespace-nowrap font-[Lato] font-bold text-[14px] leading-[150%] text-[#787A80]">
+                                    <img src="Image/HomePagePhoto/Clock.svg" class=""/>
+                                    ${post[currentLang].duration}
+                                </span>
+                            </div>
+                            <div class="">
+                                <a href="#" class="font-[Lato] font-bold text-[20px] leading-[150%] text-[#1E212C] hover:text-[#ff3f3a] transition-all duration-300">${post[currentLang].title}</a>
+                                <p class="line-clamp-2 font-[Lato] font-normal text-[16px] leading-[160%] text-[#424551] mt-2 mb-4">${post.en.description}</p>
+                                <a href="#" class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#1E212C] hover:text-[#ff3f3a] transition-all duration-300 flex items-center gap-2 hover:gap-4">
+                                    ${post[currentLang].action} 
+                                    <img src="Image/HomePagePhoto/right.svg" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                    })
+                    .join(" ")}
+            </div>
+            <div class="customPaginat flex items-center justify-center gap-3 mt-10 [&>.swiper-pagination-bullet]:!w-8 [&>.swiper-pagination-bullet]:!h-1 [&>.swiper-pagination-bullet]:!bg-[#B3B7BC] [&>.swiper-pagination-bullet]:!opacity-100 [&>.swiper-pagination-bullet]:!rounded-full [&>.swiper-pagination-bullet]:!m-0 [&>.swiper-pagination-bullet]:transition-all [&>.swiper-pagination-bullet]:duration-300 [&>.swiper-pagination-bullet.swiper-pagination-bullet-active]:!bg-[#424551]">
+                
+            </div>
+        </div>
+
+    </div>
+`;
+var swiper = new Swiper(".swiper3", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    pagination: {
+        el: ".customPaginat",
+        clickable: true,
+    },
+    breakpoints: {
+        590: {
+            slidesPerView: 2,
+        },
+        768: {
+            slidesPerView: 3,
+        },
+    },
+});
+// ourBlog Section end
 
 window.addEventListener("scroll", function () {
     const header = document.querySelector("header");
