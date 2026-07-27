@@ -18,7 +18,7 @@ updateOnlineCourseHeader();
 function createSelectedCats() {
     const allCategories = allCourses.map((eachCourse) => eachCourse[currentLang].category)
    
-    
+
 
     // selectCategory.innerHTML = html;
 }
@@ -111,7 +111,7 @@ function createSliderCards() {
                                         />
                                     </div>
 
-                                    
+                                    <a>ddddd</a>
 
                                     <p
                                         class="pl-10 text-sm sm:text-base sm:pl-10 sm:max-w-full md:text-lg md:max-w-full  lg:text-xl lg:max-w-[900px] w-full lg:pl-10 xl:pl-14"
