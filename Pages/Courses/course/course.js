@@ -3,7 +3,7 @@ import { allCourses } from "../../../AllCourses.js";
 window.addEventListener("DOMContentLoaded", () => {
     const currentLang = localStorage.getItem("selectedLang");
 
-    const locale = {
+    const localeCourse = {
         en: {
             hero: {
                 info: {
@@ -112,6 +112,80 @@ window.addEventListener("DOMContentLoaded", () => {
                 intro: {
                     badge: "For whom?",
                     title: "Who will benefit from the course:",
+                },
+            },
+            program: {
+                intro: {
+                    badge: "Course program",
+                    title: "What will you learn",
+                },
+                imagePart: {
+                    image: "../../../Image/program/illustration.png",
+                },
+            },
+            testimonials: {
+                intro: {
+                    badge: "TESTIMONIALS",
+                    title: "What our students say",
+                },
+
+                comment: [
+                    {
+                        opinion:
+                            "Suleyman's online course is an absolute game-changer! The material is presented in a very clear, structured way, and the practical assignments help you master the concepts quickly. He is an incredibly supportive tutor who always answers questions promptly. I highly recommend this course to everyone",
+                        image: "../../../Image/courses-photo/slider-image/image.png",
+                        braces: "../../../Image/courses-photo/slider-image/braces.png",
+                        name: "Eleanor Pena",
+                        completedCourse: "Position, Course",
+                    },
+
+                    {
+                        opinion:
+                            "Suleyman's online course is an absolute game-changer! The material is presented in a very clear, structured way, and the practical assignments help you master the concepts quickly. He is an incredibly supportive tutor who always answers questions promptly. I highly recommend this course to everyone",
+                        image: "../../Image/courses-photo/slider-image/image.png",
+                        braces: "../../../Image/courses-photo/slider-image/braces.png",
+                        name: "Eleanor Pena",
+                        completedCourse: "Position, Course",
+                    },
+                ],
+            },
+            registration: {
+                imagePart: {
+                    image: "../../../Image/course-images/registration/illustration.png",
+                },
+                intro: {
+                    description: "Leave a request now and get 20% off!",
+                    title: "Register for the course",
+
+                    inputsInfo: [
+                        {
+                            input: "Full Name",
+                            inputPlaceholder: "Your full name",
+                        },
+
+                        {
+                            input: "Email",
+                            inputPlaceholder: "Your working email",
+                        },
+
+                        {
+                            input: "Phone",
+                            inputPlaceholder: "Your phone number",
+                        },
+                    ],
+                    regButton: {
+                        button: "Join the course",
+                    },
+                },
+            },
+            recommendation: {
+                intro: {
+                    badge: "Check other courses",
+                    title: "You may also like",
+                },
+                more: {
+                    title: "Do you want more?",
+                    button: "View all courses",
                 },
             },
         },
@@ -339,8 +413,8 @@ window.addEventListener("DOMContentLoaded", () => {
     const heroContainer = document.getElementById("hero-container");
 
     function updateHero() {
-        const heroData = locale[currentLang].hero.info;
-        const heroDecorationData = locale[currentLang].hero.decoration;
+        const heroData = localeCourse[currentLang].hero.info;
+        const heroDecorationData = localeCourse[currentLang].hero.decoration;
 
         const badge = document.getElementById("hero-badge");
         const title = document.getElementById("hero-title");
@@ -360,10 +434,9 @@ window.addEventListener("DOMContentLoaded", () => {
 
     // *************** About the course section ***************
     const aboutTheCourse = document.getElementById("aboutTheCourse");
-    console.log(aboutTheCourse);
 
     function updateAboutTheCourseTop() {
-        const aboutTheCourseData = locale[currentLang].aboutTheCourse;
+        const aboutTheCourseData = localeCourse[currentLang].aboutTheCourse;
 
         const courseWithId0 = allCourses.find((c) => c.id === 0);
 
@@ -432,9 +505,9 @@ window.addEventListener("DOMContentLoaded", () => {
     updateAboutTheCourseTop();
 
     // About THE COURSE TUTOR
-
+    const tutorSection = document.getElementById("tutor-container");
     function updateAboutTheCourseTutor() {
-        const aboutTheCourseData = locale[currentLang].aboutTheCourse;
+        const aboutTheCourseData = localeCourse[currentLang].aboutTheCourse;
         const courseWithId0 = allCourses.find((c) => c.id === 0);
 
         // Tutor part is here starts ↓
@@ -452,7 +525,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
         tutorImageContainer.appendChild(tutorImage);
         aboutTheCourseTutor.appendChild(tutorImageContainer);
-        aboutTheCourse.appendChild(aboutTheCourseTutor);
+        tutorSection.appendChild(aboutTheCourseTutor);
 
         const tutorCourseInfo = document.createElement("div");
         tutorCourseInfo.className =
@@ -532,7 +605,7 @@ window.addEventListener("DOMContentLoaded", () => {
     // About THE COURSE Main Steps
     function updateMainSteps() {
         const aboutTheCourseData =
-            locale[currentLang].aboutTheCourse.mainStepsPart;
+            localeCourse[currentLang].aboutTheCourse.mainStepsPart;
 
         const courseWithId0 = allCourses.find((c) => c.id === 0);
 
@@ -612,9 +685,6 @@ window.addEventListener("DOMContentLoaded", () => {
                 const gap = 16;
                 const stepSize = cardsWidth + gap;
                 track.style.transform = `translateX(-${stepSize * currentSlide}px)`;
-                console.log(
-                    (track.style.transform = `translateX(-${stepSize * currentSlide}px)`),
-                );
             }
 
             function createIndicators() {
@@ -693,7 +763,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const earlyBirds = document.getElementById("early-birds");
 
     function updateEarlyBirds() {
-        const earlyBirdsData = locale[currentLang].earlyBirds;
+        const earlyBirdsData = localeCourse[currentLang].earlyBirds;
 
         const earlyBirdsContent = document.createElement("div");
         earlyBirdsContent.className = "";
@@ -769,19 +839,18 @@ window.addEventListener("DOMContentLoaded", () => {
         `;
 
         earlyBirdsContent.innerHTML = earlyBirdsContentHTML;
-        console.log(earlyBirds);
     }
     updateEarlyBirds();
+
     // *************** Benefits section ***************
     const BENEFITS = document.getElementById("BENEFITS");
-    console.log(BENEFITS);
 
     function updateBenefits() {
-        const aboutTheCourseData = locale[currentLang].aboutTheCourse.intro.icon;
-        console.log(aboutTheCourseData)
-        const benefitData = locale[currentLang].benefits;
-      const courseWithId0 = allCourses.find((c) => c.id === 0);
-        
+        const aboutTheCourseData =
+            localeCourse[currentLang].aboutTheCourse.intro.icon;
+
+        const benefitData = localeCourse[currentLang].benefits;
+        const courseWithId0 = allCourses.find((c) => c.id === 0);
 
         const benefitsContainer = document.createElement("div");
         benefitsContainer.className =
@@ -789,7 +858,8 @@ window.addEventListener("DOMContentLoaded", () => {
         BENEFITS.appendChild(benefitsContainer);
 
         const benefitsContent = document.createElement("div");
-        benefitsContent.className = "benefit-content flex flex-col md:flex-row md:items-center";
+        benefitsContent.className =
+            "benefit-content flex flex-col md:flex-row md:items-start";
         benefitsContainer.appendChild(benefitsContent);
 
         let benefitHTML = ``;
@@ -801,7 +871,9 @@ window.addEventListener("DOMContentLoaded", () => {
            
             </div>
             <div class='each-benefits-container md:ml-[65px] lg:80px xl:ml-[105px] px-[15px]'>
-                ${Object.values(courseWithId0[currentLang].forWhom).map((info) => `
+                ${Object.values(courseWithId0[currentLang].forWhom)
+                    .map(
+                        (info) => `
                         <div class='flex items-start'>
                             <div class="w-4 h-4 mr-4 mt-2">
                                 <img class='w-full h-full object-cover' src="${aboutTheCourseData}"/>
@@ -812,7 +884,9 @@ window.addEventListener("DOMContentLoaded", () => {
                             </div>
                         </div>
 
-                    `).join(' ')}
+                    `,
+                    )
+                    .join(" ")}
             </div>
         
         `;
@@ -821,4 +895,394 @@ window.addEventListener("DOMContentLoaded", () => {
     }
     updateBenefits();
     // *************** Benefits section ***************
+
+    // *************** Program section ***************
+    const PROGRAM = document.getElementById("PROGRAM");
+    function updateProgram() {
+        const programData = localeCourse[currentLang].program;
+        const courseWithId0 = allCourses.find((c) => c.id === 0);
+
+        const programContainer = document.createElement("div");
+        programContainer.className =
+            "container mx-auto px-5 md:px-10 lg:px-20 mt-[96px]";
+        PROGRAM.appendChild(programContainer);
+
+        const programContent = document.createElement("div");
+        programContent.className = "flex flex-col items-center md:flex-row";
+        programContainer.appendChild(programContent);
+
+        let programHTML = "";
+        programHTML += `
+            
+                <div class='px-4 w-full'>
+                    <h6 class='uppercase font-bold text-[rgb(30,33,44)] mb-2'>${programData.intro.badge}</h6>
+                    <h2 class='text-3xl pb-0 md:text-4xl lg:text-5xl font-black md:pb-4 mb-6'>${programData.intro.title}</h2>
+
+
+                    
+
+                    <div class='flex flex-col gap-3 md:max-w-[450px] xl:max-w-full'> 
+                        ${Object.values(courseWithId0[currentLang].courseLesson)
+                            .map(
+                                (less) => `
+                            <div class='program-button flex items-center gap-2 xl:gap-3 text-[rgb(255,63,58)]'>
+                                   
+                                    <button class='minusBtn max-[580px]:self-start relative w-[18px] h-[18px] flex-shrink-0 '>
+                                        <span class="absolute top-1/2 left-0 -translate-y-1/2 w-[18px] h-[2px] bg-[rgb(255,63,58)]"></span>
+
+                                        <span class="vertical absolute top-0 left-1/2 -translate-x-1/2 w-[2px] h-[18px] bg-[rgb(255,63,58)]"></ span>
+
+                                    </button>
+                                    
+
+                                    <p class='w-full text-xl text-[rgb(255,63,58)]'>${less.lesson} <span class='button-line-text text-black ml-2 font-bold'>${less.title}</span></p>
+                            
+                            </div>
+
+                            <div class='program-description overflow-hidden max-h-0 md:pl-[21px] md:text-start lg:max-w-[414px] xl:max-w-[560px] pl-[42px] mb-5 transition-all duration-500 ease-in-out'>
+                                    <p>${less.description}</p>
+                            </div>
+
+                        `,
+                            )
+                            .join(" ")}
+                    </div>
+
+
+
+                </div>
+
+
+                <div class='md:ml-[0px] md:max-w-[440px] md:max-h-[493px] lg:ml-[80px] xl:ml-[105px] lg:max-w-[375px] lg:max-h-[420px] max-w-[495px] max-h-[554px]'>
+                    <img class='w-full h-full object-cover' src="${programData.imagePart.image}"/>
+                </div>
+
+        `;
+        programContent.innerHTML = programHTML;
+
+        function lessonFunction() {
+            const minusBtns = document.querySelectorAll(".minusBtn");
+
+            minusBtns.forEach((minus) => {
+                const parent = minus.parentElement;
+                const description = parent.nextElementSibling;
+                const verticalBtn = minus.lastElementChild;
+
+                minus.addEventListener("click", () => {
+                    const wasOpen = description.classList.contains("max-h-96");
+
+                    // here i am closing ALL BUTTONS BEFORE OPENING A BUTTON WITH FOR EACH inside button event
+                    minusBtns.forEach((btn) => {
+                        const parent = btn.parentElement;
+                        const description = parent.nextElementSibling;
+                        const verticalBtn = btn.lastElementChild;
+
+                        description.classList.remove("max-h-96");
+                        description.classList.add("max-h-0");
+                        verticalBtn.classList.remove("hidden");
+                    });
+
+                    if (!wasOpen) {
+                        description.classList.remove("max-h-0");
+                        description.classList.add("max-h-96");
+                        verticalBtn.classList.add("hidden");
+                    }
+                });
+            });
+        }
+        lessonFunction();
+    }
+    updateProgram();
+    // *************** Program section ***************
+
+    // *************** Testimonials Section ***************
+    function testimonialHeader() {
+        const intro = localeCourse[currentLang].testimonials.intro;
+
+        const badge = document.getElementById("testimonials-badge");
+        const description = document.getElementById("testimonials-description");
+
+        badge.innerHTML = intro.badge;
+        description.innerHTML = intro.title;
+    }
+
+    testimonialHeader();
+
+    function createSliderCards() {
+        const sliderContainer = document.getElementById("slider-container");
+
+        const commentData = localeCourse[currentLang].testimonials.comment;
+
+        let html = "";
+        commentData.forEach((com) => {
+            html += `
+            <div
+                                    class="relative p-6 flex flex-col items-start h-auto sm:items-center lg:items-start testimonial-itself w-full shrink-0 bg-white sm:p-6 my-6 md:p-10 rounded"
+                                >
+                                    <div class="absolute left-[20px] md:left-6 lg:left-5 xl:left-10">
+                                        <img
+                                            src="${com.braces}"
+                                            alt="justIcon"
+                                        />
+                                    </div>
+
+                                    
+
+                                    <p
+                                        class="pl-10 text-sm sm:text-base sm:pl-10 sm:max-w-full md:text-lg md:max-w-full  lg:text-xl lg:max-w-[900px] w-full lg:pl-10 xl:pl-14"
+                                        id="testimonials-opinion"
+                                    >
+                                        ${com.opinion}
+                                    </p>
+
+                                    <div class="ml-[40px] sm:ml-0 lg:ml-10 flex items-start gap-5 mt-6 jusify-itself-start">
+                                        <div>
+                                            <img
+                                                src="${com.image}"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <div>
+                                            <p>${com.name}</p>
+                                            <p>${com.completedCourse}</p>
+                                        </div>
+                                    </div>
+                                </div>
+            `;
+        });
+        sliderContainer.innerHTML = html;
+    }
+    createSliderCards();
+
+    function sliderEngine() {
+        const sliderContainer = document.getElementById("slider-container");
+        const nextBtn = document.getElementById("nextBtn");
+        const prevBtn = document.getElementById("prevBtn");
+
+        const cards = document.querySelectorAll(".testimonial-itself");
+        if (cards.length === 0) return;
+
+        let currentIndex = 0;
+
+        function goToSlide(index) {
+            currentIndex = index;
+            updatePosition();
+        }
+
+        function updatePosition() {
+            const cardWidth = cards[0].offsetWidth;
+            console.log(cardWidth);
+
+            const gap = 8;
+
+            const stepSize = cards[1].offsetLeft - cards[0].offsetLeft;
+
+            sliderContainer.style.transform = `translateX(-${stepSize * currentIndex}px)`;
+            sliderContainer.style.transition = "transform 0.5s ease-in-out";
+
+            const indicators = document.querySelectorAll(".indicator");
+            indicators.forEach((i) => {
+                i.classList.remove("bg-[#424551]");
+                i.classList.add("bg-gray-300");
+            });
+
+            indicators[currentIndex].classList.add("bg-[#424551]");
+            indicators[currentIndex].classList.remove("bg-gray-300");
+        }
+
+        nextBtn.addEventListener("click", () => {
+            const visibleCards = 1;
+            const maxIndex = cards.length - visibleCards;
+
+            if (currentIndex < maxIndex) {
+                goToSlide(currentIndex + 1);
+            } else {
+                goToSlide(0);
+            }
+            updatePosition();
+        });
+
+        prevBtn.addEventListener("click", () => {
+            const visibleCards = window.innerWidth < 768 ? 1 : 2;
+
+            const maxIndex = cards.length - visibleCards;
+
+            if (currentIndex > 0) {
+                goToSlide(currentIndex - 1);
+            } else {
+                goToSlide(maxIndex);
+            }
+            updatePosition();
+        });
+
+        const indicatorContainer =
+            document.getElementById("indicatorContainer");
+
+        createIndicators(cards, indicatorContainer, goToSlide);
+    }
+    sliderEngine();
+
+    // indicators
+    function createIndicators(cards, indicatorContainer, goToSlide) {
+        cards.forEach((card, index) => {
+            const indicator = document.createElement("div");
+            indicator.className =
+                "indicator w-8 h-[3px] rounded-full bg-gray-300 cursor-pointer";
+            indicatorContainer.appendChild(indicator);
+
+            indicator.addEventListener("click", () => {
+                goToSlide(index);
+            });
+        });
+
+        const indicators = document.querySelectorAll(".indicator");
+
+        indicators[0].classList.remove("bg-gray-300");
+        indicators[0].classList.add("bg-[#424551]");
+    }
+    //   *************** Testimonials Section ***************
+
+    // *************** Registration Section ***************
+    const REGISTRATION = document.getElementById("REGISTRATION");
+    function updateRegistration() {
+        const registrationData = localeCourse[currentLang].registration;
+
+        const registrationContainer = document.createElement("div");
+        registrationContainer.className =
+            "container mx-auto px-[15px] md:px-10 lg:px-20 mt-[96px] pb-12";
+        REGISTRATION.appendChild(registrationContainer);
+
+        const registrationContent = document.createElement("div");
+        registrationContent.className = "flex flex-col-reverse md:flex-row";
+
+        let registrationHTML = "";
+
+        registrationHTML += `
+        <div class='px-4 max-w-[700px] max-h-[500px] md:max-w-[463px] md:max-h-[313px]'>
+            <img class='w-full h-full object-fit' src="${registrationData.imagePart.image}"/>
+        </div>
+
+        <div class="class='px-4 md:ml-[0px] lg:max-w-[400px] lg:ml-[80px] xl:ml-[105px]">
+            <h6 class='font-bold text-[rgb(30,33,44)] uppercase mb-2'>${registrationData.intro.description}</h6>
+            <h1 class='text-5xl font-black pb-2 mb-12  xl:whitespace-nowrap'>${registrationData.intro.title}</h1>
+
+            <form>
+               ${registrationData.intro.inputsInfo
+                   .map(
+                       (input) => `
+                    <div class='flex flex-col mb-6'>
+                        <label class='cursor-pointer mb-2 text-[rgb(66,69,81)]' for='user-${input.inputPlaceholder}'>${input.input}</label>
+                        <input id="user-${input.inputPlaceholder}" class="w-full outline-none px-4 py-2.5 text-[0.875rem] border-gray-300 border-[1px] rounded text-[#424551] transition-all duration-300  focus:border-red-400/80" placeholder="${input.inputPlaceholder}"/>
+                     </div>
+
+                `,
+                   )
+                   .join(" ")}
+                   
+                   <div class='flex items-center justify-center w-full mb-6'> 
+                    <button class='flex flex-col mb-6 pt-6 relative z-0'> 
+                    <button type='submit' class='w-full text-sm rounded py-2.5 bg-gradient-to-l from-[#F75E05] to-[#FF3F3A] text-white'>${registrationData.intro.regButton.button}</button>
+                   </div>
+
+            </form>
+        </div>
+        `;
+
+        registrationContent.innerHTML = registrationHTML;
+        registrationContainer.appendChild(registrationContent);
+    }
+    updateRegistration();
+    // *************** Registration Section ***************
+
+    // *************** RECOMMENDATION Section ***************
+    const RECOMMENDATION = document.getElementById("RECOMMENDATION");
+
+    function updateRecommendationSec() {
+        const recommendationData = localeCourse[currentLang].recommendation;
+        console.log(RECOMMENDATION);
+        const recommendationContainer = document.createElement("div");
+        recommendationContainer.className =
+            "container mx-auto px-5 md:px-10 pt-[48px]";
+        RECOMMENDATION.appendChild(recommendationContainer);
+
+        const recommendationContent = document.createElement("div");
+        let recommendationHTML = "";
+
+        recommendationHTML += `
+        <div class='flex justify-between items-center'>
+                <div>
+                    <h3 class='text-[rgb(30,33,44)] uppercase mb-2 '>${recommendationData.intro.badge}</h3>
+                    <h2 class="text-[rgb(30,33,44))] text-4xl font-black pb-2 mb-6">${recommendationData.intro.title}</h2>
+                </div>
+                
+                <div class="flex gap-2">
+                    <button class="custom-swiper-prevBtn w-10 h-10 rounded-full md:flex md:items-center md:justify-center bg-transparent text-black cursor-pointer hover:bg-[#FF3F3A] hover:text-white transition-colors duration-300 active:scale-105 select-none">←</button>
+
+                    <button class="custom-swiper-nextBtn w-10 h-10 rounded-full bg-transparent text-black cursor-pointer hover:bg-[#FF3F3A] hover:text-white transition-colors duration-300 active:scale-105 select-none">→</button>
+                </div>
+        </div>
+
+          <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper pb-10 mb-12">
+      ${allCourses
+          .slice(0, 6)
+          .map((each) => {
+              return `
+            <div class="swiper-slide flex group md:flex md:flex-col lg:flex-row  h-full">
+            <div class='aspect-square max-w-[214px] md:aspect-video md:max-w-full lg:flex-shrink-lg lg:aspect-square lg:max-w-[214px]'>
+            <img class='w-full h-full object-cover rounded-l' src="${each.curatorTitleImg}"/>
+            </div>
+
+            <div class='flex flex-col items-start flex-1 shadow-lg transition-shadow duration-300 group-hover:shadow-xl border-[rgb(229,232,237)] border-[1px] rounded p-[30px]'>
+                <span class='mb-4 px-4 py-1 text-white rounded bg-[${each.backColor}] inline-block'>${each[currentLang].category}</span>
+                <h5 class='font-bold text-xl text-[rgb(30,33,44)] transition-colors duration-300  group-hover:text-red-500 py-1 mb-4'>${each.curator[currentLang].jobs}</h5>
+                <div>
+                    <span class='text-red-500 font-bold'>$${each.coursePrice} | <span class="text-[rgb(120,122,128)]">${each.curator.curatorName}</span></span>
+                </div>
+            </div>
+        </div>
+
+          `;
+          })
+          .join(" ")}
+      </div>
+
+
+      <div class="flex justify-center gap-6 mb-6 max-[576px]:flex-col">
+          <h4 class="max-[576px]:text-center font-bold text-3xl">${recommendationData.more.title}</h4>
+          <button class="text-sm rounded py-2.5 px-10 bg-gradient-to-l from-[#F75E05] to-[#FF3F3A] text-white">${recommendationData.more.button}</button>
+      </div>
+  
+    </div>
+    
+        
+   
+        
+        `;
+        recommendationContent.innerHTML = recommendationHTML;
+        recommendationContainer.appendChild(recommendationContent);
+
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".custom-swiper-nextBtn",
+                prevEl: ".custom-swiper-prevBtn",
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+            },
+        });
+    }
+    updateRecommendationSec();
+    // *************** RECOMMENDATION Section ***************
 });

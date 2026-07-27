@@ -87,49 +87,49 @@ export const allCourses = [
             },
             courseLesson: {
                 lesson1: {
-                    lesson: "Lesson 1",
+                    lesson: "Lesson 1.",
                     title: "Aliquet lectus urna viverra in odio.",
                     description:
                         "Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.",
                 },
                 lesson2: {
-                    lesson: "Lesson 2",
+                    lesson: "Lesson 2.",
                     title: "Orci commodo, viverra orci mollis ut euismod.",
                     description:
                         "Ipsum aspernatur officiis, obcaecati modi excepturi, consectetur adipisicing elit. Inventore porro molestiae nihil ad aut atque tempora tempore fugiat ipsum aspernatur officiis, obcaecati modi excepturi, aliquid reprehenderit? Sint ullam magni molestias?",
                 },
                 lesson3: {
-                    lesson: "Lesson 3",
+                    lesson: "Lesson 3.",
                     title: "Sagittis vitae facilisi rutrum amet mauris.",
                     description:
                         "Doloribus quo sed beatae provident placeat voluptate corporis eligendi maxime laborum reprehenderit voluptatibus obcaecati recusandae illum, delectus ipsum ab vitae cum excepturi? Illo ad id mollitia, sit obcaecati qui laborum iste minima deserunt consequatur sunt neque aliquid, error aspernatur!",
                 },
                 lesson4: {
-                    lesson: "Lesson 4",
+                    lesson: "Lesson 4.",
                     title: "In id dolor quis nunc, urna hendrerit pharetra.",
-                    desctiption:
+                    description:
                         "Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.",
                 },
                 lesson5: {
-                    lesson: "Lesson 5",
+                    lesson: "Lesson 5.",
                     title: "Est, ut tempus id rutrum facilisi.",
                     description:
                         "Doloribus quo sed beatae provident placeat voluptate corporis eligendi maxime laborum reprehenderit voluptatibus obcaecati recusandae illum, delectus ipsum ab vitae cum excepturi? Illo ad id mollitia, sit obcaecati qui laborum iste minima deserunt consequatur sunt neque aliquid, error aspernatur!",
                 },
                 lesson6: {
-                    lesson: "Lesson 6",
+                    lesson: "Lesson 6.",
                     title: "Amet nec in pellentesque.",
                     description:
                         "Ipsum aspernatur officiis, obcaecati modi excepturi, consectetur adipisicing elit. Inventore porro molestiae nihil ad aut atque tempora tempore fugiat ipsum aspernatur officiis, obcaecati modi excepturi, aliquid reprehenderit? Sint ullam magni molestias?",
                 },
                 lesson7: {
-                    lesson: "Lesson 7",
+                    lesson: "Lesson 7.",
                     title: "Massa vel arcu mauris, id vel rhoncus mattis quis.",
                     description:
                         "Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.",
                 },
                 lesson8: {
-                    lesson: "Lesson 8",
+                    lesson: "Lesson 8.",
                     title: "Neque, cursus sapien nullam id.",
                     description:
                         "Doloribus quo sed beatae provident placeat voluptate corporis eligendi maxime laborum reprehenderit voluptatibus obcaecati recusandae illum, delectus ipsum ab vitae cum excepturi? Illo ad id mollitia, sit obcaecati qui laborum iste minima deserunt consequatur sunt neque aliquid, error aspernatur!",
@@ -170,49 +170,49 @@ export const allCourses = [
             },
             courseLesson: {
                 lesson1: {
-                    lesson: "1-Dars",
+                    lesson: "1-Dars.",
                     title: "UX va inson omiliga yo'naltirilgan dizayn asoslari",
                     description:
                         "Dizayn fikrlash (Design Thinking) va HCD (Human-centered Design) prinsiplari bilan tanishamiz. Loyihani boshlash, foydalanuvchi muammolarini aniqlash va tadqiqot rejasini tuzishni o'rganamiz.",
                 },
                 lesson2: {
-                    lesson: "2-Dars",
+                    lesson: "2-Dars.",
                     title: "Foydalanuvchilarni tadqiq qilish va Persona yaratish",
                     description:
                         "Suhbatlar o'tkazish, so'rovnomalar tuzish va kuzatuv usullarini o'rganamiz. To'plangan ma'lumotlar asosida maqsadli auditoriya arxetipi — Personani shakllantirishni o'zlashtiramiz.",
                 },
                 lesson3: {
-                    lesson: "3-Dars",
+                    lesson: "3-Dars.",
                     title: "Customer Journey Map (CJM) va axborot arxitekturasi",
                     description:
                         "Foydalanuvchining mahsulot bilan to'qnashish yo'lini (CJM) chizamiz. Sayt yoki ilovaning tarkibiy tuzilishi va navigatsiyasini (Information Architecture) mantiqiy loyihalashtiramiz.",
                 },
                 lesson4: {
-                    lesson: "4-Dars",
+                    lesson: "4-Dars.",
                     title: "Wireframing va past aniqlikdagi prototiplash",
                     description:
                         "G'oyalarni tezkor vizuallashtirish. Qog'ozda eskizlar chizish va Figma-da vizual elementlarsiz, faqat funksional bloklardan iborat wireframe-larni qurishni o'rganamiz.",
                 },
                 lesson5: {
-                    lesson: "5-Dars",
+                    lesson: "5-Dars.",
                     title: "Figma-da yuqori aniqlikdagi interaktiv prototiplar",
                     description:
                         "Dizaynni jonlantirish: ekranlararo o'tishlar, animatsiyalar va mikro-aloqalarni (micro-interactions) sozlash orqali xuddi tayyor ilovadek ishlaydigan prototip yaratamiz.",
                 },
                 lesson6: {
-                    lesson: "6-Dars",
+                    lesson: "6-Dars.",
                     title: "Foydalanish qulayligini sinash (Usability Testing)",
                     description:
                         "Yaratilgan prototipni real foydalanuvchilar yordamida testdan o'tkazamiz. Ssenariylar tuzish, xatolarni aniqlash va dizaynni test natijalari asosida yaxshilashni o'rganamiz.",
                 },
                 lesson7: {
-                    lesson: "7-Dars",
+                    lesson: "7-Dars.",
                     title: "UI dizayn tizimlari (Design Systems) va uyg'unlik",
                     description:
                         "Loyihaning vizual qismini tizimlashtirish: komponentlar, ranglar palitrasi, tipografika va UI-kitlar bilan ishlash orqali dizaynni dasturchilarga topshirishga tayyorlaymiz.",
                 },
                 lesson8: {
-                    lesson: "8-Dars",
+                    lesson: "8-Dars.",
                     title: "Kurs ishi taqdimoti va UX portfolioni shakllantirish",
                     description:
                         "Tayyorlangan amaliy loyihani himoya qilish. Behance va Dribbble uchun keyslar tayyorlash hamda ish beruvchilarga taqdim etish qoidalarini ko'rib chiqamiz.",
@@ -322,7 +322,7 @@ export const allCourses = [
     {
         id: 1,
         backColor: "#03CEA4",
-        curatorTitleImg: "Image/courses-photo/people/tutor1.png",
+        curatorTitleImg: "/Image/courses-photo/people/tutor1.png",
         coursePrice: "100",
         curator: {
             curatorSulyemanMainImage:
@@ -603,7 +603,7 @@ export const allCourses = [
     {
         id: 2,
         backColor: "#5A87FC",
-        curatorTitleImg: "Image/courses-photo/people/tutor2.png",
+        curatorTitleImg: "/Image/courses-photo/people/tutor2.png",
         coursePrice: "480",
         curator: {
             curatorSulyemanMainImage:
@@ -884,7 +884,7 @@ export const allCourses = [
     {
         id: 3,
         backColor: "#F3982D",
-        curatorTitleImg: "Image/courses-photo/people/tutor3.png",
+        curatorTitleImg: "/Image/courses-photo/people/tutor3.png",
         coursePrice: "200",
         curator: {
             curatorSulyemanMainImage:
@@ -1165,7 +1165,7 @@ export const allCourses = [
     {
         id: 4,
         backColor: "#14C8A4",
-        curatorTitleImg: "Image/courses-photo/people/tutor4.png",
+        curatorTitleImg: "/Image/courses-photo/people/tutor4.png",
         coursePrice: "530",
         curator: {
             curatorSulyemanMainImage:
@@ -1446,7 +1446,7 @@ export const allCourses = [
     {
         id: 5,
         backColor: "#5D88F8",
-        curatorTitleImg: "Image/courses-photo/people/tutor6.png",
+        curatorTitleImg: "/Image/courses-photo/people/tutor6.png",
         coursePrice: "400",
         curator: {
             curatorSulyemanMainImage:
@@ -1729,7 +1729,7 @@ export const allCourses = [
     {
         id: 6,
         backColor: "#F52F6E",
-        curatorTitleImg: "Image/courses-photo/people/tutor5.png",
+        curatorTitleImg: "/Image/courses-photo/people/tutor5.png",
         coursePrice: "500",
         curator: {
             curatorSulyemanMainImage: "Image/courses-photo/people/tutor5.png",

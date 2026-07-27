@@ -12,6 +12,11 @@
             rel="stylesheet"
         />
 
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@14/swiper-bundle.min.css"
+        />
+
         <script>
             tailwind.config = {
                 theme: {
@@ -63,22 +68,120 @@
             </section>
             <!-- *************** About the course section *************** -->
 
-            <!-- *************** EARLY BIRDS section *************** -->
-            <section>
-                <div class="container mx-auto px-5 md:px-10 lg:px-20 mt-[96px]">
+            <!-- *************** Tutor Section ***************  -->
+            <div
+                class="bg-[url('../../../Image/course-images/Background.png')] bg-no-repeat bg-[-90px_120px]"
+            >
+                <section>
                     <div
-                        class="bg-[#F9D7CC] px-6 py-2 desktop992:px-[15px] desktop992:py-12 rounded"
-                        id="early-birds"
+                        id="tutor-container"
+                        class="container mx-auto px-5 md:px-10 pt-[96px]"
                     ></div>
-                </div>
-            </section>
-            <!-- *************** EARLY BIRDS section *************** -->
+                </section>
+                <!-- *************** Tutor Section ***************  -->
 
+                <!-- *************** EARLY BIRDS section *************** -->
+                <section>
+                    <div
+                        class="container mx-auto px-5 md:px-10 lg:px-20 mt-[96px]"
+                    >
+                        <div
+                            class="bg-[#F9D7CC] px-6 py-2 desktop992:px-[15px] desktop992:py-12 rounded"
+                            id="early-birds"
+                        ></div>
+                    </div>
+                </section>
+                <!-- *************** EARLY BIRDS section *************** -->
+
+                <!-- *************** Benefits section *************** -->
+                <section id="BENEFITS"></section>
+            </div>
             <!-- *************** Benefits section *************** -->
-             <section id="BENEFITS"></section>
-            <!-- *************** Benefits section *************** -->
+
+            <!-- *************** Program section *************** -->
+            <section id="PROGRAM"></section>
+            <!-- *************** Program section *************** -->
+
+            <!-- *************** Registration Section ***************  -->
+            <div class="border-2 border-black">
+                <section class="mt-[120px] bg-[rgb(240,240,240)]">
+                    <div
+                        class="container mx-auto md:px-10 lg:px-4 flex flex-col items-center justify-center pt-24 xl:px-[15px] xl:pb-12"
+                    >
+                        <div class="relative w-full">
+                            <h6
+                                id="testimonials-badge"
+                                class="w-full text-center font-bold leading-[150%] tracking-[1px] text-[#1E212C] mb-2"
+                            ></h6>
+
+                            <h1
+                                id="testimonials-description"
+                                class="text-center text-2xl mb-12 pb-2 font-black sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl leading-[130%] text-[#1E212C]"
+                            ></h1>
+
+                            <!-- slider -->
+
+                            <div
+                                class="slider-wrapper flex items-center justify-center max-w-full pb-6"
+                            >
+                                <!-- Next Btn -->
+                                <div
+                                    id="nextBtn"
+                                    class="absolute w-10 h-10 z-50 rounded-full bg-transparent text-black hidden md:-right-[50px] min-[992px]:right-[20px] lg:top-[280px] lg:right-[50px] xl:top-[280px] xl:right-10 md:flex md:items-center md:justify-center cursor-pointer hover:bg-[#FF3F3A] hover:text-white transition-colors duration-300 active:scale-105 select-none"
+                                >
+                                    <p class="text-2xl">→</p>
+                                </div>
+
+                                <!-- circle image -->
+                                <div
+                                    class="absolute sm:-left-[80px] md:-left-[0px] lg:-left-[0px] xl:top-[255px] xl:-left-[15px]"
+                                >
+                                    <img
+                                        src="../../Image/courses-photo/slider-image/circles.png"
+                                        alt=""
+                                    />
+                                </div>
+
+                                <!-- prev Btn -->
+                                <div
+                                    id="prevBtn"
+                                    class="absolute w-10 h-10 z-50 rounded-full md:flex md:items-center md:justify-center bg-transparent text-black hidden md:-left-[50px] min-[992px]:left-[20px] lg:top-[280px] lg:left-[50px] xl:left-10 xl:top-[280px] cursor-pointer hover:bg-[#FF3F3A] hover:text-white transition-colors duration-300 active:scale-105 select-none"
+                                >
+                                    <p class="text-2xl">←</p>
+                                </div>
+
+                                <div
+                                    class="view-port overflow-hidden max-w-[437px] sm:max-w-[550px] md:max-w-[753px] xl:max-w-[1050px] w-full"
+                                >
+                                    <div
+                                        id="slider-container"
+                                        class="flex transition-transform duration-500 ease-out"
+                                    >
+                                        <!-- px-6 mb-6 -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="absolute bottom-5 xl:bottom-0 left-1/2 -translate-x-1/2 flex items-center justify-center gap-3"
+                                id="indicatorContainer"
+                            ></div>
+                        </div>
+                    </div>
+                </section>
+                <!-- *************** Testimonials Section ***************  -->
+
+                <!-- *************** Registration Section ***************  -->
+                <section id="REGISTRATION" class="pt-6"></section>
+            </div>
+            <!-- *************** Registration Section ***************  -->
+
+            <!-- *************** RECOMMENDATION Section *************** -->
+            <section id="RECOMMENDATION"></section>
+            <!-- *************** RECOMMENDATION Section *************** -->
         </main>
 
+          <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
         <script type="module" src="course.js"></script>
     </body>
 </html>
