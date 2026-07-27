@@ -16,33 +16,16 @@ function updateOnlineCourseHeader() {
 updateOnlineCourseHeader();
 
 function createSelectedCats() {
-    const categoriesSelectedObject =
-        locale[currentLang].onlineCourse.categoriesSelected;
-    const selectedCatArr = Object.values(categoriesSelectedObject);
-    // console.log(selectedCatArr);
+    const allCategories = allCourses.map((eachCourse) => eachCourse[currentLang].category)
+   
 
-    const selectCategory = document.getElementById("categories");
 
-    let html = "";
-
-    Object.entries(categoriesSelectedObject).forEach(([key, value]) => {
-        html += `
-             <a
-                class="category py-2 px-4 border border-transparent whitespace-nowrap hover:font-bold hover:text-[#000000] transtion-color duration-300 ease-in-out rounded-md"
-                href="#"
-                data-category="${key}"
-                >${value}<span></span>
-            </a>
-            `;
-    });
-
-    selectCategory.innerHTML = html;
+    // selectCategory.innerHTML = html;
 }
 createSelectedCats();
 
 function eachCardDynamic() {
     const tutorsObject = locale[currentLang].onlineCourse.tutors;
-    
 
     const tutors = document.getElementById("tutors");
 
@@ -95,37 +78,6 @@ function eachCardDynamic() {
 }
 eachCardDynamic();
 
-function selectCategory() {
-    const categories = document.querySelectorAll(".category");
-    const people = document.querySelectorAll(".person");
-
-    categories.forEach((category) => {
-        category.addEventListener("click", (e) => {
-            e.preventDefault();
-
-            // active vaxti
-            categories.forEach((category) => {
-                category.classList.remove("border-red-500", "text-red-500");
-                category.classList.add("border-transparent");
-            });
-
-            category.classList.remove("border-transparent");
-            category.classList.add("border-red-500", "text-red-500");
-
-            const selected = category.dataset.category;
-            console.log("selected:", selected);
-
-            people.forEach((person) => {
-                person.classList.toggle(
-                    "hidden",
-                    selected !== "all" && person.dataset.category !== selected,
-                );
-            });
-        });
-    });
-}
-selectCategory();
-
 // ====================== ONLINE COURSES SECTION ======================
 
 //  ====================== TESTIMONIALS SECTION ======================
@@ -159,7 +111,7 @@ function createSliderCards() {
                                         />
                                     </div>
 
-                                    
+                                    <a>ddddd</a>
 
                                     <p
                                         class="pl-10 text-sm sm:text-base sm:pl-10 sm:max-w-full md:text-lg md:max-w-full  lg:text-xl lg:max-w-[900px] w-full lg:pl-10 xl:pl-14"
@@ -373,7 +325,6 @@ updateSubscribe();
 
 // ****************** FOOTER ******************
 const footerContainer = document.getElementById("footer-content");
-console.log(footerContainer);
 function logoPart() {
     const footerData = locale[currentLang].footer.intro;
 
@@ -455,7 +406,6 @@ siteMapText();
 
 function coursesPart() {
     const coursesData = locale[currentLang].footer.coursesPart;
-    console.log(coursesData);
     const coursesPart = document.createElement("div");
     coursesPart.className = "px-[15px]";
     footerContainer.appendChild(coursesPart);
