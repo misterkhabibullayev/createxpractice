@@ -72,7 +72,7 @@ export const allCourses = [
             },
         },
         en: {
-            category: "Design",
+            category: "Development",
             curator: "Suleyman Amanov",
             courseTitle: "User Experience. Human-centered Design",
             courseDescription:

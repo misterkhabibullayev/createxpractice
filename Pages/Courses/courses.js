@@ -15,12 +15,38 @@ function updateOnlineCourseHeader() {
 }
 updateOnlineCourseHeader();
 
+const categoriesPart = document.getElementById("categories");
+
 function createSelectedCats() {
-    const allCategories = allCourses.map((eachCourse) => eachCourse[currentLang].category)
-   
+    // only unique categs
+    const categories = [
+        "All",
+        ...new Set(allCourses.map((each) => each[currentLang].category)),
+    ];
 
+    let fourATagHTML = categories
+        .map((eachCategory) => {
 
-    // selectCategory.innerHTML = html;
+            const count =
+                eachCategory === "All"
+                    ? allCourses.length
+                    : allCourses.filter((course) => {
+                          return course[currentLang].category === eachCategory;
+                      }).length;
+
+            return `
+                <a
+                class="relative category py-2 px-4 border border-transparent whitespace-nowrap hover:font-bold hover:text-[#000000] transition-colors duration-300 ease-in-out rounded-md"
+                href="#"
+                data-category="${eachCategory}"
+                >${eachCategory}  <span class="text-[10px] absolute top-0 right-1">${count}</span>
+            </a>
+            
+            `;
+        })
+        .join(" ");
+
+    categoriesPart.innerHTML = fourATagHTML;
 }
 createSelectedCats();
 
@@ -28,7 +54,6 @@ function eachCardDynamic() {
     const tutorsObject = locale[currentLang].onlineCourse.tutors;
 
     const tutors = document.getElementById("tutors");
-
     let html = "";
 
     allCourses.forEach((card) => {
@@ -37,8 +62,8 @@ function eachCardDynamic() {
                             data-category="${card[currentLang].category}"
                             class="person group flex flex-col h-full shadow-lg hover:shadow-xl rounded transition-shadow duration-100"
                         >
-                            <div class="w-full overflow-hidden">
-                                <a href="./course/course.html" class="block w-full">
+                            <div class="w-full max-h-[176px] sm:max-h-[181px] md:max-h-[182px] lg:max-h-[166px] xl:max-h-[218px] overflow-hidden ">
+                                <a href="./course/course.html?id=${card.id}" class="block w-full">
                                     <img
                                         src="${card.curatorTitleImg}"
                                         alt=""
@@ -78,6 +103,44 @@ function eachCardDynamic() {
 }
 eachCardDynamic();
 
+function selectedCatgEngine() {
+    const categoryButtons = document.querySelectorAll(".category");
+    const people = document.querySelectorAll(".person");
+
+    categoryButtons.forEach((button) => {
+        button.addEventListener("click", (e) => {
+            console.log(button.dataset.category);
+            const selectedCategory = button.dataset.category;
+
+            people.forEach((person) => {
+                if (person.dataset.category === selectedCategory) {
+                    person.style.display = "";
+                } else if (selectedCategory === "All") {
+                    person.style.display = "";
+                } else {
+                    person.style.display = "none";
+                }
+            });
+
+            categoryButtons.forEach((buttonStyles) => {
+                buttonStyles.classList.remove(
+                    "border-red-500",
+                    "text-red-500",
+                    "font-bold",
+                );
+            });
+
+            button.classList.add(
+                "hover:text-red-500",
+                "text-red-500",
+                "font-bold",
+                "border-red-500",
+            );
+        });
+    });
+}
+selectedCatgEngine();
+
 // ====================== ONLINE COURSES SECTION ======================
 
 //  ====================== TESTIMONIALS SECTION ======================
@@ -110,9 +173,6 @@ function createSliderCards() {
                                             alt="justIcon"
                                         />
                                     </div>
-
-                                    <a>ddddd</a>
-                                    <a>ddddd</a>
 
                                     <p
                                         class="pl-10 text-sm sm:text-base sm:pl-10 sm:max-w-full md:text-lg md:max-w-full  lg:text-xl lg:max-w-[900px] w-full lg:pl-10 xl:pl-14"

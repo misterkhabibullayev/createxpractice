@@ -3,6 +3,9 @@ import { allCourses } from "../../../AllCourses.js";
 window.addEventListener("DOMContentLoaded", () => {
     const currentLang = localStorage.getItem("selectedLang");
 
+    const params = new URLSearchParams(window.location.search);
+    const courseId = params.get("id");
+
     const localeCourse = {
         en: {
             hero: {
@@ -189,6 +192,428 @@ window.addEventListener("DOMContentLoaded", () => {
                 },
             },
         },
+        ru: {
+            hero: {
+                info: {
+                    badge: "курс",
+                    title: "Пользовательский опыт. Принципы человеко-ориентированного дизайна",
+                },
+
+                decoration: {
+                    dec1: "../../../Image/course-images/hero/arrow-right.png",
+                    dec2: "../../../Image/course-images/hero/circles.png",
+                    dec3: "../../../Image/course-images/hero/dots.png",
+                    dec4: "../../../Image/course-images/hero/up.png",
+                },
+            },
+
+            aboutTheCourse: {
+                intro: {
+                    title: "О курсе",
+                    willBeLearned: "Вы изучите:",
+                    icon: "../../../Image/course-images/aboutTheCourse/check.png",
+                },
+
+                datesPart: {
+                    dates: "Даты",
+                    duration: "Продолжительность",
+                    price: "Цена",
+                    button: "Присоединиться к курсу",
+                },
+
+                tutorInfo: {
+                    badge: "Куратор курса",
+
+                    lessonIcons: [
+                        {
+                            icon: "../../../Image/course-images/tutor-info/Star.png",
+                        },
+                        {
+                            icon: "../../../Image/course-images/tutor-info/Play.png",
+                        },
+                        {
+                            icon: "../../../Image/course-images/tutor-info/Profile.png",
+                        },
+                    ],
+                },
+
+                mainStepsPart: {
+                    intro: {
+                        badge: "Основные этапы",
+                        title: "Процесс онлайн-обучения",
+                    },
+
+                    carousel: [
+                        {
+                            number: "01",
+                            title: "Просмотр онлайн-видеолекций",
+                            text: "Изучайте материалы курса через структурированные видеоуроки и практические задания.",
+                        },
+                        {
+                            number: "02",
+                            title: "Прохождение теста",
+                            text: "Проверяйте свои знания и закрепляйте полученные навыки с помощью тестирования.",
+                        },
+                        {
+                            number: "03",
+                            title: "Обратная связь от куратора",
+                            text: "Получайте рекомендации и поддержку от опытного преподавателя.",
+                        },
+                        {
+                            number: "04",
+                            title: "Исправления при необходимости",
+                            text: "Работайте над ошибками и улучшайте свои результаты.",
+                        },
+                    ],
+                },
+            },
+
+            earlyBirds: {
+                title: "Скидка 20% для ранних участников!",
+
+                inputsInfo: {
+                    input1: "Полное имя",
+                    inputPlaceholder1: "Ваше полное имя",
+
+                    input2: "Email",
+                    inputPlaceholder2: "Ваш рабочий email",
+
+                    input3: "Телефон",
+                    inputPlaceholder3: "Ваш номер телефона",
+
+                    button: "Присоединиться к курсу",
+                },
+
+                dates: [
+                    {
+                        howMany: 0,
+                        period: "Дней",
+                    },
+                    {
+                        howMany: 0,
+                        period: "Часов",
+                    },
+                    {
+                        howMany: 0,
+                        period: "Минут",
+                    },
+                    {
+                        howMany: 0,
+                        period: "Секунд",
+                    },
+                ],
+            },
+
+            benefits: {
+                intro: {
+                    badge: "Для кого?",
+                    title: "Кому подойдет этот курс:",
+                },
+            },
+
+            program: {
+                intro: {
+                    badge: "Программа курса",
+                    title: "Чему вы научитесь",
+                },
+
+                imagePart: {
+                    image: "../../../Image/program/illustration.png",
+                },
+            },
+
+            testimonials: {
+                intro: {
+                    badge: "ОТЗЫВЫ",
+                    title: "Что говорят наши студенты",
+                },
+
+                comment: [
+                    {
+                        opinion:
+                            "Онлайн-курс Сулеймана полностью изменил мой подход к обучению! Материал представлен очень понятно и структурировано, а практические задания помогают быстро освоить новые знания. Он всегда поддерживает студентов и быстро отвечает на вопросы. Я рекомендую этот курс всем.",
+
+                        image: "../../../Image/courses-photo/slider-image/image.png",
+
+                        braces: "../../../Image/courses-photo/slider-image/braces.png",
+
+                        name: "Eleanor Pena",
+
+                        completedCourse: "Должность, Курс",
+                    },
+
+                    {
+                        opinion:
+                            "Онлайн-курс Сулеймана полностью изменил мой подход к обучению! Материал представлен очень понятно и структурировано, а практические задания помогают быстро освоить новые знания. Он всегда поддерживает студентов и быстро отвечает на вопросы. Я рекомендую этот курс всем.",
+
+                        image: "../../Image/courses-photo/slider-image/image.png",
+
+                        braces: "../../../Image/courses-photo/slider-image/braces.png",
+
+                        name: "Eleanor Pena",
+
+                        completedCourse: "Должность, Курс",
+                    },
+                ],
+            },
+
+            registration: {
+                imagePart: {
+                    image: "../../../Image/course-images/registration/illustration.png",
+                },
+
+                intro: {
+                    description:
+                        "Оставьте заявку сейчас и получите скидку 20%!",
+                    title: "Регистрация на курс",
+
+                    inputsInfo: [
+                        {
+                            input: "Полное имя",
+                            inputPlaceholder: "Ваше полное имя",
+                        },
+                        {
+                            input: "Email",
+                            inputPlaceholder: "Ваш рабочий email",
+                        },
+                        {
+                            input: "Телефон",
+                            inputPlaceholder: "Ваш номер телефона",
+                        },
+                    ],
+
+                    regButton: {
+                        button: "Присоединиться к курсу",
+                    },
+                },
+            },
+
+            recommendation: {
+                intro: {
+                    badge: "Посмотрите другие курсы",
+                    title: "Вам также может понравиться",
+                },
+
+                more: {
+                    title: "Хотите больше?",
+                    button: "Посмотреть все курсы",
+                },
+            },
+        },
+     uz: {
+    hero: {
+        info: {
+            badge: "kurs",
+            title: "Foydalanuvchi tajribasi. Inson markazli dizayn tamoyillari",
+        },
+
+        decoration: {
+            dec1: "../../../Image/course-images/hero/arrow-right.png",
+            dec2: "../../../Image/course-images/hero/circles.png",
+            dec3: "../../../Image/course-images/hero/dots.png",
+            dec4: "../../../Image/course-images/hero/up.png",
+        },
+    },
+
+    aboutTheCourse: {
+        intro: {
+            title: "Kurs haqida",
+            willBeLearned: "Siz o'rganasiz:",
+            icon: "../../../Image/course-images/aboutTheCourse/check.png",
+        },
+
+        datesPart: {
+            dates: "Sanalar",
+            duration: "Davomiyligi",
+            price: "Narxi",
+            button: "Kursga qo'shilish",
+        },
+
+        tutorInfo: {
+            badge: "Kurs kuratori",
+
+            lessonIcons: [
+                {
+                    icon: "../../../Image/course-images/tutor-info/Star.png",
+                },
+                {
+                    icon: "../../../Image/course-images/tutor-info/Play.png",
+                },
+                {
+                    icon: "../../../Image/course-images/tutor-info/Profile.png",
+                },
+            ],
+        },
+
+        mainStepsPart: {
+            intro: {
+                badge: "Asosiy bosqichlar",
+                title: "Onlayn ta'lim jarayoni",
+            },
+
+            carousel: [
+                {
+                    number: "01",
+                    title: "Onlayn video darslarni ko'rish",
+                    text: "Kurs materiallarini tushunarli video darslar va amaliy topshiriqlar orqali o'rganing.",
+                },
+
+                {
+                    number: "02",
+                    title: "Test topshirish",
+                    text: "Bilimlaringizni tekshiring va o'rgangan bilimlaringizni testlar orqali mustahkamlang.",
+                },
+
+                {
+                    number: "03",
+                    title: "Kurator fikri",
+                    text: "Tajribali ustozdan tavsiyalar va yordam oling.",
+                },
+
+                {
+                    number: "04",
+                    title: "Kerak bo'lsa tuzatishlar",
+                    text: "Xatolar ustida ishlang va natijalaringizni yaxshilang.",
+                },
+            ],
+        },
+    },
+
+    earlyBirds: {
+        title: "Dastlabki qatnashuvchilar uchun 20% chegirma!",
+
+        inputsInfo: {
+            input1: "To'liq ism",
+            inputPlaceholder1: "To'liq ismingiz",
+
+            input2: "Email",
+            inputPlaceholder2: "Ishchi emailingiz",
+
+            input3: "Telefon",
+            inputPlaceholder3: "Telefon raqamingiz",
+
+            button: "Kursga qo'shilish",
+        },
+
+        dates: [
+            {
+                howMany: 0,
+                period: "Kun",
+            },
+            {
+                howMany: 0,
+                period: "Soat",
+            },
+            {
+                howMany: 0,
+                period: "Daqiqa",
+            },
+            {
+                howMany: 0,
+                period: "Soniya",
+            },
+        ],
+    },
+
+    benefits: {
+        intro: {
+            badge: "Kimlar uchun?",
+            title: "Kurs kimlarga foydali:",
+        },
+    },
+
+    program: {
+        intro: {
+            badge: "Kurs dasturi",
+            title: "Siz nimalarni o'rganasiz",
+        },
+
+        imagePart: {
+            image: "../../../Image/program/illustration.png",
+        },
+    },
+
+    testimonials: {
+        intro: {
+            badge: "FIKRLAR",
+            title: "Talabalarimiz nima deydi",
+        },
+
+        comment: [
+            {
+                opinion:
+                    "Suleymanning onlayn kursi haqiqiy o'zgarish olib keladi! Materiallar juda tushunarli va tartibli tarzda berilgan, amaliy topshiriqlar esa bilimlarni tez o'zlashtirishga yordam beradi. U doimo talabalarni qo'llab-quvvatlaydi va savollarga tez javob beradi. Ushbu kursni hammaga tavsiya qilaman.",
+
+                image: "../../../Image/courses-photo/slider-image/image.png",
+
+                braces: "../../../Image/courses-photo/slider-image/braces.png",
+
+                name: "Eleanor Pena",
+
+                completedCourse: "Lavozim, Kurs",
+            },
+
+            {
+                opinion:
+                    "Suleymanning onlayn kursi haqiqiy o'zgarish olib keladi! Materiallar juda tushunarli va tartibli tarzda berilgan, amaliy topshiriqlar esa bilimlarni tez o'zlashtirishga yordam beradi. U doimo talabalarni qo'llab-quvvatlaydi va savollarga tez javob beradi. Ushbu kursni hammaga tavsiya qilaman.",
+
+                image: "../../Image/courses-photo/slider-image/image.png",
+
+                braces: "../../../Image/courses-photo/slider-image/braces.png",
+
+                name: "Eleanor Pena",
+
+                completedCourse: "Lavozim, Kurs",
+            },
+        ],
+    },
+
+    registration: {
+        imagePart: {
+            image: "../../../Image/course-images/registration/illustration.png",
+        },
+
+        intro: {
+            description:
+                "Hozir ariza qoldiring va 20% chegirmaga ega bo'ling!",
+
+            title: "Kursga ro'yxatdan o'tish",
+
+            inputsInfo: [
+                {
+                    input: "To'liq ism",
+                    inputPlaceholder: "To'liq ismingiz",
+                },
+
+                {
+                    input: "Email",
+                    inputPlaceholder: "Ishchi emailingiz",
+                },
+
+                {
+                    input: "Telefon",
+                    inputPlaceholder: "Telefon raqamingiz",
+                },
+            ],
+
+            regButton: {
+                button: "Kursga qo'shilish",
+            },
+        },
+    },
+
+    recommendation: {
+        intro: {
+            badge: "Boshqa kurslarni ko'ring",
+            title: "Sizga ham yoqishi mumkin",
+        },
+
+        more: {
+            title: "Ko'proq xohlaysizmi?",
+            button: "Barcha kurslarni ko'rish",
+        },
+    },
+},
     };
 
     // header
@@ -438,7 +863,9 @@ window.addEventListener("DOMContentLoaded", () => {
     function updateAboutTheCourseTop() {
         const aboutTheCourseData = localeCourse[currentLang].aboutTheCourse;
 
-        const courseWithId0 = allCourses.find((c) => c.id === 0);
+        const selectedCourse = allCourses.find((course) => {
+            return course.id === Number(courseId);
+        });
 
         const aboutTheCourseTop = document.createElement("div");
         aboutTheCourseTop.className =
@@ -448,14 +875,14 @@ window.addEventListener("DOMContentLoaded", () => {
         html += `
         <div class="flex flex-col md:px-[15px]">
         <h1 class='font-black text-3xl lg:text-4xl xl:text-5xl xl:leading-[57.5px] pb-4 mb-6'>${aboutTheCourseData.intro.title}</h1>
-        <p class='text-[rgb(66,69,81)] md:max-w-[335px] lg:max-w-[470px] xl:max-w-[600px] mb-12'>${courseWithId0[currentLang].courseDescription}</p>
+        <p class='text-[rgb(66,69,81)] md:max-w-[335px] lg:max-w-[470px] xl:max-w-[600px] mb-12'>${selectedCourse[currentLang].courseDescription}</p>
 
         <div class='sm:mb-[30px]'> 
         <h3 class='text-[28px] font-bold mb-6'>${aboutTheCourseData.intro.willBeLearned}</h3>
 
         <div> 
             
-            ${Object.values(courseWithId0[currentLang].willBeLearn)
+            ${Object.values(selectedCourse[currentLang].willBeLearn)
                 .map((each) => {
                     return `
               <div class='flex items-center gap-2'>
@@ -477,20 +904,20 @@ window.addEventListener("DOMContentLoaded", () => {
         <div id="dates-container" class="dates-container flex flex-col h-fit md:mx-[15px] p-6 shadow-2xl  md:max-w-[335px] lg:max-w-[350px] xl:max-w-[505px]">
            <div class='px-2 pt-4 mb-4'>
            <h6 class='font-bold tracking-[1px] uppercase'>${aboutTheCourseData.datesPart.dates}</h6>
-           <p class='text-2xl text-[rgb(255,63,58)] font-bold mb-2'>${courseWithId0[currentLang].coursesStartedDate} - ${courseWithId0[currentLang].coursesEndedDate}</p>
-           <p class='text-[rgb(66,69,81)]'>${courseWithId0[currentLang].coursesDescription}</p>
+           <p class='text-2xl text-[rgb(255,63,58)] font-bold mb-2'>${selectedCourse[currentLang].coursesStartedDate} - ${selectedCourse[currentLang].coursesEndedDate}</p>
+           <p class='text-[rgb(66,69,81)]'>${selectedCourse[currentLang].coursesDescription}</p>
            </div>
 
             <div class='px-2 pt-4 mb-4'>
            <h6 class='font-bold tracking-[1px] uppercase'>${aboutTheCourseData.datesPart.duration}</h6>
-           <p class='text-2xl text-[rgb(255,63,58)] font-bold mb-2'>${courseWithId0[currentLang].coursesDurationMonth} - ${courseWithId0[currentLang].coursesDurationLesson}</p>
-           <p class='text-[rgb(66,69,81)]'>${courseWithId0[currentLang].coursesDurationDescription}</p>
+           <p class='text-2xl text-[rgb(255,63,58)] font-bold mb-2'>${selectedCourse[currentLang].coursesDurationMonth} - ${selectedCourse[currentLang].coursesDurationLesson}</p>
+           <p class='text-[rgb(66,69,81)]'>${selectedCourse[currentLang].coursesDurationDescription}</p>
            </div>
 
              <div class='px-2 pt-4 mb-4'>
            <h6 class='font-bold tracking-[1px] uppercase'>${aboutTheCourseData.datesPart.price}</h6>
-           <p class='text-2xl text-[rgb(255,63,58)] font-bold mb-2'>${courseWithId0.coursePrice} ${courseWithId0[currentLang].coursesPerMonth}</p>
-           <p class='text-[rgb(66,69,81)]'>${courseWithId0[currentLang].coursesPerMonthDescription}</p>
+           <p class='text-2xl text-[rgb(255,63,58)] font-bold mb-2'>${selectedCourse.coursePrice} ${selectedCourse[currentLang].coursesPerMonth}</p>
+           <p class='text-[rgb(66,69,81)]'>${selectedCourse[currentLang].coursesPerMonthDescription}</p>
            </div>
            
             <div class='text-center px-2 pt-6 mb-4'>
@@ -503,12 +930,16 @@ window.addEventListener("DOMContentLoaded", () => {
         aboutTheCourse.appendChild(aboutTheCourseTop);
     }
     updateAboutTheCourseTop();
+    // *************** About the course section ***************
 
-    // About THE COURSE TUTOR
+    // *************** Tutor section ***************
     const tutorSection = document.getElementById("tutor-container");
     function updateAboutTheCourseTutor() {
+        const selectedCourse = allCourses.find((course) => {
+            return course.id === Number(courseId);
+        });
+
         const aboutTheCourseData = localeCourse[currentLang].aboutTheCourse;
-        const courseWithId0 = allCourses.find((c) => c.id === 0);
 
         // Tutor part is here starts ↓
         const aboutTheCourseTutor = document.createElement("div");
@@ -520,7 +951,7 @@ window.addEventListener("DOMContentLoaded", () => {
             "max-w-full max-h-full mt-10 sm:max-w-[200px] sm:max-h-[230px] md:max-w-[243px] md:max-h-[295px] lg:max-w-[343px] lg:max-h-[426px] xl:max-w-[463px] xl:max-h-[606px] flex-shrink-0 overflow-hidden";
         const tutorImage = document.createElement("img");
         tutorImage.className = "w-full h-full object-cover";
-        tutorImage.src = courseWithId0.curatorTitleImg;
+        tutorImage.src = selectedCourse.curatorTitleImg;
         tutorImage.alt = "Course Tutor image";
 
         tutorImageContainer.appendChild(tutorImage);
@@ -538,11 +969,11 @@ window.addEventListener("DOMContentLoaded", () => {
         const tutorName = document.createElement("h1");
         tutorName.className =
             "mb-4 text-3xl lg:text-4xl xl:text-5xl font-bold ";
-        tutorName.textContent = courseWithId0.curator.curatorName;
+        tutorName.textContent = selectedCourse.curator.curatorName;
 
         const tutorProfession = document.createElement("p");
         tutorProfession.className = "pb-2 mb-6 text-xl ";
-        tutorProfession.textContent = courseWithId0.curator[currentLang].jobs;
+        tutorProfession.textContent = selectedCourse.curator[currentLang].jobs;
 
         const courseInfoRateCoursesStudentsContainer =
             document.createElement("div");
@@ -551,7 +982,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
         let tutorLessonInfoHtml = "";
 
-        courseWithId0.curator.courseLessonInfo.forEach((info) => {
+        selectedCourse.curator.courseLessonInfo.forEach((info) => {
             tutorLessonInfoHtml += `
                 <div class='flex flex-col'>
                   <div class='flex items-center gap-2 pb-[0.25rem]'>
@@ -569,11 +1000,11 @@ window.addEventListener("DOMContentLoaded", () => {
         aboutCourse.className =
             "text-[rgb(66,69,81)] pb-4 mb-6 w-full sm:max-w-[330px] md:max-w-full  lg:max-w-[476px]";
         aboutCourse.textContent =
-            courseWithId0.curator[currentLang].aboutCurator;
+            selectedCourse.curator[currentLang].aboutCurator;
 
         const socialMediaHTML = `
         <div class='flex items-center gap-4'>
-              ${courseWithId0.curator.socialLinks
+              ${selectedCourse.curator.socialLinks
                   .map(
                       (media) => `
                 <a
@@ -601,6 +1032,7 @@ window.addEventListener("DOMContentLoaded", () => {
         aboutTheCourseTutor.appendChild(tutorCourseInfo);
     }
     updateAboutTheCourseTutor();
+    // *************** Tutor section ***************
 
     // About THE COURSE Main Steps
     function updateMainSteps() {
@@ -846,11 +1278,14 @@ window.addEventListener("DOMContentLoaded", () => {
     const BENEFITS = document.getElementById("BENEFITS");
 
     function updateBenefits() {
+        const selectedCourse = allCourses.find((course) => {
+            return course.id === Number(courseId);
+        });
+
         const aboutTheCourseData =
             localeCourse[currentLang].aboutTheCourse.intro.icon;
 
         const benefitData = localeCourse[currentLang].benefits;
-        const courseWithId0 = allCourses.find((c) => c.id === 0);
 
         const benefitsContainer = document.createElement("div");
         benefitsContainer.className =
@@ -871,7 +1306,7 @@ window.addEventListener("DOMContentLoaded", () => {
            
             </div>
             <div class='each-benefits-container md:ml-[65px] lg:80px xl:ml-[105px] px-[15px]'>
-                ${Object.values(courseWithId0[currentLang].forWhom)
+                ${Object.values(selectedCourse[currentLang].forWhom)
                     .map(
                         (info) => `
                         <div class='flex items-start'>
@@ -1200,6 +1635,7 @@ window.addEventListener("DOMContentLoaded", () => {
     function updateRecommendationSec() {
         const recommendationData = localeCourse[currentLang].recommendation;
         console.log(RECOMMENDATION);
+
         const recommendationContainer = document.createElement("div");
         recommendationContainer.className =
             "container mx-auto px-5 md:px-10 pt-[48px]";
@@ -1230,13 +1666,13 @@ window.addEventListener("DOMContentLoaded", () => {
           .map((each) => {
               return `
             <div class="swiper-slide flex group md:flex md:flex-col lg:flex-row  h-full">
-            <div class='aspect-square max-w-[214px] md:aspect-video md:max-w-full lg:flex-shrink-lg lg:aspect-square lg:max-w-[214px]'>
+            <a href="./course.html?id=${each.id}" class='aspect-square max-w-[214px] md:aspect-video md:max-w-full lg:flex-shrink-lg lg:aspect-square lg:max-w-[214px]'>
             <img class='w-full h-full object-cover rounded-l' src="${each.curatorTitleImg}"/>
-            </div>
+            </a>
 
-            <div class='flex flex-col items-start flex-1 shadow-lg transition-shadow duration-300 group-hover:shadow-xl border-[rgb(229,232,237)] border-[1px] rounded p-[30px]'>
+            <div class='flex flex-col  items-start flex-1 shadow-lg transition-shadow duration-300 group-hover:shadow-xl border-[rgb(229,232,237)] border-[1px] rounded p-[30px]'>
                 <span class='mb-4 px-4 py-1 text-white rounded bg-[${each.backColor}] inline-block'>${each[currentLang].category}</span>
-                <h5 class='font-bold text-xl text-[rgb(30,33,44)] transition-colors duration-300  group-hover:text-red-500 py-1 mb-4'>${each.curator[currentLang].jobs}</h5>
+                <h5 class='line-clamp-2 font-bold text-xl text-[rgb(30,33,44)] transition-colors duration-300  group-hover:text-red-500 py-1 mb-4'>${each.curator[currentLang].jobs}</h5>
                 <div>
                     <span class='text-red-500 font-bold'>$${each.coursePrice} | <span class="text-[rgb(120,122,128)]">${each.curator.curatorName}</span></span>
                 </div>
