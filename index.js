@@ -941,6 +941,88 @@ var swiper = new Swiper(".mySwiper", {
 
 // testimonials Section end
 
+// <<<<<<< HEAD
+// ourBlog Section
+const ourBlog = document.querySelector("#ourBlog");
+ourBlog.innerHTML = `
+    <div class="w-full max-w-[1300px] mx-auto px-5">
+        <div>
+            <span class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] text-[#1E212C] mb-2">${translateData[currentLang].ourBlog.toUpperCase()}</span>
+        </div>
+        <div class="flex justify-between items-center mb-11">
+            <h1 class="font-[Lato] font-black text-[30px] md:text-[46px] leading-[130%] text-[#1E212C]">${translateData[currentLang].latestPosts}</h1>
+            <a href="./Pages/Courses/courses.html" class="hidden md:block px-[40px] font-[Lato] font-bold text-[16px] leading-[52px] tracking-[0.5px] text-[#F75E05] border border-[#F75E05] rounded-[4px] hover:bg-[#FF3F3A] hover:text-white transition-all duration-300">${translateData[currentLang].goBlog}</a>
+        </div>
+        <div class="swiper swiper3">
+            <div class="swiper-wrapper">
+                ${allBlogPosts
+                    .slice(0, 3)
+                    .map((post) => {
+                        return `
+                    <div class="swiper-slide group">
+                        <div class="w-full h-auto rounded-[4px] relative mb-4 overflow-hidden">
+                            <a href="#!" class="inline-block w-full h-full overflow-hidden rounded-[4px]">
+                                <img src="${post.img}" alt="post img" class="w-full h-full object-cover rounded group-hover:scale-110 transition-all duration-300"/>
+                                <div class="py-[1px] px-[8px] bg-white rounded-[4px] flex items-center gap-[4px] absolute top-3 left-3">
+                                    <img src="${post.en.type === "Podcast" ? "Image/HomePagePhoto/microphone.svg" : post.en.type === "Article" ? "Image/HomePagePhoto/article.svg" : "Image/HomePagePhoto/videoType.svg"}" />
+                                    <span>${post[currentLang].type}</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div>
+                            <div class="flex flex-wrap gap-3 mb-2">
+                                <span class="flex items-center font-[Lato] font-bold text-[14px] leading-[150%] text-[#787A80]">${post[currentLang].category} 
+                                <span class="inline-block w-[1px] h-3 bg-[#787A80] rounded-[1px] ml-3"></span></span>
+                                <div class="flex items-center gap-2">
+                                    <img src="Image/HomePagePhoto/Calendar.svg" />
+                                    <span class="flex items-center whitespace-nowrap font-[Lato] font-bold text-[14px] leading-[150%] text-[#787A80]">${post[currentLang].date}
+                                    <span class="inline-block w-[1px] h-3 bg-[#787A80] rounded-[1px] ml-3"></span></span>
+                                </div>
+                                <span class="flex items-center gap-2 whitespace-nowrap font-[Lato] font-bold text-[14px] leading-[150%] text-[#787A80]">
+                                    <img src="Image/HomePagePhoto/Clock.svg" class=""/>
+                                    ${post[currentLang].duration}
+                                </span>
+                            </div>
+                            <div class="">
+                                <a href="#" class="font-[Lato] font-bold text-[20px] leading-[150%] text-[#1E212C] hover:text-[#ff3f3a] transition-all duration-300">${post[currentLang].title}</a>
+                                <p class="line-clamp-2 font-[Lato] font-normal text-[16px] leading-[160%] text-[#424551] mt-2 mb-4">${post.en.description}</p>
+                                <a href="#" class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#1E212C] hover:text-[#ff3f3a] transition-all duration-300 flex items-center gap-2 hover:gap-4">
+                                    ${post[currentLang].action} 
+                                    <img src="Image/HomePagePhoto/right.svg" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                    })
+                    .join(" ")}
+            </div>
+            <div class="customPaginat flex items-center justify-center gap-3 mt-10 [&>.swiper-pagination-bullet]:!w-8 [&>.swiper-pagination-bullet]:!h-1 [&>.swiper-pagination-bullet]:!bg-[#B3B7BC] [&>.swiper-pagination-bullet]:!opacity-100 [&>.swiper-pagination-bullet]:!rounded-full [&>.swiper-pagination-bullet]:!m-0 [&>.swiper-pagination-bullet]:transition-all [&>.swiper-pagination-bullet]:duration-300 [&>.swiper-pagination-bullet.swiper-pagination-bullet-active]:!bg-[#424551]">
+                
+            </div>
+        </div>
+
+    </div>
+`;
+var swiper = new Swiper(".swiper3", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    pagination: {
+        el: ".customPaginat",
+        clickable: true,
+    },
+    breakpoints: {
+        590: {
+            slidesPerView: 2,
+        },
+        768: {
+            slidesPerView: 3,
+        },
+    },
+});
+// ourBlog Section end
+
+// >>>>>>> 881d6a4392fade75368e33de69e89d04eb2a3126
 window.addEventListener("scroll", function () {
     const header = document.querySelector("header");
     if (window.scrollY > 300) {
