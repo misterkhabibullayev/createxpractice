@@ -1,4 +1,5 @@
-const translateLang = {
+// import { allBlogPosts } from "../../AllBlogPosts";
+export const translateLang = {
     en: {
         header: {
             langTitle: "EN",
