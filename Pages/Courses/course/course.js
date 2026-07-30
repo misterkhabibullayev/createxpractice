@@ -1673,7 +1673,7 @@ window.addEventListener("DOMContentLoaded", () => {
             <div class='flex flex-col  items-start flex-1 shadow-lg transition-shadow duration-300 group-hover:shadow-xl border-[rgb(229,232,237)] border-[1px] rounded p-[30px]'>
                 <span class='mb-4 px-4 py-1 text-white rounded bg-[${each.backColor}] inline-block'>${each[currentLang].category}</span>
                 <h5 class='line-clamp-2 font-bold text-xl text-[rgb(30,33,44)] transition-colors duration-300  group-hover:text-red-500 py-1 mb-4'>${each.curator[currentLang].jobs}</h5>
-                <div>
+                <div class='mt-auto'>
                     <span class='text-red-500 font-bold'>$${each.coursePrice} | <span class="text-[rgb(120,122,128)]">${each.curator.curatorName}</span></span>
                 </div>
             </div>

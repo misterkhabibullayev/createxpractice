@@ -2,7 +2,7 @@ export const allEvents = [
     {
         id: 0,
         previewListGrid: {
-            date: "5",
+            date: "05",
             startTime: "11:00",
             endTime: "14:00",
             en: {
