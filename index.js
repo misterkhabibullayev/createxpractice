@@ -1224,12 +1224,12 @@ subscribeSection.innerHTML = `
 const footer = document.querySelector("#footer");
 footer.innerHTML = `
     <div class="bg-[#1E212C] pt-[50px] pb-[40px] lg:pt-[80px] lg:pb-[60px]">
-        <div class="w-full max-w-[1340px] mx-auto px-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-y-8 gap-x-6">
-            <div class="flex flex-col lg:col-span-3 sm:col-span-1 order-1 lg:order-1">
+        <div class="w-full max-w-[1340px] mx-auto px-5 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-12 gap-y-8 gap-x-6">
+            <div class="flex flex-col lg:col-span-3 sm:col-span-1 col-span-2 order-1 lg:order-1">
                 <a href="./index.html">
                     <img src="Image/HomePagePhoto/footerlogo.svg" alt="footer logo" class="" />
                 </a>
-                <p class="font-[Lato] font-normal text-[12px] leading-[150%] text-white opacity-60 max-w-[280px] line-clamp-5 mt-[24px] mb-[38px]">${translateData[currentLang].footerDescription}</p>
+                <p class="font-[Lato] font-normal text-[12px] leading-[150%] text-white opacity-60 max-w-full line-clamp-5 mt-[24px] mb-[38px]">${translateData[currentLang].footerDescription}</p>
                 <div class="flex items-center gap-5 mb-4">
                     <a href="https://facebook.com/" aria-label="Facebook">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="text-[#A5A6AB] hover:text-white transition-all duration-300">
@@ -1289,7 +1289,7 @@ footer.innerHTML = `
                     <a href="#!" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateData[currentLang].development}</a>
                 </div>
             </div>
-            <div class="lg:col-span-2 sm:col-span-1 order-3 sm:order-3 lg:order-4">
+            <div class="lg:col-span-2 sm:col-span-1 col-span-2 order-3 sm:order-3 lg:order-4">
                 <h3 class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] mb-[12px] text-white">${translateData[currentLang].contactUs.toUpperCase()}</h3>
                 <div class="flex flex-col gap-2">
                     <a href="tel:(405) 555-0128" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300 group flex items-center gap-2">
@@ -1308,7 +1308,7 @@ footer.innerHTML = `
                     </a>
                 </div>
             </div>
-            <div class="lg:col-span-3 sm:col-span-1 order-4 sm:order-2 lg:order-5">
+            <div class="lg:col-span-3 col-span-2 sm:col-span-1 order-4 sm:order-2 lg:order-5">
                 <h3 class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] mb-[12px] text-white">${translateData[currentLang].signUpNewsLatter.toUpperCase()}</h3>
                 <form>
                     <div class="flex items-center justify-end bg-[#393C46] border border-[#FFFFFF33] px-3 py-2.5 rounded-[4px] focus-within:border-[#ff3f3a] focus-within:bg-white transition-all duration-300">
