@@ -525,7 +525,7 @@ headerMain.innerHTML = `
 // heroSection start
 const hero = document.querySelector("#hero");
 hero.innerHTML = `
-  <div class="w-full max-w-[1300px] mx-auto px-5 flex flex-col-reverse text-center items-center mt-20 mb-10 md:text-left md:flex md:flex-row md:justify-between md:items-start md:mb-14 lg:mt-34 lg:mb-24">
+  <div class="w-full max-w-[1340px] mx-auto px-5 flex flex-col-reverse text-center items-center mt-20 mb-10 md:text-left md:flex md:flex-row md:justify-between md:items-start md:mb-14 lg:mt-34 lg:mb-24">
     <div>
         <h6 class="text-[#1E212C] font-bold text-base leading-[150%]">
             ${translateLang[currentLang].heroSection.hero_name}</h6>
@@ -975,7 +975,7 @@ const imageCards = images
 
 const bestJobs = document.querySelector("#bestJobs");
 bestJobs.innerHTML = `
-<div class="w-full max-w-[1300px] mx-auto px-5">
+<div class="w-full max-w-[1340px] mx-auto px-5">
     <div class="mx-auto items-center text-center mb-5 md:mb-8">
         <h6 class="text-[#1E212C] font-bold text-base leading-[150%]">
         ${translateLang[currentLang].section8.section8_name}</h6>
