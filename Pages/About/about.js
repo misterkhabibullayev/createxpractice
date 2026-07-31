@@ -1,4 +1,5 @@
-// import { allBlogPosts } from "../../AllBlogPosts";
+import { allBlogPosts } from "../../AllBlogPosts.js";
+
 export const translateLang = {
     en: {
         header: {
@@ -236,21 +237,21 @@ export const translateLang = {
         section6: {
             section6_name: "ENG YAXSHI USTOZLAR SHU YERDA",
             section6_title: "Jamoamiz bilan tanishing",
-            dianne: "Diana Russell",
+            dianne: "Dianne Russell",
             dianne_job: "Asoschi va Bosh direktor",
-            jerome: "Jerom Bell",
+            jerome: "Jerome Bell",
             jerome_job: "Asoschi va Dastur direktori",
-            kristin: "Kristin Uatson",
+            kristin: "Kristin Watson",
             kristin_job: "Marketolog, Marketing kursi kuratori",
             marvin: "Marvin McKinney",
             marvin_job: "Loyiha menejeri, Menejment kursi kuratori",
-            leslie: "Lesli Aleksander Li",
+            leslie: "Leslie Alexander Li",
             leslie_job: "HR va Rekruting kursi kuratori",
-            murphy: "Kertin Murfy",
+            murphy: "Kathryn Murphy",
             murphy_job: "Analitik va Marketing mutaxassisi",
-            brooklyn: "Bryuklin Simons",
+            brooklyn: "Brooklyn Simmons",
             brooklyn_job: "Dasturlash kursi kuratori",
-            cody: "Kody Fisher",
+            cody: "Cody Fisher",
             cody_job: "UX Dizayner, Dizayn kursi kuratori",
         },
         section7: {
@@ -351,16 +352,16 @@ export const translateLang = {
             section3_title: "Наши ценности",
             section3_card1_title: "Структурный подход",
             section3_card1_text:
-                "Aенеан урна диктум aдипискинг нес, крас куискуе. Нунс ин маурис.",
+                "Aenean urna dictum adipiscing nec, cras quisque. Nunc in mauris.",
             section3_card2_title: "Профессиональная обратная связь",
             section3_card2_text:
-                "Кулпа ноструд коммодо ea консекуат репрехандерит aдикуип.",
+                "Culpa nostrud commodo ea consequat reprehenderit aliquip.",
             section3_card3_title: "Эффективность",
             section3_card3_text:
-                "Виверра скелерискуе консекуат нет. Aдиписикинг eссе консекуат.",
+                "Viverra scelerisque consequat net. Adipisicing esse consequat.",
             section3_card4_title: "Гибкий график",
             section3_card4_text:
-                "Aуте eиусмод долоре десерунт вениам aд десерунт.",
+                "Aute eiusmod dolore dolore deserunt veniam ad deserunt.",
         },
         section4: {
             section4_name: "НАШИ ОСНОВНЫЕ НАПРАВЛЕНИЯ",
@@ -372,7 +373,7 @@ export const translateLang = {
             development_button: "Разработка",
             check_button: "Посмотреть курсы",
             section4_card_text:
-                "Oдио посуере нетус куискуе фаусибус лектус арсу донес.",
+                "Odio posuere netus quisque faucibus lectus arcu donec.",
             section4_last_card: "Новая программа обучения скоро...",
         },
         section5: {
@@ -381,39 +382,39 @@ export const translateLang = {
             step: "ШАГ",
             step1_title: "Просмотр онлайн-видеолекций",
             step1_text:
-                "Aликуам турпис виверрa куам сит интердум бландит посуере пеллентескуе.",
+                "Aliquam turpis viverra quam sit interdum blandit posuere pellentesque.",
             step2_title: "Прохождение тестов",
-            step2_text: "Фасилисис пеллентескуе куис aссумсан ултрикиес.",
+            step2_text: "Facilisis pellentesque quis accumsan ultricies.",
             step3_title: "Обратная связь от куратора",
-            step3_text: "Егет aмет, eним фаретра лео eгестас ниси.",
+            step3_text: "Eget amet, enim pharetra leo egestas nisi.",
             step4_title: "Исправления при необходимости",
-            step4_text: "Нон темпор пульвинар тинсидунт aликуам.",
+            step4_text: "Non tempor pulvinar tincidunt aliquam.",
         },
         section6: {
             section6_name: "ЛУЧШИЕ ПРЕПОДАВАТЕЛИ ЗДЕСЬ",
             section6_title: "Познакомьтесь с нашей командой",
-            dianne: "Дианне Руссел",
+            dianne: "Dianne Russell",
             dianne_job: "Основатель и Генеральный директор",
-            jerome: "Жероме Белл",
+            jerome: "Jerome Bell",
             jerome_job: "Основатель и Директор программы",
-            kristin: "Кристин Уатсон",
+            kristin: "Kristin Watson",
             kristin_job: "Маркетолог, куратор курса по маркетингу",
-            marvin: "Mарвин МакКейнер",
+            marvin: "Marvin McKinney",
             marvin_job: "PM, куратор курса по менеджменту",
-            leslie: "Лесли Александер Ли",
+            leslie: "Leslie Alexander Li",
             leslie_job: "Куратор курса HR и Рекрутинга",
-            murphy: "Kетрин Мурфий",
+            murphy: "Kathryn Murphy",
             murphy_job: "Аналитик и специалист по маркетингу",
-            brooklyn: "Бруклин Симмонс",
+            brooklyn: "Brooklyn Simmons",
             brooklyn_job: "Куратор курса по разработке",
-            cody: "Коди Фишер",
+            cody: "Cody Fisher",
             cody_job: "UX-дизайнер, куратор курса по дизайну",
         },
         section7: {
             section7_name: "ОТЗЫВЫ",
             section7_title: "Что говорят наши студенты",
-            comment: "Лорем ипсум долор сит aмет, консектерур aдипискинг eлит.",
-            elenor: "Элянор Пена",
+            comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            elenor: "Eleanor Pena",
             elenors: "Должность, Курс",
         },
         section8: {
@@ -431,18 +432,18 @@ export const translateLang = {
             section8_card1_title:
                 "Что такое арбитраж трафика и действительно ли он приносит деньги?",
             section8_card1_text:
-                "Фаретра, улламкорпер ясулис виверра партуриент сед ид сед.",
+                "Pharetra, ullamcorper iaculis viverra parturient sed id sed.",
             listen: "Слушать",
             watch: "Смотреть",
             read: "Читать",
             section8_card2_title:
                 "Что делать и к кому обратиться, если вы хотите получить отзыв о продукте?",
             section8_card2_text:
-                "Некуе a, сенектус консектерур одио ин aликует нес eу.",
+                "Neque a, senectus consectetur odio in aliquet nec eu.",
             section8_card3_title:
                 "Стоит ли выбирать творческую профессию, если вас привлекает творчество?",
             section8_card3_text:
-                "Курабитур нисл тинсидунт ерос вененатис вестибулум.",
+                "Curabitur nisl tincidunt eros venenatis vestibulum.",
             podcast: "Подкаст",
             video: "Видео",
             article: "Статья",
@@ -479,9 +480,12 @@ let currentLang = localStorage.getItem("selectedLang") || "en";
 // header start
 const headerMain = document.querySelector("#headerMain");
 headerMain.innerHTML = `
-<div class="container mx-auto px-5 md:px-10 lg:px-15 flex justify-between items-center py-5">
+<div class="w-full max-w-[1300px] mx-auto px-5 flex justify-between items-center py-5">
     <div class="flex items-center gap-7 md:gap-10">
-        <a href="/index.html"><img src="../../Image/HomePagePhoto/logo.svg"/></a>
+            <a href="/index.html">
+                <img
+                    src="../../Image/HomePagePhoto/logo.svg" alt="logo image"/>
+            </a>
         <nav class="hidden lg:flex items-center gap-4 xl:gap-8">
             <a href="../../Pages/About/about.html" class="font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300">${translateLang[currentLang].header.navAbout}</a>
             <a href="../../Pages/Courses/courses.html"
@@ -507,21 +511,21 @@ headerMain.innerHTML = `
                     ${translateLang[currentLang].header.loginRegister}</a>
         </div>
         <div class="hidden min-[300px]:block relative">
-            <button class="outline-none flex items-center gap-1 px-2 rounded-[20px]" id="langBtn"></button>
+            <button class=" flex items-center gap-1 px-2 rounded-[20px]" id="langBtn"></button>
                 <div
                     class="bg-[#F75E05] flex-col items-center gap-1.5 py-1.5 rounded-[10px] absolute top-[30px] w-full hidden"
                     id="langModal"></div>
         </div>
-            <button class="block lg:hidden outline-none">
+            <button class="block lg:hidden">
                 <img src="../../Image/HomePagePhoto/stash--burger-classic-light.svg"/></button>
     </div>
 </div>`;
 // header end
 
 // heroSection start
-const heroSection = document.querySelector("#heroSection");
-heroSection.innerHTML = `
-  <div class="container mx-auto px-5 flex flex-col-reverse text-center items-center mt-20 mb-10 md:text-left md:flex md:flex-row md:justify-between md:items-start md:px-10 md:mt-20 md:mb-14 lg:px-15 lg:mt-34 lg:mb-24">
+const hero = document.querySelector("#hero");
+hero.innerHTML = `
+  <div class="w-full max-w-[1340px] mx-auto px-5 flex flex-col-reverse text-center items-center mt-20 mb-10 md:text-left md:flex md:flex-row md:justify-between md:items-start md:mb-14 lg:mt-34 lg:mb-24">
     <div>
         <h6 class="text-[#1E212C] font-bold text-base leading-[150%]">
             ${translateLang[currentLang].heroSection.hero_name}</h6>
@@ -537,7 +541,7 @@ heroSection.innerHTML = `
                     ${translateLang[currentLang].heroSection.explore_button}</button>
             </a>
             <a href="../Courses/courses.html">
-                <button class="outline-none text-[#FFFFFF] bg-[#F75E05] border border-[#FF3F3A] hover:text-[#F75E05] hover:bg-[white] rounded-md transition-all duration-500 font-semibold leading-[40px] px-16 sm:px-[30px] lg:px-[40px]" >
+                <button class="text-[#FFFFFF] bg-[#F75E05] border border-[#FF3F3A] hover:text-[#F75E05] hover:bg-[white] rounded-md transition-all duration-500 font-semibold leading-[40px] px-16 sm:px-[30px] lg:px-[40px]" >
                     ${translateLang[currentLang].heroSection.browse_button}</button>
             </a>
         </div>
@@ -647,10 +651,10 @@ ourMainDirection.innerHTML = `
         <img class="w-full object-contain mx-auto"
              src="../../Image/aboutUs-photo/about.section4.card1.png"/>
         <div class="px-3 py-3 sm:px-6 sm:py-6 border border-[#E5E8ED]">
-            <button class="outline-none bg-[#03CEA4] text-[#FFFFFF] hover:bg-[#ffffff] hover:text-[#03CEA4]  hover:border font-semibold text-base leading-[160%] rounded-[4px] px-2 mb-2 sm:mb-5">${translateLang[currentLang].section4.marketing_button}</button>
+            <button class="bg-[#03CEA4] text-[#FFFFFF] hover:bg-[#ffffff] hover:text-[#03CEA4]  hover:border font-semibold text-base leading-[160%] rounded-[4px] px-2 mb-2 sm:mb-5">${translateLang[currentLang].section4.marketing_button}</button>
             <p class="font-normal text-base leading-[130%] text-[#424551] mb-2 sm:mb-5 sm:leading-[160%]">${translateLang[currentLang].section4.section4_card_text}</p>
             <a href="../Courses/courses.html" class="flex gap-3 items-center">
-                <button class="outline-none font-semibold text-base leading-[160%] text-[#1E212C] hover:text-red-500">${translateLang[currentLang].section4.check_button}</button>
+                <button class="font-semibold text-base leading-[160%] text-[#1E212C] hover:text-red-500">${translateLang[currentLang].section4.check_button}</button>
                 <img src="../../Image/aboutUs-photo/about.section4.strelka.svg"/></a>
         </div>
     </div>
@@ -659,10 +663,10 @@ ourMainDirection.innerHTML = `
         <img class="w-full object-contain mx-auto" 
              src="../../Image/aboutUs-photo/about.section4.card2.png"/>
         <div class="px-3 py-3 sm:px-6 sm:py-6 border border-[#E5E8ED]">
-            <button class="outline-none bg-[#5A87FC] text-[#FFFFFF] hover:bg-[#ffffff] hover:text-[#5A87FC] hover:border font-semibold text-base leading-[160%] rounded-[4px] px-2 mb-2 sm:mb-5">${translateLang[currentLang].section4.management_button}</button>
+            <button class="bg-[#5A87FC] text-[#FFFFFF] hover:bg-[#ffffff] hover:text-[#5A87FC] hover:border font-semibold text-base leading-[160%] rounded-[4px] px-2 mb-2 sm:mb-5">${translateLang[currentLang].section4.management_button}</button>
             <p class="font-normal text-base leading-[130%] text-[#424551] mb-2 sm:mb-5 sm:leading-[160%]">${translateLang[currentLang].section4.section4_card_text}</p>
             <a href="../Courses/courses.html" class="flex gap-3 items-center">
-                <button class="outline-none font-semibold text-base leading-[160%] text-[#1E212C] hover:text-red-500">${translateLang[currentLang].section4.check_button}</button>
+                <button class="font-semibold text-base leading-[160%] text-[#1E212C] hover:text-red-500">${translateLang[currentLang].section4.check_button}</button>
                 <img src="../../Image/aboutUs-photo/about.section4.strelka.svg"/></a>
         </div>
     </div>
@@ -671,10 +675,10 @@ ourMainDirection.innerHTML = `
         <img class="w-full object-contain mx-auto" 
              src="../../Image/aboutUs-photo/about.section4.card3.png"/>
         <div class="px-3 py-3 sm:px-6 sm:py-6 border border-[#E5E8ED]">
-            <button class="outline-none bg-[#F89828] text-[#FFFFFF] hover:bg-[#ffffff] hover:text-[#F89828] hover:border font-semibold text-base leading-[160%] rounded-[4px] px-2 mb-2 sm:mb-5">${translateLang[currentLang].section4.recruting_button}</button>
+            <button class="bg-[#F89828] text-[#FFFFFF] hover:bg-[#ffffff] hover:text-[#F89828] hover:border font-semibold text-base leading-[160%] rounded-[4px] px-2 mb-2 sm:mb-5">${translateLang[currentLang].section4.recruting_button}</button>
             <p class="font-normal text-base leading-[130%] text-[#424551] mb-2 sm:mb-5 sm:leading-[160%]">${translateLang[currentLang].section4.section4_card_text}</p>
             <a href="../Courses/courses.html" class="flex gap-3 items-center">
-                <button class="outline-none font-semibold text-base leading-[160%] text-[#1E212C] hover:text-red-500">${translateLang[currentLang].section4.check_button}</button>
+                <button class="font-semibold text-base leading-[160%] text-[#1E212C] hover:text-red-500">${translateLang[currentLang].section4.check_button}</button>
                 <img src="../../Image/aboutUs-photo/about.section4.strelka.svg"/></a>
         </div>
     </div>
@@ -683,10 +687,10 @@ ourMainDirection.innerHTML = `
         <img class="w-full object-contain mx-auto"
              src="../../Image/aboutUs-photo/about.section4.card4.png"/>
         <div class="px-3 py-3 sm:px-6 sm:py-6 border border-[#E5E8ED]">
-            <button class="outline-none bg-[#F52F6E] text-[#FFFFFF] hover:bg-[#ffffff] hover:text-[#F52F6E] hover:border font-semibold text-base leading-[160%] rounded-[4px] px-2 mb-2 sm:mb-5">${translateLang[currentLang].section4.design_button}</button>
+            <button class="bg-[#F52F6E] text-[#FFFFFF] hover:bg-[#ffffff] hover:text-[#F52F6E] hover:border font-semibold text-base leading-[160%] rounded-[4px] px-2 mb-2 sm:mb-5">${translateLang[currentLang].section4.design_button}</button>
             <p class="font-normal text-base leading-[130%] text-[#424551] mb-2 sm:mb-5 sm:leading-[160%]">${translateLang[currentLang].section4.section4_card_text}</p>
             <a href="../Courses/courses.html" class="flex gap-3 items-center">
-                <button class="outline-none font-semibold text-base leading-[160%] text-[#1E212C] hover:text-red-500">${translateLang[currentLang].section4.check_button}</button>
+                <button class="font-semibold text-base leading-[160%] text-[#1E212C] hover:text-red-500">${translateLang[currentLang].section4.check_button}</button>
                 <img src="../../Image/aboutUs-photo/about.section4.strelka.svg"/></a>
         </div>
     </div>
@@ -695,10 +699,10 @@ ourMainDirection.innerHTML = `
         <img class="w-full object-contain mx-auto"
             src="../../Image/aboutUs-photo/about.section4.card5.png"/>
         <div class="px-3 py-3 sm:px-6 sm:py-6 border border-[#E5E8ED]">
-            <button class="outline-none bg-[#7772F1] text-[#FFFFFF] hover:bg-[#ffffff] hover:text-[#7772F1] hover:border font-semibold text-base leading-[160%] rounded-[4px] px-2 mb-2 sm:mb-5">${translateLang[currentLang].section4.development_button}</button>
+            <button class="bg-[#7772F1] text-[#FFFFFF] hover:bg-[#ffffff] hover:text-[#7772F1] hover:border font-semibold text-base leading-[160%] rounded-[4px] px-2 mb-2 sm:mb-5">${translateLang[currentLang].section4.development_button}</button>
             <p class="font-normal text-base leading-[130%] text-[#424551] mb-2 sm:mb-5 sm:leading-[160%]">${translateLang[currentLang].section4.section4_card_text}</p>
             <a href="../Courses/courses.html" class="flex gap-3 items-center">
-                <button class="outline-none font-semibold text-base leading-[160%] text-[#1E212C] hover:text-red-500">${translateLang[currentLang].section4.check_button}</button>
+                <button class="font-semibold text-base leading-[160%] text-[#1E212C] hover:text-red-500">${translateLang[currentLang].section4.check_button}</button>
                 <img src="../../Image/aboutUs-photo/about.section4.strelka.svg"/></a>
         </div>
     </div>
@@ -819,7 +823,7 @@ const peopleCards = tutors
             <img src="${person.image}" class="w-full object-contain px-2 pt-2 md:px-5 md:pt-5"/>
             <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
             </div>
-            <div class="absolute items-center bottom-5 left-[50%] -translate-x-1/2 flex gap-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+            <div class="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
                 <a href="#"><img src="../../Image/aboutUs-photo/1.svg"></a>
                 <a href="#"><img src="../../Image/aboutUs-photo/2.svg"></a>
                 <a href="#"><img src="../../Image/aboutUs-photo/Linked-In.svg"></a>
@@ -846,7 +850,7 @@ bestTutors.innerHTML = `
 // testimonials start
 const testimonials = document.querySelector("#testimonials");
 testimonials.innerHTML = `
- <div class="container mx-auto px-5 md:px-10 lg:px-15">
+ <div class="w-full max-w-[1300px] mx-auto px-5">
     <div class="mx-auto items-center text-center mb-5 md:mb-8">
         <h6 class="text-[#1E212C] font-bold text-base leading-[150%]">
          ${translateLang[currentLang].section7.section7_name}</h6>
@@ -971,7 +975,7 @@ const imageCards = images
 
 const bestJobs = document.querySelector("#bestJobs");
 bestJobs.innerHTML = `
-<div class="container mx-auto px-5 md:px-10 lg:px-15">
+<div class="w-full max-w-[1340px] mx-auto px-5">
     <div class="mx-auto items-center text-center mb-5 md:mb-8">
         <h6 class="text-[#1E212C] font-bold text-base leading-[150%]">
         ${translateLang[currentLang].section8.section8_name}</h6>
@@ -979,107 +983,92 @@ bestJobs.innerHTML = `
     </div>
     <div class="grid grid-cols-4 gap-4 md:grid-cols-6 md:gap-6">${imageCards}</div>
 </div>`;
-// best jobs end//////////////////////////////////////////////////////////////////////////////////
+// best jobs end/////////////////////////////////////////////////////////////////////
 
 // our blog start
 const ourBlog = document.querySelector("#ourBlog");
 ourBlog.innerHTML = `
-<div class="mx-auto mb-5 md:mb-10">
-    <h6 class="text-[#1E212C] font-bold text-base leading-[150%]">
-        ${translateLang[currentLang].section8.ourBlog}</h6>
-    <div class="flex justify-between items-center">
-        <h1 class="text-[#1E212C] font-extrabold text-xl sm:leading-[130%] sm:text-3xl lg:font-black lg:text-4xl">${translateLang[currentLang].section8.latestPosts}</h1>
-        <a href="../Blogs/blogs.html">
-            <button class="outline-none bg-[#F75E05] text-white px-4 md:py-2 md:px-7 rounded hover:bg-white hover:text-[#F75E05] hover:border border-[#F75E05]" >
-                  ${translateLang[currentLang].section8.goBlog}</button></a>
-    </div>
-</div>
-<div class="grid sm:grid-cols-3 gap-5">
-        <!-- birinchi -->
-    <div class="group relative overflow-hidden rounded-xl">
-        <a class="flex gap-1 top-4 absolute left-3 z-20 bg-white rounded-md"                  href="../Blogs/blogs.html">
-            <img class="absolute left-1" src="../../Image/aboutUs-photo/mic.svg" />
-            <button class="outline-none bg-[#FFFFFF] text-sm font-normal pl-2 pr-1 rounded-md ml-3">
-                ${translateLang[currentLang].section8.podcast}</button></a>
-        <img
-            class="w-full transition-transform duration-500 hover:scale-105"
-            src="../../Image/aboutUs-photo/girl-image.png"/>
-        <div class="flex flex-wrap mt-3">
-            <span class="font-semibold text-sm leading-[100%] text-[#787A80] pr-2 border-r border-[#787A80]"> ${translateLang[currentLang].section8.marketing}</span>
-            <img class="ml-2" src="../../Image/aboutUs-photo/Vector (Stroke).svg"/>
-            <span class="font-semibold text-sm leading-[100%] text-[#787A80] pr-2 border-r border-[#787A80]">${translateLang[currentLang].section8.september} 4, 2020   </span>
-            <img class="ml-2" src="../../Image/aboutUs-photo/Union.svg"/>
-             <span class="font-semibold text-sm leading-[100%] text-[#787A80]"> 36 ${translateLang[currentLang].section8.min}</span>
-        </div>
-        <div>
-            <h6 class="font-bold text-sm md:text-lg leading-[120%] py-2 text-[#1E212C]"
-                >${translateLang[currentLang].section8.section8_card1_title}</h6>
-            <p class="font-normal text-sm leading-[130%] text-[#424551] mb-2"> 
-                ${translateLang[currentLang].section8.section8_card1_text}</p>
-            <a href="../Blogs/blogs.html" class="flex gap-3 items-center">
-                <button class="font-semibold text-base leading-[160%] text-[#1E212C] hover:text-red-500">${translateLang[currentLang].section8.listen}</button>
-                <img src="../../Image/aboutUs-photo/about.section4.strelka.svg"/></a>
+<div class="w-full max-w-[1340px] mx-auto px-5">
+    <div class="mx-auto mb-5 md:mb-10">
+        <h6 class="text-[#1E212C] font-bold text-base leading-[150%]">
+            ${translateLang[currentLang].section8.ourBlog}</h6>
+        <div class="flex justify-between items-center">
+            <h1 class="text-[#1E212C] font-extrabold text-xl sm:leading-[130%] sm:text-3xl lg:font-black lg:text-4xl">${translateLang[currentLang].section8.latestPosts}</h1>
+            <a href="../Blogs/blogs.html">
+                <button class="bg-[#F75E05] text-white px-4 md:py-2 md:px-7 rounded hover:bg-white hover:text-[#F75E05] hover:border border-[#F75E05]" >
+                  ${translateLang[currentLang].section8.goBlog}</button>
+            </a>
         </div>
     </div>
-            <!-- ikkinchi -->
-    <div class="group relative overflow-hidden rounded-xl">
-        <a class="flex gap-1 top-4 absolute left-3 z-20 bg-white rounded-md" 
-           href="../Blogs/blogs.html">
-            <img class="absolute left-1" src="../../Image/aboutUs-photo/Play.svg"/>
-            <button class="outline-none bg-[#FFFFFF] text-sm font-normal pl-2 pr-1 rounded-md ml-3">
-                    ${translateLang[currentLang].section8.video}</button></a>
-        <img class="w-full transition-transform duration-500 hover:scale-105"
-             src="../../Image/aboutUs-photo/lamp-image.png"/>
-        <div class="flex flex-wrap mt-3">
-            <span class="font-semibold text-sm leading-[100%] text-[#787A80] pr-2 border-r border-[#787A80]">${translateLang[currentLang].section8.management}</span>
-            <img class="ml-2" src="../../Image/aboutUs-photo/Vector (Stroke).svg"/>
-            <span class="font-semibold text-sm leading-[100%] text-[#787A80] pr-2 border-r border-[#787A80]">${translateLang[currentLang].section8.august}  25, 2020</span>
-            <img class="ml-2" src="../../Image/aboutUs-photo/Union.svg"/>
-            <span class="font-semibold text-sm leading-[100%] text-[#787A80]">45
-                  ${translateLang[currentLang].section8.min}</span>
-        </div>
-        <div>
-            <h6 class="font-bold text-sm md:text-lg leading-[120%] py-2 text-[#1E212C]"
-                > ${translateLang[currentLang].section8.section8_card2_title} </h6>
-            <p class="font-normal text-sm leading-[130%] text-[#424551] mb-2">
-                ${translateLang[currentLang].section8.section8_card2_text}</p>
-            <a href="../Blogs/blogs.html" class="flex gap-3 items-center">
-                <button class="font-semibold text-base leading-[160%] text-[#1E212C] hover:text-red-500">${translateLang[currentLang].section8.watch}</button>
-                <img src="../../Image/aboutUs-photo/about.section4.strelka.svg"/></a>
-        </div>
-    </div>
-        <!-- uchinchi -->
-    <div class="group relative overflow-hidden rounded-xl">
-        <a class="flex gap-1 top-4 absolute left-3 z-20 bg-white rounded-md"
-           href="../Blogs/blogs.html">
-            <img class="absolute left-1" src="../../Image/aboutUs-photo/Files.svg"/>
-            <button class="outline-none bg-[#FFFFFF] text-sm font-normal pl-2 pr-1 rounded-md ml-3"
-                >${translateLang[currentLang].section8.article}</button></a>
-        <img class="w-full transition-transform duration-500 hover:scale-105"
-             src="../../Image/aboutUs-photo/cap-image.png"/>
-        <div class="flex flex-wrap mt-3">
-            <span class="font-semibold text-sm leading-[100%] text-[#787A80] pr-2  marker:border-r border-[#787A80]">${translateLang[currentLang].section8.design}</span>
-            <img class="ml-2" src="../../Image/aboutUs-photo/Vector (Stroke).svg"/>
-            <span class="font-semibold text-sm leading-[100%] text-[#787A80]">
-                  ${translateLang[currentLang].section8.august} 8, 2020</span>
-        </div>
-        <div>
-            <h6 class="font-bold text-sm md:text-lg leading-[120%] py-2 text-[#1E212C]"
-                > ${translateLang[currentLang].section8.section8_card1_title}</h6>
-            <p class="font-normal text-sm leading-[130%] text-[#424551] mb-2">
-                ${translateLang[currentLang].section8.section8_card1_text}</p>
-            <a href="../Blogs/blogs.html" class="flex gap-3 items-center">
-                <button class="font-semibold text-base leading-[160%] text-[#1E212C] hover:text-red-500">${translateLang[currentLang].section8.read}</button>
-                <img src="../../Image/aboutUs-photo/about.section4.strelka.svg"/></a>
+
+    <div class="swiper swiper3">
+        <div class="swiper-wrapper">
+            ${allBlogPosts
+                .slice(0, 3)
+                .map((post) => {
+                    return `
+            <div class="swiper-slide group">
+                <div class="w-full h-auto rounded-[4px] relative mb-4 overflow-hidden">
+                    <a href="#!" class="inline-block w-full h-full overflow-hidden rounded">
+                        <img src="${post.img}" class="w-full h-full object-cover rounded group-hover:scale-110 transition-all duration-300"/>
+                        <div class="py-[1px] px-2 bg-white rounded flex items-center gap-1 absolute top-3 left-3">
+                            <img src="${post.en.type === "Podcast" ? "../../Image/HomePagePhoto/microphone.svg" : post.en.type === "Article" ? "../../Image/HomePagePhoto/article.svg" : "../../Image/HomePagePhoto/videoType.svg"}"/>
+                            <span>${post[currentLang].type}</span>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <div class="flex flex-wrap gap-3 mb-2">
+                        <span class="flex items-center font-bold text-[14px] leading-[150%] text-[#787A80]">${post[currentLang].category} 
+                            <span class="inline-block w-[1px] h-3 bg-[#787A80] rounded-[1px] ml-3"></span></span>
+                        <div class="flex items-center gap-2">
+                            <img src="../../Image/HomePagePhoto/Calendar.svg" />
+                            <span class="flex items-center whitespace-nowrap font-bold text-[14px] leading-[150%] text-[#787A80]">${post[currentLang].date}
+                                <span class="inline-block w-[1px] h-3 bg-[#787A80] rounded-[1px] ml-3"></span>
+                            </span>
+                        </div>
+                        <span class="flex items-center gap-2 whitespace-nowrap font-bold text-[14px] leading-[150%] text-[#787A80]">
+                            <img src="../../Image/HomePagePhoto/Clock.svg" class=""/>
+                                ${post[currentLang].duration} </span>
+                    </div>
+                    <div>
+                        <a href="#" class="font-bold text-[20px] leading-[150%] text-[#1E212C] hover:text-[#ff3f3a] transition-all duration-300">${post[currentLang].title}</a>
+                        <p class="line-clamp-2 font-normal text-[16px] leading-[160%] text-[#424551] mt-2 mb-4">${post[currentLang].description}</p>
+                        <a href="#" class="font-bold text-[16px] leading-[160%] text-[#1E212C] hover:text-[#ff3f3a] transition-all duration-300 flex items-center gap-2 hover:gap-4">${post[currentLang].action} 
+                            <img src="../../Image/HomePagePhoto/right.svg" /></a>
+                    </div>
+                </div>
+            </div>`;
+                })
+                .join(" ")}
+            </div>
+            <div class="customPaginat flex items-center justify-center gap-3 mt-10 [&>.swiper-pagination-bullet]:!w-8 [&>.swiper-pagination-bullet]:!h-1 [&>.swiper-pagination-bullet]:!bg-[#B3B7BC] [&>.swiper-pagination-bullet]:!opacity-100 [&>.swiper-pagination-bullet]:!rounded-full [&>.swiper-pagination-bullet]:!m-0 [&>.swiper-pagination-bullet]:transition-all [&>.swiper-pagination-bullet]:duration-300 [&>.swiper-pagination-bullet.swiper-pagination-bullet-active]:!bg-[#424551]">  
+            </div>
         </div>
     </div>
 </div>`;
+var swiperr = new Swiper(".swiper3", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    pagination: {
+        el: ".customPaginat",
+        clickable: true,
+    },
+    breakpoints: {
+        590: {
+            slidesPerView: 2,
+        },
+        768: {
+            slidesPerView: 3,
+        },
+    },
+});
 // our blog end
 
 //  Subscribe Section start
 const subscribe = document.querySelector("#subscribe");
 subscribe.innerHTML = `
-<div class="container mx-auto px-5 md:px-10 lg:px-20 flex flex-col items-center justify-center py-10 sm:py-20">
+<div class="w-full max-w-[1300px] mx-auto px-5 flex flex-col items-center justify-center py-10 sm:py-20">
     <div class="flex flex-col items-center text-center mb-10">
         <h6 class="text-[#1E212C] font-bold text-base leading-[150%]">
             ${translateLang[currentLang].section9.dontmiss}</h6>
@@ -1089,7 +1078,7 @@ subscribe.innerHTML = `
         <form action="#" class="flex items-center justify-center gap-2 sm:gap-5 w-full max-w-[600px] mx-auto">
             <input class="px-4 py-2.5 w-full md:max-w-[268px] lg:max-w-[320px] xl:max-w-[400px] rounded" type="email"
                 placeholder="${translateLang[currentLang].section9.subscribePlaceholder}"/>
-            <button class="outline-none bg-[#FF3F3A] w-full md:w-auto text-white font-bold leading-[43px] px-5 rounded">
+            <button class="bg-[#FF3F3A] w-full md:w-auto text-white font-bold leading-[43px] px-5 rounded">
             ${translateLang[currentLang].section9.subscribe_button}</button>
         </form>
     </div>
@@ -1097,6 +1086,114 @@ subscribe.innerHTML = `
 // Subscribe Section end
 
 // footer start
+const footer = document.querySelector("#footer");
+footer.innerHTML = `
+<div class="bg-[#1E212C] pt-[50px] pb-10 lg:pt-20 lg:pb-16">
+    <div class="w-full max-w-[1340px] mx-auto px-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-y-8 gap-x-6">
+        <div class="flex flex-col lg:col-span-3 sm:col-span-1 order-1 lg:order-1">
+            <a href="./index.html"><img src="../../Image/HomePagePhoto/footerlogo.svg"/></a>
+            <p class="font-normal text-[12px] leading-[150%] text-white opacity-60 max-w-70 line-clamp-5 mt-6 mb-9">${translateLang[currentLang].footer.footerDescription}</p>
+            <div class="flex items-center gap-5 mb-4">
+                <a href="https://facebook.com/" aria-label="Facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="text-[#A5A6AB] hover:text-white transition-all duration-300">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path fill="currentColor" d="M14.2 2.875A4.625 4.625 0 0 0 9.575 7.5v2.575H7.1c-.124 0-.225.1-.225.225v3.4c0 .124.1.225.225.225h2.475V20.9c0 .124.1.225.225.225h3.4c.124 0 .225-.1.225-.225v-6.975h2.497c.103 0 .193-.07.218-.17l.85-3.4a.225.225 0 0 0-.218-.28h-3.347V7.5a.775.775 0 0 1 .775-.775h2.6c.124 0 .225-.1.225-.225V3.1c0-.124-.1-.225-.225-.225z" />
+                    </svg>
+                </a>
+                <a href="https://x.com/" aria-label="Twitter">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="text-[#A5A6AB] hover:text-white transition-all duration-300">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path fill="currentColor" d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.2 4.2 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.52 8.52 0 0 1-5.33 1.84q-.51 0-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23" />
+                    </svg>
+                </a>
+                <a href="https://youtube.com/" aria-label="YouTube">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="text-[#A5A6AB] hover:text-white transition-all duration-300">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path fill="currentColor" d="m10 15l5.19-3L10 9zm11.56-7.83c.13.47.22 1.1.28 1.9c.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83c-.25.9-.83 1.48-1.73 1.73c-.47.13-1.33.22-2.65.28c-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44c-.9-.25-1.48-.83-1.73-1.73c-.13-.47-.22-1.1-.28-1.9c-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83c.25-.9.83-1.48 1.73-1.73c.47-.13 1.33-.22 2.65-.28c1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44c.9.25 1.48.83 1.73 1.73" />
+                    </svg>
+                </a>
+                <a href="https://t.me/" aria-label="Telegram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="text-[#A5A6AB] hover:text-white transition-all duration-300">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path fill="currentColor" d="m21.936 5.17l-3.03 14.185c-.226.999-.806 1.224-1.644.773l-4.545-3.352l-2.225 2.127c-.225.226-.451.452-.967.452l.355-4.675l8.478-7.704c.354-.355-.097-.484-.548-.193l-10.541 6.64l-4.546-1.386c-.999-.322-.999-1 .226-1.45L20.614 3.72c.87-.258 1.612.194 1.322 1.45" />
+                    </svg>
+                </a>
+                <a href="https://instagram.com/" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="text-[#A5A6AB] hover:text-white transition-all duration-300">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3" />
+                    </svg>
+                </a>
+                <a href="https://linkedin.com/" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="text-[#A5A6AB] hover:text-white transition-all duration-300">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path fill="currentColor" d="M6.94 5a2 2 0 1 1-4-.002a2 2 0 0 1 4 .002M7 8.48H3V21h4zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="lg:col-span-2 sm:col-span-2 order-1 sm:order-4 lg:order-2">
+            <h3 class="font-bold text-base leading-[150%] tracking-[1px] mb- text-white">${translateLang[currentLang].footer.siteMap}</h3>
+            <div class="flex gap-6 sm:flex-row flex-col lg:flex-col lg:gap-2">
+                <a href="Pages/About/about.html" class="font-normal text-base leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateLang[currentLang].header.navAbout}</a>
+                <a href="Pages/Courses/courses.html" class="font-normal text-base leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateLang[currentLang].header.navCourses}</a>
+                <a href="Pages/Events/events.html" class="font-normal text-base leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateLang[currentLang].header.navEvents}</a>
+                <a href="Pages/Blogs/blogs.html" class="font-normal text-base leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateLang[currentLang].header.navBlog}</a>
+                <a href="Pages/Contacts/contacts.html" class="font-normal text-base leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateLang[currentLang].header.navContacts}</a>
+            </div>
+        </div>
+        <div class="lg:col-span-2 sm:col-span-2 order-2 sm:order-5 lg:order-3">
+            <h3 class="font-bold text-base leading-[150%] tracking-[1px] mb-3 text-white">${translateLang[currentLang].footer.courses.toUpperCase()}</h3>
+            <div class="flex gap-6 sm:flex-row flex-col lg:flex-col lg:gap-2">
+                <a href="#!" class="font-normal text-base leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateLang[currentLang].footer.marketing}</a>
+                <a href="#!" class="font-normal text-base leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateLang[currentLang].footer.management}</a>
+                <a href="#!" class="font-normal text-base leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateLang[currentLang].footer.hrRecruting}</a>
+                <a href="#!" class="font-normal text-base leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateLang[currentLang].footer.design}</a>
+                <a href="#!" class="font-normal text-base leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateLang[currentLang].footer.development}</a>
+            </div>
+        </div>
+        <div class="lg:col-span-2 sm:col-span-1 order-3 sm:order-3 lg:order-4">
+            <h3 class="font-bold text-base leading-[150%] tracking-[1px] mb-3 text-white">${translateLang[currentLang].footer.contactUs}</h3>
+            <div class="flex flex-col gap-2">
+                <a href="tel:(405) 555-0128" class="font-normal text-base leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300 group flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none" />
+                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 3H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-2m-4 0h4m-4 0v1m4-1v1m0 0a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v0m4 0h-4m2 10.008" />
+                    </svg>(405) 555-0128
+                </a>
+                <a href="mailto:hello@createx.com" class="font-normal text-base leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300 group flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none" />
+                        <path fill="currentColor" d="M4.616 19q-.691 0-1.153-.462T3 17.384V6.616q0-.691.463-1.153T4.615 5h14.77q.69 0 1.152.463T21 6.616v10.769q0 .69-.463 1.153T19.385 19zM12 12.116L4 6.885v10.5q0 .269.173.442t.443.173h14.769q.269 0 .442-.173t.173-.443v-10.5zM12 11l7.692-5H4.308zM4 6.885V6v11.385q0 .269.173.442t.443.173H4z" />
+                    </svg>hello@createx.com
+                 </a>
+            </div>
+        </div>
+        <div class="lg:col-span-3 sm:col-span-1 order-4 sm:order-2 lg:order-5">
+            <h3 class="font-bold text-base leading-[150%] tracking-[1px] mb-3 text-white">${translateLang[currentLang].footer.signUpNewsLatter}</h3>
+            <form>
+                <div class="flex items-center justify-end bg-[#393C46] border border-[#FFFFFF33] px-3 py-2.5 rounded focus-within:border-[#ff3f3a] focus-within:bg-white transition-all duration-300">
+                    <input type="email" placeholder="${translateLang[currentLang].footer.signUpNewsLatterPlaceholder}" class="flex-1 pr-3 bg-transparent font-normal text-[12px] leading-[150%] text-white focus:text-black outline-none placeholder:text-[#A5A6AB]">
+                    <img src="../../Image/HomePagePhoto/footerRight.svg" class="w-4 h-4"/>
+                </div>
+                <p class="mt-3 font-normal text-[10px] leading-[150%] text-white opacity-60 max-w-[290px] line-clamp-2">${translateLang[currentLang].footer.signUpSubscribe}</p>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="bg-[#292C37] py-[18px]">
+    <div class="w-full max-w-[1340px] mx-auto px-5 flex items-center justify-between">
+        <p class="font-normal text-[12px] leading-[150%] text-white">&copy; ${translateLang[currentLang].footer.copyRight}. ${translateLang[currentLang].footer.madeWith}</p>
+        <div>
+            <button id="goToTopBtn" class="font-bold text-[14px] leading-[150%] text-white">${translateLang[currentLang].footer.backtoTop}</button>
+        </div>
+    </div>
+</div>`;
+const goToTopBtn = document.querySelector("#goToTopBtn");
+goToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+    });
+});
 // footer end
 // LANGUAGE BUTTON
 window.addEventListener("scroll", function () {
