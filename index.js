@@ -227,7 +227,7 @@ let currentLang = localStorage.getItem("selectedLang") || "en";
 const headerMain = document.querySelector("#headerMain");
 headerMain.innerHTML = `
     <div
-        class="container mx-auto px-5 md:px-10 lg:px-20 flex justify-between items-center py-5"
+        class=" w-full max-w-[1340px] mx-auto px-5 flex justify-between items-center py-5"
     >
         <div class="flex items-center gap-7 md:gap-10">
             <div class="">
@@ -306,7 +306,7 @@ headerMain.innerHTML = `
 // hero Section
 const heroSection = document.querySelector("#heroSection");
 heroSection.innerHTML = `
-    <div class="container mx-auto px-5 md:px-10 lg:px-20">
+    <div class=" w-full max-w-[1340px] mx-auto px-5">
         <div
             class="flex flex-col-reverse items-center gap-8 lg:flex lg:flex-row lg:justify-between lg:items-center lg:mb-[40px]"
         >
@@ -421,7 +421,7 @@ heroSection.innerHTML = `
 const whoweare = document.querySelector("#whoweare");
 whoweare.innerHTML = `
     <div
-        class="container mx-auto px-5 md:px-10 lg:px-20 my-[180px] flex flex-col gap-[30px] md:flex-row md:justify-between"
+        class=" w-full max-w-[1340px] mx-auto px-5 my-[180px] flex flex-col gap-[30px] md:flex-row md:justify-between"
     >
         <div class="w-full md:w-[50%] h-[50%]">
             <img
@@ -526,7 +526,7 @@ const featuredCoursesSection = document.querySelector(
     "#featuredCoursesSection",
 );
 featuredCoursesSection.innerHTML = `
-    <div class="container mx-auto px-5 md:px-10 lg:px-20">
+    <div class=" w-full max-w-[1340px] mx-auto px-5">
         <div>
             <span class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] text-[#1E212C] mb-2">${translateData[currentLang].readytolearn.toUpperCase()}</span>
         </div>
@@ -643,7 +643,7 @@ const benefitsData = {
     },
 };
 ourBenefits.innerHTML = `
-    <div class="container mx-auto px-5 md:px-10 lg:px-20">
+    <div class=" w-full max-w-[1340px] mx-auto px-5">
         <div class="flex flex-col md:items-center gap-2 mb-[60px]">
             <span class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] text-[#1E212C]">${translateData[currentLang].ourbenefits.toUpperCase()}</span>
             <h1 class="font-[Lato] font-black text-[28px] sm:text-[36px] md:text-[46px] leading-[130%] text-[#1E212C]">${translateData[currentLang].thatshowwedoit}</h1>
@@ -772,7 +772,7 @@ renderBenefit();
 // ourEvents Section
 const ourEvents = document.querySelector("#ourEvents");
 ourEvents.innerHTML = `
-    <div class="container mx-auto px-5 md:px-10 lg:px-20">
+    <div class=" w-full max-w-[1340px] mx-auto px-5">
         <div class="mb-[60px] md:flex md:flex-col md:items-center md:gap-2">
             <span class="font-[Lato] font-bold text-[16px] leading-[150%] text-[#1E212C]">${translateData[currentLang].ourevents.toUpperCase()}</span>
             <h1 class="font-[Lato] font-black text-[46px] leading-[130%] text-[#1E212C]">${translateData[currentLang].lecturesWorkshop}</h1>
@@ -838,7 +838,7 @@ ourEvents.innerHTML = `
 // certificates Section
 const creatXCertificateSection = document.querySelector("#creatXCertificate");
 creatXCertificateSection.innerHTML = `
-    <div class="container mx-auto px-5 md:px-10 lg:px-20 lg:flex lg:justify-between lg:items-start">
+    <div class=" w-full max-w-[1340px] mx-auto px-5 lg:flex lg:justify-between lg:items-start">
         <div class="mb-[16px]">
             <div>
                 <span class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] text-[#1E212C] mb-[8px]">
@@ -875,7 +875,7 @@ creatXCertificateSection.innerHTML = `
 // bestTutors Section
 const bestTutors = document.querySelector("#bestTutors");
 bestTutors.innerHTML = `
-    <div class="container mx-auto px-5 md:px-10 lg:px-20">
+    <div class=" w-full max-w-[1340px] mx-auto px-5">
         <div>
             <span class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] text-[#1E212C] mb-2">
                 ${translateData[currentLang].bestTutorsHere.toUpperCase()}
@@ -942,21 +942,21 @@ var swiper = new Swiper(".mySwiper", {
 export const testimonialsData = [
     {
         id: 1,
-        authorImage: (
+        authorImage:`
             <svg
                 xmlns='http://www.w3.org/2000/svg'
                 viewBox='0 0 24 24'
                 fill='#9CA3AF'
                 class='w-full h-full object-cover rounded-full bg-gray-200 p-2'
             >
-                {" "}
+                 
                 <path
                     fill-rule='evenodd'
                     d='M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.6-7.812-1.7a.75.75 0 01-.437-.695z'
                     clip-rule='evenodd'
-                />{" "}
+                /> 
             </svg>
-        ),
+        `,
         comment:
             "Learning from Ibrohimjon Khabibullayev has been a game-changer for my career. His structured approach to complex frontend concepts, hands-on mentorship, and endless support made web development truly enjoyable and accessible. He doesn't just teach code—he inspires you to think like a real engineer!",
         en: {
@@ -977,21 +977,21 @@ export const testimonialsData = [
     },
     {
         id: 2,
-        authorImage: (
+        authorImage: `
             <svg
                 xmlns='http://www.w3.org/2000/svg'
                 viewBox='0 0 24 24'
                 fill='#9CA3AF'
                 class='w-full h-full object-cover rounded-full bg-gray-200 p-2'
             >
-                {" "}
+                 
                 <path
                     fill-rule='evenodd'
                     d='M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.6-7.812-1.7a.75.75 0 01-.437-.695z'
                     clip-rule='evenodd'
-                />{" "}
+                /> 
             </svg>
-        ),
+        `,
         comment:
             "Ibrohimjon is an outstanding mentor with an exceptional talent for breaking down intricate JavaScript and UI architectures into crystal-clear lessons. Thanks to his real-world project guidance, I gained the confidence to tackle high-level production challenges.",
         en: {
@@ -1012,21 +1012,21 @@ export const testimonialsData = [
     },
     {
         id: 3,
-        authorImage: (
+        authorImage: `
             <svg
                 xmlns='http://www.w3.org/2000/svg'
                 viewBox='0 0 24 24'
                 fill='#9CA3AF'
                 class='w-full h-full object-cover rounded-full bg-gray-200 p-2'
             >
-                {" "}
+                 
                 <path
                     fill-rule='evenodd'
                     d='M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.6-7.812-1.7a.75.75 0 01-.437-.695z'
                     clip-rule='evenodd'
-                />{" "}
+                /> 
             </svg>
-        ),
+        `,
         comment:
             "Working on projects alongside Ibrohimjon Khabibullayev showed me what true professionalism looks like. His deep knowledge of modern frontend frameworks and clean coding standards helped our entire team level up significantly.",
         en: {
@@ -1047,21 +1047,21 @@ export const testimonialsData = [
     },
     {
         id: 4,
-        authorImage: (
+        authorImage: `
             <svg
                 xmlns='http://www.w3.org/2000/svg'
                 viewBox='0 0 24 24'
                 fill='#9CA3AF'
                 class='w-full h-full object-cover rounded-full bg-gray-200 p-2'
             >
-                {" "}
+                 
                 <path
                     fill-rule='evenodd'
                     d='M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.6-7.812-1.7a.75.75 0 01-.437-.695z'
                     clip-rule='evenodd'
-                />{" "}
+                /> 
             </svg>
-        ),
+        `,
         comment:
             "If you want to master frontend development with modern standards, Ibrohimjon is the mentor you need. His attention to code quality, performance optimization, and responsive design is second to none. Truly grateful for his guidance!",
         en: {
@@ -1082,75 +1082,72 @@ export const testimonialsData = [
     },
 ];
 const testimonials = document.querySelector("#testimonials");
-testimonials.innerHTML = (
+testimonials.innerHTML = `
     <div class='w-full max-w-[1300px] mx-auto px-5'>
-        {" "}
+         
         <div class='flex flex-col items-center gap-2'>
-            {" "}
+             
             <span class='font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] text-[#1E212C]'>
                 ${translateData[currentLang].testimonials.toUpperCase()}
-            </span>{" "}
+            </span> 
             <h1 class='font-[Lato] font-black text-[26px] md:text-[36px] lg:text-[46px] leading-[130%] text-[#1E212C]'>
                 ${translateData[currentLang].whatOurStudentsSay}
-            </h1>{" "}
-        </div>{" "}
+            </h1> 
+        </div> 
         <div class='relative py-[60px]'>
-            {" "}
+             
             <div class='swiper testimonials-swiper flex items-center justify-center overflow-hidden mx-0 lg:mx-32'>
-                {" "}
+                 
                 <div class='swiper-wrapper'>
-                    {" "}
-                    $
-                    {testimonialsData
+                     
+                    ${testimonialsData
                         .map((item) => {
-                            return (
+                            return `
                                 <div class='swiper-slide transition-all duration-300 px-[50px] md:px-[70px] lg:px-[104px] py-[20px] md:py-[40px] lg:py-[64px] bg-white flex items-start gap-[30px] rounded-[4px]'>
-                                    {" "}
+                                     
                                     <div class='w-[28px] h-[20px] flex items-start justify-center'>
-                                        {" "}
+                                         
                                         <img
                                             src='Image/HomePagePhoto/quote.svg'
                                             alt='quote img'
                                             class='w-full h-full object-cover'
-                                        />{" "}
-                                    </div>{" "}
+                                        /> 
+                                    </div> 
                                     <div class='flex-1'>
-                                        {" "}
+                                         
                                         <h2 class='font-[Lato] font-normal text-[20px] leading-[150%] text-[#424551] mb-[24px]'>
                                             ${item.comment}
-                                        </h2>{" "}
+                                        </h2> 
                                         <div class='flex flex-col md:flex-row items-center gap-[20px]'>
-                                            {" "}
+                                             
                                             <div class='w-[72px] h-[72px] rounded-full overflow-hidden'>
-                                                {" "}
-                                                ${item.authorImage}{" "}
-                                            </div>{" "}
+                                                 
+                                                ${item.authorImage} 
+                                            </div> 
                                             <div class='flex-1'>
-                                                {" "}
+                                                 
                                                 <h4 class='font-[Lato] font-bold text-[16px] leading-[160%] text-[#1E212C] text-center md:text-left mb-[4px]'>
-                                                    $
-                                                    {
+                                                    ${
                                                         item[currentLang]
                                                             .authorName
                                                     }
-                                                </h4>{" "}
+                                                </h4> 
                                                 <p class='font-[Lato] font-normal text-[14px] leading-[150%] text-[#787A80] text-center md:text-left'>
-                                                    $
-                                                    {item[currentLang].position}
+                                                    ${item[currentLang].position}
                                                     , $
                                                     {item[currentLang].course}
-                                                </p>{" "}
-                                            </div>{" "}
-                                        </div>{" "}
-                                    </div>{" "}
+                                                </p> 
+                                            </div> 
+                                        </div> 
+                                    </div> 
                                 </div>
-                            );
+                            `;
                         })
-                        .join(" ")}{" "}
-                </div>{" "}
-            </div>{" "}
+                        .join(" ")} 
+                </div> 
+            </div> 
             <button class='hidden lg:flex testimonials-prev-btn absolute left-0 z-[2] top-1/2 -translate-y-1/2 w-[48px] h-[48px] items-center justify-center rounded-full hover:bg-[#FF3F3A] transition-all duration-300 group'>
-                {" "}
+                 
                 <svg
                     xmlns='http://www.w3.org/2000/svg'
                     width='24'
@@ -1158,18 +1155,18 @@ testimonials.innerHTML = (
                     viewBox='0 0 16 16'
                     class='rotate-180 text-[#424551] group-hover:text-[#FFFFFF] transition-all duration-300'
                 >
-                    {" "}
-                    <path d='M0 0h16v16H0z' fill='none' />{" "}
+                     
+                    <path d='M0 0h16v16H0z' fill='none' /> 
                     <path
                         fill='currentColor'
                         fill-rule='evenodd'
                         d='M1.25 8A.75.75 0 0 1 2 7.25h10.19L9.47 4.53a.75.75 0 0 1 1.06-1.06l4 4a.75.75 0 0 1 0 1.06l-4 4a.75.75 0 1 1-1.06-1.06l2.72-2.72H2A.75.75 0 0 1 1.25 8'
                         clip-rule='evenodd'
-                    />{" "}
-                </svg>{" "}
-            </button>{" "}
+                    /> 
+                </svg> 
+            </button> 
             <button class='hidden lg:flex testimonials-next-btn absolute right-0 z-10 top-1/2 -translate-y-1/2 w-[48px] h-[48px] items-center justify-center rounded-full hover:bg-[#FF3F3A] transition-all duration-300 group'>
-                {" "}
+                 
                 <svg
                     xmlns='http://www.w3.org/2000/svg'
                     width='24'
@@ -1177,20 +1174,20 @@ testimonials.innerHTML = (
                     viewBox='0 0 16 16'
                     class='text-[#424551] group-hover:text-[#FFFFFF] transition-all duration-300'
                 >
-                    {" "}
-                    <path d='M0 0h16v16H0z' fill='none' />{" "}
+                     
+                    <path d='M0 0h16v16H0z' fill='none' /> 
                     <path
                         fill='currentColor'
                         fill-rule='evenodd'
                         d='M1.25 8A.75.75 0 0 1 2 7.25h10.19L9.47 4.53a.75.75 0 0 1 1.06-1.06l4 4a.75.75 0 0 1 0 1.06l-4 4a.75.75 0 1 1-1.06-1.06l2.72-2.72H2A.75.75 0 0 1 1.25 8'
                         clip-rule='evenodd'
-                    />{" "}
-                </svg>{" "}
-            </button>{" "}
-            <div class='testimonials-pagination absolute bottom-0 flex justify-center gap-3 [&>.swiper-pagination-bullet]:!w-8 [&>.swiper-pagination-bullet]:!h-1 [&>.swiper-pagination-bullet]:!bg-[#B3B7BC] [&>.swiper-pagination-bullet]:!opacity-100 [&>.swiper-pagination-bullet]:!rounded-full [&>.swiper-pagination-bullet]:!m-0 [&>.swiper-pagination-bullet]:transition-all [&>.swiper-pagination-bullet]:duration-300 [&>.swiper-pagination-bullet.swiper-pagination-bullet-active]:!bg-[#424551]'></div>{" "}
-        </div>{" "}
+                    /> 
+                </svg> 
+            </button> 
+            <div class='testimonials-pagination absolute bottom-0 flex justify-center gap-3 [&>.swiper-pagination-bullet]:!w-8 [&>.swiper-pagination-bullet]:!h-1 [&>.swiper-pagination-bullet]:!bg-[#B3B7BC] [&>.swiper-pagination-bullet]:!opacity-100 [&>.swiper-pagination-bullet]:!rounded-full [&>.swiper-pagination-bullet]:!m-0 [&>.swiper-pagination-bullet]:transition-all [&>.swiper-pagination-bullet]:duration-300 [&>.swiper-pagination-bullet.swiper-pagination-bullet-active]:!bg-[#424551]'></div> 
+        </div> 
     </div>
-);
+`;
 var swiper1 = new Swiper(".testimonials-swiper", {
     slidesPerView: 1,
     spaceBetween: 30,
@@ -1206,7 +1203,7 @@ var swiper1 = new Swiper(".testimonials-swiper", {
 // ourBlog Section
 const ourBlog = document.querySelector("#ourBlog");
 ourBlog.innerHTML = `
-    <div class="w-full max-w-[1300px] mx-auto px-5">
+    <div class="w-full max-w-[1340px] mx-auto px-5">
         <div>
             <span class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] text-[#1E212C] mb-2">${translateData[currentLang].ourBlog.toUpperCase()}</span>
         </div>
