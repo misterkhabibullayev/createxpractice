@@ -1,4 +1,3 @@
-import { allBlogPosts } from "./AllBlogPosts.js";
 import { allCourses } from "./AllCourses.js";
 import { allEvents } from "./AllEvents.js";
 console.log(allCourses);
@@ -48,7 +47,7 @@ const translateData = {
             "We are accredited by international professional organizations and institutes:",
         bestTutorsHere: "Best tutors are all here",
         meetOurTema: "Meet our team",
-        testimonials: "Testimonials",
+        testimonials: "TESTIMONIALS",
         whatOurStudentsSay: "What our students say",
         ourBlog: "Our blog",
         latestPosts: "Latest posts",
@@ -227,7 +226,7 @@ let currentLang = localStorage.getItem("selectedLang") || "en";
 const headerMain = document.querySelector("#headerMain");
 headerMain.innerHTML = `
     <div
-        class="w-full max-w-[1300px] mx-auto px-5 flex justify-between items-center py-5"
+        class="container mx-auto px-5 md:px-10 lg:px-20 flex justify-between items-center py-5"
     >
         <div class="flex items-center gap-7 md:gap-10">
             <div class="">
@@ -241,7 +240,7 @@ headerMain.innerHTML = `
             <nav class="hidden lg:flex items-center gap-4 xl:gap-8">
                 <a
                     href="./Pages/About/about.html"
-                    class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300 whitespace-nowrap"
+                    class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
                 >${translateData[currentLang].navAbout}</a>
                 <a
                     href="./Pages/Courses/courses.html"
@@ -265,7 +264,7 @@ headerMain.innerHTML = `
             <div class="flex items-center gap-3 md:gap-4">
                 <a
                     href="./Pages/Contacts/contacts.html"
-                    class="font-[Lato] font-bold text-[12px] py-3 leading-4 tracking-[0.5px] text-white bg-gradient-to-r from-[#FF3F3A] to-[#F75E05] px-5 lg:px-3 rounded-[4px] hidden sm:inline-block hover:bg-gradient-to-l hover:from-[#F75E05] hover:to-[#FF3F3A]"
+                    class="font-[Lato] font-bold text-[12px] lg:py-1 md:leading-6 lg:leading-4 tracking-[0.5px] text-white bg-gradient-to-r from-[#FF3F3A] to-[#F75E05] px-5 lg:px-3 rounded-[4px] hidden sm:inline-block hover:bg-gradient-to-l hover:from-[#F75E05] hover:to-[#FF3F3A]"
                 >
                     ${translateData[currentLang].getConsultation}
                 </a>
@@ -306,7 +305,7 @@ headerMain.innerHTML = `
 // hero Section
 const heroSection = document.querySelector("#heroSection");
 heroSection.innerHTML = `
-    <div class="w-full max-w-[1300px] mx-auto px-5">
+    <div class="container mx-auto px-5 md:px-10 lg:px-20">
         <div
             class="flex flex-col-reverse items-center gap-8 lg:flex lg:flex-row lg:justify-between lg:items-center lg:mb-[40px]"
         >
@@ -421,7 +420,7 @@ heroSection.innerHTML = `
 const whoweare = document.querySelector("#whoweare");
 whoweare.innerHTML = `
     <div
-        class="w-full max-w-[1300px] mx-auto px-5 my-[180px] flex flex-col gap-[30px] md:flex-row md:justify-between"
+        class="container mx-auto px-5 md:px-10 lg:px-20 my-[180px] flex flex-col gap-[30px] md:flex-row md:justify-between"
     >
         <div class="w-full md:w-[50%] h-[50%]">
             <img
@@ -526,7 +525,7 @@ const featuredCoursesSection = document.querySelector(
     "#featuredCoursesSection",
 );
 featuredCoursesSection.innerHTML = `
-    <div class="w-full max-w-[1300px] mx-auto px-5">
+    <div class="container mx-auto px-5 md:px-10 lg:px-20">
         <div>
             <span class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] text-[#1E212C] mb-2">${translateData[currentLang].readytolearn.toUpperCase()}</span>
         </div>
@@ -643,7 +642,7 @@ const benefitsData = {
     },
 };
 ourBenefits.innerHTML = `
-    <div class="w-full max-w-[1300px] mx-auto px-5">
+    <div class="container mx-auto px-5 md:px-10 lg:px-20">
         <div class="flex flex-col md:items-center gap-2 mb-[60px]">
             <span class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] text-[#1E212C]">${translateData[currentLang].ourbenefits.toUpperCase()}</span>
             <h1 class="font-[Lato] font-black text-[28px] sm:text-[36px] md:text-[46px] leading-[130%] text-[#1E212C]">${translateData[currentLang].thatshowwedoit}</h1>
@@ -772,7 +771,7 @@ renderBenefit();
 // ourEvents Section
 const ourEvents = document.querySelector("#ourEvents");
 ourEvents.innerHTML = `
-    <div class="w-full max-w-[1300px] mx-auto px-5">
+    <div class="container mx-auto px-5 md:px-10 lg:px-20">
         <div class="mb-[60px] md:flex md:flex-col md:items-center md:gap-2">
             <span class="font-[Lato] font-bold text-[16px] leading-[150%] text-[#1E212C]">${translateData[currentLang].ourevents.toUpperCase()}</span>
             <h1 class="font-[Lato] font-black text-[46px] leading-[130%] text-[#1E212C]">${translateData[currentLang].lecturesWorkshop}</h1>
@@ -815,8 +814,8 @@ ourEvents.innerHTML = `
                 .join(" ")}
         </div>
         <div class="mt-[60px] flex justify-center">
-            <div class="flex flex-col md:flex-row items-center gap-5 z-[5]">
-                <p class="font-[Lato] font-bold text-[18px] md:text-[28px] leading-[150%] text-[#1E212C] text-center">
+            <div class="flex items-center gap-10">
+                <p class="font-[Lato] font-bold text-[28px] leading-[150%] text-[#1E212C]">
                     ${translateData[currentLang].doyouwatnmore}
                 </p>
                 <a href="./Pages/Events/events.html" class="inline-block py-2 px-[32px] font-[Lato] font-normal text-[16px] leading-8 tracking-[0.5px] text-white border-[1px] border-[#F75E05] rounded-[4px] bg-[#F75E05] transition-all duration-300 hover:shadow-[0px_4px_4px_0px_#F75E0580]">
@@ -838,7 +837,7 @@ ourEvents.innerHTML = `
 // certificates Section
 const creatXCertificateSection = document.querySelector("#creatXCertificate");
 creatXCertificateSection.innerHTML = `
-    <div class="w-full max-w-[1300px] mx-auto px-5 lg:flex lg:justify-between lg:items-start">
+    <div class="container mx-auto px-5 md:px-10 lg:px-20 lg:flex lg:justify-between lg:items-start">
         <div class="mb-[16px]">
             <div>
                 <span class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] text-[#1E212C] mb-[8px]">
@@ -875,7 +874,7 @@ creatXCertificateSection.innerHTML = `
 // bestTutors Section
 const bestTutors = document.querySelector("#bestTutors");
 bestTutors.innerHTML = `
-    <div class="w-full max-w-[1300px] mx-auto px-5">
+    <div class="container mx-auto px-5 md:px-10 lg:px-20">
         <div>
             <span class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] text-[#1E212C] mb-2">
                 ${translateData[currentLang].bestTutorsHere.toUpperCase()}
@@ -905,31 +904,13 @@ bestTutors.innerHTML = `
             ${allCourses
                 .map((item) => {
                     return `
-                <div class="w-full swiper-slide text-center group">
-                    <div class="relative w-full aspect-[3/3.5] rounded-lg overflow-hidden mb-4">
+                <div class="w-full swiper-slide text-center">
+                    <div class="w-full aspect-[3/4] mb-4 overflow-hidden">
                         <img src="${item.curatorTitleImg}" alt="tutor image" class="w-full h-full object-cover" />
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end justify-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <div class="flex items-center gap-3 text-[#ACABAB] ">
-                            ${
-                                Array.isArray(item.curator?.socialLinks)
-                                    ? item.curator.socialLinks
-                                          .filter((_, index) => index !== 1)
-                                          .map((social) => {
-                                              return `
-                                    <a href="${social.link}" class="hover:text-white hover:scale-110 transition-all duration-300">
-                                        ${social.svg}
-                                    </a>
-                                `;
-                                          })
-                                          .join(" ")
-                                    : ""
-                            }
-                            </div>
-                        </div>
                     </div>
                     <div class="flex-1">
-                        <h3 class="font-[Lato] font-bold text-[20px] leading-[150%] text-[#424551] select-none">${item[currentLang].curator}</h3>
-                        <p class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#787A80] select-none">${item.curator[currentLang].jobs}</p>
+                        <h3 class="font-[Lato] font-bold text-[20px] leading-[150%] text-[#424551]">${item[currentLang].curator}</h3>
+                        <p class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#787A80]">${item.curator[currentLang].jobs}</p>
                     </div>
                 </div>
             `;
@@ -957,171 +938,10 @@ var swiper = new Swiper(".mySwiper", {
 // bestTutors Section end
 
 // testimonials Section
-export const testimonialsData = [
-    {
-        id: 1,
-        authorImage: `
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#9CA3AF" class="w-full h-full object-cover rounded-full bg-gray-200 p-2">
-            <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.6-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd" />
-        </svg>`,
-        comment:
-            "Learning from Ibrohimjon Khabibullayev has been a game-changer for my career. His structured approach to complex frontend concepts, hands-on mentorship, and endless support made web development truly enjoyable and accessible. He doesn't just teach code—he inspires you to think like a real engineer!",
-        en: {
-            authorName: "Eleanor Pena",
-            position: "Frontend Developer",
-            course: "Web Development Course",
-        },
-        uz: {
-            authorName: "Eleanor Pena",
-            position: "Frontend Dasturchi",
-            course: "Veb Dasturlash Kursi",
-        },
-        ru: {
-            authorName: "Элеанор Пена",
-            position: "Frontend-разработчик",
-            course: "Курс веб-разработки",
-        },
-    },
-    {
-        id: 2,
-        authorImage: `
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#9CA3AF" class="w-full h-full object-cover rounded-full bg-gray-200 p-2">
-            <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.6-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd" />
-        </svg>`,
-        comment:
-            "Ibrohimjon is an outstanding mentor with an exceptional talent for breaking down intricate JavaScript and UI architectures into crystal-clear lessons. Thanks to his real-world project guidance, I gained the confidence to tackle high-level production challenges.",
-        en: {
-            authorName: "Guy Hawkins",
-            position: "UI/UX Designer",
-            course: "Interface Design Masterclass",
-        },
-        uz: {
-            authorName: "Gay Hokins",
-            position: "UI/UX Dizayner",
-            course: "Interfeys Dizayni Masterklassi",
-        },
-        ru: {
-            authorName: "Гай Хокинс",
-            position: "UI/UX-дизайнер",
-            course: "Мастер-класс по дизайну интерфейсов",
-        },
-    },
-    {
-        id: 3,
-        authorImage: `
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#9CA3AF" class="w-full h-full object-cover rounded-full bg-gray-200 p-2">
-            <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.6-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd" />
-        </svg>`,
-        comment:
-            "Working on projects alongside Ibrohimjon Khabibullayev showed me what true professionalism looks like. His deep knowledge of modern frontend frameworks and clean coding standards helped our entire team level up significantly.",
-        en: {
-            authorName: "Kristin Watson",
-            position: "Software Engineer",
-            course: "Advanced JavaScript Course",
-        },
-        uz: {
-            authorName: "Kristin Uotson",
-            position: "Dasturiy Ta'minot Muhandisi",
-            course: "Murakkab JavaScript Kursi",
-        },
-        ru: {
-            authorName: "Кристин Уотсон",
-            position: "Инженер программного обеспечения",
-            course: "Продвинутый курс JavaScript",
-        },
-    },
-    {
-        id: 4,
-        authorImage: `
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#9CA3AF" class="w-full h-full object-cover rounded-full bg-gray-200 p-2">
-            <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.6-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd" />
-        </svg>`,
-        comment:
-            "If you want to master frontend development with modern standards, Ibrohimjon is the mentor you need. His attention to code quality, performance optimization, and responsive design is second to none. Truly grateful for his guidance!",
-        en: {
-            authorName: "Cody Fisher",
-            position: "Full Stack Student",
-            course: "Web Application Development",
-        },
-        uz: {
-            authorName: "Kodi Fisher",
-            position: "Full Stack Talabasi",
-            course: "Veb Ilova Ishlab Chiqish",
-        },
-        ru: {
-            authorName: "Коди Фишер",
-            position: "Студент Full Stack",
-            course: "Разработка веб-приложений",
-        },
-    },
-];
-const testimonials = document.querySelector("#testimonials");
-testimonials.innerHTML = `
-    <div class="w-full max-w-[1300px] mx-auto px-5">
-        <div class="flex flex-col items-center gap-2">
-            <span class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] text-[#1E212C]">${translateData[currentLang].testimonials.toUpperCase()}</span>
-            <h1 class="font-[Lato] font-black text-[26px] md:text-[36px] lg:text-[46px] leading-[130%] text-[#1E212C]">${translateData[currentLang].whatOurStudentsSay}</h1>
-        </div>
-        <div class="relative py-[60px]">
-            <div class="swiper testimonials-swiper flex items-center justify-center overflow-hidden mx-0 lg:mx-32">
-                <div class="swiper-wrapper">
-                    ${testimonialsData
-                        .map((item) => {
-                            return `
-                                <div class="swiper-slide transition-all duration-300 px-[50px] md:px-[70px] lg:px-[104px] py-[20px] md:py-[40px] lg:py-[64px] bg-white flex items-start gap-[30px] rounded-[4px]">
-                                    <div class="w-[28px] h-[20px] flex items-start justify-center">
-                                        <img src="Image/HomePagePhoto/quote.svg" alt="quote img" class="w-full h-full object-cover"/>
-                                    </div>
-                                    <div class="flex-1">
-                                        <h2 class="font-[Lato] font-normal text-[20px] leading-[150%] text-[#424551] mb-[24px]">${item.comment}</h2>
-                                        <div class="flex flex-col md:flex-row items-center gap-[20px]">
-                                            <div class="w-[72px] h-[72px] rounded-full overflow-hidden">
-                                                ${item.authorImage}
-                                            </div>
-                                            <div class="flex-1">
-                                                <h4 class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#1E212C] text-center md:text-left mb-[4px]">${item[currentLang].authorName}</h4>
-                                                <p class="font-[Lato] font-normal text-[14px] leading-[150%] text-[#787A80] text-center md:text-left">${item[currentLang].position}, ${item[currentLang].course}</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            `;
-                        })
-                        .join(" ")}
-                </div>
-            </div>
-            <button class="hidden lg:flex testimonials-prev-btn absolute left-0 z-[2] top-1/2 -translate-y-1/2 w-[48px] h-[48px] items-center justify-center rounded-full hover:bg-[#FF3F3A] transition-all duration-300 group">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16" class="rotate-180 text-[#424551] group-hover:text-[#FFFFFF] transition-all duration-300">
-                    <path d="M0 0h16v16H0z" fill="none" />
-                    <path fill="currentColor" fill-rule="evenodd" d="M1.25 8A.75.75 0 0 1 2 7.25h10.19L9.47 4.53a.75.75 0 0 1 1.06-1.06l4 4a.75.75 0 0 1 0 1.06l-4 4a.75.75 0 1 1-1.06-1.06l2.72-2.72H2A.75.75 0 0 1 1.25 8" clip-rule="evenodd" />
-                </svg>
-            </button>
-            <button class="hidden lg:flex testimonials-next-btn absolute right-0 z-10 top-1/2 -translate-y-1/2 w-[48px] h-[48px] items-center justify-center rounded-full hover:bg-[#FF3F3A] transition-all duration-300 group">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16" class="text-[#424551] group-hover:text-[#FFFFFF] transition-all duration-300">
-                    <path d="M0 0h16v16H0z" fill="none" />
-                    <path fill="currentColor" fill-rule="evenodd" d="M1.25 8A.75.75 0 0 1 2 7.25h10.19L9.47 4.53a.75.75 0 0 1 1.06-1.06l4 4a.75.75 0 0 1 0 1.06l-4 4a.75.75 0 1 1-1.06-1.06l2.72-2.72H2A.75.75 0 0 1 1.25 8" clip-rule="evenodd" />
-                </svg>
-            </button>
-            <div class="testimonials-pagination absolute bottom-0 flex justify-center gap-3 [&>.swiper-pagination-bullet]:!w-8 [&>.swiper-pagination-bullet]:!h-1 [&>.swiper-pagination-bullet]:!bg-[#B3B7BC] [&>.swiper-pagination-bullet]:!opacity-100 [&>.swiper-pagination-bullet]:!rounded-full [&>.swiper-pagination-bullet]:!m-0 [&>.swiper-pagination-bullet]:transition-all [&>.swiper-pagination-bullet]:duration-300 [&>.swiper-pagination-bullet.swiper-pagination-bullet-active]:!bg-[#424551]"></div>
-        </div>
-    </div>
-`;
 
-var swiper1 = new Swiper(".testimonials-swiper", {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    loop: true,
-    pagination: {
-        el: ".testimonials-pagination",
-        clickable: true,
-    },
-    navigation: {
-        nextEl: ".testimonials-next-btn",
-        prevEl: ".testimonials-prev-btn",
-    },
-});
 // testimonials Section end
 
+// <<<<<<< HEAD
 // ourBlog Section
 const ourBlog = document.querySelector("#ourBlog");
 ourBlog.innerHTML = `
@@ -1202,6 +1022,7 @@ var swiper = new Swiper(".swiper3", {
 });
 // ourBlog Section end
 
+// <<<<<<< HEAD// >>>>>>> 881d6a4392fade75368e33de69e89d04eb2a3126
 // subscribeSection
 const subscribeSection = document.querySelector("#subscribeSection");
 subscribeSection.innerHTML = `
@@ -1329,15 +1150,16 @@ footer.innerHTML = `
         </div>
     </div>
 `;
-const goToTopBtn = document.querySelector('#goToTopBtn');
-goToTopBtn.addEventListener('click', () => {
+const goToTopBtn = document.querySelector("#goToTopBtn");
+goToTopBtn.addEventListener("click", () => {
     window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
-})
+        top: 0,
+        behavior: "smooth",
+    });
+});
 // footer end
 
+// >>>>>>> 428266ee9c97b7ca953ea5a86dcb57b7b3cb0cef
 window.addEventListener("scroll", function () {
     const header = document.querySelector("header");
     if (window.scrollY > 300) {

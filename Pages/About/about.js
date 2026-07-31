@@ -1,4 +1,5 @@
-const translateLang = {
+// import { allBlogPosts } from "../../AllBlogPosts";
+export const translateLang = {
     en: {
         header: {
             langTitle: "EN",
@@ -235,21 +236,21 @@ const translateLang = {
         section6: {
             section6_name: "ENG YAXSHI USTOZLAR SHU YERDA",
             section6_title: "Jamoamiz bilan tanishing",
-            dianne: "Dianne Russell",
+            dianne: "Diana Russell",
             dianne_job: "Asoschi va Bosh direktor",
-            jerome: "Jerome Bell",
+            jerome: "Jerom Bell",
             jerome_job: "Asoschi va Dastur direktori",
-            kristin: "Kristin Watson",
+            kristin: "Kristin Uatson",
             kristin_job: "Marketolog, Marketing kursi kuratori",
             marvin: "Marvin McKinney",
             marvin_job: "Loyiha menejeri, Menejment kursi kuratori",
-            leslie: "Leslie Alexander Li",
+            leslie: "Lesli Aleksander Li",
             leslie_job: "HR va Rekruting kursi kuratori",
-            murphy: "Kathryn Murphy",
+            murphy: "Kertin Murfy",
             murphy_job: "Analitik va Marketing mutaxassisi",
-            brooklyn: "Brooklyn Simmons",
+            brooklyn: "Bryuklin Simons",
             brooklyn_job: "Dasturlash kursi kuratori",
-            cody: "Cody Fisher",
+            cody: "Kody Fisher",
             cody_job: "UX Dizayner, Dizayn kursi kuratori",
         },
         section7: {
@@ -350,16 +351,16 @@ const translateLang = {
             section3_title: "Наши ценности",
             section3_card1_title: "Структурный подход",
             section3_card1_text:
-                "Aenean urna dictum adipiscing nec, cras quisque. Nunc in mauris.",
+                "Aенеан урна диктум aдипискинг нес, крас куискуе. Нунс ин маурис.",
             section3_card2_title: "Профессиональная обратная связь",
             section3_card2_text:
-                "Culpa nostrud commodo ea consequat reprehenderit aliquip.",
+                "Кулпа ноструд коммодо ea консекуат репрехандерит aдикуип.",
             section3_card3_title: "Эффективность",
             section3_card3_text:
-                "Viverra scelerisque consequat net. Adipisicing esse consequat.",
+                "Виверра скелерискуе консекуат нет. Aдиписикинг eссе консекуат.",
             section3_card4_title: "Гибкий график",
             section3_card4_text:
-                "Aute eiusmod dolore dolore deserunt veniam ad deserunt.",
+                "Aуте eиусмод долоре десерунт вениам aд десерунт.",
         },
         section4: {
             section4_name: "НАШИ ОСНОВНЫЕ НАПРАВЛЕНИЯ",
@@ -371,7 +372,7 @@ const translateLang = {
             development_button: "Разработка",
             check_button: "Посмотреть курсы",
             section4_card_text:
-                "Odio posuere netus quisque faucibus lectus arcu donec.",
+                "Oдио посуере нетус куискуе фаусибус лектус арсу донес.",
             section4_last_card: "Новая программа обучения скоро...",
         },
         section5: {
@@ -380,39 +381,39 @@ const translateLang = {
             step: "ШАГ",
             step1_title: "Просмотр онлайн-видеолекций",
             step1_text:
-                "Aliquam turpis viverra quam sit interdum blandit posuere pellentesque.",
+                "Aликуам турпис виверрa куам сит интердум бландит посуере пеллентескуе.",
             step2_title: "Прохождение тестов",
-            step2_text: "Facilisis pellentesque quis accumsan ultricies.",
+            step2_text: "Фасилисис пеллентескуе куис aссумсан ултрикиес.",
             step3_title: "Обратная связь от куратора",
-            step3_text: "Eget amet, enim pharetra leo egestas nisi.",
+            step3_text: "Егет aмет, eним фаретра лео eгестас ниси.",
             step4_title: "Исправления при необходимости",
-            step4_text: "Non tempor pulvinar tincidunt aliquam.",
+            step4_text: "Нон темпор пульвинар тинсидунт aликуам.",
         },
         section6: {
             section6_name: "ЛУЧШИЕ ПРЕПОДАВАТЕЛИ ЗДЕСЬ",
             section6_title: "Познакомьтесь с нашей командой",
-            dianne: "Dianne Russell",
+            dianne: "Дианне Руссел",
             dianne_job: "Основатель и Генеральный директор",
-            jerome: "Jerome Bell",
+            jerome: "Жероме Белл",
             jerome_job: "Основатель и Директор программы",
-            kristin: "Kristin Watson",
+            kristin: "Кристин Уатсон",
             kristin_job: "Маркетолог, куратор курса по маркетингу",
-            marvin: "Marvin McKinney",
+            marvin: "Mарвин МакКейнер",
             marvin_job: "PM, куратор курса по менеджменту",
-            leslie: "Leslie Alexander Li",
+            leslie: "Лесли Александер Ли",
             leslie_job: "Куратор курса HR и Рекрутинга",
-            murphy: "Kathryn Murphy",
+            murphy: "Kетрин Мурфий",
             murphy_job: "Аналитик и специалист по маркетингу",
-            brooklyn: "Brooklyn Simmons",
+            brooklyn: "Бруклин Симмонс",
             brooklyn_job: "Куратор курса по разработке",
-            cody: "Cody Fisher",
+            cody: "Коди Фишер",
             cody_job: "UX-дизайнер, куратор курса по дизайну",
         },
         section7: {
             section7_name: "ОТЗЫВЫ",
             section7_title: "Что говорят наши студенты",
-            comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            elenor: "Eleanor Pena",
+            comment: "Лорем ипсум долор сит aмет, консектерур aдипискинг eлит.",
+            elenor: "Элянор Пена",
             elenors: "Должность, Курс",
         },
         section8: {
@@ -430,18 +431,18 @@ const translateLang = {
             section8_card1_title:
                 "Что такое арбитраж трафика и действительно ли он приносит деньги?",
             section8_card1_text:
-                "Pharetra, ullamcorper iaculis viverra parturient sed id sed.",
+                "Фаретра, улламкорпер ясулис виверра партуриент сед ид сед.",
             listen: "Слушать",
             watch: "Смотреть",
             read: "Читать",
             section8_card2_title:
                 "Что делать и к кому обратиться, если вы хотите получить отзыв о продукте?",
             section8_card2_text:
-                "Neque a, senectus consectetur odio in aliquet nec eu.",
+                "Некуе a, сенектус консектерур одио ин aликует нес eу.",
             section8_card3_title:
                 "Стоит ли выбирать творческую профессию, если вас привлекает творчество?",
             section8_card3_text:
-                "Curabitur nisl tincidunt eros venenatis vestibulum.",
+                "Курабитур нисл тинсидунт ерос вененатис вестибулум.",
             podcast: "Подкаст",
             video: "Видео",
             article: "Статья",
@@ -480,10 +481,7 @@ const headerMain = document.querySelector("#headerMain");
 headerMain.innerHTML = `
 <div class="container mx-auto px-5 md:px-10 lg:px-15 flex justify-between items-center py-5">
     <div class="flex items-center gap-7 md:gap-10">
-            <a href="/index.html">
-                <img
-                    src="../../Image/HomePagePhoto/logo.svg" alt="logo image"/>
-            </a>
+        <a href="/index.html"><img src="../../Image/HomePagePhoto/logo.svg"/></a>
         <nav class="hidden lg:flex items-center gap-4 xl:gap-8">
             <a href="../../Pages/About/about.html" class="font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300">${translateLang[currentLang].header.navAbout}</a>
             <a href="../../Pages/Courses/courses.html"
@@ -509,12 +507,12 @@ headerMain.innerHTML = `
                     ${translateLang[currentLang].header.loginRegister}</a>
         </div>
         <div class="hidden min-[300px]:block relative">
-            <button class=" flex items-center gap-1 px-2 rounded-[20px]" id="langBtn"></button>
+            <button class="outline-none flex items-center gap-1 px-2 rounded-[20px]" id="langBtn"></button>
                 <div
                     class="bg-[#F75E05] flex-col items-center gap-1.5 py-1.5 rounded-[10px] absolute top-[30px] w-full hidden"
                     id="langModal"></div>
         </div>
-            <button class="block lg:hidden">
+            <button class="block lg:hidden outline-none">
                 <img src="../../Image/HomePagePhoto/stash--burger-classic-light.svg"/></button>
     </div>
 </div>`;
@@ -539,7 +537,7 @@ heroSection.innerHTML = `
                     ${translateLang[currentLang].heroSection.explore_button}</button>
             </a>
             <a href="../Courses/courses.html">
-                <button class="text-[#FFFFFF] bg-[#F75E05] border border-[#FF3F3A] hover:text-[#F75E05] hover:bg-[white] rounded-md transition-all duration-500 font-semibold leading-[40px] px-16 sm:px-[30px] lg:px-[40px]" >
+                <button class="outline-none text-[#FFFFFF] bg-[#F75E05] border border-[#FF3F3A] hover:text-[#F75E05] hover:bg-[white] rounded-md transition-all duration-500 font-semibold leading-[40px] px-16 sm:px-[30px] lg:px-[40px]" >
                     ${translateLang[currentLang].heroSection.browse_button}</button>
             </a>
         </div>
@@ -649,10 +647,10 @@ ourMainDirection.innerHTML = `
         <img class="w-full object-contain mx-auto"
              src="../../Image/aboutUs-photo/about.section4.card1.png"/>
         <div class="px-3 py-3 sm:px-6 sm:py-6 border border-[#E5E8ED]">
-            <button class="bg-[#03CEA4] text-[#FFFFFF] hover:bg-[#ffffff] hover:text-[#03CEA4]  hover:border font-semibold text-base leading-[160%] rounded-[4px] px-2 mb-2 sm:mb-5">${translateLang[currentLang].section4.marketing_button}</button>
+            <button class="outline-none bg-[#03CEA4] text-[#FFFFFF] hover:bg-[#ffffff] hover:text-[#03CEA4]  hover:border font-semibold text-base leading-[160%] rounded-[4px] px-2 mb-2 sm:mb-5">${translateLang[currentLang].section4.marketing_button}</button>
             <p class="font-normal text-base leading-[130%] text-[#424551] mb-2 sm:mb-5 sm:leading-[160%]">${translateLang[currentLang].section4.section4_card_text}</p>
             <a href="../Courses/courses.html" class="flex gap-3 items-center">
-                <button class="font-semibold text-base leading-[160%] text-[#1E212C] hover:text-red-500">${translateLang[currentLang].section4.check_button}</button>
+                <button class="outline-none font-semibold text-base leading-[160%] text-[#1E212C] hover:text-red-500">${translateLang[currentLang].section4.check_button}</button>
                 <img src="../../Image/aboutUs-photo/about.section4.strelka.svg"/></a>
         </div>
     </div>
@@ -661,10 +659,10 @@ ourMainDirection.innerHTML = `
         <img class="w-full object-contain mx-auto" 
              src="../../Image/aboutUs-photo/about.section4.card2.png"/>
         <div class="px-3 py-3 sm:px-6 sm:py-6 border border-[#E5E8ED]">
-            <button class="bg-[#5A87FC] text-[#FFFFFF] hover:bg-[#ffffff] hover:text-[#5A87FC] hover:border font-semibold text-base leading-[160%] rounded-[4px] px-2 mb-2 sm:mb-5">${translateLang[currentLang].section4.management_button}</button>
+            <button class="outline-none bg-[#5A87FC] text-[#FFFFFF] hover:bg-[#ffffff] hover:text-[#5A87FC] hover:border font-semibold text-base leading-[160%] rounded-[4px] px-2 mb-2 sm:mb-5">${translateLang[currentLang].section4.management_button}</button>
             <p class="font-normal text-base leading-[130%] text-[#424551] mb-2 sm:mb-5 sm:leading-[160%]">${translateLang[currentLang].section4.section4_card_text}</p>
             <a href="../Courses/courses.html" class="flex gap-3 items-center">
-                <button class="font-semibold text-base leading-[160%] text-[#1E212C] hover:text-red-500">${translateLang[currentLang].section4.check_button}</button>
+                <button class="outline-none font-semibold text-base leading-[160%] text-[#1E212C] hover:text-red-500">${translateLang[currentLang].section4.check_button}</button>
                 <img src="../../Image/aboutUs-photo/about.section4.strelka.svg"/></a>
         </div>
     </div>
@@ -673,10 +671,10 @@ ourMainDirection.innerHTML = `
         <img class="w-full object-contain mx-auto" 
              src="../../Image/aboutUs-photo/about.section4.card3.png"/>
         <div class="px-3 py-3 sm:px-6 sm:py-6 border border-[#E5E8ED]">
-            <button class="bg-[#F89828] text-[#FFFFFF] hover:bg-[#ffffff] hover:text-[#F89828] hover:border font-semibold text-base leading-[160%] rounded-[4px] px-2 mb-2 sm:mb-5">${translateLang[currentLang].section4.recruting_button}</button>
+            <button class="outline-none bg-[#F89828] text-[#FFFFFF] hover:bg-[#ffffff] hover:text-[#F89828] hover:border font-semibold text-base leading-[160%] rounded-[4px] px-2 mb-2 sm:mb-5">${translateLang[currentLang].section4.recruting_button}</button>
             <p class="font-normal text-base leading-[130%] text-[#424551] mb-2 sm:mb-5 sm:leading-[160%]">${translateLang[currentLang].section4.section4_card_text}</p>
             <a href="../Courses/courses.html" class="flex gap-3 items-center">
-                <button class="font-semibold text-base leading-[160%] text-[#1E212C] hover:text-red-500">${translateLang[currentLang].section4.check_button}</button>
+                <button class="outline-none font-semibold text-base leading-[160%] text-[#1E212C] hover:text-red-500">${translateLang[currentLang].section4.check_button}</button>
                 <img src="../../Image/aboutUs-photo/about.section4.strelka.svg"/></a>
         </div>
     </div>
@@ -685,10 +683,10 @@ ourMainDirection.innerHTML = `
         <img class="w-full object-contain mx-auto"
              src="../../Image/aboutUs-photo/about.section4.card4.png"/>
         <div class="px-3 py-3 sm:px-6 sm:py-6 border border-[#E5E8ED]">
-            <button class="bg-[#F52F6E] text-[#FFFFFF] hover:bg-[#ffffff] hover:text-[#F52F6E] hover:border font-semibold text-base leading-[160%] rounded-[4px] px-2 mb-2 sm:mb-5">${translateLang[currentLang].section4.design_button}</button>
+            <button class="outline-none bg-[#F52F6E] text-[#FFFFFF] hover:bg-[#ffffff] hover:text-[#F52F6E] hover:border font-semibold text-base leading-[160%] rounded-[4px] px-2 mb-2 sm:mb-5">${translateLang[currentLang].section4.design_button}</button>
             <p class="font-normal text-base leading-[130%] text-[#424551] mb-2 sm:mb-5 sm:leading-[160%]">${translateLang[currentLang].section4.section4_card_text}</p>
             <a href="../Courses/courses.html" class="flex gap-3 items-center">
-                <button class="font-semibold text-base leading-[160%] text-[#1E212C] hover:text-red-500">${translateLang[currentLang].section4.check_button}</button>
+                <button class="outline-none font-semibold text-base leading-[160%] text-[#1E212C] hover:text-red-500">${translateLang[currentLang].section4.check_button}</button>
                 <img src="../../Image/aboutUs-photo/about.section4.strelka.svg"/></a>
         </div>
     </div>
@@ -697,10 +695,10 @@ ourMainDirection.innerHTML = `
         <img class="w-full object-contain mx-auto"
             src="../../Image/aboutUs-photo/about.section4.card5.png"/>
         <div class="px-3 py-3 sm:px-6 sm:py-6 border border-[#E5E8ED]">
-            <button class="bg-[#7772F1] text-[#FFFFFF] hover:bg-[#ffffff] hover:text-[#7772F1] hover:border font-semibold text-base leading-[160%] rounded-[4px] px-2 mb-2 sm:mb-5">${translateLang[currentLang].section4.development_button}</button>
+            <button class="outline-none bg-[#7772F1] text-[#FFFFFF] hover:bg-[#ffffff] hover:text-[#7772F1] hover:border font-semibold text-base leading-[160%] rounded-[4px] px-2 mb-2 sm:mb-5">${translateLang[currentLang].section4.development_button}</button>
             <p class="font-normal text-base leading-[130%] text-[#424551] mb-2 sm:mb-5 sm:leading-[160%]">${translateLang[currentLang].section4.section4_card_text}</p>
             <a href="../Courses/courses.html" class="flex gap-3 items-center">
-                <button class="font-semibold text-base leading-[160%] text-[#1E212C] hover:text-red-500">${translateLang[currentLang].section4.check_button}</button>
+                <button class="outline-none font-semibold text-base leading-[160%] text-[#1E212C] hover:text-red-500">${translateLang[currentLang].section4.check_button}</button>
                 <img src="../../Image/aboutUs-photo/about.section4.strelka.svg"/></a>
         </div>
     </div>
@@ -821,7 +819,7 @@ const peopleCards = tutors
             <img src="${person.image}" class="w-full object-contain px-2 pt-2 md:px-5 md:pt-5"/>
             <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
             </div>
-            <div class="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+            <div class="absolute items-center bottom-5 left-[50%] -translate-x-1/2 flex gap-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
                 <a href="#"><img src="../../Image/aboutUs-photo/1.svg"></a>
                 <a href="#"><img src="../../Image/aboutUs-photo/2.svg"></a>
                 <a href="#"><img src="../../Image/aboutUs-photo/Linked-In.svg"></a>
@@ -992,7 +990,7 @@ ourBlog.innerHTML = `
     <div class="flex justify-between items-center">
         <h1 class="text-[#1E212C] font-extrabold text-xl sm:leading-[130%] sm:text-3xl lg:font-black lg:text-4xl">${translateLang[currentLang].section8.latestPosts}</h1>
         <a href="../Blogs/blogs.html">
-            <button class="bg-[#F75E05] text-white px-4 md:py-2 md:px-7 rounded hover:bg-white hover:text-[#F75E05] hover:border border-[#F75E05]" >
+            <button class="outline-none bg-[#F75E05] text-white px-4 md:py-2 md:px-7 rounded hover:bg-white hover:text-[#F75E05] hover:border border-[#F75E05]" >
                   ${translateLang[currentLang].section8.goBlog}</button></a>
     </div>
 </div>
@@ -1001,7 +999,7 @@ ourBlog.innerHTML = `
     <div class="group relative overflow-hidden rounded-xl">
         <a class="flex gap-1 top-4 absolute left-3 z-20 bg-white rounded-md"                  href="../Blogs/blogs.html">
             <img class="absolute left-1" src="../../Image/aboutUs-photo/mic.svg" />
-            <button class="bg-[#FFFFFF] text-sm font-normal pl-2 pr-1 rounded-md ml-3">
+            <button class="outline-none bg-[#FFFFFF] text-sm font-normal pl-2 pr-1 rounded-md ml-3">
                 ${translateLang[currentLang].section8.podcast}</button></a>
         <img
             class="w-full transition-transform duration-500 hover:scale-105"
@@ -1028,7 +1026,7 @@ ourBlog.innerHTML = `
         <a class="flex gap-1 top-4 absolute left-3 z-20 bg-white rounded-md" 
            href="../Blogs/blogs.html">
             <img class="absolute left-1" src="../../Image/aboutUs-photo/Play.svg"/>
-            <button class="bg-[#FFFFFF] text-sm font-normal pl-2 pr-1 rounded-md ml-3">
+            <button class="outline-none bg-[#FFFFFF] text-sm font-normal pl-2 pr-1 rounded-md ml-3">
                     ${translateLang[currentLang].section8.video}</button></a>
         <img class="w-full transition-transform duration-500 hover:scale-105"
              src="../../Image/aboutUs-photo/lamp-image.png"/>
@@ -1055,7 +1053,7 @@ ourBlog.innerHTML = `
         <a class="flex gap-1 top-4 absolute left-3 z-20 bg-white rounded-md"
            href="../Blogs/blogs.html">
             <img class="absolute left-1" src="../../Image/aboutUs-photo/Files.svg"/>
-            <button class="bg-[#FFFFFF] text-sm font-normal pl-2 pr-1 rounded-md ml-3"
+            <button class="outline-none bg-[#FFFFFF] text-sm font-normal pl-2 pr-1 rounded-md ml-3"
                 >${translateLang[currentLang].section8.article}</button></a>
         <img class="w-full transition-transform duration-500 hover:scale-105"
              src="../../Image/aboutUs-photo/cap-image.png"/>
@@ -1091,7 +1089,7 @@ subscribe.innerHTML = `
         <form action="#" class="flex items-center justify-center gap-2 sm:gap-5 w-full max-w-[600px] mx-auto">
             <input class="px-4 py-2.5 w-full md:max-w-[268px] lg:max-w-[320px] xl:max-w-[400px] rounded" type="email"
                 placeholder="${translateLang[currentLang].section9.subscribePlaceholder}"/>
-            <button class="bg-[#FF3F3A] w-full md:w-auto text-white font-bold leading-[43px] px-5 rounded">
+            <button class="outline-none bg-[#FF3F3A] w-full md:w-auto text-white font-bold leading-[43px] px-5 rounded">
             ${translateLang[currentLang].section9.subscribe_button}</button>
         </form>
     </div>
