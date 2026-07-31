@@ -227,7 +227,7 @@ let currentLang = localStorage.getItem("selectedLang") || "en";
 const headerMain = document.querySelector("#headerMain");
 headerMain.innerHTML = `
     <div
-        class=" w-full max-w-[1340px] mx-auto px-5 flex justify-between items-center py-5"
+        class=" w-full max-w-[1340px] mx-auto px-5 flex justify-between items-center py-5 relative"
     >
         <div class="flex items-center gap-7 md:gap-10">
             <div class="">
@@ -292,13 +292,79 @@ headerMain.innerHTML = `
                     id="langModal"
                 ></div>
             </div>
-            <button class="flex flex-col items-end gap-1 justify-center lg:hidden">
-                <span class="w-[25px] h-[3px] rounded-full bg-[#424551] inline-block"></span>
-                <span class="w-[20px] h-[3px] rounded-full bg-[#424551] inline-block"></span>
+            <button id="burgerBtn" class="relative flex flex-col items-end justify-center gap-[6px] lg:hidden w-[30px] h-[30px]">
+                <span id="burgerSpan1" class="w-[30px] h-[4px] rounded-full bg-[#424551] transition-all duration-300 origin-center"></span>
+                <span id="burgerSpan2" class="w-[23px] h-[4px] rounded-full bg-[#424551] transition-all duration-300 origin-center"></span>
             </button>
+            
+        </div>
+        <div id="burgerModal" class="absolute top-full left-0 px-5 w-full flex lg:hidden overflow-hidden transition-all duration-300 origin-top [transform:rotateX(90deg)]">
+            <nav class="flex flex-col bg-white w-full">
+                <a
+                    href="./Pages/About/about.html"
+                    class="block w-full px-4 py-2 font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
+                >${translateData[currentLang].navAbout}</a>
+                <a
+                    href="./Pages/Courses/courses.html"
+                    class="inline-block w-full px-4 py-2 font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
+                >${translateData[currentLang].navCourses}</a>
+                <a
+                    href="./Pages/Events/events.html"
+                    class="inline-block w-full px-4 py-2 font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
+                >${translateData[currentLang].navEvents}</a>
+                <a
+                    href="./Pages/Blogs/blogs.html"
+                    class="inline-block w-full px-4 py-2 font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
+                >${translateData[currentLang].navBlog}</a>
+                <a
+                    href="./Pages/Contacts/contacts.html"
+                    class="inline-block w-full px-4 py-2 font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
+                >${translateData[currentLang].navContacts}</a>
+                <a
+                    href="#!"
+                    class="flex lg:hidden gap-2 items-center w-full px-4 py-2 font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
+                >
+                    <img
+                        src="./Image/HomePagePhoto/Profile.svg"
+                        alt="profile icon"
+                        class="block"
+                    />
+                    ${translateData[currentLang].loginRegister}
+                </a>
+                <div class="">
+                    <a
+                        href="./Pages/Contacts/contacts.html"
+                        class="font-[Lato] font-bold text-[12px] leading-8 tracking-[0.5px] text-white bg-gradient-to-r from-[#FF3F3A] to-[#F75E05] px-5 rounded-[4px] inline-block mx-4 my-2 sm:hidden hover:bg-gradient-to-l hover:from-[#F75E05] hover:to-[#FF3F3A]"
+                    >
+                        ${translateData[currentLang].getConsultation}
+                    </a>
+                </div>
+            </nav>
         </div>
     </div>
 `;
+const burgerBtn = document.querySelector("#burgerBtn");
+const burgerSpan1 = document.querySelector("#burgerSpan1");
+const burgerSpan2 = document.querySelector("#burgerSpan2");
+const burgerModal = document.querySelector("#burgerModal");
+burgerBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    burgerSpan1.classList.toggle("translate-y-[5px]");
+    burgerSpan1.classList.toggle("rotate-45");
+    burgerSpan2.classList.toggle("-translate-y-[5px]");
+    burgerSpan2.classList.toggle("w-[30px]");
+    burgerSpan2.classList.toggle("-rotate-45");
+    burgerModal.classList.toggle("[transform:rotateX(90deg)]");
+});
+document.addEventListener("click", () => {
+    burgerSpan1.classList.remove("translate-y-[5px]", "rotate-45");
+    burgerSpan2.classList.remove(
+        "-translate-y-[5px]",
+        "-rotate-45",
+        "w-[30px]",
+    );
+    burgerModal.classList.add("[transform:rotateX(90deg)]");
+});
 // header end
 
 // hero Section
@@ -940,7 +1006,7 @@ var swiper = new Swiper(".mySwiper", {
 export const testimonialsData = [
     {
         id: 1,
-        authorImage:`
+        authorImage: `
             <svg
                 xmlns='http://www.w3.org/2000/svg'
                 viewBox='0 0 24 24'
@@ -1163,7 +1229,7 @@ testimonials.innerHTML = `
                     /> 
                 </svg> 
             </button> 
-            <button class='hidden lg:flex testimonials-next-btn absolute right-0 z-10 top-1/2 -translate-y-1/2 w-[48px] h-[48px] items-center justify-center rounded-full hover:bg-[#FF3F3A] transition-all duration-300 group'>
+            <button class='hidden lg:flex testimonials-next-btn absolute right-0 z-[2] top-1/2 -translate-y-1/2 w-[48px] h-[48px] items-center justify-center rounded-full hover:bg-[#FF3F3A] transition-all duration-300 group'>
                  
                 <svg
                     xmlns='http://www.w3.org/2000/svg'
