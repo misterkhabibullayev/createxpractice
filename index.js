@@ -265,7 +265,7 @@ headerMain.innerHTML = `
             <div class="flex items-center gap-3 md:gap-4">
                 <a
                     href="./Pages/Contacts/contacts.html"
-                    class="font-[Lato] font-bold text-[12px] lg:py-1 md:leading-6 lg:leading-4 tracking-[0.5px] text-white bg-gradient-to-r from-[#FF3F3A] to-[#F75E05] px-5 lg:px-3 rounded-[4px] hidden sm:inline-block hover:bg-gradient-to-l hover:from-[#F75E05] hover:to-[#FF3F3A]"
+                    class="font-[Lato] font-bold text-[12px] leading-8 tracking-[0.5px] text-white bg-gradient-to-r from-[#FF3F3A] to-[#F75E05] px-5 rounded-[4px] hidden sm:inline-block hover:bg-gradient-to-l hover:from-[#F75E05] hover:to-[#FF3F3A]"
                 >
                     ${translateData[currentLang].getConsultation}
                 </a>
@@ -292,11 +292,9 @@ headerMain.innerHTML = `
                     id="langModal"
                 ></div>
             </div>
-            <button class="block lg:hidden">
-                <img
-                    src="./Image/HomePagePhoto/stash--burger-classic-light.svg"
-                    alt="burger icon"
-                />
+            <button class="flex flex-col items-end gap-1 justify-center lg:hidden">
+                <span class="w-[25px] h-[3px] rounded-full bg-[#424551] inline-block"></span>
+                <span class="w-[20px] h-[3px] rounded-full bg-[#424551] inline-block"></span>
             </button>
         </div>
     </div>
@@ -328,7 +326,7 @@ heroSection.innerHTML = `
                     >${translateData[currentLang].playShowreel}</span>
                 </div>
                 <h1
-                    class="w-full text-center md:text-start text-[40px] lg:max-w-[500px] font-[Lato] font-black xl:text-[64px] leading-[130%] tracking-[1px] mt-[24px] mb-[60px]"
+                    class="w-full text-center lg:text-start text-[40px] lg:max-w-[500px] font-[Lato] font-black xl:text-[64px] leading-[130%] tracking-[1px] mt-[24px] mb-[60px]"
                 >
                     ${translateData[currentLang].heroSectionH1}
                 </h1>
