@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 import { allBlogPosts } from "../../AllBlogPosts.js";
+import { translateLang } from "../../Pages/About/about.js";
 
 export const translateLang = {
     en: {
@@ -102,24 +102,7 @@ export const translateLang = {
         },
     },
 };
-=======
-import { translateLang } from "../../Pages/About/about.js";
-const allBlog = [
-    {
-        id: 1,
-        type: "Podcast",
-        image: "../../Image/aboutUs-photo/mic.svg",
-        mainImg: "../../Image/aboutUs-photo/girl-image.png",
-        cardType: "Marketing",
-        dateImg: "../../Image/aboutUs-photo/Vector (Stroke).svg",
-        cardDate: `${translateLang[currentLang].section8.september} 4, 2020`,
-        cardTime: `36  ${translateLang[currentLang].section8.min}`,
-        timeImg: "../../Image/aboutUs-photo/Union.svg",
-        cardTitle: translateLang[currentLang].section8.section8_card1_title,
-        cardText: translateLang[currentLang].section8.section8_card1_text,
-    },
-];
->>>>>>> 7ec56f714da50def812d0986fa5d9cb51126c792
+
 let currentLang = localStorage.getItem("selectedLang") || "en";
 // header start
 const headerMain = document.querySelector("#headerMain");
