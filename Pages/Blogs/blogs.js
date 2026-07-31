@@ -1,4 +1,6 @@
-const translateLang = {
+import { allBlogPosts } from "../../AllBlogPosts.js";
+
+export const translateLang = {
     en: {
         header: {
             langTitle: "EN",
@@ -11,133 +13,7 @@ const translateLang = {
             getConsultation: "Get consultation",
             loginRegister: "Log in / Register",
         },
-        heroSection: {
-            hero_name: "ABOUT US",
-            heroTitle: "Createx Online School",
-            heroText:
-                "Createx Online School is a leader in online studying. We have lots of courses and programs from the main market experts.",
-            heroP: "We provide relevant approaches to online learning, internships and employment in the largest companies in the country. Our educational programs help you get a new specialty from scratch. During your studies, we will help you find a job. Check the courses and online events that we organise.",
-            explore_button: "Explore events",
-            browse_button: "Browse courses",
-        },
-        section2: {
-            watchVideo: "Watch Video",
-            desc1: "students graduated",
-            desc2: "completed courses",
-            desc3: "qualified tutors",
-            desc4: "years of experience",
-        },
-        section3: {
-            section3_name: "WE ALWAYS STAND FOR",
-            section3_title: "Our core values",
-            section3_card1_title: "Structured Approach",
-            section3_card1_text:
-                "Aenean urna dictum adipiscing nec, cras quisque. Nunc in mauris.",
-            section3_card2_title: "Professional Feedbacks",
-            section3_card2_text:
-                "Culpa nostrud commodo ea consequat reprehenderit aliquip. ",
-            section3_card3_title: "Efficiency",
-            section3_card3_text:
-                "Viverra scelerisque consequat net. Adipisicing esse consequat. ",
-            section3_card4_title: "Flexible Shedule",
-            section3_card4_text:
-                "Aute eiusmod dolore dolore deserunt veniam ad deserunt. ",
-        },
-        section4: {
-            section4_name: "OUR MAIN DIRECTIONS",
-            section4_title: "What do we teach",
-            marketing_button: "Marketing",
-            management_button: "Management",
-            recruting_button: "HR & Recruting",
-            design_button: "Design",
-            development_button: "Development",
-            check_button: "Check courses",
-            section4_card_text:
-                "Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra scelerisque consequat.",
-            section4_last_card: "New studying program coming soon...",
-        },
-        section5: {
-            section5_name: "STUDYING PROCESS",
-            section5_title: "That’s how we do it",
-            step: "STEP",
-            step1_title: "Watching online video lectures",
-            step1_text:
-                "Aliquam turpis viverra quam sit interdum blandit posuere pellentesque. Nisl, imperdiet gravida massa neque.",
-            step2_title: "Passing test",
-            step2_text:
-                "Facilisis pellentesque quis accumsan ultricies. Eu egestas eget feugiat lacus, amet, sollicitudin egestas laoreet etiam. ",
-            step3_title: "Curator’s feedback",
-            step3_text:
-                "Eget amet, enim pharetra leo egestas nisi, odio imperdiet facilisis. Aliquet orci varius volutpat egestas facilisi lobortis. ",
-            step4_title: "Corrections if needed",
-            step4_text:
-                "Non tempor pulvinar tincidunt aliquam. Placerat ultricies malesuada dui auctor.",
-        },
-        section6: {
-            section6_name: "BEST TUTORS ARE ALL HERE",
-            section6_title: "Meet our team",
-            dianne: "Dianne Russell",
-            dianne_job: "Founder and CEO",
-            jerome: "Jerome Bell",
-            jerome_job: "Founder and Program Director",
-            kristin: "Kristin Watson",
-            kristin_job: "Marketer, Curator of Marketing Course",
-            marvin: "Marvin McKinney",
-            marvin_job: "PM, Curator of Management Course",
-            leslie: "Leslie Alexander Li",
-            leslie_job: "Curator of HR & Recruting Course",
-            murphy: "Kathryn Murphy",
-            murphy_job: "Analyst and Marketing specialist",
-            brooklyn: "Brooklyn Simmons",
-            brooklyn_job: "Curator of Development Course",
-            cody: "Cody Fisher",
-            cody_job: "UX Designer, Curator of Design Course",
-        },
-        section7: {
-            section7_name: "TESTIMONIALS",
-            section7_title: "What our students say",
-            comment:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.",
-            elenor: "Eleanor Pena",
-            elenors: "Position, Course",
-        },
-        section8: {
-            section8_name: "BEST JOBS FOR YOU",
-            section8_title: "Our students work here",
-            ourBlog: "OUR BLOG",
-            latestPosts: "Latest posts",
-            goBlog: "Go to blog",
-            marketing: "Marketing",
-            management: "Management",
-            design: "Design",
-            september: "September",
-            august: "August",
-            min: "min",
-            section8_card1_title:
-                "What is traffic arbitrage and does it really make money?",
-            section8_card1_text:
-                "Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...",
-            listen: "Listen",
-            watch: "Watch",
-            read: "Read",
-            section8_card2_title:
-                "What to do and who to talk to if you want to get feedback on the product",
-            section8_card2_text:
-                "Neque a, senectus consectetur odio in aliquet nec eu. Ultricies ac nibh urna urna sagittis faucibus...",
-            section8_card3_title:
-                "Should you choose a creative profession if you are attracted to creativity?",
-            section8_card3_text:
-                "Curabitur nisl tincidunt eros venenatis vestibulum ac placerat. Tortor, viverra sed vulputate ultrices...",
-            podcast: "Podcast",
-            video: "Video",
-            article: "Article",
-        },
-        section9: {
-            dontmiss: "DON`T MISS ANYTHING",
-            subscribeTitle: "Subscribe to the Createx School announcements",
-            subscribePlaceholder: "Your working email",
-            subscribe_button: "Subscribe",
-        },
+
         footer: {
             footerDescription:
                 "Createx Online School is a leader in online studying. We have lots of courses and programs from the main market experts. We provide relevant approaches to online learning, internships and employment in the largest companies in the country.",
@@ -170,133 +46,7 @@ const translateLang = {
             getConsultation: "Konsultatsiya olish",
             loginRegister: "Kirish / Ro'yxatdan o'tish",
         },
-        heroSection: {
-            hero_name: "BIZ HAQIMIZDA",
-            heroTitle: "Createx Onlayn Maktabi",
-            heroText:
-                "Createx Onlayn Maktabi onlayn ta'lim sohasidagi yetakchilardan biridir. Bizda bozorning yetakchi mutaxassislari tomonidan yaratilgan ko'plab kurslar va dasturlar mavjud.",
-            heroP: "Biz onlayn ta'lim, amaliyot va mamlakatning yirik kompaniyalarida ishga joylashish uchun zamonaviy yondashuvlarni taklif qilamiz. Ta'lim dasturlarimiz sizga yangi kasbni noldan o'rganishga yordam beradi. O'qish davomida ish topishingizga ham ko'maklashamiz. Biz tashkil etadigan kurslar va onlayn tadbirlarni ko'rib chiqing.",
-            explore_button: "Tadbirlarni ko'rish",
-            browse_button: "Kurslarni ko'rish",
-        },
-        section2: {
-            watchVideo: "Videoni ko'rish",
-            desc1: "bitiruvchi talabalar",
-            desc2: "yakunlangan kurslar",
-            desc3: "malakali ustozlar",
-            desc4: "yillik tajriba",
-        },
-        section3: {
-            section3_name: "BIZ DOIMO QADRIYATLARIMIZGA SODIQMIZ",
-            section3_title: "Asosiy qadriyatlarimiz",
-            section3_card1_title: "Tizimli yondashuv",
-            section3_card1_text:
-                "Aenean urna dictum adipiscing nec, cras quisque. Nunc in mauris.",
-            section3_card2_title: "Professional fikr-mulohazalar",
-            section3_card2_text:
-                "Culpa nostrud commodo ea consequat reprehenderit aliquip.",
-            section3_card3_title: "Samaradorlik",
-            section3_card3_text:
-                "Viverra scelerisque consequat net. Adipisicing esse consequat.",
-            section3_card4_title: "Moslashuvchan jadval",
-            section3_card4_text:
-                "Aute eiusmod dolore dolore deserunt veniam ad deserunt.",
-        },
-        section4: {
-            section4_name: "ASOSIY YO'NALISHLARIMIZ",
-            section4_title: "Nimalarni o'rgatamiz",
-            marketing_button: "Marketing",
-            management_button: "Menejment",
-            recruting_button: "HR va Rekruting",
-            design_button: "Dizayn",
-            development_button: "Dasturlash",
-            check_button: "Kurslarni ko'rish",
-            section4_card_text:
-                "Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra scelerisque consequat.",
-            section4_last_card: "Yangi o'quv dasturi tez orada...",
-        },
-        section5: {
-            section5_name: "TA'LIM JARAYONI",
-            section5_title: "Biz qanday ishlaymiz",
-            step: "BOSQICH",
-            step1_title: "Onlayn video darslarni tomosha qilish",
-            step1_text:
-                "Aliquam turpis viverra quam sit interdum blandit posuere pellentesque. Nisl, imperdiet gravida massa neque.",
-            step2_title: "Test topshirish",
-            step2_text:
-                "Facilisis pellentesque quis accumsan ultricies. Eu egestas eget feugiat lacus.",
-            step3_title: "Kurator fikr-mulohazasi",
-            step3_text:
-                "Eget amet, enim pharetra leo egestas nisi, odio imperdiet facilisis.",
-            step4_title: "Kerak bo'lsa tuzatishlar kiritish",
-            step4_text:
-                "Non tempor pulvinar tincidunt aliquam. Placerat ultricies malesuada dui auctor.",
-        },
-        section6: {
-            section6_name: "ENG YAXSHI USTOZLAR SHU YERDA",
-            section6_title: "Jamoamiz bilan tanishing",
-            dianne: "Dianne Russell",
-            dianne_job: "Asoschi va Bosh direktor",
-            jerome: "Jerome Bell",
-            jerome_job: "Asoschi va Dastur direktori",
-            kristin: "Kristin Watson",
-            kristin_job: "Marketolog, Marketing kursi kuratori",
-            marvin: "Marvin McKinney",
-            marvin_job: "Loyiha menejeri, Menejment kursi kuratori",
-            leslie: "Leslie Alexander Li",
-            leslie_job: "HR va Rekruting kursi kuratori",
-            murphy: "Kathryn Murphy",
-            murphy_job: "Analitik va Marketing mutaxassisi",
-            brooklyn: "Brooklyn Simmons",
-            brooklyn_job: "Dasturlash kursi kuratori",
-            cody: "Cody Fisher",
-            cody_job: "UX Dizayner, Dizayn kursi kuratori",
-        },
-        section7: {
-            section7_name: "FIKR-MULOHAZALAR",
-            section7_title: "Talabalarimiz nima deydi",
-            comment:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet.",
-            elenor: "Eleanor Pena",
-            elenors: "Lavozim, Kurs",
-        },
-        section8: {
-            section8_name: "SIZ UCHUN ENG YAXSHI ISHLAR",
-            section8_title: "Talabalarimiz shu yerda ishlaydi",
-            ourBlog: "BIZNING BLOG",
-            latestPosts: "So'nggi maqolalar",
-            goBlog: "Blogga o'tish",
-            marketing: "Marketing",
-            management: "Menejment",
-            design: "Dizayn",
-            september: "Sentabr",
-            august: "Avgust",
-            min: "daq",
-            section8_card1_title:
-                "Trafik arbitraji nima va u haqiqatan ham daromad keltiradimi?",
-            section8_card1_text:
-                "Pharetra, ullamcorper iaculis viverra parturient sed id sed.",
-            listen: "Tinglash",
-            watch: "Ko'rish",
-            read: "O'qish",
-            section8_card2_title:
-                "Mahsulot bo'yicha fikr olishni istasangiz nima qilish kerak?",
-            section8_card2_text:
-                "Neque a, senectus consectetur odio in aliquet nec eu.",
-            section8_card3_title:
-                "Ijodkorlikka qiziqsangiz, ijodiy kasbni tanlash kerakmi?",
-            section8_card3_text:
-                "Curabitur nisl tincidunt eros venenatis vestibulum.",
-            podcast: "Podkast",
-            video: "Video",
-            article: "Maqola",
-        },
-        section9: {
-            dontmiss: "HECH NARSANI O'TKAZIB YUBORMANG",
-            subscribeTitle: "Createx School yangiliklariga obuna bo'ling",
-            subscribePlaceholder: "Ishchi emailingiz",
-            subscribe_button: "Obuna bo'lish",
-        },
+
         footer: {
             footerDescription:
                 "Createx Onlayn Maktabi onlayn ta'lim sohasidagi yetakchilardan biridir. Biz zamonaviy ta'lim va ishga joylashish imkoniyatlarini taklif qilamiz.",
@@ -329,129 +79,7 @@ const translateLang = {
             getConsultation: "Получить консультацию",
             loginRegister: "Войти / Зарегистрироваться",
         },
-        heroSection: {
-            hero_name: "О НАС",
-            heroTitle: "Онлайн-школа Createx",
-            heroText:
-                "Онлайн-школа Createx — один из лидеров в сфере онлайн-обучения. У нас есть множество курсов и программ от ведущих экспертов рынка.",
-            heroP: "Мы предлагаем современные подходы к онлайн-обучению, стажировкам и трудоустройству в крупнейших компаниях страны. Наши образовательные программы помогут вам освоить новую профессию с нуля. Во время обучения мы также поможем вам найти работу. Ознакомьтесь с нашими курсами и онлайн-мероприятиями.",
-            explore_button: "Посмотреть мероприятия",
-            browse_button: "Просмотреть курсы",
-        },
-        section2: {
-            watchVideo: "Смотреть видео",
-            desc1: "выпускников",
-            desc2: "завершённых курсов",
-            desc3: "квалифицированных преподавателей",
-            desc4: "лет опыта",
-        },
-        section3: {
-            section3_name: "НАШИ ОСНОВНЫЕ ЦЕННОСТИ",
-            section3_title: "Наши ценности",
-            section3_card1_title: "Структурный подход",
-            section3_card1_text:
-                "Aenean urna dictum adipiscing nec, cras quisque. Nunc in mauris.",
-            section3_card2_title: "Профессиональная обратная связь",
-            section3_card2_text:
-                "Culpa nostrud commodo ea consequat reprehenderit aliquip.",
-            section3_card3_title: "Эффективность",
-            section3_card3_text:
-                "Viverra scelerisque consequat net. Adipisicing esse consequat.",
-            section3_card4_title: "Гибкий график",
-            section3_card4_text:
-                "Aute eiusmod dolore dolore deserunt veniam ad deserunt.",
-        },
-        section4: {
-            section4_name: "НАШИ ОСНОВНЫЕ НАПРАВЛЕНИЯ",
-            section4_title: "Чему мы обучаем",
-            marketing_button: "Маркетинг",
-            management_button: "Менеджмент",
-            recruting_button: "HR и Рекрутинг",
-            design_button: "Дизайн",
-            development_button: "Разработка",
-            check_button: "Посмотреть курсы",
-            section4_card_text:
-                "Odio posuere netus quisque faucibus lectus arcu donec.",
-            section4_last_card: "Новая программа обучения скоро...",
-        },
-        section5: {
-            section5_name: "ПРОЦЕСС ОБУЧЕНИЯ",
-            section5_title: "Вот как это происходит",
-            step: "ШАГ",
-            step1_title: "Просмотр онлайн-видеолекций",
-            step1_text:
-                "Aliquam turpis viverra quam sit interdum blandit posuere pellentesque.",
-            step2_title: "Прохождение тестов",
-            step2_text: "Facilisis pellentesque quis accumsan ultricies.",
-            step3_title: "Обратная связь от куратора",
-            step3_text: "Eget amet, enim pharetra leo egestas nisi.",
-            step4_title: "Исправления при необходимости",
-            step4_text: "Non tempor pulvinar tincidunt aliquam.",
-        },
-        section6: {
-            section6_name: "ЛУЧШИЕ ПРЕПОДАВАТЕЛИ ЗДЕСЬ",
-            section6_title: "Познакомьтесь с нашей командой",
-            dianne: "Dianne Russell",
-            dianne_job: "Основатель и Генеральный директор",
-            jerome: "Jerome Bell",
-            jerome_job: "Основатель и Директор программы",
-            kristin: "Kristin Watson",
-            kristin_job: "Маркетолог, куратор курса по маркетингу",
-            marvin: "Marvin McKinney",
-            marvin_job: "PM, куратор курса по менеджменту",
-            leslie: "Leslie Alexander Li",
-            leslie_job: "Куратор курса HR и Рекрутинга",
-            murphy: "Kathryn Murphy",
-            murphy_job: "Аналитик и специалист по маркетингу",
-            brooklyn: "Brooklyn Simmons",
-            brooklyn_job: "Куратор курса по разработке",
-            cody: "Cody Fisher",
-            cody_job: "UX-дизайнер, куратор курса по дизайну",
-        },
-        section7: {
-            section7_name: "ОТЗЫВЫ",
-            section7_title: "Что говорят наши студенты",
-            comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            elenor: "Eleanor Pena",
-            elenors: "Должность, Курс",
-        },
-        section8: {
-            section8_name: "ЛУЧШИЕ ВАКАНСИИ ДЛЯ ВАС",
-            section8_title: "Наши студенты работают здесь",
-            ourBlog: "Наш блог",
-            latestPosts: "Последние статьи",
-            goBlog: "Перейти в блог",
-            marketing: "Маркетинг",
-            management: "Менеджмент",
-            design: "Дизайн",
-            september: "Сентябрь",
-            august: "Август",
-            min: "мин",
-            section8_card1_title:
-                "Что такое арбитраж трафика и действительно ли он приносит деньги?",
-            section8_card1_text:
-                "Pharetra, ullamcorper iaculis viverra parturient sed id sed.",
-            listen: "Слушать",
-            watch: "Смотреть",
-            read: "Читать",
-            section8_card2_title:
-                "Что делать и к кому обратиться, если вы хотите получить отзыв о продукте?",
-            section8_card2_text:
-                "Neque a, senectus consectetur odio in aliquet nec eu.",
-            section8_card3_title:
-                "Стоит ли выбирать творческую профессию, если вас привлекает творчество?",
-            section8_card3_text:
-                "Curabitur nisl tincidunt eros venenatis vestibulum.",
-            podcast: "Подкаст",
-            video: "Видео",
-            article: "Статья",
-        },
-        section9: {
-            dontmiss: "НЕ ПРОПУСТИТЕ НИЧЕГО",
-            subscribeTitle: "Подпишитесь на новости школы Createx",
-            subscribePlaceholder: "Ваш рабочий email",
-            subscribe_button: "Подписаться",
-        },
+
         footer: {
             footerDescription:
                 "Онлайн-школа Createx — лидер в сфере онлайн-образования. Мы предлагаем современные программы обучения и помощь в трудоустройстве.",
@@ -477,7 +105,7 @@ let currentLang = localStorage.getItem("selectedLang") || "en";
 // header start
 const headerMain = document.querySelector("#headerMain");
 headerMain.innerHTML = `
-<div class="container mx-auto px-5 md:px-10 lg:px-15 flex justify-between items-center py-5">
+<div class="w-full max-w-[1300px] mx-auto px-5 flex justify-between items-center py-5">
     <div class="flex items-center gap-7 md:gap-10">
             <a href="/index.html">
                 <img
@@ -519,6 +147,101 @@ headerMain.innerHTML = `
 </div>`;
 // header end
 
+// our blog start
+const blog = document.querySelector("#blog");
+blog.innerHTML = `
+<div class="w-full max-w-[1340px] mx-auto px-5">
+    <div>
+        <div class="mx-auto items-center text-center mt-10 mb-5 sm:mt-20 sm:mb-16">
+            <h6 class="text-[#1E212C] font-bold text-base leading-[150%]">OUR BLOG</h6>
+            <h1 class="text-[#1E212C] leading-[100%] sm:leading-[130%] text-3xl sm:text-4xl font-black">Createx School Journal</h1>
+        </div>
+        <div class="mb-16 lg:flex lg:justify-between">
+            <div class="flex gap-3 items-center mb-5 lg:mb-0 max-[480px] overflow-x-auto  custom-scrollbar pb-2 flex-1 pr-3 xl:overflow-x-hidden xl:max-w-[100%]">
+                <button class="font-bold text-base leading-[160%] text-[#9A9CA5] py-2 px-5 hover:text-[#FF3F3A] hover:border hover:border-[#FF3F3A] rounded">All</button>
+                <a href="#" class="flex gap-1 font-bold text-base leading-[160%] text-[#9A9CA5] py-2 px-5 hover:text-[#FF3F3A] hover:border hover:border-[#FF3F3A] rounded">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" class="mt-1"><path d="M0 0h24v24H0z" fill="none" />
+                    <path fill="currentColor" d="M7.5 16.5h6v-1h-6zm0-4h9v-1h-9zm0-4h9v-1h-9zM5.616 20q-.691 0-1.153-.462T4 18.384V5.616q0-.691.463-1.153T5.616 4h12.769q.69 0 1.153.463T20 5.616v12.769q0 .69-.462 1.153T18.384 20zm0-1h12.769q.23 0 .423-.192t.192-.424V5.616q0-.231-.192-.424T18.384 5H5.616q-.231 0-.424.192T5 5.616v12.769q0 .23.192.423t.423.192M5 5v14z"/></svg>Articles
+                </a>
+                <a href="#" class="flex gap-1 font-bold text-base leading-[160%] text-[#9A9CA5] py-2 px-5 hover:text-[#FF3F3A] hover:border hover:border-[#FF3F3A] rounded">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" class="mt-1"><path d="M0 0h24v24H0z" fill="none" /><g fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round"
+                    d="M16.211 11.106L9.737 7.868A1.2 1.2 0 0 0 8 8.942v6.116a1.2 1.2 0 0 0 1.737 1.074l6.474-3.238a1 1 0 0 0 0-1.788"/><circle cx="12" cy="12" r="9" /></g>
+                    </svg>Videos
+                </a>
+                <a href="#" class="flex gap-1 font-bold text-base leading-[160%] text-[#9A9CA5] py-2 px-5 hover:text-[#FF3F3A] hover:border hover:border-[#FF3F3A] rounded">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" class="mt-1"><path d="M0 0h24v24H0z" fill="none" /><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="1.5"><path d="M16 6.429C16 4.535 14.21 3 12 3S8 4.535 8 6.429v5.142C8 13.465 9.79 15 12 15s4-1.535 4-3.429z"/>
+                    <path d="M5 11a7 7 0 1 0 14 0m-7 7v3m-4 0h8"/></g>
+                    </svg>Podcasts
+                </a>
+            </div>
+            <div class="sm:flex sm:gap-5 sm:items-center">
+                <div>
+                    <h5 class="font-bold text-base leading-[160%] text-[#424551] whitespace-nowrap">
+                    Blog category</h5>
+                </div>
+                <select name="select" class="font-normal text-base leading-[160%] text-[#424551] border border-[#D7DADD] rounded py-2 px-4 hover:text-[#FF3F3A] hover:border-[#FF3F3A] outline-none w-full sm:w-auto mb-5 sm:mb-0">
+                    <option value="All articles" aria-describedby="All articles">All articles</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="Development">Development</option>
+                    <option value="Design">Design</option>
+                    <option value="Manegement">Management</option>
+                    <option value="HR & Recruting">HR & Recruting</option>
+                </select>
+                <div class="flex w-full relative">
+                    <input class="font-normal text-base text-[#424551] border border-[#D7DADD] rounded py-2 px-4 hover:placeholder-[#FF3F3A] hover:border-[#FF3F3A] w-full lg:w-auto" type="text" placeholder="search blog..."/>
+                    <svg class="absolute right-[15px] top-[12px]" xmlns="http://www.w3.org/2000/svg"
+                    width="1em" height="1em" viewBox="0 0 24 24">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m21 21l-4.343-4.343m0 0A8 8 0 1 0 5.343 5.343a8 8 0 0 0 11.314 11.314"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='grid grid-cols-3 gap-5'>  
+    ${allBlogPosts
+        .map((post) => {
+            return `
+        <div class="">
+            <div class="w-full h-auto rounded relative mb-4 overflow-hidden">
+                <a href="#!" class="inline-block w-full h-full overflow-hidden rounded">
+                    <img src="${post.img}" class="w-full h-full object-cover rounded group-hover:scale-110 transition-all duration-300"/>
+                    <div class="py-[1px] px-2 bg-white rounded flex items-center gap-1 absolute top-3 left-3">
+                        <img src="${post.en.type === "Podcast" ? "../../Image/HomePagePhoto/microphone.svg" : post.en.type === "Article" ? "../../Image/HomePagePhoto/article.svg" : "../../Image/HomePagePhoto/videoType.svg"}"/>
+                        <span>${post[currentLang].type}</span>
+                    </div>
+                </a>
+            </div>
+            <div>
+                <div class="flex flex-wrap gap-3 mb-2">
+                    <span class="flex items-center font-bold text-[14px] leading-[150%] text-[#787A80]">${post[currentLang].category}
+                        <span class="inline-block w-[1px] h-3 bg-[#787A80] rounded-[1px] ml-3"></span></span>
+                    <div class="flex items-center gap-2">
+                        <img src="../../Image/HomePagePhoto/Calendar.svg" />
+                        <span class="flex items-center whitespace-nowrap font-bold text-[14px] leading-[150%] text-[#787A80]">${post[currentLang].date}
+                            <span class="inline-block w-[1px] h-3 bg-[#787A80] rounded-[1px] ml-3"></span></span>
+                    </div>
+                    <span class="flex items-center gap-2 whitespace-nowrap font-bold text-[14px] leading-[150%] text-[#787A80]">
+                        <img src="../../Image/HomePagePhoto/Clock.svg" class=""/>
+                            ${post[currentLang].duration} </span>
+                </div>
+                <div>
+                    <a href="#" class="font-bold text-[20px] leading-[150%] text-[#1E212C] hover:text-[#ff3f3a] transition-all duration-300">${post[currentLang].title}
+                    </a>
+                    <p class="line-clamp-2 font-normal text-base leading-[160%] text-[#424551] mt-2 mb-4">${post[currentLang].description}</p>
+                    <a href="#" class="font-bold text-base leading-[160%] text-[#1E212C] hover:text-[#ff3f3a] transition-all duration-300 flex items-center gap-2 hover:gap-4">${post[currentLang].action}
+                    <img src="../../Image/HomePagePhoto/right.svg"/>
+                    </a>
+                </div>
+            </div>
+        </div>`;
+        })
+        .join(" ")}
+    </div>
+</div>`;
+
+// our blog end
 // LANGUAGE BUTTON
 window.addEventListener("scroll", function () {
     const header = document.querySelector("header");

@@ -1329,13 +1329,13 @@ footer.innerHTML = `
         </div>
     </div>
 `;
-const goToTopBtn = document.querySelector('#goToTopBtn');
-goToTopBtn.addEventListener('click', () => {
+const goToTopBtn = document.querySelector("#goToTopBtn");
+goToTopBtn.addEventListener("click", () => {
     window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
-})
+        top: 0,
+        behavior: "smooth",
+    });
+});
 // footer end
 
 window.addEventListener("scroll", function () {
