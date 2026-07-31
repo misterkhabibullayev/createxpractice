@@ -516,7 +516,7 @@ export const allBlogPosts = [
     },
     {
         id: 4,
-        img: "//Image/HomePagePhoto/blogpostimg4.svg",
+        img: "/Image/HomePagePhoto/blogpostimg4.svg",
         tags: ["#hr", "#recruiting", "#job_search"],
         author: {
             authorImg: "/Image/courses-photo/people/tutor4.png",
