@@ -1,10 +1,10 @@
 export const allBlogPosts = [
     {
         id: 0,
-        img: "Image/HomePagePhoto/blogpostimg1.svg",
+        img: "/Image/HomePagePhoto/blogpostimg1.svg",
         tags: ["#marketing", "#traffic_arbitrage", "#online_business"],
         author: {
-            authorImg: "Image/courses-photo/people/tutor4.png",
+            authorImg: "/Image/courses-photo/people/tutor4.png",
             authorName: "Kristin Watson",
             authorJob: {
                 en: "Curator of Marketing Course",
@@ -131,10 +131,10 @@ export const allBlogPosts = [
     },
     {
         id: 1,
-        img: "Image/HomePagePhoto/blogpostimg2.svg",
+        img: "/Image/HomePagePhoto/blogpostimg2.svg",
         tags: ["#development", "#programming", "#coding"],
         author: {
-            authorImg: "Image/courses-photo/people/tutor4.png",
+            authorImg: "/Image/courses-photo/people/tutor4.png",
             authorName: "Kristin Watson",
             authorJob: {
                 en: "Curator of Marketing Course",
@@ -261,10 +261,10 @@ export const allBlogPosts = [
     },
     {
         id: 2,
-        img: "Image/HomePagePhoto/blogpostimg3.svg",
+        img: "/Image/HomePagePhoto/blogpostimg3.svg",
         tags: ["#design", "#creativity", "#career"],
         author: {
-            authorImg: "Image/courses-photo/people/tutor4.png",
+            authorImg: "/Image/courses-photo/people/tutor4.png",
             authorName: "Kristin Watson",
             authorJob: {
                 en: "Curator of Marketing Course",
@@ -388,10 +388,10 @@ export const allBlogPosts = [
     },
     {
         id: 3,
-        img: "Image/HomePagePhoto/blogpostimg5.svg",
+        img: "/Image/HomePagePhoto/blogpostimg5.svg",
         tags: ["#management", "#product", "#feedback"],
         author: {
-            authorImg: "Image/courses-photo/people/tutor4.png",
+            authorImg: "/Image/courses-photo/people/tutor4.png",
             authorName: "Kristin Watson",
             authorJob: {
                 en: "Curator of Marketing Course",
@@ -516,10 +516,10 @@ export const allBlogPosts = [
     },
     {
         id: 4,
-        img: "/Image/HomePagePhoto/blogpostimg4.svg",
+        img: "//Image/HomePagePhoto/blogpostimg4.svg",
         tags: ["#hr", "#recruiting", "#job_search"],
         author: {
-            authorImg: "Image/courses-photo/people/tutor4.png",
+            authorImg: "/Image/courses-photo/people/tutor4.png",
             authorName: "Kristin Watson",
             authorJob: {
                 en: "Curator of Marketing Course",
@@ -646,10 +646,10 @@ export const allBlogPosts = [
     },
     {
         id: 5,
-        img: "Image/HomePagePhoto/blogpostimg6.svg",
+        img: "/Image/HomePagePhoto/blogpostimg6.svg",
         tags: ["#design", "#graphic_design", "#colors"],
         author: {
-            authorImg: "Image/courses-photo/people/tutor4.png",
+            authorImg: "/Image/courses-photo/people/tutor4.png",
             authorName: "Kristin Watson",
             authorJob: {
                 en: "Curator of Marketing Course",
@@ -773,10 +773,10 @@ export const allBlogPosts = [
     },
     {
         id: 6,
-        img: "Image/HomePagePhoto/blogpostimg7.svg",
+        img: "/Image/HomePagePhoto/blogpostimg7.svg",
         tags: ["#startup", "#team_building", "#management"],
         author: {
-            authorImg: "Image/courses-photo/people/tutor4.png",
+            authorImg: "/Image/courses-photo/people/tutor4.png",
             authorName: "Kristin Watson",
             authorJob: {
                 en: "Curator of Marketing Course",
@@ -901,10 +901,10 @@ export const allBlogPosts = [
     },
     {
         id: 7,
-        img: "Image/HomePagePhoto/blogpostimg8.svg",
+        img: "/Image/HomePagePhoto/blogpostimg8.svg",
         tags: ["#marketing", "#customer_loyalty", "#business"],
         author: {
-            authorImg: "Image/courses-photo/people/tutor4.png",
+            authorImg: "/Image/courses-photo/people/tutor4.png",
             authorName: "Kristin Watson",
             authorJob: {
                 en: "Curator of Marketing Course",
