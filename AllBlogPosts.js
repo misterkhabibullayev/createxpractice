@@ -387,7 +387,7 @@ export const allBlogPosts = [
         },
     },
     {
-        id: 3,
+        id: 4,
         img: "Image/HomePagePhoto/blogpostimg5.svg",
         tags: ["#management", "#product", "#feedback"],
         author: {
@@ -511,136 +511,6 @@ export const allBlogPosts = [
                 ],
                 paragraph4:
                     "Foydalanuvchilarni eshitish muhim, ammo ularning muammolariga to'g'ri texnik yechim topish — mahsulot muvaffaqiyatining kalitidir.",
-            },
-        },
-    },
-    {
-        id: 4,
-        img: "Image/HomePagePhoto/blogpostimg4.svg",
-        tags: ["#hr", "#recruiting", "#job_search"],
-        author: {
-            authorImg: "Image/courses-photo/people/tutor4.png",
-            authorName: "Kristin Watson",
-            authorJob: {
-                en: "Curator of Marketing Course",
-                ru: "Куратор курса по маркетингу",
-                uz: "Marketing kursi kuratori",
-            },
-            socialLinks: {
-                instagram: {
-                    svg: `
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-              <path d="M0 0h24v24H0z" fill="none" />
-              <path fill="currentColor" d="M12.001 9a3 3 0 1 0 0 6a3 3 0 0 0 0-6m0-2a5 5 0 1 1 0 10a5 5 0 0 1 0-10m6.5-.25a1.25 1.25 0 0 1-2.5 0a1.25 1.25 0 0 1 2.5 0M12.001 4c-2.474 0-2.878.007-4.029.058c-.784.037-1.31.142-1.798.332a2.9 2.9 0 0 0-1.08.703a2.9 2.9 0 0 0-.704 1.08c-.19.49-.295 1.015-.331 1.798C4.007 9.075 4 9.461 4 12c0 2.475.007 2.878.058 4.029c.037.783.142 1.31.331 1.797c.17.435.37.748.702 1.08c.337.336.65.537 1.08.703c.494.191 1.02.297 1.8.333C9.075 19.994 9.461 20 12 20c2.475 0 2.878-.007 4.029-.058c.782-.037 1.308-.142 1.797-.331a2.9 2.9 0 0 0 1.08-.703c.337-.336.538-.649.704-1.08c.19-.492.296-1.018.332-1.8c.052-1.103.058-1.49.058-4.028c0-2.474-.007-2.878-.058-4.029c-.037-.782-.143-1.31-.332-1.798a2.9 2.9 0 0 0-.703-1.08a2.9 2.9 0 0 0-1.08-.704c-.49-.19-1.016-.295-1.798-.331C14.926 4.006 14.54 4 12 4m0-2c2.717 0 3.056.01 4.123.06c1.064.05 1.79.217 2.427.465c.66.254 1.216.598 1.772 1.153a4.9 4.9 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428c.047 1.066.06 1.405.06 4.122s-.01 3.056-.06 4.122s-.218 1.79-.465 2.428a4.9 4.9 0 0 1-1.153 1.772a4.9 4.9 0 0 1-1.772 1.153c-.637.247-1.363.415-2.427.465c-1.067.047-1.406.06-4.123.06s-3.056-.01-4.123-.06c-1.064-.05-1.789-.218-2.427-.465a4.9 4.9 0 0 1-1.772-1.153a4.9 4.9 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.012 15.056 2 14.717 2 12s.01-3.056.06-4.122s.217-1.79.465-2.428a4.9 4.9 0 0 1 1.153-1.772A4.9 4.9 0 0 1 5.45 2.525c.637-.248 1.362-.415 2.427-.465C8.945 2.013 9.284 2 12.001 2" />
-          </svg>`,
-                    hoverColor: "hover:text-[#FF3F3A]",
-                    link: "https://instagram.com/misterkhabibullayev",
-                },
-                twitter: {
-                    svg: `
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-              <path d="M0 0h24v24H0z" fill="none" />
-              <path fill="currentColor" d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.2 4.2 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.52 8.52 0 0 1-5.33 1.84q-.51 0-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23" />
-          </svg>`,
-                    hoverColor: "hover:text-[#FF3F3A]",
-                    link: "https://x.com/",
-                },
-                linkedIn: {
-                    svg: `
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-              <path d="M0 0h24v24H0z" fill="none" />
-              <path fill="currentColor" d="M6.94 5a2 2 0 1 1-4-.002a2 2 0 0 1 4 .002M7 8.48H3V21h4zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91z" />
-          </svg>`,
-                    hoverColor: "hover:text-[#FF3F3A]",
-                    link: "https://uz.linkedin.com/",
-                },
-            },
-        },
-        en: {
-            type: "Article",
-            date: "August 3, 2020",
-            category: "HR & Recruiting",
-            duration: "12 min",
-            title: "HR statistics: job search, interviews, hiring and recruiting",
-            description:
-                "Discover recent job search trends, hiring metrics, and interview analytics to prepare your resume and impress recruiters effectively.",
-            action: "Read",
-            content: {
-                leadTitle:
-                    "Understanding hiring statistics and HR metrics can drastically increase your chances of landing your dream job in today's competitive market.",
-                paragraph1:
-                    "Data shows that recruiters spend an average of 6 to 7 seconds reviewing a resume before deciding whether to move forward or reject an applicant.",
-                paragraph2:
-                    "Preparing for tech and behavioral interviews with structured frameworks (like STAR) yields up to 40% higher success rates during final offer stages.",
-                quote: "Your resume is a marketing brochure for your skills, not a historical document of everything you have ever done.",
-                paragraph3:
-                    "Key statistical findings every job candidate should know:",
-                list: [
-                    "Over 75% of resumes are filtered out by ATS (Applicant Tracking Systems)",
-                    "Referrals account for the highest percentage of successful hires",
-                    "Tailoring your CV to specific job descriptions triples response rates",
-                    "Soft skills contribute to over 60% of hiring decisions in tech",
-                ],
-                paragraph4:
-                    "By aligning your application strategy with real recruitment data, you will navigate job interviews with far greater confidence.",
-            },
-        },
-        ru: {
-            type: "Статья",
-            date: "3 августа 2020 г.",
-            category: "HR & Recruiting",
-            duration: "12 мин",
-            title: "HR статистика: поиск работы, собеседования, найм и рекрутинг",
-            description:
-                "Узнайте свежие тренды рынка труда, метрики найма и аналитику собеседований, чтобы грамотно подготовить резюме и пройти рекрутеров.",
-            action: "Читать",
-            content: {
-                leadTitle:
-                    "Понимание статистики найма и ключевых метрик HR может значительно повысить ваши шансы на получение желаемой работы на современном конкурентном рынке.",
-                paragraph1:
-                    "Данные показывают, что рекрутеры тратят в среднем от 6 до 7 секунд на просмотр резюме, прежде чем принять решение об отказе или приглашении.",
-                paragraph2:
-                    "Подготовка к техническим и поведенческим собеседованиям по структурированным методологиям (например, STAR) повышает шанс оффера на 40%.",
-                quote: "Ваше резюме — это маркетинговый буклет ваших навыков, а не просто исторический список всего, что вы когда-либо делали.",
-                paragraph3:
-                    "Ключевые статистические факты, которые нужно знать соискателю:",
-                list: [
-                    "Более 75% резюме отсеиваются автоматическими системами (ATS)",
-                    "Рекомендации (referrals) дают самый высокий процент успешного найма",
-                    "Адаптация CV под конкретную вакансию втридорога увеличивает отклик",
-                    "Soft skills определяют более 60% решений при найме в IT",
-                ],
-                paragraph4:
-                    "Сопоставляя свою стратегию поиска работы с реальными данными рекрутинга, вы будете проходить собеседования с гораздо большей уверенностью.",
-            },
-        },
-        uz: {
-            type: "Maqola",
-            date: "2020-yil 3-avgust",
-            category: "HR & Recruiting",
-            duration: "12 daqiqa",
-            title: "HR statistikasi: ish qidirish, suhbatlar, yollash va rekruting",
-            description:
-                "Rezyumengizni to'g'ri tayyorlash va HR mutaxassislari e'tiborini tortish uchun ish bozoridagi so'nggi trendlar va suhbat statistikasini o'rganing.",
-            action: "O'qish",
-            content: {
-                leadTitle:
-                    "Rekruting va HR statistikasini tushunish hozirgi raqobatbardosh mehnat bozorida orzuyingizdagi ishni topish imkoniyatini keskin oshiradi.",
-                paragraph1:
-                    "Tadqiqotlarga ko'ra, HR mutaxassislari rezyumeni ko'rib chiqishga va nomzodni saralashga o'rtacha 6-7 soniya vaqt sarflaydilar.",
-                paragraph2:
-                    "Suhbatlarga (intervyu) tizimli va to'g'ri tayyorgarlik ko'rish (masalan, STAR usuli bo'yicha) yakuniy taklif (offer) olish imkoniyatini 40% ga oshiradi.",
-                quote: "Rezyumengiz — bu o'tmishingiz haqidagi hujjat emas, balki ko'nikmalaringizni ko'rsatuvchi reklama bukletidir.",
-                paragraph3:
-                    "Har bir nomzod bilishi kerak bo'lgan muhim statistik faktlar:",
-                list: [
-                    "Rezyumelarning 75% dan ortig'i ATS (avtomatik saralash) tizimlaridan o'ta olmaydi",
-                    "Tavsiyanoma (referral) orqali kelganlar eng yuqori ishga kirish ko'rsatkichiga ega",
-                    "Rezyumeni muayyan vakansiyaga moslashtirish takliflar sonini 3 barobarga oshiradi",
-                    "Soft skill'lar (muloqot va shaxsiy sifatlar) ishga olishdagi qarorning 60% qismini tashkil qiladi",
-                ],
-                paragraph4:
-                    "Ish qidirish strategiyangizni zamonaviy HR ma'lumotlariga moslashtirish orqali siz suhbatlardan muvaffaqiyatli o'tishingiz osonlashadi.",
             },
         },
     },
