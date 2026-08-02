@@ -1192,14 +1192,11 @@ testimonials.innerHTML = `
                                                  
                                                 <h4 class='font-[Lato] font-bold text-[16px] leading-[160%] text-[#1E212C] text-center md:text-left mb-[4px]'>
                                                     ${
-                                                        item[currentLang]
-                                                            .authorName
+                                                        item[currentLang].authorName
                                                     }
                                                 </h4> 
                                                 <p class='font-[Lato] font-normal text-[14px] leading-[150%] text-[#787A80] text-center md:text-left'>
-                                                    ${item[currentLang].position}
-                                                    , $
-                                                    {item[currentLang].course}
+                                                    ${item[currentLang].position}, ${item[currentLang].course}
                                                 </p> 
                                             </div> 
                                         </div> 
@@ -1344,7 +1341,6 @@ var swiper = new Swiper(".swiper3", {
 });
 // ourBlog Section end
 
-// <<<<<<< HEAD// >>>>>>> 881d6a4392fade75368e33de69e89d04eb2a3126
 // subscribeSection
 const subscribeSection = document.querySelector("#subscribeSection");
 subscribeSection.innerHTML = `

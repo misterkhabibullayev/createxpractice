@@ -395,34 +395,34 @@ anyQuestions.innerHTML = `
             </div>
             <form class="grid grid-cols-1 gap-6 min-[575px]:grid-cols-2">
                 <div class="flex flex-col ">
-                    <label for="first-name" class="font-[Lato] font-normal text--[16px] leading-[160%] text-[#424551] mb-2">${translateData[currentLang].firstName}</label>
+                    <label for="first-name" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#424551] mb-2">${translateData[currentLang].firstName}</label>
                     <input type="text" id="first-name" placeholder="${translateData[currentLang].yourFirstName}" class="px-4 py-[13px] outline-none border border-[#D7DADD] focus:border-[#FF3F3A] focus:shadow-[0_0_8px_rgba(255,63,58,0.4)] rounded-[4px] font-[Lato] font-normal text-[16px] leading-[160%] text-black placeholder:text-[#9A9CA5]" required>
                 </div>
                 <div class="flex flex-col ">
-                    <label for="last-name" class="font-[Lato] font-normal text--[16px] leading-[160%] text-[#424551] mb-2">${translateData[currentLang].lastName}</label>
+                    <label for="last-name" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#424551] mb-2">${translateData[currentLang].lastName}</label>
                     <input type="text" id="last-name" placeholder="${translateData[currentLang].yourLastName}" class="px-4 py-[13px] outline-none border border-[#D7DADD] focus:border-[#FF3F3A] focus:shadow-[0_0_8px_rgba(255,63,58,0.4)] rounded-[4px] font-[Lato] font-normal text-[16px] leading-[160%] text-black placeholder:text-[#9A9CA5]" required>
                 </div>
                 <div class="flex flex-col ">
-                    <label for="email" class="font-[Lato] font-normal text--[16px] leading-[160%] text-[#424551] mb-2">${translateData[currentLang].email}</label>
+                    <label for="email" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#424551] mb-2">${translateData[currentLang].email}</label>
                     <input type="email" id="email" placeholder="${translateData[currentLang].yourWorkingEmail}" class="px-4 py-[13px] outline-none border border-[#D7DADD] focus:border-[#FF3F3A] focus:shadow-[0_0_8px_rgba(255,63,58,0.4)] rounded-[4px] font-[Lato] font-normal text-[16px] leading-[160%] text-black placeholder:text-[#9A9CA5]" required>
                 </div>
                 <div class="flex flex-col ">
-                    <label for="phone" class="font-[Lato] font-normal text--[16px] leading-[160%] text-[#424551] mb-2">${translateData[currentLang].phone}</label>
+                    <label for="phone" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#424551] mb-2">${translateData[currentLang].phone}</label>
                     <input type="tel" id="phone" placeholder="${translateData[currentLang].yourPhoneNumber}" class="px-4 py-[13px] outline-none border border-[#D7DADD] focus:border-[#FF3F3A] focus:shadow-[0_0_8px_rgba(255,63,58,0.4)] rounded-[4px] font-[Lato] font-normal text-[16px] leading-[160%] text-black placeholder:text-[#9A9CA5]">
                 </div>
                 <div class="flex flex-col min-[575px]:col-span-2">
-                    <label for="message" class="font-[Lato] font-normal text--[16px] leading-[160%] text-[#424551] mb-2">${translateData[currentLang].message}</label>
+                    <label for="message" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#424551] mb-2">${translateData[currentLang].message}</label>
                     <textarea id="message" rows="5" placeholder="${translateData[currentLang].yourmessage}" class="px-4 py-[13px] outline-none border border-[#D7DADD] focus:border-[#FF3F3A] focus:shadow-[0_0_8px_rgba(255,63,58,0.4)] rounded-[4px] font-[Lato] font-normal text-[16px] leading-[160%] text-black placeholder:text-[#9A9CA5] min-h-[53px]" required></textarea>
                 </div>
                 <div>
-                    <label class="flex items-start gap-2.5 cursor-pointer text-sm text-[#424551]">
+                    <label class="flex items-start gap-2.5 cursor-pointer">
                         <input 
                             type="checkbox" 
                             class="w-4 h-4 mt-0.5 accent-[#ff4e2a] rounded cursor-pointer shrink-0"
                             checked
                             required
                         >
-                        <span>${translateData[currentLang].rozilikEslatmasi}</span>
+                        <span class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#424551]">${translateData[currentLang].rozilikEslatmasi}</span>
                     </label>
                 </div>
                 <div>
