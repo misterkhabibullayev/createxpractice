@@ -292,13 +292,14 @@ document.addEventListener("click", () => {
 });
 // header end
 
+// contactInfo Section
 const contactInfo = document.querySelector("#contactInfo");
 contactInfo.innerHTML = `
     <div class="w-full max-w-[1340px] mx-auto px-5">
         <div>
             <span class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] text-[#1E212C] mb-2">${translateData[currentLang].contactInfo.toUpperCase()}</span>
         </div>
-        <div class="md:flex justify-between">
+        <div class="md:flex justify-between gap-6">
             <div>
                 <h1 class="font-[Lato] font-black text-[26px] md:text-[36px] lg:text-[46px]  leading-[130%] text-[#1E212C] mb-10">${translateData[currentLang].getInTouch}</h1>
                 <div>
@@ -331,7 +332,7 @@ contactInfo.innerHTML = `
                     </div>
                     <div class="mt-[48px]">
                         <h1 class="mb-[24px] font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] text-[#1E212C]">${translateData[currentLang].followUs.toUpperCase()}</h1>
-                        <div class="flex items-center gap-6">
+                        <div class="flex items-center gap-6 flex-wrap">
                             <a href="https://facebook.com/" aria-label="Facebook">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="text-[#A5A6AB] hover:text-[#FF3F3A] transition-all duration-300">
                                     <path d="M0 0h24v24H0z" fill="none" />
@@ -378,6 +379,65 @@ contactInfo.innerHTML = `
         </div>
     </div>
 `;
+// contactInfo Section end
+
+// anyQuestions Section
+const anyQuestions = document.querySelector("#anyQuestions");
+anyQuestions.innerHTML = `
+    <div class="w-full max-w-[1340px] mx-auto px-5 flex flex-col gap-12 md:flex-row md:items-center md:justify-between">
+        <div>
+            <img src="/Image/HomePagePhoto/illustration.svg" />
+        </div>
+        <div class="w-full md:w-[60%]">
+            <div class="mb-10">
+                <span class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] text-[#1E212C] mb-2">${translateData[currentLang].anyQuestions.toUpperCase()}</span>
+                <h1 class="font-[Lato] font-black text-[26px] md:text-[36px] lg:text-[46px] leading-[130%] text-[#1E212C]">${translateData[currentLang].dropUsALine}</h1>
+            </div>
+            <form class="grid grid-cols-1 gap-6 min-[575px]:grid-cols-2">
+                <div class="flex flex-col ">
+                    <label for="first-name" class="font-[Lato] font-normal text--[16px] leading-[160%] text-[#424551] mb-2">${translateData[currentLang].firstName}</label>
+                    <input type="text" id="first-name" placeholder="${translateData[currentLang].yourFirstName}" class="px-4 py-[13px] outline-none border border-[#D7DADD] focus:border-[#FF3F3A] focus:shadow-[0_0_8px_rgba(255,63,58,0.4)] rounded-[4px] font-[Lato] font-normal text-[16px] leading-[160%] text-black placeholder:text-[#9A9CA5]" required>
+                </div>
+                <div class="flex flex-col ">
+                    <label for="last-name" class="font-[Lato] font-normal text--[16px] leading-[160%] text-[#424551] mb-2">${translateData[currentLang].lastName}</label>
+                    <input type="text" id="last-name" placeholder="${translateData[currentLang].yourLastName}" class="px-4 py-[13px] outline-none border border-[#D7DADD] focus:border-[#FF3F3A] focus:shadow-[0_0_8px_rgba(255,63,58,0.4)] rounded-[4px] font-[Lato] font-normal text-[16px] leading-[160%] text-black placeholder:text-[#9A9CA5]" required>
+                </div>
+                <div class="flex flex-col ">
+                    <label for="email" class="font-[Lato] font-normal text--[16px] leading-[160%] text-[#424551] mb-2">${translateData[currentLang].email}</label>
+                    <input type="email" id="email" placeholder="${translateData[currentLang].yourWorkingEmail}" class="px-4 py-[13px] outline-none border border-[#D7DADD] focus:border-[#FF3F3A] focus:shadow-[0_0_8px_rgba(255,63,58,0.4)] rounded-[4px] font-[Lato] font-normal text-[16px] leading-[160%] text-black placeholder:text-[#9A9CA5]" required>
+                </div>
+                <div class="flex flex-col ">
+                    <label for="phone" class="font-[Lato] font-normal text--[16px] leading-[160%] text-[#424551] mb-2">${translateData[currentLang].phone}</label>
+                    <input type="tel" id="phone" placeholder="${translateData[currentLang].yourPhoneNumber}" class="px-4 py-[13px] outline-none border border-[#D7DADD] focus:border-[#FF3F3A] focus:shadow-[0_0_8px_rgba(255,63,58,0.4)] rounded-[4px] font-[Lato] font-normal text-[16px] leading-[160%] text-black placeholder:text-[#9A9CA5]">
+                </div>
+                <div class="flex flex-col min-[575px]:col-span-2">
+                    <label for="message" class="font-[Lato] font-normal text--[16px] leading-[160%] text-[#424551] mb-2">${translateData[currentLang].message}</label>
+                    <textarea id="message" rows="5" placeholder="${translateData[currentLang].yourmessage}" class="px-4 py-[13px] outline-none border border-[#D7DADD] focus:border-[#FF3F3A] focus:shadow-[0_0_8px_rgba(255,63,58,0.4)] rounded-[4px] font-[Lato] font-normal text-[16px] leading-[160%] text-black placeholder:text-[#9A9CA5] min-h-[53px]" required></textarea>
+                </div>
+                <div>
+                    <label class="flex items-start gap-2.5 cursor-pointer text-sm text-[#424551]">
+                        <input 
+                            type="checkbox" 
+                            class="w-4 h-4 mt-0.5 accent-[#ff4e2a] rounded cursor-pointer shrink-0"
+                            checked
+                            required
+                        >
+                        <span>${translateData[currentLang].rozilikEslatmasi}</span>
+                    </label>
+                </div>
+                <div>
+                    <button 
+                        type="submit" 
+                        class="bg-gradient-to-r from-[#ff4242] to-[#ff6000] hover:opacity-90 transition-opacity text-white font-semibold py-3 w-full rounded cursor-pointer whitespace-nowrap"
+                    >
+                        ${translateData[currentLang].sendmessage}
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+`;
+// anyQuestions Section end
 
 // footer
 const footer = document.querySelector("#footer");
@@ -389,7 +449,7 @@ footer.innerHTML = `
                     <img src="/Image/HomePagePhoto/footerlogo.svg" alt="footer logo" class="" />
                 </a>
                 <p class="font-[Lato] font-normal text-[12px] leading-[150%] text-white opacity-60 max-w-full line-clamp-5 mt-[24px] mb-[38px]">${translateData[currentLang].footerDescription}</p>
-                <div class="flex items-center gap-5 mb-4">
+                <div class="flex items-center gap-5 mb-4 flex-wrap">
                     <a href="https://facebook.com/" aria-label="Facebook">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="text-[#A5A6AB] hover:text-white transition-all duration-300">
                             <path d="M0 0h24v24H0z" fill="none" />
