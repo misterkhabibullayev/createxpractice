@@ -2,281 +2,282 @@ import { allBlogPosts } from "./AllBlogPosts.js";
 import { allCourses } from "./AllCourses.js";
 import { allEvents } from "./AllEvents.js";
 
-const translateData = {
-    en: {
-        langTitle: "EN",
-        flag: "Image/HomePagePhoto/twemoji--flag-united-states.svg",
-        navAbout: "About Us",
-        navCourses: "Courses",
-        navEvents: "Events",
-        navBlog: "Blog",
-        navContacts: "Contacts",
-        getConsultation: "Get consultation",
-        loginRegister: "Log in / Register",
-        signIn: "Sign in",
-        signInP:
-            "Sign in to your account using email and password provided during registration.",
-        email: "Email",
-        yourEmailAddress: "Your working email",
-        password: "Password",
-        passwordPlaceholder: "Your password",
-        rememberMe: "Remember me",
-        forgotPassword: "Forgot password?",
-        dontHaveAnAccount: "Don't have an account?",
-        orSignInWith: "Or sign in with",
-        signUp: "Sign up",
-        fullName: "Full name",
-        yourFullName: "Your full name",
-        confirmPassword: "Confirm Password",
-        confirmPasswordPlaceholder: "Confirm password",
-        alreadyAnAccount: "Already have an account?",
-        playShowreel: "Play showreel",
-        heroSectionH1: "Enjoy studying with Createx Online Courses",
-        exploreCourses: "Explore courses",
-        studentGraduet: "Students graduated",
-        commlatedCourses: "Completed courses",
-        qualifiedTutors: "Qualified tutors",
-        experienceYears: "Years of experience",
-        whoweare: "Who we are",
-        whyCreateX: "Why Createx?",
-        why1: "A fermentum in morbi pretium aliquam adipiscing donec tempus.",
-        why2: "Vulputate placerat amet pulvinar lorem nisl.",
-        why3: "Consequat feugiat habitant gravida quisque elit bibendum id adipiscing sed.",
-        why4: "Etiam duis lobortis in fames ultrices commodo nibh.",
-        why5: "Tincidunt sagittis neque sem ac eget.",
-        why6: "Ultricies amet justo et eget quisque purus vulputate dapibus tortor.",
-        moreAboutUs: "More about us",
-        readytolearn: "Ready to learn?",
-        featuredCourses: "Featured Courses",
-        viewAllCourses: "View all courses",
-        ourbenefits: "Our benefits",
-        thatshowwedoit: "That’s how we do it",
-        experiencedTutors: "Experienced Tutors",
-        feedbackSupports: "Feedback & Support",
-        onlineLibrary: "24/7 Online Library",
-        community: "Community",
-        ourevents: "Our Events",
-        lecturesWorkshop: "Lectures & workshops",
-        doyouwatnmore: "Do you want more?",
-        exploreAllEvents: "Explore all events",
-        createXCertificate: "Createx Certificate",
-        createXCertificateH1: "Your expertise will be confirmed",
-        createXCertificateP:
-            "We are accredited by international professional organizations and institutes:",
-        bestTutorsHere: "Best tutors are all here",
-        meetOurTema: "Meet our team",
-        testimonials: "TESTIMONIALS",
-        whatOurStudentsSay: "What our students say",
-        ourBlog: "Our blog",
-        latestPosts: "Latest posts",
-        goBlog: "Go to blog",
-        dontmiss: "Don’t miss anything",
-        subscribeTitle: "Subscribe to the Createx School announcements",
-        subscribePlaceholder: "Your working email",
-        subscribe: "Subscribe",
-        footerDescription:
-            "Createx Online School is a leader in online studying. We have lots of courses and programs from the main market experts. We provide relevant approaches to online learning, internships and employment in the largest companies in the country.",
-        siteMap: "SITE MAP",
-        courses: "COURSES",
-        marketing: "Marketing",
-        management: "Management",
-        hrRecruting: "HR & Recruting",
-        design: "Design",
-        development: "Development",
-        contactUs: "CONTACT US",
-        signUpNewsLatter: "SIGN UP TO OUR NEWSLETTER",
-        signUpNewsLatterPlaceholder: "Email address",
-        signUpSubscribe:
-            "*Subscribe to our newsletter to receive communications and early updates from Createx SEO Agency.",
-        copyRight: "All rights reserved.",
-        madeWith: "Made with by Limon IT ",
-        backtoTop: "Back to top",
-    },
-    ru: {
-        langTitle: "RU",
-        flag: "Image/HomePagePhoto/twemoji--flag-russia.svg",
-        navAbout: "О нас",
-        navCourses: "Курсы",
-        navEvents: "Мероприятия",
-        navBlog: "Блог",
-        navContacts: "Контакты",
-        getConsultation: "Получить консультацию",
-        loginRegister: "Войти / Зарегистрироваться",
-        signIn: "Войти",
-        signInP:
-            "Войдите в свой аккаунт, используя email и пароль, указанные при регистрации.",
-        email: "Email",
-        yourEmailAddress: "Ваш рабочий email",
-        password: "Пароль",
-        passwordPlaceholder: "Ваш пароль",
-        rememberMe: "Запомнить меня",
-        forgotPassword: "Забыли пароль?",
-        dontHaveAnAccount: "Нет аккаунта?",
-        orSignInWith: "Или войдите с помощью",
-        signUp: "Зарегистрироваться",
-        fullName: "Полное имя",
-        yourFullName: "Ваше полное имя",
-        confirmPassword: "Подтвердите пароль",
-        confirmPasswordPlaceholder: "Подтверждение пароля",
-        alreadyAnAccount: "Уже есть аккаунт?",
-        playShowreel: "Смотреть шоурил",
-        heroSectionH1:
-            "Получайте удовольствие от обучения на онлайн-курсах Createx",
-        exploreCourses: "Изучить курсы",
-        studentGraduet: "Выпускников",
-        commlatedCourses: "Пройденных курсов",
-        qualifiedTutors: "Квалифицированных преподавателей",
-        experienceYears: "Лет опыта",
-        whoweare: "Кто мы",
-        whyCreateX: "Почему Createx?",
-        why1: "Вы получаете самые актуальные практические знания от экспертов рынка.",
-        why2: "Индивидуальный подход к каждому студенту и менторская поддержка на протяжении всего курса.",
-        why3: "Пожизненный доступ к учебным материалам и лекциям в режиме 24/7.",
-        why4: "Реальные кейсы и практические домашние задания для закрепления теории.",
-        why5: "Международный сертификат после успешного окончания обучения.",
-        why6: "Возможность прохождения стажировки и трудоустройства в топовые компании.",
-        moreAboutUs: "Подробнее о нас",
-        readytolearn: "Готовы учиться?",
-        featuredCourses: "Рекомендуемые курсы",
-        viewAllCourses: "Посмотреть все курсы",
-        ourbenefits: "Наши преимущества",
-        thatshowwedoit: "Вот как мы это делаем",
-        experiencedTutors: "Опытные преподаватели",
-        feedbackSupports: "Обратная связь и поддержка",
-        onlineLibrary: "Онлайн-библиотека 24/7",
-        community: "Сообщество",
-        ourevents: "Наши мероприятия",
-        lecturesWorkshop: "Лекции и воркшопы",
-        doyouwatnmore: "Хотите большего?",
-        exploreAllEvents: "Изучить все мероприятия",
-        createXCertificate: "Сертификат Createx",
-        createXCertificateH1: "Ваш профессионализм будет подтвержден",
-        createXCertificateP:
-            "Мы аккредитованы международными профессиональными организациями и институтами:",
-        bestTutorsHere: "Все лучшие преподаватели здесь",
-        meetOurTema: "Встречайте нашу команду",
-        testimonials: "ОТЗЫВЫ",
-        whatOurStudentsSay: "Что говорят наши студенты",
-        ourBlog: "Наш блог",
-        latestPosts: "Последние публикации",
-        goBlog: "Перейти в блог",
-        dontmiss: "Ничего не упустите",
-        subscribeTitle: "Подпишитесь на анонсы школы Createx",
-        subscribePlaceholder: "Ваша рабочая эл. почта",
-        subscribe: "Подписаться",
-        footerDescription:
-            "Онлайн-школа Createx — лидер в сфере онлайн-обучения. У нас представлено множество курсов и программ от ведущих экспертов рынка. Мы предлагаем актуальные подходы к онлайн-обучению, стажировкам и трудоустройству в крупнейших компаниях страны.",
-        siteMap: "КАРТА САЙТА",
-        courses: "КУРСЫ",
-        marketing: "Маркетинг",
-        management: "Менеджмент",
-        hrRecruting: "HR и Рекрутинг",
-        design: "Дизайн",
-        development: "Разработка",
-        contactUs: "СВЯЗАТЬСЯ С НАМИ",
-        signUpNewsLatter: "ПОДПИШИТЕСЬ НА НАШУ РАССЫЛКУ",
-        signUpNewsLatterPlaceholder: "Адрес эл. почты",
-        signUpSubscribe:
-            "*Подпишитесь на нашу рассылку, чтобы получать сообщения и самые свежие обновления от SEO-агентства Createx.",
-        copyRight: "Все права защищены.",
-        madeWith: "Разработано в Limon IT",
-        backtoTop: "Наверх",
-    },
-    uz: {
-        langTitle: "UZ",
-        flag: "Image/HomePagePhoto/twemoji--flag-uzbekistan.svg",
-        navAbout: "Biz haqimizda",
-        navCourses: "Kurslar",
-        navEvents: "Tadbirlar",
-        navBlog: "Blog",
-        navContacts: "Kontaktlar",
-        getConsultation: "Konsultatsiya olish",
-        loginRegister: "Kirish / Ro'yxatdan o'tish",
-        signIn: "Kirish",
-        signInP:
-            "Ro'yxatdan o'tish paytida ko'rsatilgan email va parol yordamida hisobingizga kiring.",
-        email: "Email",
-        yourEmailAddress: "Ishlayotgan emailingiz",
-        password: "Parol",
-        passwordPlaceholder: "Sizning parolingiz",
-        rememberMe: "Meni eslab qol",
-        forgotPassword: "Parolni unutdingizmi?",
-        dontHaveAnAccount: "Hisobingiz yo'qmi?",
-        orSignInWith: "Yoki ushbu usulda kiring",
-        signUp: "Ro'yxatdan o'tish",
-        fullName: "To'liq ism-sharif",
-        yourFullName: "Ism va familiyangiz",
-        confirmPassword: "Parolni tasdiqlang",
-        confirmPasswordPlaceholder: "Parolni tasdiqlang",
-        alreadyAnAccount: "Allaqachon hisobingiz bormi?",
-        playShowreel: "Shou-rolikni ko'rish",
-        heroSectionH1: "Createx Online Kurslari bilan o'qishdan zavqlaning",
-        exploreCourses: "Kurslarni o'rganish",
-        studentGraduet: "Bitirgan talabalar",
-        commlatedCourses: "Tugallangan kurslar",
-        qualifiedTutors: "Malakali o'qituvchilar",
-        experienceYears: "Yillik tajriba",
-        whoweare: "Biz kimmiz",
-        whyCreateX: "Nega aynan Createx?",
-        why1: "Eng so'nggi va dolzarb amaliy bilimlarni bozor ekspertlaridan o'rganasiz.",
-        why2: "Har bir talabaga individual yondashuv va dars davomida mentorlik ko'magi.",
-        why3: "O'quv materiallari va ma'ruzalarga 24/7 rejimida umrbod kirish imkoniyati.",
-        why4: "Nazariyani mustahkamlovchi real keyslar va amaliy uy vazifalari.",
-        why5: "Kursni muvaffaqiyatli tugatgandan so'ng xalqaro darajadagi sertifikat.",
-        why6: "Eng yaxshi kompaniyalarda amaliyot o'tash va ishga joylashish imkoniyati.",
-        moreAboutUs: "Biz haqimizda batafsil",
-        readytolearn: "O'rganishga tayyormisiz?",
-        featuredCourses: "Saralangan Kurslar",
-        viewAllCourses: "Barcha kurslarni ko'rish",
-        ourbenefits: "Bizning afzalliklarimiz",
-        thatshowwedoit: "Biz buni mana shunday bajaramiz",
-        experiencedTutors: "Tajribali O'qituvchilar",
-        feedbackSupports: "Aloqa va Qo'llab-quvvatlash",
-        onlineLibrary: "24/7 Onlayn Kutubxona",
-        community: "Hamjamiyat",
-        ourevents: "Bizning Tadbirlarimiz",
-        lecturesWorkshop: "Ma'ruzalar va seminarlar",
-        doyouwatnmore: "Yana ko'proq bilishni xohlaysizmi?",
-        exploreAllEvents: "Barcha tadbirlarni ko'rish",
-        createXCertificate: "Createx Sertifikati",
-        createXCertificateH1: "Sizning tajribangiz tasdiqlanadi",
-        createXCertificateP:
-            "Biz xalqaro professional tashkilotlar va institutlar tomonidan akkreditatsiyadan o'tganmiz:",
-        bestTutorsHere: "Eng yaxshi o'qituvchilar shu yerda",
-        meetOurTema: "Jamoamiz bilan tanishing",
-        testimonials: "FIKRLAR",
-        whatOurStudentsSay: "Talabalarimiz nima deyishadi",
-        ourBlog: "Bizning blog",
-        latestPosts: "So'nggi postlar",
-        goBlog: "Blogga o'tish",
-        dontmiss: "Hech narsani o'tkazib yubormang",
-        subscribeTitle: "Createx maktabi e'lonlariga obuna bo'ling",
-        subscribePlaceholder: "Sizning ishchi elektron pochtangiz",
-        subscribe: "Obuna bo'lish",
-        footerDescription:
-            "Createx Online School — onlayn ta'lim sohasida yetakchi hisoblanadi. Bizda bozorning yetakchi ekspertlaridan ko'plab kurslar va dasturlar mavjud. Biz mamlakatning eng yirik kompaniyalarida onlayn ta'lim, amaliyot va ishga joylashish uchun eng dolzarb yondashuvlarni taqdim etamiz.",
-        siteMap: "SAYT XARITASI",
-        courses: "KURSLAR",
-        marketing: "Marketing",
-        management: "Menejment",
-        hrRecruting: "HR va Rekruting",
-        design: "Dizayn",
-        development: "Dasturlash",
-        contactUs: "BIZ BILAN ALOQA",
-        signUpNewsLatter: "YANGILIKLARIMIZGA OBUNA BO'LING",
-        signUpNewsLatterPlaceholder: "Elektron pochta manzili",
-        signUpSubscribe:
-            "*Createx SEO agentligidan xabarlar va eng so'nggi yangiliklarni olish uchun xabarnomamizga obuna bo'ling.",
-        copyRight: "Barcha huquqlar himoyalangan.",
-        madeWith: "Limon IT tomonidan yaratildi",
-        backtoTop: "Tepaga qaytish",
-    },
-};
-let currentLang = localStorage.getItem("selectedLang") || "en";
+window.addEventListener("DOMContentLoaded", () => {
+    const translateData = {
+        en: {
+            langTitle: "EN",
+            flag: "Image/HomePagePhoto/twemoji--flag-united-states.svg",
+            navAbout: "About Us",
+            navCourses: "Courses",
+            navEvents: "Events",
+            navBlog: "Blog",
+            navContacts: "Contacts",
+            getConsultation: "Get consultation",
+            loginRegister: "Log in / Register",
+            signIn: "Sign in",
+            signInP:
+                "Sign in to your account using email and password provided during registration.",
+            email: "Email",
+            yourEmailAddress: "Your working email",
+            password: "Password",
+            passwordPlaceholder: "Your password",
+            rememberMe: "Remember me",
+            forgotPassword: "Forgot password?",
+            dontHaveAnAccount: "Don't have an account?",
+            orSignInWith: "Or sign in with",
+            signUp: "Sign up",
+            fullName: "Full name",
+            yourFullName: "Your full name",
+            confirmPassword: "Confirm Password",
+            confirmPasswordPlaceholder: "Confirm password",
+            alreadyAnAccount: "Already have an account?",
+            playShowreel: "Play showreel",
+            heroSectionH1: "Enjoy studying with Createx Online Courses",
+            exploreCourses: "Explore courses",
+            studentGraduet: "Students graduated",
+            commlatedCourses: "Completed courses",
+            qualifiedTutors: "Qualified tutors",
+            experienceYears: "Years of experience",
+            whoweare: "Who we are",
+            whyCreateX: "Why Createx?",
+            why1: "A fermentum in morbi pretium aliquam adipiscing donec tempus.",
+            why2: "Vulputate placerat amet pulvinar lorem nisl.",
+            why3: "Consequat feugiat habitant gravida quisque elit bibendum id adipiscing sed.",
+            why4: "Etiam duis lobortis in fames ultrices commodo nibh.",
+            why5: "Tincidunt sagittis neque sem ac eget.",
+            why6: "Ultricies amet justo et eget quisque purus vulputate dapibus tortor.",
+            moreAboutUs: "More about us",
+            readytolearn: "Ready to learn?",
+            featuredCourses: "Featured Courses",
+            viewAllCourses: "View all courses",
+            ourbenefits: "Our benefits",
+            thatshowwedoit: "That’s how we do it",
+            experiencedTutors: "Experienced Tutors",
+            feedbackSupports: "Feedback & Support",
+            onlineLibrary: "24/7 Online Library",
+            community: "Community",
+            ourevents: "Our Events",
+            lecturesWorkshop: "Lectures & workshops",
+            doyouwatnmore: "Do you want more?",
+            exploreAllEvents: "Explore all events",
+            createXCertificate: "Createx Certificate",
+            createXCertificateH1: "Your expertise will be confirmed",
+            createXCertificateP:
+                "We are accredited by international professional organizations and institutes:",
+            bestTutorsHere: "Best tutors are all here",
+            meetOurTema: "Meet our team",
+            testimonials: "TESTIMONIALS",
+            whatOurStudentsSay: "What our students say",
+            ourBlog: "Our blog",
+            latestPosts: "Latest posts",
+            goBlog: "Go to blog",
+            dontmiss: "Don’t miss anything",
+            subscribeTitle: "Subscribe to the Createx School announcements",
+            subscribePlaceholder: "Your working email",
+            subscribe: "Subscribe",
+            footerDescription:
+                "Createx Online School is a leader in online studying. We have lots of courses and programs from the main market experts. We provide relevant approaches to online learning, internships and employment in the largest companies in the country.",
+            siteMap: "SITE MAP",
+            courses: "COURSES",
+            marketing: "Marketing",
+            management: "Management",
+            hrRecruting: "HR & Recruting",
+            design: "Design",
+            development: "Development",
+            contactUs: "CONTACT US",
+            signUpNewsLatter: "SIGN UP TO OUR NEWSLETTER",
+            signUpNewsLatterPlaceholder: "Email address",
+            signUpSubscribe:
+                "*Subscribe to our newsletter to receive communications and early updates from Createx SEO Agency.",
+            copyRight: "All rights reserved.",
+            madeWith: "Made with by Limon IT ",
+            backtoTop: "Back to top",
+        },
+        ru: {
+            langTitle: "RU",
+            flag: "Image/HomePagePhoto/twemoji--flag-russia.svg",
+            navAbout: "О нас",
+            navCourses: "Курсы",
+            navEvents: "Мероприятия",
+            navBlog: "Блог",
+            navContacts: "Контакты",
+            getConsultation: "Получить консультацию",
+            loginRegister: "Войти / Зарегистрироваться",
+            signIn: "Войти",
+            signInP:
+                "Войдите в свой аккаунт, используя email и пароль, указанные при регистрации.",
+            email: "Email",
+            yourEmailAddress: "Ваш рабочий email",
+            password: "Пароль",
+            passwordPlaceholder: "Ваш пароль",
+            rememberMe: "Запомнить меня",
+            forgotPassword: "Забыли пароль?",
+            dontHaveAnAccount: "Нет аккаунта?",
+            orSignInWith: "Или войдите с помощью",
+            signUp: "Зарегистрироваться",
+            fullName: "Полное имя",
+            yourFullName: "Ваше полное имя",
+            confirmPassword: "Подтвердите пароль",
+            confirmPasswordPlaceholder: "Подтверждение пароля",
+            alreadyAnAccount: "Уже есть аккаунт?",
+            playShowreel: "Смотреть шоурил",
+            heroSectionH1:
+                "Получайте удовольствие от обучения на онлайн-курсах Createx",
+            exploreCourses: "Изучить курсы",
+            studentGraduet: "Выпускников",
+            commlatedCourses: "Пройденных курсов",
+            qualifiedTutors: "Квалифицированных преподавателей",
+            experienceYears: "Лет опыта",
+            whoweare: "Кто мы",
+            whyCreateX: "Почему Createx?",
+            why1: "Вы получаете самые актуальные практические знания от экспертов рынка.",
+            why2: "Индивидуальный подход к каждому студенту и менторская поддержка на протяжении всего курса.",
+            why3: "Пожизненный доступ к учебным материалам и лекциям в режиме 24/7.",
+            why4: "Реальные кейсы и практические домашние задания для закрепления теории.",
+            why5: "Международный сертификат после успешного окончания обучения.",
+            why6: "Возможность прохождения стажировки и трудоустройства в топовые компании.",
+            moreAboutUs: "Подробнее о нас",
+            readytolearn: "Готовы учиться?",
+            featuredCourses: "Рекомендуемые курсы",
+            viewAllCourses: "Посмотреть все курсы",
+            ourbenefits: "Наши преимущества",
+            thatshowwedoit: "Вот как мы это делаем",
+            experiencedTutors: "Опытные преподаватели",
+            feedbackSupports: "Обратная связь и поддержка",
+            onlineLibrary: "Онлайн-библиотека 24/7",
+            community: "Сообщество",
+            ourevents: "Наши мероприятия",
+            lecturesWorkshop: "Лекции и воркшопы",
+            doyouwatnmore: "Хотите большего?",
+            exploreAllEvents: "Изучить все мероприятия",
+            createXCertificate: "Сертификат Createx",
+            createXCertificateH1: "Ваш профессионализм будет подтвержден",
+            createXCertificateP:
+                "Мы аккредитованы международными профессиональными организациями и институтами:",
+            bestTutorsHere: "Все лучшие преподаватели здесь",
+            meetOurTema: "Встречайте нашу команду",
+            testimonials: "ОТЗЫВЫ",
+            whatOurStudentsSay: "Что говорят наши студенты",
+            ourBlog: "Наш блог",
+            latestPosts: "Последние публикации",
+            goBlog: "Перейти в блог",
+            dontmiss: "Ничего не упустите",
+            subscribeTitle: "Подпишитесь на анонсы школы Createx",
+            subscribePlaceholder: "Ваша рабочая эл. почта",
+            subscribe: "Подписаться",
+            footerDescription:
+                "Онлайн-школа Createx — лидер в сфере онлайн-обучения. У нас представлено множество курсов и программ от ведущих экспертов рынка. Мы предлагаем актуальные подходы к онлайн-обучению, стажировкам и трудоустройству в крупнейших компаниях страны.",
+            siteMap: "КАРТА САЙТА",
+            courses: "КУРСЫ",
+            marketing: "Маркетинг",
+            management: "Менеджмент",
+            hrRecruting: "HR и Рекрутинг",
+            design: "Дизайн",
+            development: "Разработка",
+            contactUs: "СВЯЗАТЬСЯ С НАМИ",
+            signUpNewsLatter: "ПОДПИШИТЕСЬ НА НАШУ РАССЫЛКУ",
+            signUpNewsLatterPlaceholder: "Адрес эл. почты",
+            signUpSubscribe:
+                "*Подпишитесь на нашу рассылку, чтобы получать сообщения и самые свежие обновления от SEO-агентства Createx.",
+            copyRight: "Все права защищены.",
+            madeWith: "Разработано в Limon IT",
+            backtoTop: "Наверх",
+        },
+        uz: {
+            langTitle: "UZ",
+            flag: "Image/HomePagePhoto/twemoji--flag-uzbekistan.svg",
+            navAbout: "Biz haqimizda",
+            navCourses: "Kurslar",
+            navEvents: "Tadbirlar",
+            navBlog: "Blog",
+            navContacts: "Kontaktlar",
+            getConsultation: "Konsultatsiya olish",
+            loginRegister: "Kirish / Ro'yxatdan o'tish",
+            signIn: "Kirish",
+            signInP:
+                "Ro'yxatdan o'tish paytida ko'rsatilgan email va parol yordamida hisobingizga kiring.",
+            email: "Email",
+            yourEmailAddress: "Ishlayotgan emailingiz",
+            password: "Parol",
+            passwordPlaceholder: "Sizning parolingiz",
+            rememberMe: "Meni eslab qol",
+            forgotPassword: "Parolni unutdingizmi?",
+            dontHaveAnAccount: "Hisobingiz yo'qmi?",
+            orSignInWith: "Yoki ushbu usulda kiring",
+            signUp: "Ro'yxatdan o'tish",
+            fullName: "To'liq ism-sharif",
+            yourFullName: "Ism va familiyangiz",
+            confirmPassword: "Parolni tasdiqlang",
+            confirmPasswordPlaceholder: "Parolni tasdiqlang",
+            alreadyAnAccount: "Allaqachon hisobingiz bormi?",
+            playShowreel: "Shou-rolikni ko'rish",
+            heroSectionH1: "Createx Online Kurslari bilan o'qishdan zavqlaning",
+            exploreCourses: "Kurslarni o'rganish",
+            studentGraduet: "Bitirgan talabalar",
+            commlatedCourses: "Tugallangan kurslar",
+            qualifiedTutors: "Malakali o'qituvchilar",
+            experienceYears: "Yillik tajriba",
+            whoweare: "Biz kimmiz",
+            whyCreateX: "Nega aynan Createx?",
+            why1: "Eng so'nggi va dolzarb amaliy bilimlarni bozor ekspertlaridan o'rganasiz.",
+            why2: "Har bir talabaga individual yondashuv va dars davomida mentorlik ko'magi.",
+            why3: "O'quv materiallari va ma'ruzalarga 24/7 rejimida umrbod kirish imkoniyati.",
+            why4: "Nazariyani mustahkamlovchi real keyslar va amaliy uy vazifalari.",
+            why5: "Kursni muvaffaqiyatli tugatgandan so'ng xalqaro darajadagi sertifikat.",
+            why6: "Eng yaxshi kompaniyalarda amaliyot o'tash va ishga joylashish imkoniyati.",
+            moreAboutUs: "Biz haqimizda batafsil",
+            readytolearn: "O'rganishga tayyormisiz?",
+            featuredCourses: "Saralangan Kurslar",
+            viewAllCourses: "Barcha kurslarni ko'rish",
+            ourbenefits: "Bizning afzalliklarimiz",
+            thatshowwedoit: "Biz buni mana shunday bajaramiz",
+            experiencedTutors: "Tajribali O'qituvchilar",
+            feedbackSupports: "Aloqa va Qo'llab-quvvatlash",
+            onlineLibrary: "24/7 Onlayn Kutubxona",
+            community: "Hamjamiyat",
+            ourevents: "Bizning Tadbirlarimiz",
+            lecturesWorkshop: "Ma'ruzalar va seminarlar",
+            doyouwatnmore: "Yana ko'proq bilishni xohlaysizmi?",
+            exploreAllEvents: "Barcha tadbirlarni ko'rish",
+            createXCertificate: "Createx Sertifikati",
+            createXCertificateH1: "Sizning tajribangiz tasdiqlanadi",
+            createXCertificateP:
+                "Biz xalqaro professional tashkilotlar va institutlar tomonidan akkreditatsiyadan o'tganmiz:",
+            bestTutorsHere: "Eng yaxshi o'qituvchilar shu yerda",
+            meetOurTema: "Jamoamiz bilan tanishing",
+            testimonials: "FIKRLAR",
+            whatOurStudentsSay: "Talabalarimiz nima deyishadi",
+            ourBlog: "Bizning blog",
+            latestPosts: "So'nggi postlar",
+            goBlog: "Blogga o'tish",
+            dontmiss: "Hech narsani o'tkazib yubormang",
+            subscribeTitle: "Createx maktabi e'lonlariga obuna bo'ling",
+            subscribePlaceholder: "Sizning ishchi elektron pochtangiz",
+            subscribe: "Obuna bo'lish",
+            footerDescription:
+                "Createx Online School — onlayn ta'lim sohasida yetakchi hisoblanadi. Bizda bozorning yetakchi ekspertlaridan ko'plab kurslar va dasturlar mavjud. Biz mamlakatning eng yirik kompaniyalarida onlayn ta'lim, amaliyot va ishga joylashish uchun eng dolzarb yondashuvlarni taqdim etamiz.",
+            siteMap: "SAYT XARITASI",
+            courses: "KURSLAR",
+            marketing: "Marketing",
+            management: "Menejment",
+            hrRecruting: "HR va Rekruting",
+            design: "Dizayn",
+            development: "Dasturlash",
+            contactUs: "BIZ BILAN ALOQA",
+            signUpNewsLatter: "YANGILIKLARIMIZGA OBUNA BO'LING",
+            signUpNewsLatterPlaceholder: "Elektron pochta manzili",
+            signUpSubscribe:
+                "*Createx SEO agentligidan xabarlar va eng so'nggi yangiliklarni olish uchun xabarnomamizga obuna bo'ling.",
+            copyRight: "Barcha huquqlar himoyalangan.",
+            madeWith: "Limon IT tomonidan yaratildi",
+            backtoTop: "Tepaga qaytish",
+        },
+    };
+    let currentLang = localStorage.getItem("selectedLang") || "en";
 
-// header
-const headerMain = document.querySelector("#headerMain");
-headerMain.innerHTML = `
+    // header
+    const headerMain = document.querySelector("#headerMain");
+    headerMain.innerHTML = `
     <div
         class=" w-full max-w-[1340px] mx-auto px-5 flex justify-between items-center py-5 relative"
     >
@@ -552,113 +553,117 @@ headerMain.innerHTML = `
     </div>
 `;
 
-function loginSignFunc() {
-    const loginModalBtns = document.querySelectorAll(".loginModalBtn");
-    const loginModal = document.querySelector("#loginModal");
-    const closeBtn = document.querySelector("#closeBtn");
-    if (loginModalBtns.length > 0 && loginModal) {
-        loginModalBtns.forEach((btn) => {
-            btn.addEventListener("click", () => {
-                document.body.classList.add("overflow-y-hidden");
-                loginModal.classList.add("flex");
-                loginModal.classList.remove("hidden");
+    function loginSignFunc() {
+        const loginModalBtns = document.querySelectorAll(".loginModalBtn");
+        const loginModal = document.querySelector("#loginModal");
+        const closeBtn = document.querySelector("#closeBtn");
+        if (loginModalBtns.length > 0 && loginModal) {
+            loginModalBtns.forEach((btn) => {
+                btn.addEventListener("click", () => {
+                    document.body.classList.add("overflow-y-hidden");
+                    loginModal.classList.add("flex");
+                    loginModal.classList.remove("hidden");
+                });
             });
-        });
-    }
-    if (closeBtn && loginModal) {
-        closeBtn.addEventListener("click", () => {
-            document.body.classList.remove("overflow-y-hidden");
-            loginModal.classList.add("hidden");
-            loginModal.classList.remove("flex");
-        });
-    }
-    if (loginModal) {
-        loginModal.addEventListener("click", (e) => {
-            if (e.target === e.currentTarget) {
+        }
+        if (closeBtn && loginModal) {
+            closeBtn.addEventListener("click", () => {
                 document.body.classList.remove("overflow-y-hidden");
                 loginModal.classList.add("hidden");
                 loginModal.classList.remove("flex");
+            });
+        }
+        if (loginModal) {
+            loginModal.addEventListener("click", (e) => {
+                if (e.target === e.currentTarget) {
+                    document.body.classList.remove("overflow-y-hidden");
+                    loginModal.classList.add("hidden");
+                    loginModal.classList.remove("flex");
+                }
+            });
+        }
+
+        const signInUp = document.querySelector("#signInUp");
+        const signInUpTitle = document.querySelector("#signInUpTitle");
+        const signInP = document.querySelector("#loginModal p"); // Description text
+        const fullNameDiv = document.querySelector("#fullNameDiv");
+        const confirmPasswordDiv = document.querySelector(
+            "#confirmPasswordDiv",
+        );
+        const rememberDiv = document.querySelector("#rememberDiv");
+        const submitBtn = document.querySelector("#submitBtn");
+        const donthaveP = document.querySelector("#donthaveP");
+
+        let isSignUp = false;
+
+        signInUp.addEventListener("click", () => {
+            isSignUp = !isSignUp;
+
+            if (isSignUp) {
+                signInUpTitle.innerHTML = translateData[currentLang].signUp;
+                signInP.innerHTML =
+                    translateData[currentLang].signUpP ||
+                    translateData[currentLang].signInP;
+
+                fullNameDiv.classList.replace("hidden", "flex");
+                confirmPasswordDiv.classList.replace("hidden", "block");
+                rememberDiv.classList.add("hidden");
+
+                submitBtn.innerHTML = translateData[currentLang].signUp;
+                donthaveP.innerHTML =
+                    translateData[currentLang].alreadyAnAccount;
+                signInUp.innerHTML = translateData[currentLang].signIn;
+            } else {
+                signInUpTitle.innerHTML = translateData[currentLang].signIn;
+                signInP.innerHTML = translateData[currentLang].signInP;
+
+                fullNameDiv.classList.replace("flex", "hidden");
+                confirmPasswordDiv.classList.replace("block", "hidden");
+                rememberDiv.classList.remove("hidden");
+
+                submitBtn.innerHTML = translateData[currentLang].signIn;
+                donthaveP.innerHTML =
+                    translateData[currentLang].dontHaveAnAccount;
+                signInUp.innerHTML = translateData[currentLang].signUp;
             }
         });
     }
+    loginSignFunc();
 
-    const signInUp = document.querySelector("#signInUp");
-    const signInUpTitle = document.querySelector("#signInUpTitle");
-    const signInP = document.querySelector("#loginModal p"); // Description text
-    const fullNameDiv = document.querySelector("#fullNameDiv");
-    const confirmPasswordDiv = document.querySelector("#confirmPasswordDiv");
-    const rememberDiv = document.querySelector("#rememberDiv");
-    const submitBtn = document.querySelector("#submitBtn");
-    const donthaveP = document.querySelector("#donthaveP");
-
-    let isSignUp = false;
-
-    signInUp.addEventListener("click", () => {
-        isSignUp = !isSignUp;
-
-        if (isSignUp) {
-            signInUpTitle.innerHTML = translateData[currentLang].signUp;
-            signInP.innerHTML =
-                translateData[currentLang].signUpP ||
-                translateData[currentLang].signInP;
-
-            fullNameDiv.classList.replace("hidden", "flex");
-            confirmPasswordDiv.classList.replace("hidden", "block");
-            rememberDiv.classList.add("hidden");
-
-            submitBtn.innerHTML = translateData[currentLang].signUp;
-            donthaveP.innerHTML = translateData[currentLang].alreadyAnAccount;
-            signInUp.innerHTML = translateData[currentLang].signIn;
-        } else {
-            signInUpTitle.innerHTML = translateData[currentLang].signIn;
-            signInP.innerHTML = translateData[currentLang].signInP;
-
-            fullNameDiv.classList.replace("flex", "hidden");
-            confirmPasswordDiv.classList.replace("block", "hidden");
-            rememberDiv.classList.remove("hidden");
-
-            submitBtn.innerHTML = translateData[currentLang].signIn;
-            donthaveP.innerHTML = translateData[currentLang].dontHaveAnAccount;
-            signInUp.innerHTML = translateData[currentLang].signUp;
-        }
-    });
-}
-loginSignFunc();
-
-function burgerBtnFunc() {
-    const burgerBtn = document.querySelector("#burgerBtn");
-    const burgerSpan1 = document.querySelector("#burgerSpan1");
-    const burgerSpan2 = document.querySelector("#burgerSpan2");
-    const burgerModal = document.querySelector("#burgerModal");
-    burgerBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        burgerSpan1.classList.toggle("translate-y-[5px]");
-        burgerSpan1.classList.toggle("rotate-45");
-        burgerSpan2.classList.toggle("-translate-y-[5px]");
-        burgerSpan2.classList.toggle("w-[30px]");
-        burgerSpan2.classList.toggle("-rotate-45");
-        if (burgerModal.style.transform === "rotateX(0deg)") {
+    function burgerBtnFunc() {
+        const burgerBtn = document.querySelector("#burgerBtn");
+        const burgerSpan1 = document.querySelector("#burgerSpan1");
+        const burgerSpan2 = document.querySelector("#burgerSpan2");
+        const burgerModal = document.querySelector("#burgerModal");
+        burgerBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            burgerSpan1.classList.toggle("translate-y-[5px]");
+            burgerSpan1.classList.toggle("rotate-45");
+            burgerSpan2.classList.toggle("-translate-y-[5px]");
+            burgerSpan2.classList.toggle("w-[30px]");
+            burgerSpan2.classList.toggle("-rotate-45");
+            if (burgerModal.style.transform === "rotateX(0deg)") {
+                burgerModal.style.transform = "rotateX(90deg)";
+            } else {
+                burgerModal.style.transform = "rotateX(0deg)";
+            }
+        });
+        document.addEventListener("click", () => {
+            burgerSpan1.classList.remove("translate-y-[5px]", "rotate-45");
+            burgerSpan2.classList.remove(
+                "-translate-y-[5px]",
+                "-rotate-45",
+                "w-[30px]",
+            );
             burgerModal.style.transform = "rotateX(90deg)";
-        } else {
-            burgerModal.style.transform = "rotateX(0deg)";
-        }
-    });
-    document.addEventListener("click", () => {
-        burgerSpan1.classList.remove("translate-y-[5px]", "rotate-45");
-        burgerSpan2.classList.remove(
-            "-translate-y-[5px]",
-            "-rotate-45",
-            "w-[30px]",
-        );
-        burgerModal.style.transform = "rotateX(90deg)";
-    });
-}
-burgerBtnFunc();
-// header end
+        });
+    }
+    burgerBtnFunc();
+    // header end
 
-// hero Section
-const heroSection = document.querySelector("#heroSection");
-heroSection.innerHTML = `
+    // hero Section
+    const heroSection = document.querySelector("#heroSection");
+    heroSection.innerHTML = `
     <div class=" w-full max-w-[1340px] mx-auto px-5">
         <div
             class="flex flex-col-reverse items-center gap-8 lg:flex lg:flex-row lg:justify-between lg:items-center lg:mb-[40px]"
@@ -768,11 +773,11 @@ heroSection.innerHTML = `
         </div>
     </div>
 `;
-// hero Section end
+    // hero Section end
 
-// whoweare Section
-const whoweare = document.querySelector("#whoweare");
-whoweare.innerHTML = `
+    // whoweare Section
+    const whoweare = document.querySelector("#whoweare");
+    whoweare.innerHTML = `
     <div
         class=" w-full max-w-[1340px] mx-auto px-5 my-[180px] flex flex-col gap-[30px] md:flex-row md:justify-between"
     >
@@ -872,13 +877,13 @@ whoweare.innerHTML = `
         </div>
     </div>
 `;
-// whoweare Section end
+    // whoweare Section end
 
-// featured Courses Section
-const featuredCoursesSection = document.querySelector(
-    "#featuredCoursesSection",
-);
-featuredCoursesSection.innerHTML = `
+    // featured Courses Section
+    const featuredCoursesSection = document.querySelector(
+        "#featuredCoursesSection",
+    );
+    featuredCoursesSection.innerHTML = `
     <div class=" w-full max-w-[1340px] mx-auto px-5">
         <div>
             <span class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] text-[#1E212C] mb-2">${translateData[currentLang].readytolearn.toUpperCase()}</span>
@@ -916,86 +921,86 @@ featuredCoursesSection.innerHTML = `
         </div>
     </div>
 `;
-// featured Courses Section end
+    // featured Courses Section end
 
-// ourBenefits Setion
-const ourBenefits = document.querySelector("#ourBenefits");
+    // ourBenefits Setion
+    const ourBenefits = document.querySelector("#ourBenefits");
 
-const benefitsData = {
-    experiend: {
-        img: "Image/HomePagePhoto/benefit1.svg",
-        en: {
-            title: "Only practicing tutors",
-            description:
-                "Urna nisi, arcu cras nunc. Aenean quam est lobortis mi non fames dictum suspendisse. Morbi mauris cras massa ut dolor quis sociis mollis augue. Nunc, sodales tortor sit diam mi amet massa. Fermentum diam diam sociis vestibulum. Nulla nisl accumsan, id dignissim massa ut amet. Amet enim, nisi tempus vehicula.",
+    const benefitsData = {
+        experiend: {
+            img: "Image/HomePagePhoto/benefit1.svg",
+            en: {
+                title: "Only practicing tutors",
+                description:
+                    "Urna nisi, arcu cras nunc. Aenean quam est lobortis mi non fames dictum suspendisse. Morbi mauris cras massa ut dolor quis sociis mollis augue. Nunc, sodales tortor sit diam mi amet massa. Fermentum diam diam sociis vestibulum. Nulla nisl accumsan, id dignissim massa ut amet. Amet enim, nisi tempus vehicula.",
+            },
+            ru: {
+                title: "Только практикующие репетиторы",
+                description:
+                    "На нашей платформе преподают только специалисты с реальным опытом и активной практикой. Изучайте теорию вместе с практикой, получайте точные ответы на интересующие вас вопросы и эффективно повышайте свой уровень знаний.",
+            },
+            uz: {
+                title: "Faqat amaliyotchi repetitorlar",
+                description:
+                    "Bizning platformamizda faqat real tajribaga ega bo'lgan va o'z sohasida faoliyat yuritayotgan mutaxassislar dars berishadi. Nazariya va amaliyotni birgalikda o'rganing, o'zlaringizni qiziqtirgan barcha savollarga aniq javoblar oling hamda bilimingizni samarali oshiring.",
+            },
         },
-        ru: {
-            title: "Только практикующие репетиторы",
-            description:
-                "На нашей платформе преподают только специалисты с реальным опытом и активной практикой. Изучайте теорию вместе с практикой, получайте точные ответы на интересующие вас вопросы и эффективно повышайте свой уровень знаний.",
+        feedBack: {
+            img: "Image/HomePagePhoto/benefit2.svg",
+            en: {
+                title: "Always in touch, ready to support",
+                description:
+                    "Faucibus erat massa elementum nec fermentum augue. Ante pellentesque dis et malesuada mauris, faucibus est et a. Gravida malesuada ut varius eu pretium vitae eu. Volutpat nullam posuere eget felis at dui neque. Neque vitae, pulvinar donec integer lacus, fermentum, faucibus. Lorem porttitor hendrerit vel interdum arcu arcu mollis massa. Velit nulla felis ornare elit a platea malesuada.",
+            },
+            ru: {
+                title: "Всегда на связи, готовы поддержать",
+                description:
+                    "По любым вопросам или трудностям, возникшим в процессе обучения, вы всегда можете обратиться в нашу службу поддержки. Мы готовы оперативно помочь вам, чтобы ваше обучение проходило непрерывно и максимально эффективно.",
+            },
+            uz: {
+                title: "Har doim aloqadamiz, qo'llab-quvvatlashga tayyormiz",
+                description:
+                    "O'quv jarayonida yuzaga kelgan har qanday savol yoki muammo bo'yicha bizning qo'llab-quvvatlash jamoamizga murojaat qilishingiz mumkin. Biz sizga tezkor yordam berishga va o'qishingizni uzluksiz hamda samarali davom ettirishingizga har doim tayyormiz.",
+            },
         },
-        uz: {
-            title: "Faqat amaliyotchi repetitorlar",
-            description:
-                "Bizning platformamizda faqat real tajribaga ega bo'lgan va o'z sohasida faoliyat yuritayotgan mutaxassislar dars berishadi. Nazariya va amaliyotni birgalikda o'rganing, o'zlaringizni qiziqtirgan barcha savollarga aniq javoblar oling hamda bilimingizni samarali oshiring.",
+        onlineLib: {
+            img: "Image/HomePagePhoto/benefit3.svg",
+            en: {
+                title: "The most carefully selected materials",
+                description:
+                    "Senectus magnis diam tellus nibh elit ac ac. Elit eget faucibus urna, feugiat arcu mattis viverra tempor id. Vivamus nunc quam donec non amet nulla etiam ullamcorper posuere. Venenatis commodo molestie eleifend nulla faucibus in. In sed felis adipiscing pharetra, etiam. Molestie euismod consectetur eu sed. Sit magnis sed sed ipsum vulputate pellentesque nullam faucibus.",
+            },
+            ru: {
+                title: "Самые тщательно отобранные материалы",
+                description:
+                    "Наши учебные программы и материалы тщательно отобраны экспертами отрасли. Без лишней «воды» — мы предоставляем только самые актуальные, необходимые и применимые на практике знания.",
+            },
+            uz: {
+                title: "Eng sinchiklab tanlab olingan materiallar",
+                description:
+                    "Bizning o'quv dasturlarimiz va darsliklarimiz soha mutaxassislari tomonidan puxta saralab olingan. Ortqiqcha ma'lumotlarsiz, faqat eng zarur, zamonaviy va amaliyotda qo'llaniladigan sifatli bilimlar bilan ta'minlaymiz.",
+            },
         },
-    },
-    feedBack: {
-        img: "Image/HomePagePhoto/benefit2.svg",
-        en: {
-            title: "Always in touch, ready to support",
-            description:
-                "Faucibus erat massa elementum nec fermentum augue. Ante pellentesque dis et malesuada mauris, faucibus est et a. Gravida malesuada ut varius eu pretium vitae eu. Volutpat nullam posuere eget felis at dui neque. Neque vitae, pulvinar donec integer lacus, fermentum, faucibus. Lorem porttitor hendrerit vel interdum arcu arcu mollis massa. Velit nulla felis ornare elit a platea malesuada.",
+        comunity: {
+            img: "Image/HomePagePhoto/benefit4.svg",
+            en: {
+                title: "Student communication",
+                description:
+                    "Eu placerat magna elementum nulla egestas id. Non sit enim tortor massa id tristique vel tincidunt sit. Tellus, ridiculus dictum purus nibh sed bibendum. In eleifend ac convallis convallis lectus. Urna semper ac non eros, donec accumsan egestas ipsum. Arcu at morbi.",
+            },
+            ru: {
+                title: "Общение между студентами",
+                description:
+                    "Активное общение между студентами и преподавателями помогает лучше усваивать материал. Делитесь опытом, задавайте вопросы и развивайтесь вместе в сообществе единомышленников.",
+            },
+            uz: {
+                title: "O'quvchilar bilan muloqot",
+                description:
+                    "O'quvchilarimiz va repetitorlar o'rtasidagi faol muloqot bilamlarni yanada mustahkamlashga yordam beradi. Tajriba almashing, savollar bering va hamfikrlar jamiyatida birgalikda rivojlaning.",
+            },
         },
-        ru: {
-            title: "Всегда на связи, готовы поддержать",
-            description:
-                "По любым вопросам или трудностям, возникшим в процессе обучения, вы всегда можете обратиться в нашу службу поддержки. Мы готовы оперативно помочь вам, чтобы ваше обучение проходило непрерывно и максимально эффективно.",
-        },
-        uz: {
-            title: "Har doim aloqadamiz, qo'llab-quvvatlashga tayyormiz",
-            description:
-                "O'quv jarayonida yuzaga kelgan har qanday savol yoki muammo bo'yicha bizning qo'llab-quvvatlash jamoamizga murojaat qilishingiz mumkin. Biz sizga tezkor yordam berishga va o'qishingizni uzluksiz hamda samarali davom ettirishingizga har doim tayyormiz.",
-        },
-    },
-    onlineLib: {
-        img: "Image/HomePagePhoto/benefit3.svg",
-        en: {
-            title: "The most carefully selected materials",
-            description:
-                "Senectus magnis diam tellus nibh elit ac ac. Elit eget faucibus urna, feugiat arcu mattis viverra tempor id. Vivamus nunc quam donec non amet nulla etiam ullamcorper posuere. Venenatis commodo molestie eleifend nulla faucibus in. In sed felis adipiscing pharetra, etiam. Molestie euismod consectetur eu sed. Sit magnis sed sed ipsum vulputate pellentesque nullam faucibus.",
-        },
-        ru: {
-            title: "Самые тщательно отобранные материалы",
-            description:
-                "Наши учебные программы и материалы тщательно отобраны экспертами отрасли. Без лишней «воды» — мы предоставляем только самые актуальные, необходимые и применимые на практике знания.",
-        },
-        uz: {
-            title: "Eng sinchiklab tanlab olingan materiallar",
-            description:
-                "Bizning o'quv dasturlarimiz va darsliklarimiz soha mutaxassislari tomonidan puxta saralab olingan. Ortqiqcha ma'lumotlarsiz, faqat eng zarur, zamonaviy va amaliyotda qo'llaniladigan sifatli bilimlar bilan ta'minlaymiz.",
-        },
-    },
-    comunity: {
-        img: "Image/HomePagePhoto/benefit4.svg",
-        en: {
-            title: "Student communication",
-            description:
-                "Eu placerat magna elementum nulla egestas id. Non sit enim tortor massa id tristique vel tincidunt sit. Tellus, ridiculus dictum purus nibh sed bibendum. In eleifend ac convallis convallis lectus. Urna semper ac non eros, donec accumsan egestas ipsum. Arcu at morbi.",
-        },
-        ru: {
-            title: "Общение между студентами",
-            description:
-                "Активное общение между студентами и преподавателями помогает лучше усваивать материал. Делитесь опытом, задавайте вопросы и развивайтесь вместе в сообществе единомышленников.",
-        },
-        uz: {
-            title: "O'quvchilar bilan muloqot",
-            description:
-                "O'quvchilarimiz va repetitorlar o'rtasidagi faol muloqot bilamlarni yanada mustahkamlashga yordam beradi. Tajriba almashing, savollar bering va hamfikrlar jamiyatida birgalikda rivojlaning.",
-        },
-    },
-};
-ourBenefits.innerHTML = `
+    };
+    ourBenefits.innerHTML = `
     <div class=" w-full max-w-[1340px] mx-auto px-5">
         <div class="flex flex-col md:items-center gap-2 mb-[60px]">
             <span class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] text-[#1E212C]">${translateData[currentLang].ourbenefits.toUpperCase()}</span>
@@ -1042,89 +1047,108 @@ ourBenefits.innerHTML = `
     </div>
 `;
 
-let currentBenefitBtn = "experiend";
-const exTutorBtn = document.querySelector("#exTutorBtn");
-const feedSupBtn = document.querySelector("#feedSupBtn");
-const onlineLibBtn = document.querySelector("#onlineLibBtn");
-const comunityBtn = document.querySelector("#comunityBtn");
+    let currentBenefitBtn = "experiend";
+    const exTutorBtn = document.querySelector("#exTutorBtn");
+    const feedSupBtn = document.querySelector("#feedSupBtn");
+    const onlineLibBtn = document.querySelector("#onlineLibBtn");
+    const comunityBtn = document.querySelector("#comunityBtn");
 
-function renderBenefit() {
-    const benefitDataH1 = document.querySelector("#benefitDataH1");
-    const benefitDataP = document.querySelector("#benefitDataP");
-    const benefitDataImg = document.querySelector("#benefitDataImg");
+    function renderBenefit() {
+        const benefitDataH1 = document.querySelector("#benefitDataH1");
+        const benefitDataP = document.querySelector("#benefitDataP");
+        const benefitDataImg = document.querySelector("#benefitDataImg");
 
-    const currentBen = benefitsData[currentBenefitBtn][currentLang];
-    const currentBenImg = benefitsData[currentBenefitBtn].img;
-    if (benefitDataH1) benefitDataH1.textContent = currentBen.title;
-    if (benefitDataP) benefitDataP.textContent = currentBen.description;
-    if (benefitDataImg) {
-        benefitDataImg.innerHTML = `<img src="${currentBenImg}" alt="${currentBen.title}"/>`;
+        const currentBen = benefitsData[currentBenefitBtn][currentLang];
+        const currentBenImg = benefitsData[currentBenefitBtn].img;
+        if (benefitDataH1) benefitDataH1.textContent = currentBen.title;
+        if (benefitDataP) benefitDataP.textContent = currentBen.description;
+        if (benefitDataImg) {
+            benefitDataImg.innerHTML = `<img src="${currentBenImg}" alt="${currentBen.title}"/>`;
+        }
     }
-}
 
-const benefitSVG1 = document.querySelector("#benefitSVG1");
-const benefitSVG2 = document.querySelector("#benefitSVG2");
-const benefitSVG3 = document.querySelector("#benefitSVG3");
-const benefitSVG4 = document.querySelector("#benefitSVG4");
-const benefitSpan1 = document.querySelector("#benefitSpan1");
-const benefitSpan2 = document.querySelector("#benefitSpan2");
-const benefitSpan3 = document.querySelector("#benefitSpan3");
-const benefitSpan4 = document.querySelector("#benefitSpan4");
-const benefitItems = [
-    { btn: exTutorBtn, svg: benefitSVG1, span: benefitSpan1, key: "experiend" },
-    { btn: feedSupBtn, svg: benefitSVG2, span: benefitSpan2, key: "feedBack" },
-    {
-        btn: onlineLibBtn,
-        svg: benefitSVG3,
-        span: benefitSpan3,
-        key: "onlineLib",
-    },
-    { btn: comunityBtn, svg: benefitSVG4, span: benefitSpan4, key: "comunity" },
-];
+    const benefitSVG1 = document.querySelector("#benefitSVG1");
+    const benefitSVG2 = document.querySelector("#benefitSVG2");
+    const benefitSVG3 = document.querySelector("#benefitSVG3");
+    const benefitSVG4 = document.querySelector("#benefitSVG4");
+    const benefitSpan1 = document.querySelector("#benefitSpan1");
+    const benefitSpan2 = document.querySelector("#benefitSpan2");
+    const benefitSpan3 = document.querySelector("#benefitSpan3");
+    const benefitSpan4 = document.querySelector("#benefitSpan4");
+    const benefitItems = [
+        {
+            btn: exTutorBtn,
+            svg: benefitSVG1,
+            span: benefitSpan1,
+            key: "experiend",
+        },
+        {
+            btn: feedSupBtn,
+            svg: benefitSVG2,
+            span: benefitSpan2,
+            key: "feedBack",
+        },
+        {
+            btn: onlineLibBtn,
+            svg: benefitSVG3,
+            span: benefitSpan3,
+            key: "onlineLib",
+        },
+        {
+            btn: comunityBtn,
+            svg: benefitSVG4,
+            span: benefitSpan4,
+            key: "comunity",
+        },
+    ];
 
-function setActiveTab(selectedKey) {
-    currentBenefitBtn = selectedKey;
+    function setActiveTab(selectedKey) {
+        currentBenefitBtn = selectedKey;
+
+        benefitItems.forEach((item) => {
+            const isActive = item.key === selectedKey;
+
+            item.btn?.classList.toggle("border", isActive);
+            item.btn?.classList.toggle("border-[#FF3F3A]", isActive);
+
+            item.svg?.classList.toggle("text-[#FF3F3A]", isActive);
+            item.span?.classList.toggle("text-[#FF3F3A]", isActive);
+        });
+
+        renderBenefit();
+    }
 
     benefitItems.forEach((item) => {
-        const isActive = item.key === selectedKey;
+        item.btn?.classList.add(
+            "w-full",
+            "flex",
+            "items-center",
+            "justify-center",
+            "gap-2",
+            "py-2.5",
+            "rounded-[4px]",
+            "transition-all",
+            "duration-300",
+        );
+        item.svg?.classList.add(
+            "text-[#9A9CA5]",
+            "transition-all",
+            "duration-300",
+        );
+        item.span?.classList.add(
+            "text-[#9A9CA5]",
+            "transition-all",
+            "duration-300",
+        );
 
-        item.btn?.classList.toggle("border", isActive);
-        item.btn?.classList.toggle("border-[#FF3F3A]", isActive);
-
-        item.svg?.classList.toggle("text-[#FF3F3A]", isActive);
-        item.span?.classList.toggle("text-[#FF3F3A]", isActive);
+        item.btn?.addEventListener("click", () => setActiveTab(item.key));
     });
-
     renderBenefit();
-}
+    // ourBenefits Setion end
 
-benefitItems.forEach((item) => {
-    item.btn?.classList.add(
-        "w-full",
-        "flex",
-        "items-center",
-        "justify-center",
-        "gap-2",
-        "py-2.5",
-        "rounded-[4px]",
-        "transition-all",
-        "duration-300",
-    );
-    item.svg?.classList.add("text-[#9A9CA5]", "transition-all", "duration-300");
-    item.span?.classList.add(
-        "text-[#9A9CA5]",
-        "transition-all",
-        "duration-300",
-    );
-
-    item.btn?.addEventListener("click", () => setActiveTab(item.key));
-});
-renderBenefit();
-// ourBenefits Setion end
-
-// ourEvents Section
-const ourEvents = document.querySelector("#ourEvents");
-ourEvents.innerHTML = `
+    // ourEvents Section
+    const ourEvents = document.querySelector("#ourEvents");
+    ourEvents.innerHTML = `
     <div class=" w-full max-w-[1340px] mx-auto px-5">
         <div class="mb-[60px] md:flex md:flex-col md:items-center md:gap-2">
             <span class="font-[Lato] font-bold text-[16px] leading-[150%] text-[#1E212C]">${translateData[currentLang].ourevents.toUpperCase()}</span>
@@ -1186,11 +1210,12 @@ ourEvents.innerHTML = `
         <img src="Image/HomePagePhoto/dots (1).svg" alt="dots decoration" />
     </div>
 `;
-// our Events Section end
+    // our Events Section end
 
-// certificates Section
-const creatXCertificateSection = document.querySelector("#creatXCertificate");
-creatXCertificateSection.innerHTML = `
+    // certificates Section
+    const creatXCertificateSection =
+        document.querySelector("#creatXCertificate");
+    creatXCertificateSection.innerHTML = `
     <div class=" w-full max-w-[1340px] mx-auto px-5 lg:flex lg:justify-between lg:items-start">
         <div class="mb-[16px]">
             <div>
@@ -1223,11 +1248,11 @@ creatXCertificateSection.innerHTML = `
         </div>
     </div>
 `;
-// certificates Section end
+    // certificates Section end
 
-// bestTutors Section
-const bestTutors = document.querySelector("#bestTutors");
-bestTutors.innerHTML = `
+    // bestTutors Section
+    const bestTutors = document.querySelector("#bestTutors");
+    bestTutors.innerHTML = `
     <div class=" w-full max-w-[1340px] mx-auto px-5">
         <div>
             <span class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] text-[#1E212C] mb-2">
@@ -1274,28 +1299,28 @@ bestTutors.innerHTML = `
         </div>
     </div>
 `;
-var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    loop: true,
-    navigation: {
-        nextEl: ".custom-next-btn",
-        prevEl: ".custom-prev-btn",
-    },
-    breakpoints: {
-        320: { slidesPerView: 1, spaceBetween: 20 },
-        640: { slidesPerView: 2, spaceBetween: 20 },
-        768: { slidesPerView: 3, spaceBetween: 25 },
-        1024: { slidesPerView: 4, spaceBetween: 30 },
-    },
-});
-// bestTutors Section end
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        navigation: {
+            nextEl: ".custom-next-btn",
+            prevEl: ".custom-prev-btn",
+        },
+        breakpoints: {
+            320: { slidesPerView: 1, spaceBetween: 20 },
+            640: { slidesPerView: 2, spaceBetween: 20 },
+            768: { slidesPerView: 3, spaceBetween: 25 },
+            1024: { slidesPerView: 4, spaceBetween: 30 },
+        },
+    });
+    // bestTutors Section end
 
-// testimonials Section
-const testimonialsData = [
-    {
-        id: 1,
-        authorImage: `
+    // testimonials Section
+    const testimonialsData = [
+        {
+            id: 1,
+            authorImage: `
             <svg
                 xmlns='http://www.w3.org/2000/svg'
                 viewBox='0 0 24 24'
@@ -1310,27 +1335,27 @@ const testimonialsData = [
                 /> 
             </svg>
         `,
-        comment:
-            "Learning from Ibrohimjon Khabibullayev has been a game-changer for my career. His structured approach to complex frontend concepts, hands-on mentorship, and endless support made web development truly enjoyable and accessible. He doesn't just teach code—he inspires you to think like a real engineer!",
-        en: {
-            authorName: "Eleanor Pena",
-            position: "Frontend Developer",
-            course: "Web Development Course",
+            comment:
+                "Learning from Ibrohimjon Khabibullayev has been a game-changer for my career. His structured approach to complex frontend concepts, hands-on mentorship, and endless support made web development truly enjoyable and accessible. He doesn't just teach code—he inspires you to think like a real engineer!",
+            en: {
+                authorName: "Eleanor Pena",
+                position: "Frontend Developer",
+                course: "Web Development Course",
+            },
+            uz: {
+                authorName: "Eleanor Pena",
+                position: "Frontend Dasturchi",
+                course: "Veb Dasturlash Kursi",
+            },
+            ru: {
+                authorName: "Элеанор Пена",
+                position: "Frontend-разработчик",
+                course: "Курс веб-разработки",
+            },
         },
-        uz: {
-            authorName: "Eleanor Pena",
-            position: "Frontend Dasturchi",
-            course: "Veb Dasturlash Kursi",
-        },
-        ru: {
-            authorName: "Элеанор Пена",
-            position: "Frontend-разработчик",
-            course: "Курс веб-разработки",
-        },
-    },
-    {
-        id: 2,
-        authorImage: `
+        {
+            id: 2,
+            authorImage: `
             <svg
                 xmlns='http://www.w3.org/2000/svg'
                 viewBox='0 0 24 24'
@@ -1345,27 +1370,27 @@ const testimonialsData = [
                 /> 
             </svg>
         `,
-        comment:
-            "Ibrohimjon is an outstanding mentor with an exceptional talent for breaking down intricate JavaScript and UI architectures into crystal-clear lessons. Thanks to his real-world project guidance, I gained the confidence to tackle high-level production challenges.",
-        en: {
-            authorName: "Guy Hawkins",
-            position: "UI/UX Designer",
-            course: "Interface Design Masterclass",
+            comment:
+                "Ibrohimjon is an outstanding mentor with an exceptional talent for breaking down intricate JavaScript and UI architectures into crystal-clear lessons. Thanks to his real-world project guidance, I gained the confidence to tackle high-level production challenges.",
+            en: {
+                authorName: "Guy Hawkins",
+                position: "UI/UX Designer",
+                course: "Interface Design Masterclass",
+            },
+            uz: {
+                authorName: "Gay Hokins",
+                position: "UI/UX Dizayner",
+                course: "Interfeys Dizayni Masterklassi",
+            },
+            ru: {
+                authorName: "Гай Хокинс",
+                position: "UI/UX-дизайнер",
+                course: "Мастер-класс по дизайну интерфейсов",
+            },
         },
-        uz: {
-            authorName: "Gay Hokins",
-            position: "UI/UX Dizayner",
-            course: "Interfeys Dizayni Masterklassi",
-        },
-        ru: {
-            authorName: "Гай Хокинс",
-            position: "UI/UX-дизайнер",
-            course: "Мастер-класс по дизайну интерфейсов",
-        },
-    },
-    {
-        id: 3,
-        authorImage: `
+        {
+            id: 3,
+            authorImage: `
             <svg
                 xmlns='http://www.w3.org/2000/svg'
                 viewBox='0 0 24 24'
@@ -1380,27 +1405,27 @@ const testimonialsData = [
                 /> 
             </svg>
         `,
-        comment:
-            "Working on projects alongside Ibrohimjon Khabibullayev showed me what true professionalism looks like. His deep knowledge of modern frontend frameworks and clean coding standards helped our entire team level up significantly.",
-        en: {
-            authorName: "Kristin Watson",
-            position: "Software Engineer",
-            course: "Advanced JavaScript Course",
+            comment:
+                "Working on projects alongside Ibrohimjon Khabibullayev showed me what true professionalism looks like. His deep knowledge of modern frontend frameworks and clean coding standards helped our entire team level up significantly.",
+            en: {
+                authorName: "Kristin Watson",
+                position: "Software Engineer",
+                course: "Advanced JavaScript Course",
+            },
+            uz: {
+                authorName: "Kristin Uotson",
+                position: "Dasturiy Ta'minot Muhandisi",
+                course: "Murakkab JavaScript Kursi",
+            },
+            ru: {
+                authorName: "Кристин Уотсон",
+                position: "Инженер программного обеспечения",
+                course: "Продвинутый курс JavaScript",
+            },
         },
-        uz: {
-            authorName: "Kristin Uotson",
-            position: "Dasturiy Ta'minot Muhandisi",
-            course: "Murakkab JavaScript Kursi",
-        },
-        ru: {
-            authorName: "Кристин Уотсон",
-            position: "Инженер программного обеспечения",
-            course: "Продвинутый курс JavaScript",
-        },
-    },
-    {
-        id: 4,
-        authorImage: `
+        {
+            id: 4,
+            authorImage: `
             <svg
                 xmlns='http://www.w3.org/2000/svg'
                 viewBox='0 0 24 24'
@@ -1415,27 +1440,27 @@ const testimonialsData = [
                 /> 
             </svg>
         `,
-        comment:
-            "If you want to master frontend development with modern standards, Ibrohimjon is the mentor you need. His attention to code quality, performance optimization, and responsive design is second to none. Truly grateful for his guidance!",
-        en: {
-            authorName: "Cody Fisher",
-            position: "Full Stack Student",
-            course: "Web Application Development",
+            comment:
+                "If you want to master frontend development with modern standards, Ibrohimjon is the mentor you need. His attention to code quality, performance optimization, and responsive design is second to none. Truly grateful for his guidance!",
+            en: {
+                authorName: "Cody Fisher",
+                position: "Full Stack Student",
+                course: "Web Application Development",
+            },
+            uz: {
+                authorName: "Kodi Fisher",
+                position: "Full Stack Talabasi",
+                course: "Veb Ilova Ishlab Chiqish",
+            },
+            ru: {
+                authorName: "Коди Фишер",
+                position: "Студент Full Stack",
+                course: "Разработка веб-приложений",
+            },
         },
-        uz: {
-            authorName: "Kodi Fisher",
-            position: "Full Stack Talabasi",
-            course: "Veb Ilova Ishlab Chiqish",
-        },
-        ru: {
-            authorName: "Коди Фишер",
-            position: "Студент Full Stack",
-            course: "Разработка веб-приложений",
-        },
-    },
-];
-const testimonials = document.querySelector("#testimonials");
-testimonials.innerHTML = `
+    ];
+    const testimonials = document.querySelector("#testimonials");
+    testimonials.innerHTML = `
     <div class='w-full max-w-[1300px] mx-auto px-5'>
          
         <div class='flex flex-col items-center gap-2'>
@@ -1539,21 +1564,21 @@ testimonials.innerHTML = `
         </div> 
     </div>
 `;
-var swiper1 = new Swiper(".testimonials-swiper", {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    loop: true,
-    pagination: { el: ".testimonials-pagination", clickable: true },
-    navigation: {
-        nextEl: ".testimonials-next-btn",
-        prevEl: ".testimonials-prev-btn",
-    },
-});
-// testimonials Section end
+    var swiper1 = new Swiper(".testimonials-swiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: { el: ".testimonials-pagination", clickable: true },
+        navigation: {
+            nextEl: ".testimonials-next-btn",
+            prevEl: ".testimonials-prev-btn",
+        },
+    });
+    // testimonials Section end
 
-// ourBlog Section
-const ourBlog = document.querySelector("#ourBlog");
-ourBlog.innerHTML = `
+    // ourBlog Section
+    const ourBlog = document.querySelector("#ourBlog");
+    ourBlog.innerHTML = `
     <div class="w-full max-w-[1340px] mx-auto px-5">
         <div>
             <span class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] text-[#1E212C] mb-2">${translateData[currentLang].ourBlog.toUpperCase()}</span>
@@ -1613,27 +1638,27 @@ ourBlog.innerHTML = `
 
     </div>
 `;
-var swiper = new Swiper(".swiper3", {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    pagination: {
-        el: ".customPaginat",
-        clickable: true,
-    },
-    breakpoints: {
-        590: {
-            slidesPerView: 2,
+    var swiper = new Swiper(".swiper3", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        pagination: {
+            el: ".customPaginat",
+            clickable: true,
         },
-        768: {
-            slidesPerView: 3,
+        breakpoints: {
+            590: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 3,
+            },
         },
-    },
-});
-// ourBlog Section end
+    });
+    // ourBlog Section end
 
-// subscribeSection
-const subscribeSection = document.querySelector("#subscribeSection");
-subscribeSection.innerHTML = `
+    // subscribeSection
+    const subscribeSection = document.querySelector("#subscribeSection");
+    subscribeSection.innerHTML = `
     <div class="px-5">
         <div class="flex flex-col gap-2 mb-[60px]">
             <span class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] text-[#1E212C] text-center">${translateData[currentLang].dontmiss.toUpperCase()}</span>
@@ -1647,11 +1672,11 @@ subscribeSection.innerHTML = `
         </div>
     </div>
 `;
-// subscribeSection end
+    // subscribeSection end
 
-// footer
-const footer = document.querySelector("#footer");
-footer.innerHTML = `
+    // footer
+    const footer = document.querySelector("#footer");
+    footer.innerHTML = `
     <div class="bg-[#1E212C] pt-[50px] pb-[40px] lg:pt-[80px] lg:pb-[60px]">
         <div class="w-full max-w-[1340px] mx-auto px-5 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-12 gap-y-8 gap-x-6">
             <div class="flex flex-col lg:col-span-3 sm:col-span-1 col-span-2 order-1 lg:order-1">
@@ -1758,61 +1783,61 @@ footer.innerHTML = `
         </div>
     </div>
 `;
-const goToTopBtn = document.querySelector("#goToTopBtn");
-goToTopBtn.addEventListener("click", () => {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth",
+    const goToTopBtn = document.querySelector("#goToTopBtn");
+    goToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
     });
-});
-// footer end
+    // footer end
 
-window.addEventListener("scroll", function () {
-    const header = document.querySelector("header");
-    if (window.scrollY > 300) {
-        header.classList.add(
-            "fixed",
-            "top-0",
-            "left-0",
-            "bg-white",
-            "shadow-[0px_8px_8px_0px_rgba(0,0,0,0.1)]",
-            "z-10",
-        );
-        header.classList.remove("absolute", "bg-transparent");
-    } else {
-        header.classList.remove(
-            "fixed",
-            "top-0",
-            "left-0",
-            "bg-white",
-            "shadow-[0px_8px_8px_0px_rgba(0,0,0,0.1)]",
-            "z-10",
-        );
-        header.classList.add("absolute", "bg-transparent");
+    window.addEventListener("scroll", function () {
+        const header = document.querySelector("header");
+        if (window.scrollY > 300) {
+            header.classList.add(
+                "fixed",
+                "top-0",
+                "left-0",
+                "bg-white",
+                "shadow-[0px_8px_8px_0px_rgba(0,0,0,0.1)]",
+                "z-10",
+            );
+            header.classList.remove("absolute", "bg-transparent");
+        } else {
+            header.classList.remove(
+                "fixed",
+                "top-0",
+                "left-0",
+                "bg-white",
+                "shadow-[0px_8px_8px_0px_rgba(0,0,0,0.1)]",
+                "z-10",
+            );
+            header.classList.add("absolute", "bg-transparent");
+        }
+    });
+
+    const langBtn = document.querySelector("#langBtn");
+    const langModal = document.querySelector("#langModal");
+
+    const selectedLang = localStorage.getItem("selectedLang");
+
+    if (!localStorage.getItem("selectedLang")) {
+        localStorage.setItem("selectedLang", currentLang);
     }
-});
+    mainLangButton();
 
-const langBtn = document.querySelector("#langBtn");
-const langModal = document.querySelector("#langModal");
+    function updateLangModal() {
+        langModal.innerHTML = "";
 
-const selectedLang = localStorage.getItem("selectedLang");
+        Object.keys(translateData).forEach((langKey) => {
+            if (langKey !== currentLang) {
+                const targetLang = langKey;
 
-if (!localStorage.getItem("selectedLang")) {
-    localStorage.setItem("selectedLang", currentLang);
-}
-mainLangButton();
-
-function updateLangModal() {
-    langModal.innerHTML = "";
-
-    Object.keys(translateData).forEach((langKey) => {
-        if (langKey !== currentLang) {
-            const targetLang = langKey;
-
-            const langModalOption = document.createElement("button");
-            langModalOption.className =
-                "w-full flex items-center justify-center gap-1.5 group hover:bg-[#FF3F3A] rounded transition-all duration-300";
-            langModalOption.innerHTML = `
+                const langModalOption = document.createElement("button");
+                langModalOption.className =
+                    "w-full flex items-center justify-center gap-1.5 group hover:bg-[#FF3F3A] rounded transition-all duration-300";
+                langModalOption.innerHTML = `
                 <img
                     src="${translateData[targetLang].flag}"
                     alt="language button icon"
@@ -1820,19 +1845,19 @@ function updateLangModal() {
                 <span class="text-white text-[12px]">${translateData[targetLang].langTitle}</span>
             `;
 
-            langModalOption.addEventListener("click", () => {
-                localStorage.setItem("selectedLang", targetLang);
-                currentLang = targetLang;
-                mainLangButton();
-                updateLangModal();
-                window.location.reload();
-            });
-            langModal.appendChild(langModalOption);
-        }
-    });
-}
-function mainLangButton() {
-    langBtn.innerHTML = `
+                langModalOption.addEventListener("click", () => {
+                    localStorage.setItem("selectedLang", targetLang);
+                    currentLang = targetLang;
+                    mainLangButton();
+                    updateLangModal();
+                    window.location.reload();
+                });
+                langModal.appendChild(langModalOption);
+            }
+        });
+    }
+    function mainLangButton() {
+        langBtn.innerHTML = `
         <img
             src="${translateData[currentLang].flag}"
             alt="language button icon"
@@ -1844,19 +1869,32 @@ function mainLangButton() {
             />
         </span>
     `;
-}
+    }
 
-langBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    const downSpan = document.querySelector(".downSpan");
-    langModal.classList.toggle("hidden");
-    langModal.classList.toggle("flex");
-    downSpan.classList.toggle("rotate-180");
+    langBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const downSpan = document.querySelector(".downSpan");
+        langModal.classList.toggle("hidden");
+        langModal.classList.toggle("flex");
+        downSpan.classList.toggle("rotate-180");
+    });
+    document.addEventListener("click", () => {
+        langModal.classList.add("hidden");
+        langModal.classList.remove("flex");
+        const downSpan = document.querySelector(".downSpan");
+        if (downSpan) downSpan.classList.remove("rotate-180");
+    });
+    updateLangModal();
+
+    const loader = document.querySelector("#loader");
+
+    if (loader) {
+        setTimeout(() => {
+            loader.classList.add("opacity-0", "pointer-events-none");
+
+            setTimeout(() => {
+                loader.classList.add("hidden");
+            }, 1000);
+        }, 1000);
+    }
 });
-document.addEventListener("click", () => {
-    langModal.classList.add("hidden");
-    langModal.classList.remove("flex");
-    const downSpan = document.querySelector(".downSpan");
-    if (downSpan) downSpan.classList.remove("rotate-180");
-});
-updateLangModal();
