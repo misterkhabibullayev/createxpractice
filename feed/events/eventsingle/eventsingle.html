@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Events Single Page</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+            margin-bottom: 10000px!important;
+        }
+    </style>
+    <body>
+        <header
+            class="w-full bg-transparent absolute top-0 left-0"
+            id="headerMain"
+        ></header>
+        <main>
+            <!-- *************** Hero section *************** -->
+            <section
+                class="bg-[url('../../../Image/HomePagePhoto/backgroundHero.svg')]"
+            >
+                <div
+                    id="hero-container"
+                    class="relative w-full max-w-[1340px] mx-auto px-5"
+                >
+                    <p id="hero-badge"></p>
+                    <p id="hero-title"></p>
+                </div>
+            </section>
+            <!-- *************** Hero section *************** -->
+
+             <!-- *************** Talk about section *************** -->
+             <section id="TALKABOUT" class="w-full max-w-[1340px] mx-auto px-5 pt-[92px] pb-[48px]"></section>
+             <!-- *************** Talk about section *************** -->
+        </main>
+        <footer></footer>
+
+        <script type="module" src="eventSingle.js"></script>
+    </body>
+</html>

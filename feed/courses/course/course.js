@@ -616,7 +616,7 @@ window.addEventListener("DOMContentLoaded", () => {
         },
     };
 
-    // header
+
     const translateData = {
         en: {
             langTitle: "EN",
@@ -901,7 +901,7 @@ window.addEventListener("DOMContentLoaded", () => {
         </div>
           
 
-        <div id="dates-container" class="dates-container flex flex-col h-fit md:mx-[15px] p-6 shadow-2xl  md:max-w-[335px] lg:max-w-[350px] xl:max-w-[505px]">
+        <div id="dates-container" class="border-2 border-black dates-container flex flex-col h-fit md:mx-[15px] p-6 shadow-2xl  md:max-w-[335px] lg:max-w-[350px] xl:max-w-[505px]">
            <div class='px-2 pt-4 mb-4'>
            <h6 class='font-bold tracking-[1px] uppercase'>${aboutTheCourseData.datesPart.dates}</h6>
            <p class='text-2xl text-[rgb(255,63,58)] font-bold mb-2'>${selectedCourse[currentLang].coursesStartedDate} - ${selectedCourse[currentLang].coursesEndedDate}</p>
@@ -1396,6 +1396,7 @@ window.addEventListener("DOMContentLoaded", () => {
         programContent.innerHTML = programHTML;
 
         function lessonFunction() {
+           
             const minusBtns = document.querySelectorAll(".minusBtn");
 
             minusBtns.forEach((minus) => {
@@ -1424,6 +1425,7 @@ window.addEventListener("DOMContentLoaded", () => {
                     }
                 });
             });
+             console.log(minusBtns)
         }
         lessonFunction();
     }
@@ -1673,7 +1675,7 @@ window.addEventListener("DOMContentLoaded", () => {
             <div class='flex flex-col  items-start flex-1 shadow-lg transition-shadow duration-300 group-hover:shadow-xl border-[rgb(229,232,237)] border-[1px] rounded p-[30px]'>
                 <span class='mb-4 px-4 py-1 text-white rounded bg-[${each.backColor}] inline-block'>${each[currentLang].category}</span>
                 <h5 class='line-clamp-2 font-bold text-xl text-[rgb(30,33,44)] transition-colors duration-300  group-hover:text-red-500 py-1 mb-4'>${each.curator[currentLang].jobs}</h5>
-                <div>
+                <div class='mt-auto'>
                     <span class='text-red-500 font-bold'>$${each.coursePrice} | <span class="text-[rgb(120,122,128)]">${each.curator.curatorName}</span></span>
                 </div>
             </div>
