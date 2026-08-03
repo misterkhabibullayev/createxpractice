@@ -493,7 +493,7 @@ window.addEventListener("DOMContentLoaded", () => {
                 "max-w-full max-h-full mt-10 sm:max-w-[200px] sm:max-h-[230px] md:max-w-[243px] md:max-h-[295px] lg:max-w-[343px] lg:max-h-[426px] xl:max-w-[463px] xl:max-h-[606px] flex-shrink-0 overflow-hidden";
             const tutorImage = document.createElement("img");
             tutorImage.className = "w-full h-full object-cover";
-            tutorImage.src = ;
+            // tutorImage.src = ;
             tutorImage.alt = "Course Tutor image";
 
             tutorImageContainer.appendChild(tutorImage);
