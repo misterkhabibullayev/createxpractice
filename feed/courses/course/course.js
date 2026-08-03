@@ -901,7 +901,7 @@ window.addEventListener("DOMContentLoaded", () => {
         </div>
           
 
-        <div id="dates-container" class="border-2 border-black dates-container flex flex-col h-fit md:mx-[15px] p-6 shadow-2xl  md:max-w-[335px] lg:max-w-[350px] xl:max-w-[505px]">
+        <div id="dates-container" class="dates-container flex flex-col h-fit md:mx-[15px] p-6 shadow-2xl  md:max-w-[335px] lg:max-w-[350px] xl:max-w-[505px]">
            <div class='px-2 pt-4 mb-4'>
            <h6 class='font-bold tracking-[1px] uppercase'>${aboutTheCourseData.datesPart.dates}</h6>
            <p class='text-2xl text-[rgb(255,63,58)] font-bold mb-2'>${selectedCourse[currentLang].coursesStartedDate} - ${selectedCourse[currentLang].coursesEndedDate}</p>
@@ -944,7 +944,7 @@ window.addEventListener("DOMContentLoaded", () => {
         // Tutor part is here starts ↓
         const aboutTheCourseTutor = document.createElement("div");
         aboutTheCourseTutor.className =
-            "aboutTheCourse-tutor flex flex-col-reverse sm:flex-row mt-[96px] pb-[48px] ";
+            "aboutTheCourse-tutor flex flex-col-reverse sm:flex-row mt-[96px] pb-[48px]";
 
         const tutorImageContainer = document.createElement("div");
         tutorImageContainer.className =

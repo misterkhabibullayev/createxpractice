@@ -19,6 +19,39 @@ window.addEventListener("DOMContentLoaded", () => {
             talkAbout: {
                 intro: "We will talk about:",
             },
+            benefits: {
+                intro: {
+                    badge: "For whom?",
+                    title: "Who will benefit from the event:",
+                },
+                coreBenefit: [
+                    {
+                        icon: "../../../Image/course-images/aboutTheCourse/check.png",
+                        these: "Specialists with more than 1 year of active work experience",
+                    },
+                    {
+                        icon: "../../../Image/course-images/aboutTheCourse/check.png",
+                        these: "Mobile app designers who want to improve their skills in solving business problems, creating and testing human-centered interfaces",
+                    },
+                    {
+                        icon: "../../../Image/course-images/aboutTheCourse/check.png",
+                        these: "Professional designers who want to feel more confident in UX",
+                    },
+                ],
+            },
+            subscribeNoSkip: {
+                image: "../../../Image/eventSingle/illustration.png",
+                intro: {
+                    title: "Don’t want to miss the best events? Subscribe to our newsletter!",
+                },
+                input: {
+                    inpPlaceholder: "Your working email",
+                    button: "Subscribe",
+                    button: "Subscribe",
+                    agreement:
+                        "I agree to receive communications from Createx Online School",
+                },
+            },
         },
     };
 
@@ -327,7 +360,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
     // *************** Hero section ***************
     const heroContainer = document.getElementById("hero-container");
-
     function updateHero() {
         const heroData = locale[currentLang].hero.info;
         const heroDecorationData = locale[currentLang].hero.decoration;
@@ -357,7 +389,6 @@ window.addEventListener("DOMContentLoaded", () => {
         talkAboutContent.className = "flex flex-col md:flex-row";
         talkAboutContent.classList.add("talkAbout-content");
         TALKABOUT.appendChild(talkAboutContent);
-        console.log(talkAboutContent);
 
         let talkAboutHTML = "";
         talkAboutHTML += `
@@ -474,83 +505,57 @@ window.addEventListener("DOMContentLoaded", () => {
     }
     updateTalkAbout();
 
+    // *************** SPEAKER SECTION ***************
     function updateSpeaker() {
-        function updateAboutTheCourseTutor() {
-            const eventWithId0 = allEvents.find((event) => event.id === 0);
-            console.log(TALKABOUT);
+        const eventWithId0 = allEvents.find((event) => event.id === 0);
 
-            const SPEAKER = document.createElement("div");
-            SPEAKER.className =
-                "w-full max-w-[1340px] mx-auto px-5 pt-[92px] pb-[48px]";
-            TALKABOUT.appendChild(SPEAKER);
+        const SPEAKER = document.createElement("div");
+        SPEAKER.className =
+            "w-full max-w-[1340px] mx-auto px-5 pt-[92px] pb-[48px]";
+        TALKABOUT.appendChild(SPEAKER);
 
-            // Tutor part is here starts ↓
-            SPEAKER.className =
-                "SPEAKER flex flex-col-reverse items-stretch sm:flex-row mt-[96px] pb-[48px] h-full flex-1 border-2 border-black";
+        // Tutor part is here starts ↓
+        SPEAKER.className =
+            "SPEAKER flex flex-col-reverse items-stretch sm:flex-row mt-[96px] pb-[48px] sm:justify-between";
 
-            const tutorImageContainer = document.createElement("div");
-            tutorImageContainer.className =
-                "max-w-full max-h-full mt-10 sm:max-w-[200px] sm:max-h-[230px] md:max-w-[243px] md:max-h-[295px] lg:max-w-[343px] lg:max-h-[426px] xl:max-w-[463px] xl:max-h-[606px] flex-shrink-0 overflow-hidden";
-            const tutorImage = document.createElement("img");
-            tutorImage.className = "w-full h-full object-cover";
-            // tutorImage.src = ;
-            tutorImage.alt = "Course Tutor image";
+        const tutorImageContainer = document.createElement("div");
+        tutorImageContainer.className = "w-full sm:w-[45%]";
+        const tutorImage = document.createElement("img");
+        tutorImage.className = "w-full h-full object-cover";
+        tutorImage.src = eventWithId0.tutorAbout.img;
+        tutorImage.alt = "Course Tutor image";
 
-            tutorImageContainer.appendChild(tutorImage);
-            SPEAKER.appendChild(tutorImageContainer);
-          
+        tutorImageContainer.appendChild(tutorImage);
+        SPEAKER.appendChild(tutorImageContainer);
 
-            //
-            const speakerCourseInfo = document.createElement("div");
-            speakerCourseInfo.className =
-                "max-[992px]:ml-[0px] min-[992px]:ml-[80px] lg:ml-[105px] px-4  sm:max-w-[300px] md:max-w-[400px] lg:max-w-[450px] xl:max-w-[600px] shrink-0";
-            const tutorInfoBadge = document.createElement("h6");
-            tutorInfoBadge.textContent =
-                eventWithId0.tutorAbout[currentLang].subtitle;
-            tutorInfoBadge.className =
-                "mb-2 text-[rgb(30,33,44)] uppercase font-bold";
+        //
+        const speakerCourseInfo = document.createElement("div");
+        speakerCourseInfo.className = "w-full sm:w-[50%]";
+        const tutorInfoBadge = document.createElement("h6");
+        tutorInfoBadge.textContent =
+            eventWithId0.tutorAbout[currentLang].subtitle;
+        tutorInfoBadge.className =
+            "mb-2 text-[rgb(30,33,44)] uppercase font-bold mt-[30px]";
 
-            const tutorName = document.createElement("h1");
-            tutorName.className =
-                "mb-4 text-3xl lg:text-4xl xl:text-5xl font-black ";
-            tutorName.textContent = eventWithId0.tutorAbout[currentLang].name;
+        const tutorName = document.createElement("h1");
+        tutorName.className =
+            "mb-4 text-3xl lg:text-4xl xl:text-5xl font-bold ";
+        tutorName.textContent = eventWithId0.tutorAbout[currentLang].name;
 
-            const tutorProfession = document.createElement("p");
-            tutorProfession.className = "pb-2 mb-6 text-xl ";
-            tutorProfession.textContent =
-                eventWithId0.tutorAbout[currentLang].jobTitle;
+        const tutorProfession = document.createElement("p");
+        tutorProfession.className = "pb-2 mb-6 text-xl ";
+        tutorProfession.textContent =
+            eventWithId0.tutorAbout[currentLang].jobTitle;
 
-            const aboutCourse = document.createElement("p");
-            aboutCourse.className =
-                "text-[rgb(66,69,81)] pb-4 mb-6 w-full sm:max-w-[330px] md:max-w-full  lg:max-w-[476px]";
-            aboutCourse.textContent =
-                eventWithId0.tutorAbout[currentLang].description;
+        const aboutCourse = document.createElement("p");
+        aboutCourse.className = "text-[rgb(66,69,81)] pb-4 mb-6 w-full";
+        aboutCourse.textContent =
+            eventWithId0.tutorAbout[currentLang].description;
 
-            speakerCourseInfo.appendChild(tutorInfoBadge);
-            speakerCourseInfo.appendChild(tutorName);
-            speakerCourseInfo.appendChild(tutorProfession);
-            speakerCourseInfo.appendChild(aboutCourse);
-            SPEAKER.appendChild(speakerCourseInfo);
+        // const speakerDescription = document.createElement('p');
+        // speakerDescription.textContent = eventWithId0.tutorAbout[currentLang].description;
 
-            let speakerBusinessHTML = "";
-            speakerBusinessHTML = `
-          <div class="flex items-center gap-3">
-             ${Object.values(eventWithId0.tutorAbout.partners)
-                 .map(
-                     (brand) => `
-              <div class="pr-4 pb-4 mr-6 mb-6 ${brand.hoverColor}">${brand.svg}</div>
-          `,
-                 )
-                 .join(" ")}
-          </div>
-          `;
-
-            speakerCourseInfo.insertAdjacentHTML(
-                "beforeend",
-                speakerBusinessHTML,
-            );
-
-            const socialMediaHTML = `
+        const socialMediaHTML = `
         <div class='flex items-center gap-4'>
               ${Object.values(eventWithId0.tutorAbout.socialLinks)
                   .map(
@@ -558,7 +563,7 @@ window.addEventListener("DOMContentLoaded", () => {
                 <a
                   href="${media.link}"
                   target="_blank"
-                  class='mr-2 text-gray-400 transition-colors duration-200 ${media.hoverColor}'>
+                  class='text-gray-400 transition-colors duration-200 ${media.hoverColor}'>
                   ${media.svg}</a>
                 `,
                   )
@@ -566,11 +571,143 @@ window.addEventListener("DOMContentLoaded", () => {
         </div>
       `;
 
-            speakerCourseInfo.insertAdjacentHTML("beforeend", socialMediaHTML);
-        }
-        updateAboutTheCourseTutor();
+        const courseInfoRateCoursesStudentsContainer =
+            document.createElement("div");
+        courseInfoRateCoursesStudentsContainer.className =
+            "pb-2 mb-4 md:pb-4 md:mb-4 flex gap-4";
+
+        let speakerCollaboration = "";
+
+        Object.values(eventWithId0.tutorAbout.partners).forEach((info) => {
+            const svg = info.svg.replace(
+                "<svg",
+                `<svg class="w-[105px] h-[50px] max-[760px]:w-[52px] max-[760px]:h-[25px] block"`,
+            );
+
+            speakerCollaboration += `
+            <div class="w-[105px] h-[50px] max-[760px]:w-[52px] max-[760px]:h-[25px] flex           items-center justify-center overflow-visible">
+                     <a class="${info.hoverColor} cursor-pointer">
+                         ${svg}
+                     </a>
+            </div>
+    `;
+        });
+
+        speakerCourseInfo.appendChild(tutorInfoBadge);
+        speakerCourseInfo.appendChild(tutorName);
+        speakerCourseInfo.appendChild(tutorProfession);
+        speakerCourseInfo.appendChild(aboutCourse);
+        courseInfoRateCoursesStudentsContainer.insertAdjacentHTML(
+            "beforeend",
+            speakerCollaboration,
+        );
+        speakerCourseInfo.appendChild(courseInfoRateCoursesStudentsContainer);
+        SPEAKER.appendChild(speakerCourseInfo);
+        speakerCourseInfo.insertAdjacentHTML("beforeend", socialMediaHTML);
+
+        TALKABOUT.appendChild(SPEAKER);
     }
     updateSpeaker();
+    // *************** SPEAKER SECTION ***************
 
-    // *************** TALK ABOUT SECTION ***************
+    // *************** Who benefits section ***************
+    function updateBenefit() {
+        const eventWithId0 = allEvents.find((event) => event.id === 0);
+        const benefitData = locale[currentLang].benefits;
+
+        const BENEFITS = document.createElement("div");
+        BENEFITS.classList.add("BENEFITS");
+        BENEFITS.className = "pt-[96px]";
+        TALKABOUT.appendChild(BENEFITS);
+
+        console.log(TALKABOUT);
+
+        const badge = document.createElement("h6");
+        badge.innerHTML = benefitData.intro.badge;
+        badge.className =
+            "font-bold uppercase text-[rgb(30,33,44)] mb-2 pl-[15px]";
+        BENEFITS.appendChild(badge);
+
+        const benefitsContent = document.createElement("div");
+        benefitsContent.className =
+            "benefit-content flex flex-col md:flex-row md:items-start";
+        BENEFITS.appendChild(benefitsContent);
+
+        let benefitHTML = "";
+
+        benefitHTML += `
+            <div class='px-[15px]'>
+                
+                <h1 class='text-[rgb(30,33,44)] font-black text-3xl lg:text-5xl mb-4'>${benefitData.intro.title}</h1>
+           
+            </div>
+
+            <div class='each-benefits-container md:ml-[65px] lg:80px xl:ml-[105px] px-[15px]'>
+                ${benefitData.coreBenefit
+                    .map(
+                        (info) => `
+                        <div class='flex items-start'>
+                            <div class="w-4 h-4 mr-4 mt-2">
+                                <img class='w-full h-full object-cover' src="${info.icon}"/>
+                            </div>
+
+                            <div class='flex-1 mb-2'>
+                                <p class='pb-1'>${info.these}</p>
+                            </div>
+                        </div>
+
+                    `,
+                    )
+                    .join(" ")}
+            </div>
+        
+        `;
+
+        benefitsContent.innerHTML = benefitHTML;
+    }
+    updateBenefit();
+    // *************** Who benefits section ***************
+
+    // *************** Subscribe section ***************
+    function updateSubscribe() {
+        const subscribeNoSkipData = locale[currentLang].subscribeNoSkip;
+
+        const subscribeNoSkip = document.createElement("div");
+        subscribeNoSkip.className = "subscribeNoSkip mt-[96px]";
+        TALKABOUT.appendChild(subscribeNoSkip);
+
+        let subscribeNoSkipHTML = "";
+        subscribeNoSkipHTML += ` 
+        <div class='bg-[#F5A99F]  rounded-lg'>
+            <div class="flex flex-col md:flex-row border-2 border-black items-center justify-between px-[15px] py-12">
+
+                <div class="max-[992px]:w-[35%] min-[992px]:ml-[50px] w-[30%]">
+                    <img src="${subscribeNoSkipData.image}"/>
+                </div>
+
+                <div class='flex flex-col  max-[992px]:w-[60%] min-[992px]:w-[50%] items-start justify-between'> 
+                        <h2 class='max-w-[552px] mb-6  text-3xl font-black text-[rgb(30,33,44)] leading-[41.6px]'>${subscribeNoSkipData.intro.title}</h2>
+
+                        <div class="mb-6 flex items-center gap-6 w-full">
+                           <input
+                           class="max-w-[364px] w-full outline-none px-4 py-2.5 text-[0.875rem] border-gray-300 border-[1px] rounded text-[#424551] transition-all duration-300  focus:border-red-400/80"
+                           placeholder="${subscribeNoSkipData.input.inpPlaceholder}"/>
+
+                           <button class=" text-sm rounded py-2.5 px-8 bg-gradient-to-l from-[#F75E05] to-[#FF3F3A] text-white">${subscribeNoSkipData.input.button}</button> 
+                        </div>
+                        
+                        <label class="flex items-center gap-3 cursor-pointer">
+                            <input type="checkbox" class="w-5 h-5 accent-[rgb(255,63,58)] border-red-300 rounded-full cursor-pointer transition duration-200"
+                        />
+                            <span class="text-gray-700">${subscribeNoSkipData.input.agreement}</span>
+                        </label>
+                   
+                </div>
+            </div>    
+        `;
+
+        subscribeNoSkip.innerHTML = subscribeNoSkipHTML;
+    }
+    updateSubscribe();
+    // *************** Subscribe section ***************
 });
