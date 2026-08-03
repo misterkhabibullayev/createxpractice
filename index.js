@@ -849,7 +849,7 @@ ourEvents.innerHTML = `
                 <div class="w-full bg-white px-6 py-3 md:px-10 md:py-8 flex flex-col md:flex-row md:items-center md:gap-10">
                     <div class="w-full md:w-auto flex items-center gap-5 mb-[12px]">
                         <p class="font-[Lato] font-black text-[48px] leading-[130%] text-[#FF3F3A]">
-                            ${item.previewListGrid.date < 10 ? `0${item.previewListGrid.date}` : item.previewListGrid.date}
+                            ${item.previewListGrid.date < 10 ? `${item.previewListGrid.date}` : item.previewListGrid.date}
                         </p>
                         <div class="flex flex-col gap-1">
                             <p class="font-[Lato] font-bold text-[20px] leading-[150%] text-[#1E212C]">${item.previewListGrid[currentLang].month}</p>
