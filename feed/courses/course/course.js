@@ -944,7 +944,7 @@ window.addEventListener("DOMContentLoaded", () => {
         // Tutor part is here starts ↓
         const aboutTheCourseTutor = document.createElement("div");
         aboutTheCourseTutor.className =
-            "aboutTheCourse-tutor flex flex-col-reverse sm:flex-row mt-[96px] pb-[48px] ";
+            "aboutTheCourse-tutor flex flex-col-reverse sm:flex-row mt-[96px] pb-[48px]";
 
         const tutorImageContainer = document.createElement("div");
         tutorImageContainer.className =
