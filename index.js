@@ -300,7 +300,7 @@ window.addEventListener("DOMContentLoaded", () => {
                     class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
                 >${translateData[currentLang].navCourses}</a>
                 <a
-                    href="./feed/events/events.html"
+                    href="/feed/events/events.html"
                     class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
                 >${translateData[currentLang].navEvents}</a>
                 <a

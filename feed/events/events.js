@@ -1,5 +1,6 @@
 import { allEvents } from "../../AllEvents.js";
 import { locale } from "./jsForBoth.js";
+console.log(locale)
 
 window.addEventListener("DOMContentLoaded", () => {
     let currentLang = localStorage.getItem("selectedLang") || "en";
