@@ -1454,7 +1454,7 @@ footer.innerHTML = `
                         <input type="email" placeholder="${translateData[currentLang].signUpNewsLatterPlaceholder}" class="flex-1 pr-3 bg-transparent font-[Lato] font-normal text-[12px] leading-[150%] text-white focus:text-black outline-none placeholder:text-[#A5A6AB]">
                         <img src="Image/HomePagePhoto/footerRight.svg" class="w-4 h-4"/>
                     </div>
-                    <p class="mt-[12px] font-[Lato] font-normal text-[10px] leading-[150%] text-white opacity-60 max-w-[290px] line-clamp-2">${translateData.en.signUpSubscribe}</p>
+                    <p class="mt-[12px] font-[Lato] font-normal text-[10px] leading-[150%] text-white opacity-60 max-w-[290px] line-clamp-2">${translateData[currentLang].signUpSubscribe}</p>
                 </form>
             </div>
         </div>
@@ -1477,7 +1477,6 @@ goToTopBtn.addEventListener("click", () => {
 });
 // footer end
 
-// >>>>>>> 428266ee9c97b7ca953ea5a86dcb57b7b3cb0cef
 window.addEventListener("scroll", function () {
     const header = document.querySelector("header");
     if (window.scrollY > 300) {
