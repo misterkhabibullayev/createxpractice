@@ -1370,7 +1370,7 @@ footer.innerHTML = `
                     <img src="Image/HomePagePhoto/footerlogo.svg" alt="footer logo" class="" />
                 </a>
                 <p class="font-[Lato] font-normal text-[12px] leading-[150%] text-white opacity-60 max-w-full line-clamp-5 mt-[24px] mb-[38px]">${translateData[currentLang].footerDescription}</p>
-                <div class="flex items-center gap-5 mb-4">
+                <div class="flex items-center gap-5 mb-4 flex-wrap">
                     <a href="https://facebook.com/" aria-label="Facebook">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="text-[#A5A6AB] hover:text-white transition-all duration-300">
                             <path d="M0 0h24v24H0z" fill="none" />
