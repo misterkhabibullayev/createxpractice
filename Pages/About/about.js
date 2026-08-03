@@ -480,7 +480,7 @@ let currentLang = localStorage.getItem("selectedLang") || "en";
 // header start
 const headerMain = document.querySelector("#headerMain");
 headerMain.innerHTML = `
-<div class="w-full max-w-[1300px] mx-auto px-5 flex justify-between items-center py-5">
+<div class="w-full max-w-[1340px] mx-auto px-5 flex justify-between items-center py-5">
     <div class="flex items-center gap-7 md:gap-10">
             <a href="/index.html">
                 <img
@@ -850,7 +850,7 @@ bestTutors.innerHTML = `
 // testimonials start
 const testimonials = document.querySelector("#testimonials");
 testimonials.innerHTML = `
- <div class="w-full max-w-[1300px] mx-auto px-5">
+ <div class="w-full max-w-[1340px] mx-auto px-5">
     <div class="mx-auto items-center text-center mb-5 md:mb-8">
         <h6 class="text-[#1E212C] font-bold text-base leading-[150%]">
          ${translateLang[currentLang].section7.section7_name}</h6>
@@ -1019,22 +1019,22 @@ ourBlog.innerHTML = `
                 </div>
                 <div>
                     <div class="flex flex-wrap gap-3 mb-2">
-                        <span class="flex items-center font-bold text-[14px] leading-[150%] text-[#787A80]">${post[currentLang].category} 
+                        <span class="flex items-center font-bold text-sm leading-[150%] text-[#787A80]">${post[currentLang].category} 
                             <span class="inline-block w-[1px] h-3 bg-[#787A80] rounded-[1px] ml-3"></span></span>
                         <div class="flex items-center gap-2">
                             <img src="../../Image/HomePagePhoto/Calendar.svg" />
-                            <span class="flex items-center whitespace-nowrap font-bold text-[14px] leading-[150%] text-[#787A80]">${post[currentLang].date}
+                            <span class="flex items-center whitespace-nowrap font-bold text-sm leading-[150%] text-[#787A80]">${post[currentLang].date}
                                 <span class="inline-block w-[1px] h-3 bg-[#787A80] rounded-[1px] ml-3"></span>
                             </span>
                         </div>
-                        <span class="flex items-center gap-2 whitespace-nowrap font-bold text-[14px] leading-[150%] text-[#787A80]">
-                            <img src="../../Image/HomePagePhoto/Clock.svg" class=""/>
+                        <span class="flex items-center gap-2 whitespace-nowrap font-bold text-sm leading-[150%] text-[#787A80]">
+                            <img src="../../Image/HomePagePhoto/Clock.svg"/>
                                 ${post[currentLang].duration} </span>
                     </div>
                     <div>
-                        <a href="#" class="font-bold text-[20px] leading-[150%] text-[#1E212C] hover:text-[#ff3f3a] transition-all duration-300">${post[currentLang].title}</a>
-                        <p class="line-clamp-2 font-normal text-[16px] leading-[160%] text-[#424551] mt-2 mb-4">${post[currentLang].description}</p>
-                        <a href="#" class="font-bold text-[16px] leading-[160%] text-[#1E212C] hover:text-[#ff3f3a] transition-all duration-300 flex items-center gap-2 hover:gap-4">${post[currentLang].action} 
+                        <a href="#" class="font-bold text-xl leading-[150%] text-[#1E212C] hover:text-[#ff3f3a] transition-all duration-300">${post[currentLang].title}</a>
+                        <p class="line-clamp-2 font-normal text-base leading-[160%] text-[#424551] mt-2 mb-4">${post[currentLang].description}</p>
+                        <a href="#" class="font-bold text-base leading-[160%] text-[#1E212C] hover:text-[#ff3f3a] transition-all duration-300 flex items-center gap-2 hover:gap-4">${post[currentLang].action} 
                             <img src="../../Image/HomePagePhoto/right.svg" /></a>
                     </div>
                 </div>
