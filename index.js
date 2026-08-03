@@ -240,23 +240,23 @@ headerMain.innerHTML = `
             </div>
             <nav class="hidden lg:flex items-center gap-4 xl:gap-8">
                 <a
-                    href="./Pages/About/about.html"
+                    href="./feed/about/about.html"
                     class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
                 >${translateData[currentLang].navAbout}</a>
                 <a
-                    href="./Pages/Courses/courses.html"
+                    href="./feed/courses/courses.html"
                     class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
                 >${translateData[currentLang].navCourses}</a>
                 <a
-                    href="./Pages/Events/events.html"
+                    href="./feed/events/events.html"
                     class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
                 >${translateData[currentLang].navEvents}</a>
                 <a
-                    href="./Pages/Blogs/blogs.html"
+                    href="./feed/blogs/blogs.html"
                     class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
                 >${translateData[currentLang].navBlog}</a>
                 <a
-                    href="./Pages/Contacts/contacts.html"
+                    href="./feed/contacts/contacts.html"
                     class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
                 >${translateData[currentLang].navContacts}</a>
             </nav>
@@ -264,7 +264,7 @@ headerMain.innerHTML = `
         <div class="flex items-center gap-3 md:gap-4">
             <div class="flex items-center gap-3 md:gap-4">
                 <a
-                    href="./Pages/Contacts/contacts.html"
+                    href="./feed/contacts/contacts.html"
                     class="font-[Lato] font-bold text-[12px] leading-8 tracking-[0.5px] text-white bg-gradient-to-r from-[#FF3F3A] to-[#F75E05] px-5 rounded-[4px] hidden sm:inline-block hover:bg-gradient-to-l hover:from-[#F75E05] hover:to-[#FF3F3A]"
                 >
                     ${translateData[currentLang].getConsultation}
@@ -301,23 +301,23 @@ headerMain.innerHTML = `
         <div id="burgerModal" class="absolute top-full left-0 px-5 w-full flex lg:hidden overflow-hidden transition-all duration-300 origin-top [transform:rotateX(90deg)]">
             <nav class="flex flex-col bg-white w-full">
                 <a
-                    href="./Pages/About/about.html"
+                    href="./feed/about/about.html"
                     class="block w-full px-4 py-2 font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
                 >${translateData[currentLang].navAbout}</a>
                 <a
-                    href="./Pages/Courses/courses.html"
+                    href="./feed/courses/courses.html"
                     class="inline-block w-full px-4 py-2 font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
                 >${translateData[currentLang].navCourses}</a>
                 <a
-                    href="./Pages/Events/events.html"
+                    href="./feed/events/events.html"
                     class="inline-block w-full px-4 py-2 font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
                 >${translateData[currentLang].navEvents}</a>
                 <a
-                    href="./Pages/Blogs/blogs.html"
+                    href="./feed/blogs/blogs.html"
                     class="inline-block w-full px-4 py-2 font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
                 >${translateData[currentLang].navBlog}</a>
                 <a
-                    href="./Pages/Contacts/contacts.html"
+                    href="./feed/contacts/contacts.html"
                     class="inline-block w-full px-4 py-2 font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
                 >${translateData[currentLang].navContacts}</a>
                 <a
@@ -333,7 +333,7 @@ headerMain.innerHTML = `
                 </a>
                 <div class="">
                     <a
-                        href="./Pages/Contacts/contacts.html"
+                        href="./feed/contacts/contacts.html"
                         class="font-[Lato] font-bold text-[12px] leading-8 tracking-[0.5px] text-white bg-gradient-to-r from-[#FF3F3A] to-[#F75E05] px-5 rounded-[4px] inline-block mx-4 my-2 sm:hidden hover:bg-gradient-to-l hover:from-[#F75E05] hover:to-[#FF3F3A]"
                     >
                         ${translateData[currentLang].getConsultation}
@@ -400,11 +400,11 @@ heroSection.innerHTML = `
                     class="flex flex-col items-center justify-center md:flex-row md:justify-center lg:justify-start gap-[24px]"
                 >
                     <a
-                        href="./Pages/About/about.html"
+                        href="./feed/about/about.html"
                         class="py-1 px-[40px] font-[Lato] font-normal text-[16px] leading-8 tracking-[0.5px] text-[#F75E05] border-[1px] border-[#F75E05] rounded-[4px] hover:bg-[#F75E05] hover:text-white transition-all duration-300 hover:shadow-[0px_4px_4px_0px_#F75E0580]"
                     >${translateData[currentLang].navAbout}</a>
                     <a
-                        href="./Pages/Courses/courses.html"
+                        href="./feed/courses/courses.html"
                         class="py-1 px-[40px] font-[Lato] font-normal text-[16px] leading-8 tracking-[0.5px] text-white border-[1px] border-[#F75E05] rounded-[4px] bg-[#F75E05] transition-all duration-300 hover:shadow-[0px_4px_4px_0px_#F75E0580]"
                     >${translateData[currentLang].exploreCourses}</a>
                 </div>
@@ -574,7 +574,7 @@ whoweare.innerHTML = `
 
             <div>
                 <a
-                    href="./Pages/About/about.html"
+                    href="./feed/about/about.html"
                     class="inline-block py-2 px-[32px] font-[Lato] font-normal text-[16px] leading-8 tracking-[0.5px] text-white border-[1px] border-[#F75E05] rounded-[4px] bg-[#F75E05] transition-all duration-300 hover:shadow-[0px_4px_4px_0px_#F75E0580]"
                 >
                     ${translateData[currentLang].moreAboutUs}
@@ -596,7 +596,7 @@ featuredCoursesSection.innerHTML = `
         </div>
         <div class="flex justify-between items-center mb-11">
             <h1 class="font-[Lato] font-black text-[30px] md:text-[46px] leading-[130%] text-[#1E212C]">${translateData[currentLang].featuredCourses}</h1>
-            <a href="./Pages/Courses/courses.html" class="hidden md:block px-[40px] font-[Lato] font-bold text-[16px] leading-[52px] tracking-[0.5px] text-[#F75E05] border border-[#F75E05] rounded-[4px] hover:bg-[#FF3F3A] hover:text-white transition-all duration-300">${translateData[currentLang].viewAllCourses}</a>
+            <a href="./feed/courses/courses.html" class="hidden md:block px-[40px] font-[Lato] font-bold text-[16px] leading-[52px] tracking-[0.5px] text-[#F75E05] border border-[#F75E05] rounded-[4px] hover:bg-[#FF3F3A] hover:text-white transition-all duration-300">${translateData[currentLang].viewAllCourses}</a>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-[30px]">
             ${allCourses
@@ -604,7 +604,7 @@ featuredCoursesSection.innerHTML = `
                 .map((item) => {
                     const currentLangData = item[currentLang];
                     return `
-                    <a href="Pages/Courses/course/course.html" class="w-full md:flex  rounded-[4px] overflow-hidden">
+                    <a href="feed/courses/course/course.html" class="w-full md:flex  rounded-[4px] overflow-hidden">
                         <div class="w-full aspect-video md:w-1/3 md:aspect-square">
                             <img
                                 src='${item.curatorTitleImg}'
@@ -849,7 +849,7 @@ ourEvents.innerHTML = `
                 <div class="w-full bg-white px-6 py-3 md:px-10 md:py-8 flex flex-col md:flex-row md:items-center md:gap-10">
                     <div class="w-full md:w-auto flex items-center gap-5 mb-[12px]">
                         <p class="font-[Lato] font-black text-[48px] leading-[130%] text-[#FF3F3A]">
-                            ${item.previewListGrid.date < 10 ? `0${item.previewListGrid.date}` : item.previewListGrid.date}
+                            ${item.previewListGrid.date < 10 ? `${item.previewListGrid.date}` : item.previewListGrid.date}
                         </p>
                         <div class="flex flex-col gap-1">
                             <p class="font-[Lato] font-bold text-[20px] leading-[150%] text-[#1E212C]">${item.previewListGrid[currentLang].month}</p>
@@ -858,7 +858,7 @@ ourEvents.innerHTML = `
                     </div>
                     <div class="flex flex-col md:flex-row md:justify-between md:items-center md:flex-1 md:gap-10">
                         <div>
-                            <a href="./Pages/Events/event.html" class="inline-block flex-shrink-0 font-[Lato] font-bold text-[20px] leading-[150%] text-[#1E212C] pb-[8px]">
+                            <a href="./feed/events/event.html" class="inline-block flex-shrink-0 font-[Lato] font-bold text-[20px] leading-[150%] text-[#1E212C] pb-[8px]">
                                 ${item.previewListGrid[currentLang].previewTitle}
                             </a>
                             <p class="font-[Lato] font-normal text-[16px] leading-[150%] text-[#1E212C]">
@@ -867,7 +867,7 @@ ourEvents.innerHTML = `
                         </div>
                         <div class="mt-5 md:mt-0 py-2">
                             <a
-                                href="./Pages/Events/event.html"
+                                href="./feed/events/event.html"
                                 class="inline-block w-full md:w-auto text-center py-1 px-[32px] font-[Lato] font-normal text-[16px] leading-8 tracking-[0.5px] text-[#F75E05] border-[1px] border-[#F75E05] rounded-[4px] bg-transparent  transition-all duration-300 hover:shadow-[0px_4px_4px_0px_#F75E0580] hover:bg-[#F75E05] hover:text-white whitespace-nowrap">
                                 ${item.previewListGrid[currentLang].viewMore}
                             </a>
@@ -883,7 +883,7 @@ ourEvents.innerHTML = `
                 <p class="font-[Lato] font-bold text-[28px] leading-[150%] text-[#1E212C]">
                     ${translateData[currentLang].doyouwatnmore}
                 </p>
-                <a href="./Pages/Events/events.html" class="inline-block py-2 px-[32px] font-[Lato] font-normal text-[16px] leading-8 tracking-[0.5px] text-white border-[1px] border-[#F75E05] rounded-[4px] bg-[#F75E05] transition-all duration-300 hover:shadow-[0px_4px_4px_0px_#F75E0580]">
+                <a href="./feed/events/events.html" class="inline-block py-2 px-[32px] font-[Lato] font-normal text-[16px] leading-8 tracking-[0.5px] text-white border-[1px] border-[#F75E05] rounded-[4px] bg-[#F75E05] transition-all duration-300 hover:shadow-[0px_4px_4px_0px_#F75E0580]">
                     ${translateData[currentLang].exploreAllEvents}
                 </a>
             </div>
@@ -1197,9 +1197,7 @@ testimonials.innerHTML = `
                                                     }
                                                 </h4> 
                                                 <p class='font-[Lato] font-normal text-[14px] leading-[150%] text-[#787A80] text-center md:text-left'>
-                                                    ${item[currentLang].position}
-                                                    , $
-                                                    {item[currentLang].course}
+                                                    ${item[currentLang].position}, ${item[currentLang].course}
                                                 </p> 
                                             </div> 
                                         </div> 
@@ -1273,7 +1271,7 @@ ourBlog.innerHTML = `
         </div>
         <div class="flex justify-between items-center mb-11">
             <h1 class="font-[Lato] font-black text-[30px] md:text-[46px] leading-[130%] text-[#1E212C]">${translateData[currentLang].latestPosts}</h1>
-            <a href="./Pages/Courses/courses.html" class="hidden md:block px-[40px] font-[Lato] font-bold text-[16px] leading-[52px] tracking-[0.5px] text-[#F75E05] border border-[#F75E05] rounded-[4px] hover:bg-[#FF3F3A] hover:text-white transition-all duration-300">${translateData[currentLang].goBlog}</a>
+            <a href="./feed/courses/courses.html" class="hidden md:block px-[40px] font-[Lato] font-bold text-[16px] leading-[52px] tracking-[0.5px] text-[#F75E05] border border-[#F75E05] rounded-[4px] hover:bg-[#FF3F3A] hover:text-white transition-all duration-300">${translateData[currentLang].goBlog}</a>
         </div>
         <div class="swiper swiper3">
             <div class="swiper-wrapper">
@@ -1344,7 +1342,6 @@ var swiper = new Swiper(".swiper3", {
 });
 // ourBlog Section end
 
-// <<<<<<< HEAD// >>>>>>> 881d6a4392fade75368e33de69e89d04eb2a3126
 // subscribeSection
 const subscribeSection = document.querySelector("#subscribeSection");
 subscribeSection.innerHTML = `
@@ -1373,7 +1370,7 @@ footer.innerHTML = `
                     <img src="Image/HomePagePhoto/footerlogo.svg" alt="footer logo" class="" />
                 </a>
                 <p class="font-[Lato] font-normal text-[12px] leading-[150%] text-white opacity-60 max-w-full line-clamp-5 mt-[24px] mb-[38px]">${translateData[currentLang].footerDescription}</p>
-                <div class="flex items-center gap-5 mb-4">
+                <div class="flex items-center gap-5 mb-4 flex-wrap">
                     <a href="https://facebook.com/" aria-label="Facebook">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="text-[#A5A6AB] hover:text-white transition-all duration-300">
                             <path d="M0 0h24v24H0z" fill="none" />
@@ -1415,11 +1412,11 @@ footer.innerHTML = `
             <div class="lg:col-span-2 sm:col-span-2 order-1 sm:order-4 lg:order-2">
                 <h3 class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] mb-[12px] text-white">${translateData[currentLang].siteMap.toUpperCase()}</h3>
                 <div class="flex gap-6 sm:flex-row flex-col lg:flex-col lg:gap-2">
-                    <a href="Pages/About/about.html" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateData[currentLang].navAbout}</a>
-                    <a href="Pages/Courses/courses.html" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateData[currentLang].navCourses}</a>
-                    <a href="Pages/Events/events.html" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateData[currentLang].navEvents}</a>
-                    <a href="Pages/Blogs/blogs.html" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateData[currentLang].navBlog}</a>
-                    <a href="Pages/Contacts/contacts.html" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateData[currentLang].navContacts}</a>
+                    <a href="feed/about/about.html" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateData[currentLang].navAbout}</a>
+                    <a href="feed/courses/courses.html" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateData[currentLang].navCourses}</a>
+                    <a href="feed/events/events.html" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateData[currentLang].navEvents}</a>
+                    <a href="feed/blogs/blogs.html" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateData[currentLang].navBlog}</a>
+                    <a href="feed/contacts/contacts.html" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateData[currentLang].navContacts}</a>
                 </div>
             </div>
             <div class="lg:col-span-2 sm:col-span-2 order-2 sm:order-5 lg:order-3">
@@ -1458,7 +1455,7 @@ footer.innerHTML = `
                         <input type="email" placeholder="${translateData[currentLang].signUpNewsLatterPlaceholder}" class="flex-1 pr-3 bg-transparent font-[Lato] font-normal text-[12px] leading-[150%] text-white focus:text-black outline-none placeholder:text-[#A5A6AB]">
                         <img src="Image/HomePagePhoto/footerRight.svg" class="w-4 h-4"/>
                     </div>
-                    <p class="mt-[12px] font-[Lato] font-normal text-[10px] leading-[150%] text-white opacity-60 max-w-[290px] line-clamp-2">${translateData.en.signUpSubscribe}</p>
+                    <p class="mt-[12px] font-[Lato] font-normal text-[10px] leading-[150%] text-white opacity-60 max-w-[290px] line-clamp-2">${translateData[currentLang].signUpSubscribe}</p>
                 </form>
             </div>
         </div>
@@ -1481,7 +1478,6 @@ goToTopBtn.addEventListener("click", () => {
 });
 // footer end
 
-// >>>>>>> 428266ee9c97b7ca953ea5a86dcb57b7b3cb0cef
 window.addEventListener("scroll", function () {
     const header = document.querySelector("header");
     if (window.scrollY > 300) {
