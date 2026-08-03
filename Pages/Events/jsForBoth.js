@@ -5,8 +5,8 @@ export const locale = {
             title: "Lectures, workshops & master-classes",
             perPage: "events per page",
         },
-        sort: [
-            {
+        sortings: {
+            eventCategory: {
                 label: "Event category",
                 for: "event-category",
                 option: [
@@ -17,7 +17,7 @@ export const locale = {
                     { opt: "Online workshop" },
                 ],
             },
-            {
+            sortBy: {
                 label: "Sort by",
                 for: "event-sort",
                 option: [
@@ -27,7 +27,7 @@ export const locale = {
                     { opt: "All Oldest" },
                 ],
             },
-            {
+            show: {
                 label: "Show",
                 for: "event-show",
                 option: [
@@ -37,7 +37,7 @@ export const locale = {
                     { opt: "36" },
                 ],
             },
-        ],
+        },
         lectureDetails: [
             {
                 dateDay: "05",
@@ -115,6 +115,7 @@ export const locale = {
         input: {
             placeholder: "Search events",
         },
+        
         subscribe: {
             intro: {
                 badge: "Don’t miss anything",

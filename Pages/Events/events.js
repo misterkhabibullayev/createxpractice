@@ -310,34 +310,57 @@ window.addEventListener("DOMContentLoaded", () => {
         const eventsViewData = locale[currentLang];
 
         let eventsListContent = `
-        <div class="w-full max-w-[1300px] mx-auto px-5 mt-6">
+        <div>
           <h6 class="text-[#1e212c] font-bold pb-2 uppercase tracking-[.0625rem] text-center">${eventsViewData.intro.badge}</h6>
-          <h1 class="font-black leading-tight text-[#1e212c] text-center uppercase text-[2.875rem] pb-2 mb-12">${eventsViewData.intro.title}</h1>
+          <h1 class="font-black leading-tight text-[#1e212c] text-center uppercase  text-3xl md:text-4xl lg:text-[2.875rem] pb-2 mb-12">${eventsViewData.intro.title}</h1>
 
-          <form class="flex items-center pb-6">
-              ${eventsViewData.sort
-                  .map(
-                      (event) => `
-                <div class="mb-4 lg:mx-2  xl:mx-4 flex items-center gap-2">
-                  <label class="lg:whitespace-nowrap" for="${event.for}">${event.label}</label>
-                  <select id="${event.for}" class="selects cursor-pointer lg:py-2 lg:px-4 xl:py-2.5 xl:pl-4 pr-12 border rounded outline-none active:border-red-500">
-                    ${event.option
+
+           <form class="flex flex-wrap items-center gap-3 pb-6 justify-between">
+            
+                <div class="max-[550px]:flex max-[550px]:flex-col max-[550px]:items-start flex-row gap-1 items-center grow">
+                    <label for="${eventsViewData.sortings.eventCategory.for}">${eventsViewData.sortings.eventCategory.label}</label>
+                    <select id="${eventsViewData.sortings.eventCategory.for}" class="max-[550px]:w-full grow selects cursor-pointer py-2.5 pl-4 pr-12 border rounded outline-none active:border-red-500">
+                    ${eventsViewData.sortings.eventCategory.option
                         .map(
                             (opt) => `
-                      <option>${opt.opt}</option>
-                      `,
+                            <option>${opt.opt}</option>
+                        `,
                         )
                         .join(" ")}
-                  </select>
+                    </select>
+                </div>
 
-              </div>
-                `,
-                  )
-                  .join(" ")}
-                    <span class="lg:whitespace-nowrap mb-4 mr-6">${eventsViewData.intro.perPage}</span>
+                 <div class="max-[550px]:flex max-[550px]:flex-col max-[550px]:items-start max-[550px]:my-4 flex gap-1 items-center  max-[550px]:w-full sm:grow">
+                    <label for="${eventsViewData.sortings.sortBy.for}">${eventsViewData.sortings.sortBy.label}</label>
+                    <select id="${eventsViewData.sortings.sortBy.for}" class="max-[550px]:w-full grow selects cursor-pointer py-2.5 pl-4 pr-12 border rounded outline-none active:border-red-500">
+                    ${eventsViewData.sortings.sortBy.option
+                        .map(
+                            (opt) => `
+                            <option>${opt.opt}</option>
+                        `,
+                        )
+                        .join(" ")}
+                    </select>
+                </div>
+
+                                 <div class="max-[550px]:flex max-[550px]:flex-col max-[550px]:mb-4 max-[550px]:items-start flex gap-1 items-center max-[550px]:w-full grow">
+                    <label for="${eventsViewData.sortings.show.for}">${eventsViewData.sortings.show.label}</label>
+                    <select id="${eventsViewData.sortings.show.for}" class="max-[550px]:w-full grow selects cursor-pointer py-2.5 pl-4 pr-12 border rounded outline-none active:border-red-500">
+                    ${eventsViewData.sortings.show.option
+                        .map(
+                            (opt) => `
+                            <option>${opt.opt}</option>
+                        `,
+                        )
+                        .join(" ")}
+                    </select>
+                    <span class="hidden min-[550px]:block min-[550px]:text-[rgb(120,122,128)]">${eventsViewData.intro.perPage}</span>
+                </div>
+       
                     
-                  <div class="mb-4 relative">
-                       <input class="selects selects cursor-pointer py-2.5 pl-4 pr-12 border rounded outline-none active:border-red-500" placeholder="${eventsViewData.input.placeholder}"/>
+                <div class="flex grow">  
+                  <div class="relative w-full">
+                       <input class="w-full selects selects cursor-pointer py-2.5 pl-4 pr-12 border rounded outline-none active:border-red-500" placeholder="${eventsViewData.input.placeholder}"/>
                     <div class="search-icon-btn cursor-pointer absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500">
                             <span><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 1024 1024">
                               <path d="M0 0h1024v1024H0z" fill="none" />
@@ -346,72 +369,73 @@ window.addEventListener("DOMContentLoaded", () => {
                             </span> 
                         </div>
                   </div>
-                 <div class="flex items-center gap-2 mb-6 px-4">
-  
 
-  <a href="#" class="w-[30px] h-[30px] flex items-center justify-center text-red-500 hover:text-red-500 transition-colors" aria-label="List View">
-    <svg 
-      xmlns="http://w3.org" 
-      viewBox="0 0 24 24" 
-      class="w-6 h-6" 
-      fill="none" 
-      stroke="currentColor" 
-      stroke-width="2"
-      stroke-linecap="round" 
-      stroke-linejoin="round"
-    >
-      <rect x="3" y="5" width="18" height="5" rx="1" />
-      <rect x="3" y="14" width="18" height="5" rx="1" />
-    </svg>
-  </a>
+                    <div class="items-center gap-2 hidden min-[550px]:flex">
+                    <a href="./events.html" class="w-[30px] h-[30px] flex items-center justify-center text-red-500 hover:text-red-500 transition-colors" aria-label="List View">
+                    <svg 
+                    xmlns="http://w3.org" 
+                    viewBox="0 0 24 24" 
+                    class="w-6 h-6" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    stroke-width="2"
+                    stroke-linecap="round" 
+                    stroke-linejoin="round"
+                    >
+                    <rect x="3" y="5" width="18" height="5" rx="1" />
+                    <rect x="3" y="14" width="18" height="5" rx="1" />
+                    </svg>
+                    </a>
 
- 
-  <a href="./event/event.html" class="w-[30px] h-[30px] flex items-center justify-center text-gray-500 hover:text-red-500 transition-colors" aria-label="Grid View">
-    <svg 
-      xmlns="http://w3.org" 
-      viewBox="0 0 24 24" 
-      class="w-6 h-6" 
-      fill="none" 
-      stroke="currentColor" 
-      stroke-width="2"
-      stroke-linecap="round" 
-      stroke-linejoin="round"
-    >
-      <rect x="4" y="4" width="6" height="6" rx="1" />
-      <rect x="4" y="14" width="6" height="6" rx="1" />
-      <rect x="14" y="4" width="6" height="6" rx="1" />
-      <rect x="14" y="14" width="6" height="6" rx="1" />
-    </svg>
-  </a>
 
-</div>
+                    <a href="./event/event.html" class="w-[30px] h-[30px] flex items-center justify-center text-gray-500 hover:text-red-500 transition-colors" aria-label="Grid View">
+                    <svg 
+                    xmlns="http://w3.org" 
+                    viewBox="0 0 24 24" 
+                    class="w-6 h-6" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    stroke-width="2"
+                    stroke-linecap="round" 
+                    stroke-linejoin="round"
+                    >
+                    <rect x="4" y="4" width="6" height="6" rx="1" />
+                    <rect x="4" y="14" width="6" height="6" rx="1" />
+                    <rect x="14" y="4" width="6" height="6" rx="1" />
+                    <rect x="14" y="14" width="6" height="6" rx="1" />
+                    </svg>
+                    </a>
+                    </div>
+             </div>
 
-          </form>
+        </div>  
 
-          <div>
+        </form>
+
+                  <div>
             ${allEvents
                 .map(
                     (eachEvent) => `
-                <div class="flex gap-4 border px-12 mb-6 rounded items-stretch hover:shadow-xl transition-all duration-400">
-                  <div class="w-full flex justify-between items-center">
+                <div class="flex gap-4 border px-6 sm:px-12 mb-6 rounded items-stretch hover:shadow-xl transition-all duration-400">
+                  <div class="w-full  sm:flex justify-between  items-start md:items-center">
 
                   <div class="flex items-center my-6 py-2">
                     <div>
                     <span class="text-5xl font-black text-[rgb(255,63,58)]">${eachEvent.previewListGrid.date}</span>
                     </div>
-                      <div class="flex flex-col items-center ml-4">
+                      <div class="flex flex-col items-start ml-4">
                         <h6 class="text-xl font-bold mb-1 text-[rgb(30,33,44)] ">${eachEvent.previewListGrid[currentLang].month}</h6>
                         <span class="text-[rgb(120,122,128)]">${eachEvent.previewListGrid.startTime} ${eachEvent.previewListGrid.endTime}</span>
                       </div>
                   </div>
                     
-                      <div class="m-6 px-4 py-2 flex-1">
+                      <div class=" sm:m-6 sm:px-4 sm:py-2 flex-1">
                         <h3 class="mb-1 text-[rgb(30,33,44)] font-bold text-xl">${eachEvent.previewListGrid[currentLang].previewTitle}</h3>
                         <span class="text-[rgb(120,122,128)] ">${eachEvent.previewListGrid[currentLang].category}</span>
                       </div>
 
-                      <div class="py-2  my-6">
-                        <button class="px-8 py-2.5 font-normal text-[16px] leading-8 tracking-[0.5px] text-[#F75E05] border-[1px] border-[#F75E05] rounded-[4px] hover:bg-[#F75E05] hover:text-white transition-all duration-300 hover:shadow-[0px_4px_4px_0px_#F75E0580]">${eachEvent.previewListGrid[currentLang].viewMore}</button>
+                      <div class="max-[575px]:w-full  py-2  my-6">
+                        <button class="w-full px-8 py-2.5 font-normal text-[16px] leading-8 tracking-[0.5px] text-[#F75E05] border-[1px] border-[#F75E05] rounded-[4px] hover:bg-[#F75E05] hover:text-white transition-all duration-300 hover:shadow-[0px4px4px0px#F75E0580]">${eachEvent.previewListGrid[currentLang].viewMore}</button>
                       </div>
 
                   </div>
@@ -420,6 +444,8 @@ window.addEventListener("DOMContentLoaded", () => {
                 )
                 .join(" ")}
           </div>
+
+
         </div>
         `;
 
