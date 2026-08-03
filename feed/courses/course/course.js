@@ -400,220 +400,220 @@ window.addEventListener("DOMContentLoaded", () => {
                 },
             },
         },
-     uz: {
-    hero: {
-        info: {
-            badge: "kurs",
-            title: "Foydalanuvchi tajribasi. Inson markazli dizayn tamoyillari",
-        },
-
-        decoration: {
-            dec1: "../../../Image/course-images/hero/arrow-right.png",
-            dec2: "../../../Image/course-images/hero/circles.png",
-            dec3: "../../../Image/course-images/hero/dots.png",
-            dec4: "../../../Image/course-images/hero/up.png",
-        },
-    },
-
-    aboutTheCourse: {
-        intro: {
-            title: "Kurs haqida",
-            willBeLearned: "Siz o'rganasiz:",
-            icon: "../../../Image/course-images/aboutTheCourse/check.png",
-        },
-
-        datesPart: {
-            dates: "Sanalar",
-            duration: "Davomiyligi",
-            price: "Narxi",
-            button: "Kursga qo'shilish",
-        },
-
-        tutorInfo: {
-            badge: "Kurs kuratori",
-
-            lessonIcons: [
-                {
-                    icon: "../../../Image/course-images/tutor-info/Star.png",
+        uz: {
+            hero: {
+                info: {
+                    badge: "kurs",
+                    title: "Foydalanuvchi tajribasi. Inson markazli dizayn tamoyillari",
                 },
-                {
-                    icon: "../../../Image/course-images/tutor-info/Play.png",
-                },
-                {
-                    icon: "../../../Image/course-images/tutor-info/Profile.png",
-                },
-            ],
-        },
 
-        mainStepsPart: {
-            intro: {
-                badge: "Asosiy bosqichlar",
-                title: "Onlayn ta'lim jarayoni",
+                decoration: {
+                    dec1: "../../../Image/course-images/hero/arrow-right.png",
+                    dec2: "../../../Image/course-images/hero/circles.png",
+                    dec3: "../../../Image/course-images/hero/dots.png",
+                    dec4: "../../../Image/course-images/hero/up.png",
+                },
             },
 
-            carousel: [
-                {
-                    number: "01",
-                    title: "Onlayn video darslarni ko'rish",
-                    text: "Kurs materiallarini tushunarli video darslar va amaliy topshiriqlar orqali o'rganing.",
+            aboutTheCourse: {
+                intro: {
+                    title: "Kurs haqida",
+                    willBeLearned: "Siz o'rganasiz:",
+                    icon: "../../../Image/course-images/aboutTheCourse/check.png",
                 },
 
-                {
-                    number: "02",
-                    title: "Test topshirish",
-                    text: "Bilimlaringizni tekshiring va o'rgangan bilimlaringizni testlar orqali mustahkamlang.",
+                datesPart: {
+                    dates: "Sanalar",
+                    duration: "Davomiyligi",
+                    price: "Narxi",
+                    button: "Kursga qo'shilish",
                 },
 
-                {
-                    number: "03",
-                    title: "Kurator fikri",
-                    text: "Tajribali ustozdan tavsiyalar va yordam oling.",
+                tutorInfo: {
+                    badge: "Kurs kuratori",
+
+                    lessonIcons: [
+                        {
+                            icon: "../../../Image/course-images/tutor-info/Star.png",
+                        },
+                        {
+                            icon: "../../../Image/course-images/tutor-info/Play.png",
+                        },
+                        {
+                            icon: "../../../Image/course-images/tutor-info/Profile.png",
+                        },
+                    ],
                 },
 
-                {
-                    number: "04",
-                    title: "Kerak bo'lsa tuzatishlar",
-                    text: "Xatolar ustida ishlang va natijalaringizni yaxshilang.",
+                mainStepsPart: {
+                    intro: {
+                        badge: "Asosiy bosqichlar",
+                        title: "Onlayn ta'lim jarayoni",
+                    },
+
+                    carousel: [
+                        {
+                            number: "01",
+                            title: "Onlayn video darslarni ko'rish",
+                            text: "Kurs materiallarini tushunarli video darslar va amaliy topshiriqlar orqali o'rganing.",
+                        },
+
+                        {
+                            number: "02",
+                            title: "Test topshirish",
+                            text: "Bilimlaringizni tekshiring va o'rgangan bilimlaringizni testlar orqali mustahkamlang.",
+                        },
+
+                        {
+                            number: "03",
+                            title: "Kurator fikri",
+                            text: "Tajribali ustozdan tavsiyalar va yordam oling.",
+                        },
+
+                        {
+                            number: "04",
+                            title: "Kerak bo'lsa tuzatishlar",
+                            text: "Xatolar ustida ishlang va natijalaringizni yaxshilang.",
+                        },
+                    ],
                 },
-            ],
-        },
-    },
-
-    earlyBirds: {
-        title: "Dastlabki qatnashuvchilar uchun 20% chegirma!",
-
-        inputsInfo: {
-            input1: "To'liq ism",
-            inputPlaceholder1: "To'liq ismingiz",
-
-            input2: "Email",
-            inputPlaceholder2: "Ishchi emailingiz",
-
-            input3: "Telefon",
-            inputPlaceholder3: "Telefon raqamingiz",
-
-            button: "Kursga qo'shilish",
-        },
-
-        dates: [
-            {
-                howMany: 0,
-                period: "Kun",
-            },
-            {
-                howMany: 0,
-                period: "Soat",
-            },
-            {
-                howMany: 0,
-                period: "Daqiqa",
-            },
-            {
-                howMany: 0,
-                period: "Soniya",
-            },
-        ],
-    },
-
-    benefits: {
-        intro: {
-            badge: "Kimlar uchun?",
-            title: "Kurs kimlarga foydali:",
-        },
-    },
-
-    program: {
-        intro: {
-            badge: "Kurs dasturi",
-            title: "Siz nimalarni o'rganasiz",
-        },
-
-        imagePart: {
-            image: "../../../Image/program/illustration.png",
-        },
-    },
-
-    testimonials: {
-        intro: {
-            badge: "FIKRLAR",
-            title: "Talabalarimiz nima deydi",
-        },
-
-        comment: [
-            {
-                opinion:
-                    "Suleymanning onlayn kursi haqiqiy o'zgarish olib keladi! Materiallar juda tushunarli va tartibli tarzda berilgan, amaliy topshiriqlar esa bilimlarni tez o'zlashtirishga yordam beradi. U doimo talabalarni qo'llab-quvvatlaydi va savollarga tez javob beradi. Ushbu kursni hammaga tavsiya qilaman.",
-
-                image: "../../../Image/courses-photo/slider-image/image.png",
-
-                braces: "../../../Image/courses-photo/slider-image/braces.png",
-
-                name: "Eleanor Pena",
-
-                completedCourse: "Lavozim, Kurs",
             },
 
-            {
-                opinion:
-                    "Suleymanning onlayn kursi haqiqiy o'zgarish olib keladi! Materiallar juda tushunarli va tartibli tarzda berilgan, amaliy topshiriqlar esa bilimlarni tez o'zlashtirishga yordam beradi. U doimo talabalarni qo'llab-quvvatlaydi va savollarga tez javob beradi. Ushbu kursni hammaga tavsiya qilaman.",
+            earlyBirds: {
+                title: "Dastlabki qatnashuvchilar uchun 20% chegirma!",
 
-                image: "../../Image/courses-photo/slider-image/image.png",
+                inputsInfo: {
+                    input1: "To'liq ism",
+                    inputPlaceholder1: "To'liq ismingiz",
 
-                braces: "../../../Image/courses-photo/slider-image/braces.png",
+                    input2: "Email",
+                    inputPlaceholder2: "Ishchi emailingiz",
 
-                name: "Eleanor Pena",
+                    input3: "Telefon",
+                    inputPlaceholder3: "Telefon raqamingiz",
 
-                completedCourse: "Lavozim, Kurs",
-            },
-        ],
-    },
-
-    registration: {
-        imagePart: {
-            image: "../../../Image/course-images/registration/illustration.png",
-        },
-
-        intro: {
-            description:
-                "Hozir ariza qoldiring va 20% chegirmaga ega bo'ling!",
-
-            title: "Kursga ro'yxatdan o'tish",
-
-            inputsInfo: [
-                {
-                    input: "To'liq ism",
-                    inputPlaceholder: "To'liq ismingiz",
+                    button: "Kursga qo'shilish",
                 },
 
-                {
-                    input: "Email",
-                    inputPlaceholder: "Ishchi emailingiz",
+                dates: [
+                    {
+                        howMany: 0,
+                        period: "Kun",
+                    },
+                    {
+                        howMany: 0,
+                        period: "Soat",
+                    },
+                    {
+                        howMany: 0,
+                        period: "Daqiqa",
+                    },
+                    {
+                        howMany: 0,
+                        period: "Soniya",
+                    },
+                ],
+            },
+
+            benefits: {
+                intro: {
+                    badge: "Kimlar uchun?",
+                    title: "Kurs kimlarga foydali:",
+                },
+            },
+
+            program: {
+                intro: {
+                    badge: "Kurs dasturi",
+                    title: "Siz nimalarni o'rganasiz",
                 },
 
-                {
-                    input: "Telefon",
-                    inputPlaceholder: "Telefon raqamingiz",
+                imagePart: {
+                    image: "../../../Image/program/illustration.png",
                 },
-            ],
+            },
 
-            regButton: {
-                button: "Kursga qo'shilish",
+            testimonials: {
+                intro: {
+                    badge: "FIKRLAR",
+                    title: "Talabalarimiz nima deydi",
+                },
+
+                comment: [
+                    {
+                        opinion:
+                            "Suleymanning onlayn kursi haqiqiy o'zgarish olib keladi! Materiallar juda tushunarli va tartibli tarzda berilgan, amaliy topshiriqlar esa bilimlarni tez o'zlashtirishga yordam beradi. U doimo talabalarni qo'llab-quvvatlaydi va savollarga tez javob beradi. Ushbu kursni hammaga tavsiya qilaman.",
+
+                        image: "../../../Image/courses-photo/slider-image/image.png",
+
+                        braces: "../../../Image/courses-photo/slider-image/braces.png",
+
+                        name: "Eleanor Pena",
+
+                        completedCourse: "Lavozim, Kurs",
+                    },
+
+                    {
+                        opinion:
+                            "Suleymanning onlayn kursi haqiqiy o'zgarish olib keladi! Materiallar juda tushunarli va tartibli tarzda berilgan, amaliy topshiriqlar esa bilimlarni tez o'zlashtirishga yordam beradi. U doimo talabalarni qo'llab-quvvatlaydi va savollarga tez javob beradi. Ushbu kursni hammaga tavsiya qilaman.",
+
+                        image: "../../Image/courses-photo/slider-image/image.png",
+
+                        braces: "../../../Image/courses-photo/slider-image/braces.png",
+
+                        name: "Eleanor Pena",
+
+                        completedCourse: "Lavozim, Kurs",
+                    },
+                ],
+            },
+
+            registration: {
+                imagePart: {
+                    image: "../../../Image/course-images/registration/illustration.png",
+                },
+
+                intro: {
+                    description:
+                        "Hozir ariza qoldiring va 20% chegirmaga ega bo'ling!",
+
+                    title: "Kursga ro'yxatdan o'tish",
+
+                    inputsInfo: [
+                        {
+                            input: "To'liq ism",
+                            inputPlaceholder: "To'liq ismingiz",
+                        },
+
+                        {
+                            input: "Email",
+                            inputPlaceholder: "Ishchi emailingiz",
+                        },
+
+                        {
+                            input: "Telefon",
+                            inputPlaceholder: "Telefon raqamingiz",
+                        },
+                    ],
+
+                    regButton: {
+                        button: "Kursga qo'shilish",
+                    },
+                },
+            },
+
+            recommendation: {
+                intro: {
+                    badge: "Boshqa kurslarni ko'ring",
+                    title: "Sizga ham yoqishi mumkin",
+                },
+
+                more: {
+                    title: "Ko'proq xohlaysizmi?",
+                    button: "Barcha kurslarni ko'rish",
+                },
             },
         },
-    },
-
-    recommendation: {
-        intro: {
-            badge: "Boshqa kurslarni ko'ring",
-            title: "Sizga ham yoqishi mumkin",
-        },
-
-        more: {
-            title: "Ko'proq xohlaysizmi?",
-            button: "Barcha kurslarni ko'rish",
-        },
-    },
-},
     };
 
     // header
@@ -670,23 +670,23 @@ window.addEventListener("DOMContentLoaded", () => {
             </div>
             <nav class="hidden lg:flex items-center gap-4 xl:gap-8">
                 <a
-                    href="../../../Pages/About/about.html"
+                    href="../../../feed/about/about.html"
                     class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
                 >${translateData[currentLang].navAbout}</a>
                 <a
-                    href="../../../Pages/Courses/courses.html"
+                    href="../../../feed/courses/courses.html"
                     class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
                 >${translateData[currentLang].navCourses}</a>
                 <a
-                    href="../../../Pages/Events/events.html"
+                    href="../../../feed/events/events.html"
                     class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
                 >${translateData[currentLang].navEvents}</a>
                 <a
-                    href="../../../Pages/Blogs/blogs.html"
+                    href="../../../feed/blogs/blogs.html"
                     class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
                 >${translateData[currentLang].navBlog}</a>
                 <a
-                    href="../../../Pages/Contacts/contacts.html"
+                    href="../../../feed/contacts/contacts.html"
                     class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
                 >${translateData[currentLang].navContacts}</a>
             </nav>
@@ -694,7 +694,7 @@ window.addEventListener("DOMContentLoaded", () => {
         <div class="flex items-center gap-3 md:gap-4">
             <div class="flex items-center gap-3 md:gap-4">
                 <a
-                    href="./Pages/Contacts/contacts.html"
+                    href="./feed/contacts/contacts.html"
                     class="font-[Lato] font-bold text-[12px] lg:py-1 md:leading-6 lg:leading-4 tracking-[0.5px] text-white bg-gradient-to-r from-[#FF3F3A] to-[#F75E05] px-5 lg:px-3 rounded-[4px] hidden sm:inline-block hover:bg-gradient-to-l hover:from-[#F75E05] hover:to-[#FF3F3A]"
                 >
                     ${translateData[currentLang].getConsultation}

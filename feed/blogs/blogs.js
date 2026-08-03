@@ -1,5 +1,5 @@
 import { allBlogPosts } from "../../AllBlogPosts.js";
-import { translateLang } from "../../Pages/About/about.js";
+import { translateLang } from "../../feed/about/about.js";
 
 export const translateLang = {
     en: {
@@ -114,23 +114,23 @@ headerMain.innerHTML = `
                     src="../../Image/HomePagePhoto/logo.svg" alt="logo image"/>
             </a>
         <nav class="hidden lg:flex items-center gap-4 xl:gap-8">
-            <a href="../../Pages/About/about.html" class="font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300">${translateLang[currentLang].header.navAbout}</a>
-            <a href="../../Pages/Courses/courses.html"
+            <a href="../../feed/about/about.html" class="font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300">${translateLang[currentLang].header.navAbout}</a>
+            <a href="../../feed/courses/courses.html"
                class="font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300">
                ${translateLang[currentLang].header.navCourses}</a>
-            <a href="../../Pages/Events/events.html"
+            <a href="../../feed/events/events.html"
                class="font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300">
                ${translateLang[currentLang].header.navEvents} </a>
-            <a href="../../Pages/Blogs/blogs.html"
+            <a href="../../feed/blogs/blogs.html"
                class="font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300">${translateLang[currentLang].header.navBlog}</a>
-            <a href="../../Pages/Contacts/contacts.html"
+            <a href="../../feed/contacts/contacts.html"
                class="font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300">
                ${translateLang[currentLang].header.navContacts}</a>
         </nav>
     </div>
     <div class="flex items-center gap-3 md:gap-4">
         <div class="flex items-center gap-3 md:gap-4">
-            <a href="./Pages/Contacts/contacts.html"
+            <a href="./feed/contacts/contacts.html"
                class="font-bold text-[12px] lg:py-1 md:leading-6 lg:leading-4 tracking-[0.5px] text-white bg-gradient-to-r from-[#FF3F3A] to-[#F75E05] px-5 lg:px-3 rounded-[4px] hidden sm:inline-block hover:bg-gradient-to-l hover:from-[#F75E05] hover:to-[#FF3F3A]">${translateLang[currentLang].header.getConsultation}</a>
             <a href="#!"
                class="hidden lg:flex gap-2 items-center font-bold text-3 lg:text-2 lg:leading-4 text-gray-800">
