@@ -13,9 +13,10 @@ const translateLang = {
             getConsultation: "Get consultation",
             loginRegister: "Log in / Register",
         },
+
         footer: {
             footerDescription:
-                "Createx Online School is a leader in online studying. We have lots of courses and programs from the main market experts. We provide relevant approaches to online learning, internships and employment in the largest companies in the country.",
+                "Createx Online School is a leader in online studying. We have lots of courses and programs from the main market experts. We provide relevant approaches to online learning, internships and employment in the largest companies in the country.",
             siteMap: "SITE MAP",
             courses: "COURSES",
             marketing: "Marketing",
@@ -45,6 +46,7 @@ const translateLang = {
             getConsultation: "Konsultatsiya olish",
             loginRegister: "Kirish / Ro'yxatdan o'tish",
         },
+
         footer: {
             footerDescription:
                 "Createx Onlayn Maktabi onlayn ta'lim sohasidagi yetakchilardan biridir. Biz zamonaviy ta'lim va ishga joylashish imkoniyatlarini taklif qilamiz.",
@@ -77,6 +79,7 @@ const translateLang = {
             getConsultation: "Получить консультацию",
             loginRegister: "Войти / Зарегистрироваться",
         },
+
         footer: {
             footerDescription:
                 "Онлайн-школа Createx — лидер в сфере онлайн-образования. Мы предлагаем современные программы обучения и помощь в трудоустройстве.",
@@ -100,49 +103,55 @@ const translateLang = {
 };
 
 let currentLang = localStorage.getItem("selectedLang") || "en";
-
-// HEADER START
+// header start
 const headerMain = document.querySelector("#headerMain");
-if (headerMain) {
-    headerMain.innerHTML = `
+headerMain.innerHTML = `
 <div class="w-full max-w-[1340px] mx-auto px-5 flex justify-between items-center py-5">
     <div class="flex items-center gap-7 md:gap-10">
-        <a href="/index.html">
-            <img src="../../Image/HomePagePhoto/logo.svg"/>
-        </a>
+            <a href="/index.html">
+                <img
+                    src="../../Image/HomePagePhoto/logo.svg"/>
+            </a>
         <nav class="hidden lg:flex items-center gap-4 xl:gap-8">
-            <a href="../../feed/about/about.html" class="font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300">${translateLang[currentLang].header.navAbout}</a>
-            <a href="../../feed/courses/courses.html" class="font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300">${translateLang[currentLang].header.navCourses}</a>
-            <a href="../../feed/events/events.html" class="font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300">${translateLang[currentLang].header.navEvents}</a>
-            <a href="../../feed/blogs/blogs.html" class="font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300">${translateLang[currentLang].header.navBlog}</a>
-            <a href="../../feed/contacts/contacts.html" class="font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300">${translateLang[currentLang].header.navContacts}</a>
+            <a href="../../Pages/About/about.html" class="font-bold text-base leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300">${translateLang[currentLang].header.navAbout}</a>
+            <a href="../../Pages/Courses/courses.html"
+               class="font-bold text-base leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300">
+               ${translateLang[currentLang].header.navCourses}</a>
+            <a href="../../Pages/Events/events.html"
+               class="font-bold text-base leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300">
+               ${translateLang[currentLang].header.navEvents} </a>
+            <a href="../../Pages/Blogs/blogs.html"
+               class="font-bold text-base leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300">${translateLang[currentLang].header.navBlog}</a>
+            <a href="../../Pages/Contacts/contacts.html"
+               class="font-bold text-base leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300">
+               ${translateLang[currentLang].header.navContacts}</a>
         </nav>
     </div>
     <div class="flex items-center gap-3 md:gap-4">
         <div class="flex items-center gap-3 md:gap-4">
-            <a href="../../feed/contacts/contacts.html" class="font-bold text-[12px] lg:py-1 md:leading-6 lg:leading-4 tracking-[0.5px] text-white bg-gradient-to-r from-[#FF3F3A] to-[#F75E05] px-5 lg:px-3 rounded-[4px] hidden sm:inline-block hover:bg-gradient-to-l hover:from-[#F75E05] hover:to-[#FF3F3A]">${translateLang[currentLang].header.getConsultation}</a>
-            <a href="#!" class="hidden lg:flex gap-2 items-center font-bold text-3 lg:text-2 lg:leading-4 text-gray-800">
-                <img src="../../Image/HomePagePhoto/Profile.svg"/>
-                ${translateLang[currentLang].header.loginRegister}
-            </a>
+            <a href="./Pages/Contacts/contacts.html"
+               class="font-bold text-[12px] lg:py-1 md:leading-6 lg:leading-4 tracking-[0.5px] text-white bg-gradient-to-r from-[#FF3F3A] to-[#F75E05] px-5 lg:px-3 rounded hidden sm:inline-block hover:bg-gradient-to-l hover:from-[#F75E05] hover:to-[#FF3F3A]">${translateLang[currentLang].header.getConsultation}</a>
+            <a href="#!"
+               class="hidden lg:flex gap-2 items-center font-bold text-3 lg:text-2 lg:leading-4 text-gray-800">
+               <img src="../../Image/HomePagePhoto/Profile.svg"/>
+                    ${translateLang[currentLang].header.loginRegister}</a>
         </div>
         <div class="hidden min-[300px]:block relative">
-            <button class="flex items-center gap-1 px-2 rounded-[20px]" id="langBtn"></button>
-            <div class="bg-[#F75E05] flex-col items-center gap-1.5 py-1.5 rounded-[10px] absolute top-7 w-full hidden" id="langModal"></div>
+            <button class=" flex items-center gap-1 px-2 rounded-[20px]" id="langBtn"></button>
+                <div
+                    class="bg-[#F75E05] flex-col items-center gap-1.5 py-1.5 rounded-[10px] absolute top-7 w-full hidden"
+                    id="langModal"></div>
         </div>
-        <button class="block lg:hidden">
-            <img src="../../Image/HomePagePhoto/stash--burger-classic-light.svg"/>
-        </button>
+            <button class="block lg:hidden">
+                <img src="../../Image/HomePagePhoto/stash--burger-classic-light.svg"/></button>
     </div>
 </div>`;
-}
-// HEADER END
+// header end
 
-// BLOG START
+// our blog start
 const blog = document.querySelector("#blog");
 
-if (blog) {
-    blog.innerHTML = `
+blog.innerHTML = `
 <div class="w-full max-w-[1340px] mx-auto px-5 mb-20">
     <div>
         <div class="mx-auto items-center text-center mt-10 mb-5 sm:mt-20 sm:mb-16">
@@ -150,7 +159,7 @@ if (blog) {
             <h1 class="text-[#1E212C] leading-[100%] sm:leading-[130%] text-3xl sm:text-4xl font-black">Createx School Journal</h1>
         </div>
         <div class="mb-16 lg:flex lg:justify-between">
-            <div class="flex gap-3 items-center mb-5 lg:mb-0 max-[480px] overflow-x-auto custom-scrollbar pb-2 flex-1 pr-3 xl:overflow-x-hidden xl:max-w-[100%]">
+            <div class="flex gap-3 items-center mb-5 lg:mb-0 max-[480px] overflow-x-auto  custom-scrollbar pb-2 flex-1 pr-3 xl:overflow-x-hidden xl:max-w-[100%]">
                 <button class="filter-btn font-bold text-base leading-[160%] text-[#9A9CA5] py-2 px-5 hover:text-[#FF3F3A] border border-[#ffffff] hover:border-[#FF3F3A] transition-all duration-500 rounded" data-type="All">All</button>
                 <a href="#" class="filter-btn flex gap-1 font-bold text-base leading-[160%] text-[#9A9CA5] py-2 px-5 hover:text-[#FF3F3A] border border-[#ffffff] hover:border-[#FF3F3A] rounded transition-all duration-500" data-type="Article">
                     <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" class="mt-1"><path d="M0 0h24v24H0z" fill="none" />
@@ -170,21 +179,23 @@ if (blog) {
             </div>
             <div class="sm:flex sm:gap-5 sm:items-center">
                 <div>
-                    <h5 class="font-bold text-base leading-[160%] text-[#424551] whitespace-nowrap">Blog category</h5>
+                    <h5 class="font-bold text-base leading-[160%] text-[#424551] whitespace-nowrap">
+                    Blog category</h5>
                 </div>
                 <select name="select" class="font-normal text-base leading-[160%] text-[#424551] border border-[#D7DADD] rounded py-2 px-4 hover:text-[#FF3F3A] hover:border-[#FF3F3A] outline-none w-full sm:w-auto mb-5 sm:mb-0">
-                    <option value="All articles">All articles</option>
+                    <option value="All articles" aria-describedby="All articles">All articles</option>
                     <option value="Marketing">Marketing</option>
                     <option value="Development">Development</option>
                     <option value="Design">Design</option>
-                    <option value="Management">Management</option>
+                    <option value="Manegement">Management</option>
                     <option value="HR & Recruting">HR & Recruting</option>
                 </select>
                 <div class="flex w-full relative">
                     <input class="font-normal text-base text-[#424551] border border-[#D7DADD] rounded py-2 px-4 hover:placeholder-[#FF3F3A] hover:border-[#FF3F3A] w-full lg:w-auto" type="text" placeholder="search blog..."/>
-                    <svg class="absolute right-4 top-3" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                        <path d="M0 0h24v24H0z" fill="none" />
-                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m21 21l-4.343-4.343m0 0A8 8 0 1 0 5.343 5.343a8 8 0 0 0 11.314 11.314"/>
+                    <svg class="absolute right-4 top-3" xmlns="http://www.w3.org/2000/svg"
+                    width="1em" height="1em" viewBox="0 0 24 24">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m21 21l-4.343-4.343m0 0A8 8 0 1 0 5.343 5.343a8 8 0 0 0 11.314 11.314"/>
                     </svg>
                 </div>
             </div>
@@ -202,12 +213,8 @@ function hammaBlog(posts) {
     blogCardlar.innerHTML = posts
         .map((post) => {
             let classes = "";
-<<<<<<< HEAD:Pages/Blogs/blogs.js
 
             if (post.id === 4) {
-=======
-            if (index === 4) {
->>>>>>> 0a0077bb39c88666dd9ae83e368d3a08d3af2c68:feed/blogs/blogs.js
                 classes = "col-span-2";
             }
 
@@ -233,20 +240,20 @@ function hammaBlog(posts) {
                     </div>
                     <span class="flex items-center gap-2 whitespace-nowrap font-bold text-sm leading-[150%] text-[#787A80]">
                         <img src="../../Image/HomePagePhoto/Clock.svg"/>
-                        ${post[currentLang].duration} </span>
+                            ${post[currentLang].duration} </span>
                 </div>
                 <div>
-                    <a href="#" class="font-bold text-xl leading-[150%] text-[#1E212C] hover:text-[#ff3f3a] transition-all duration-300">${post[currentLang].title}</a>
+                    <a href="#" class="font-bold text-xl leading-[150%] text-[#1E212C] hover:text-[#ff3f3a] transition-all duration-300">${post[currentLang].title}
+                    </a>
                     <p class="line-clamp-2 font-normal text-base leading-[160%] text-[#424551] mt-2 mb-4">${post[currentLang].description}</p>
-                    <a href="../../feed/blogs/blog/blog.html" class="font-bold text-base leading-[160%] text-[#1E212C] hover:text-[#ff3f3a] transition-all duration-300 flex items-center gap-2 hover:gap-4">${post[currentLang].action}
-                        <img src="../../Image/HomePagePhoto/right.svg"/>
+                    <a href="../../Pages/Blogs/blog/blog.html" class="font-bold text-base leading-[160%] text-[#1E212C] hover:text-[#ff3f3a] transition-all duration-300 flex items-center gap-2 hover:gap-4">${post[currentLang].action}
+                    <img src="../../Image/HomePagePhoto/right.svg"/>
                     </a>
                 </div>
             </div>
         </div>
             `;
         })
-<<<<<<< HEAD:Pages/Blogs/blogs.js
         .join(" ");
 }
 
@@ -268,18 +275,16 @@ filterBtns.forEach((btn) => {
     });
 });
 // our blog end
-=======
-        .join(" ")}
-    </div>
-</div>`;
-}
-// BLOG END
->>>>>>> 0a0077bb39c88666dd9ae83e368d3a08d3af2c68:feed/blogs/blogs.js
 
-// HEADER SCROLL LOGIC
+// subscribe start
+// const subscribe = document.querySelector("#subscribe");
+// subscribe.innerHTML = `
+// div
+// `
+// subscribe end
+// LANGUAGE BUTTON
 window.addEventListener("scroll", function () {
     const header = document.querySelector("header");
-    if (!header) return;
     if (window.scrollY > 300) {
         header.classList.add(
             "fixed",
@@ -301,37 +306,29 @@ window.addEventListener("scroll", function () {
     }
 });
 
-// LANGUAGE LOGIC
 const langBtn = document.querySelector("#langBtn");
 const langModal = document.querySelector("#langModal");
+
+const selectedLang = localStorage.getItem("selectedLang");
 
 if (!localStorage.getItem("selectedLang")) {
     localStorage.setItem("selectedLang", currentLang);
 }
-
-function mainLangButton() {
-    if (langBtn) {
-        langBtn.innerHTML = `
-            <img src="${translateLang[currentLang].header.flag}"/>
-            <span class="downSpan transition-all duration-300">
-                <img src="../../Image/HomePagePhoto/icon-park-solid--down-one.svg"/>
-            </span>`;
-    }
-}
+mainLangButton();
 
 function updateLangModal() {
-    if (!langModal) return;
     langModal.innerHTML = "";
 
     Object.keys(translateLang).forEach((langKey) => {
         if (langKey !== currentLang) {
             const targetLang = langKey;
+
             const langModalOption = document.createElement("button");
             langModalOption.className =
                 "w-full flex items-center justify-center gap-1.5 group hover:bg-[#FF3F3A] rounded transition-all duration-300";
             langModalOption.innerHTML = `
             <img src="${translateLang[targetLang].header.flag}" />
-            <span class="text-white text-[12px]">${translateLang[targetLang].header.langTitle}</span>`;
+            <span class="text-white text-[12px]">${translateLang[targetLang].header.langTitle}<span>`;
 
             langModalOption.addEventListener("click", () => {
                 localStorage.setItem("selectedLang", targetLang);
@@ -344,23 +341,25 @@ function updateLangModal() {
         }
     });
 }
-
-if (langBtn && langModal) {
-    langBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        const downSpan = document.querySelector(".downSpan");
-        langModal.classList.toggle("hidden");
-        langModal.classList.toggle("flex");
-        if (downSpan) downSpan.classList.toggle("rotate-180");
-    });
-
-    document.addEventListener("click", () => {
-        langModal.classList.add("hidden");
-        langModal.classList.remove("flex");
-        const downSpan = document.querySelector(".downSpan");
-        if (downSpan) downSpan.classList.remove("rotate-180");
-    });
+function mainLangButton() {
+    langBtn.innerHTML = `
+        <img src="${translateLang[currentLang].header.flag}"/>
+        <span class="downSpan transition-all duration-300">
+            <img src="../../Image/HomePagePhoto/icon-park-solid--down-one.svg"/>
+        </span>`;
 }
 
-mainLangButton();
+langBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const downSpan = document.querySelector(".downSpan");
+    langModal.classList.toggle("hidden");
+    langModal.classList.toggle("flex");
+    downSpan.classList.toggle("rotate-180");
+});
+document.addEventListener("click", () => {
+    langModal.classList.add("hidden");
+    langModal.classList.remove("flex");
+    const downSpan = document.querySelector(".downSpan");
+    if (downSpan) downSpan.classList.remove("rotate-180");
+});
 updateLangModal();
