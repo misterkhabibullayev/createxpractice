@@ -518,21 +518,18 @@ window.addEventListener("DOMContentLoaded", () => {
 
     updateSubscribe();
 
-    //  Footer 
-    function updateFooter() {
-        const footerData = locale[currentLang].footer;
-
-        // footer
+      // *************** Footer ***************
+    function footer() {
         const footer = document.querySelector("#footer");
         footer.innerHTML = `
     <div class="bg-[#1E212C] pt-[50px] pb-[40px] lg:pt-[80px] lg:pb-[60px]">
-        <div class="w-full max-w-[1340px] mx-auto px-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-y-8 gap-x-6">
-            <div class="flex flex-col lg:col-span-3 sm:col-span-1 order-1 lg:order-1">
+        <div class="w-full max-w-[1340px] mx-auto px-5 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-12 gap-y-8 gap-x-6">
+            <div class="flex flex-col lg:col-span-3 sm:col-span-1 col-span-2 order-1 lg:order-1">
                 <a href="./index.html">
-                    <img src="../../../Image/HomePagePhoto/footerlogo.svg" alt="footer logo" class="" />
+                    <img src="/Image/HomePagePhoto/footerlogo.svg" alt="footer logo" class="" />
                 </a>
-                <p class="font-[Lato] font-normal text-[12px] leading-[150%] text-white opacity-60 max-w-[280px] line-clamp-5 mt-[24px] mb-[38px]">${footerData.footerDescription}</p>
-                <div class="flex items-center gap-5 mb-4">
+                <p class="font-[Lato] font-normal text-[12px] leading-[150%] text-white opacity-60 max-w-full line-clamp-5 mt-[24px] mb-[38px]">${translateData[currentLang].footerDescription}</p>
+                <div class="flex items-center gap-5 mb-4 flex-wrap">
                     <a href="https://facebook.com/" aria-label="Facebook">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="text-[#A5A6AB] hover:text-white transition-all duration-300">
                             <path d="M0 0h24v24H0z" fill="none" />
@@ -572,27 +569,27 @@ window.addEventListener("DOMContentLoaded", () => {
                 </div>
             </div>
             <div class="lg:col-span-2 sm:col-span-2 order-1 sm:order-4 lg:order-2">
-                <h3 class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] mb-[12px] text-white">${footerData.siteMap.toUpperCase()}</h3>
+                <h3 class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] mb-[12px] text-white">${translateData[currentLang].siteMap.toUpperCase()}</h3>
                 <div class="flex gap-6 sm:flex-row flex-col lg:flex-col lg:gap-2">
-                    <a href="Pages/About/about.html" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateData[currentLang].navAbout}</a>
-                    <a href="Pages/Courses/courses.html" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateData[currentLang].navCourses}</a>
-                    <a href="Pages/Events/events.html" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateData[currentLang].navEvents}</a>
-                    <a href="Pages/Blogs/blogs.html" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateData[currentLang].navBlog}</a>
-                    <a href="Pages/Contacts/contacts.html" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${footerData.navContacts}</a>
+                    <a href="/feed/about/about.html" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateData[currentLang].navAbout}</a>
+                    <a href="/feed/courses/courses.html" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateData[currentLang].navCourses}</a>
+                    <a href="/feed/events/events.html" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateData[currentLang].navEvents}</a>
+                    <a href="/feed/blogs/blogs.html" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateData[currentLang].navBlog}</a>
+                    <a href="/feed/contacts/contacts.html" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateData[currentLang].navContacts}</a>
                 </div>
             </div>
             <div class="lg:col-span-2 sm:col-span-2 order-2 sm:order-5 lg:order-3">
-                <h3 class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] mb-[12px] text-white">${footerData.courses.toUpperCase()}</h3>
+                <h3 class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] mb-[12px] text-white">${translateData[currentLang].courses.toUpperCase()}</h3>
                 <div class="flex gap-6 sm:flex-row flex-col lg:flex-col lg:gap-2">
-                    <a href="#!" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${footerData.marketing}</a>
-                    <a href="#!" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${footerData.management}</a>
-                    <a href="#!" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${footerData.hrRecruting}</a>
-                    <a href="#!" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${footerData.design}</a>
-                    <a href="#!" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${footerData.development}</a>
+                    <a href="#!" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateData[currentLang].marketing}</a>
+                    <a href="#!" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateData[currentLang].management}</a>
+                    <a href="#!" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateData[currentLang].hrRecruting}</a>
+                    <a href="#!" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateData[currentLang].design}</a>
+                    <a href="#!" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateData[currentLang].development}</a>
                 </div>
             </div>
-            <div class="lg:col-span-2 sm:col-span-1 order-3 sm:order-3 lg:order-4">
-                <h3 class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] mb-[12px] text-white">${footerData.contactUs.toUpperCase()}</h3>
+            <div class="lg:col-span-2 sm:col-span-1 col-span-2 order-3 sm:order-3 lg:order-4">
+                <h3 class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] mb-[12px] text-white">${translateData[currentLang].contactUs.toUpperCase()}</h3>
                 <div class="flex flex-col gap-2">
                     <a href="tel:(405) 555-0128" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300 group flex items-center gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
@@ -610,23 +607,23 @@ window.addEventListener("DOMContentLoaded", () => {
                     </a>
                 </div>
             </div>
-            <div class="lg:col-span-3 sm:col-span-1 order-4 sm:order-2 lg:order-5">
-                <h3 class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] mb-[12px] text-white">${footerData.signUpNewsLatter.toUpperCase()}</h3>
+            <div class="lg:col-span-3 col-span-2 sm:col-span-1 order-4 sm:order-2 lg:order-5">
+                <h3 class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] mb-[12px] text-white">${translateData[currentLang].signUpNewsLatter.toUpperCase()}</h3>
                 <form>
                     <div class="flex items-center justify-end bg-[#393C46] border border-[#FFFFFF33] px-3 py-2.5 rounded-[4px] focus-within:border-[#ff3f3a] focus-within:bg-white transition-all duration-300">
-                        <input type="email" placeholder="${footerData.signUpNewsLatterPlaceholder}" class="flex-1 pr-3 bg-transparent font-[Lato] font-normal text-[12px] leading-[150%] text-white focus:text-black outline-none placeholder:text-[#A5A6AB]">
-                        <img src="/Image/HomePagePhoto/footerRight.svg" class="w-4 h-4"/>
+                        <input type="email" placeholder="${translateData[currentLang].signUpNewsLatterPlaceholder}" class="flex-1 pr-3 bg-transparent font-[Lato] font-normal text-[12px] leading-[150%] text-white focus:text-black outline-none placeholder:text-[#A5A6AB]">
+                        <img src="Image/HomePagePhoto/footerRight.svg" class="w-4 h-4"/>
                     </div>
-                    <p class="mt-[12px] font-[Lato] font-normal text-[10px] leading-[150%] text-white opacity-60 max-w-[290px] line-clamp-2">${translateData.en.signUpSubscribe}</p>
+                    <p class="mt-[12px] font-[Lato] font-normal text-[10px] leading-[150%] text-white opacity-60 max-w-[290px] line-clamp-2">${translateData[currentLang].signUpSubscribe}</p>
                 </form>
             </div>
         </div>
     </div>
     <div class="bg-[#292C37] py-[18px]">
         <div class="w-full max-w-[1340px] mx-auto px-5 flex items-center justify-between">
-            <p class="font-[Lato] font-normal text-[12px] leading-[150%] text-white">© ${footerData.copyRight}. ${footerData.madeWith}</p>
+            <p class="font-[Lato] font-normal text-[12px] leading-[150%] text-white">&copy; ${translateData[currentLang].copyRight}. ${translateData[currentLang].madeWith}</p>
             <div>
-                <button id="goToTopBtn" class="font-[Lato] font-bold text-[14px] leading-[150%] text-white">${footerData.backtoTop}</button>
+                <button id="goToTopBtn" class="font-[Lato] font-bold text-[14px] leading-[150%] text-white">${translateData[currentLang].backtoTop}</button>
             </div>
         </div>
     </div>
@@ -638,9 +635,8 @@ window.addEventListener("DOMContentLoaded", () => {
                 behavior: "smooth",
             });
         });
-        // footer end
     }
-    updateFooter();
-    //  Footer 
+    footer();
+    // *************** Footer ***************
 });
 
