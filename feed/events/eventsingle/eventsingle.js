@@ -96,6 +96,8 @@ window.addEventListener("DOMContentLoaded", () => {
         },
     };
 
+    let currentLang = localStorage.getItem("selectedLang") || "en";
+
     const translateData = {
         en: {
             langTitle: "EN",
@@ -315,14 +317,11 @@ window.addEventListener("DOMContentLoaded", () => {
             backtoTop: "Tepaga qaytish",
         },
     };
-
-    let currentLang = localStorage.getItem("selectedLang") || "en";
-
     function updateHeader() {
         const headerMain = document.querySelector("#headerMain");
         headerMain.innerHTML = `
     <div
-        class=" w-full max-w-[1340px] mx-auto px-5 flex justify-between items-center py-5 relative"
+        class=" w-full max-w-[1340px] mx-auto px-5 flex justify-between items-center py-5 relative z-10"
     >
         <div class="flex items-center gap-7 md:gap-10">
             <div class="">
@@ -420,7 +419,7 @@ window.addEventListener("DOMContentLoaded", () => {
                     class="flex lg:hidden gap-2 items-center w-full px-4 py-2 font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
                 >
                     <img
-                        src="./Image/HomePagePhoto/Profile.svg"
+                        src="/Image/HomePagePhoto/Profile.svg"
                         alt="profile icon"
                         class="block"
                     />
