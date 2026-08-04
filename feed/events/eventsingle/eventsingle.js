@@ -52,6 +52,40 @@ window.addEventListener("DOMContentLoaded", () => {
                         "I agree to receive communications from Createx Online School",
                 },
             },
+            registration: {
+                imagePart: {
+                    image: "../../../Image/eventSingle/registerImage.png",
+                },
+                intro: {
+                    description: "Don’t miss the event",
+                    title: "Leave a request",
+
+                    inputsInfo: [
+                        {
+                            input: "Full Name",
+                            inputPlaceholder: "Your full name",
+                        },
+
+                        {
+                            input: "Email",
+                            inputPlaceholder: "Your working email",
+                        },
+
+                        {
+                            input: "Phone",
+                            inputPlaceholder: "Your phone number",
+                        },
+                    ],
+                    regButton: {
+                        button: "Join the course",
+                    },
+                    message:
+                        "* You will receive a link to the online lecture in an email after registration.",
+                },
+            },
+            otherOnlineEvent: {
+
+            },
         },
     };
 
@@ -620,8 +654,6 @@ window.addEventListener("DOMContentLoaded", () => {
         BENEFITS.className = "pt-[96px]";
         TALKABOUT.appendChild(BENEFITS);
 
-        console.log(TALKABOUT);
-
         const badge = document.createElement("h6");
         badge.innerHTML = benefitData.intro.badge;
         badge.className =
@@ -669,7 +701,7 @@ window.addEventListener("DOMContentLoaded", () => {
     // *************** Who benefits section ***************
 
     // *************** Subscribe section ***************
-    function updateSubscribe() {
+    function updateSubscribeNoSkip() {
         const subscribeNoSkipData = locale[currentLang].subscribeNoSkip;
 
         const subscribeNoSkip = document.createElement("div");
@@ -678,19 +710,19 @@ window.addEventListener("DOMContentLoaded", () => {
 
         let subscribeNoSkipHTML = "";
         subscribeNoSkipHTML += ` 
-        <div class='bg-[#F5A99F]  rounded-lg'>
-            <div class="flex flex-col md:flex-row border-2 border-black items-center justify-between px-[15px] py-12">
+        <div class='bg-[url("/Image/eventSingle/backgr.jpg")] rounded-lg'>
+            <div class="flex flex-col items-center md:flex-row md:items-start justify-between px-[15px] py-12">
 
                 <div class="max-[992px]:w-[35%] min-[992px]:ml-[50px] w-[30%]">
                     <img src="${subscribeNoSkipData.image}"/>
                 </div>
 
-                <div class='flex flex-col  max-[992px]:w-[60%] min-[992px]:w-[50%] items-start justify-between'> 
-                        <h2 class='max-w-[552px] mb-6  text-3xl font-black text-[rgb(30,33,44)] leading-[41.6px]'>${subscribeNoSkipData.intro.title}</h2>
+                <div class='flex flex-col max-[768px]:w-full max-[992px]:w-[60%] min-[992px]:w-[50%] items-start justify-between'> 
+                        <h2 class='max-w-full md:max-w-[552px] mb-6  text-3xl font-black text-[rgb(30,33,44)] leading-[41.6px] mt-[72px] md:mt-0'>${subscribeNoSkipData.intro.title}</h2>
 
                         <div class="mb-6 flex items-center gap-6 w-full">
                            <input
-                           class="max-w-[364px] w-full outline-none px-4 py-2.5 text-[0.875rem] border-gray-300 border-[1px] rounded text-[#424551] transition-all duration-300  focus:border-red-400/80"
+                           class="w-full grow md:max-w-[364px] outline-none px-4 py-2.5 text-[0.875rem] border-gray-300 border-[1px] rounded text-[#424551] transition-all duration-300  focus:border-red-400/80"
                            placeholder="${subscribeNoSkipData.input.inpPlaceholder}"/>
 
                            <button class=" text-sm rounded py-2.5 px-8 bg-gradient-to-l from-[#F75E05] to-[#FF3F3A] text-white">${subscribeNoSkipData.input.button}</button> 
@@ -708,6 +740,55 @@ window.addEventListener("DOMContentLoaded", () => {
 
         subscribeNoSkip.innerHTML = subscribeNoSkipHTML;
     }
-    updateSubscribe();
+    updateSubscribeNoSkip();
     // *************** Subscribe section ***************
+
+    // *************** Registration Section ***************
+    function updateRegistration() {
+        const registrationData = locale[currentLang].registration;
+        const registrationContainer = document.createElement("div");
+        registrationContainer.className = "pt-[96px]";
+        TALKABOUT.appendChild(registrationContainer);
+
+        let registrationHTML = "";
+
+        registrationHTML += `
+          <h6 class='pl-[15px] font-bold text-[rgb(30,33,44)] uppercase mb-2'>${registrationData.intro.description}</h6>
+
+      <div class="flex flex-col items-center md:flex-row justify-between">
+        <div class="px-4 w-full md:w-[35%]">
+            <h1 class='text-5xl font-black pb-2 mb-12  xl:whitespace-nowrap'>${registrationData.intro.title}</h1>
+
+            <form>
+               ${registrationData.intro.inputsInfo
+                   .map(
+                       (input) => `
+                    <div class='flex flex-col mb-6'>
+                        <label class='cursor-pointer mb-2 text-[rgb(66,69,81)]' for='user-${input.inputPlaceholder}'>${input.input}</label>
+                        <input id="user-${input.inputPlaceholder}" class="w-full outline-none px-4 py-2.5 text-[0.875rem] border-gray-300 border-[1px] rounded text-[#424551] transition-all duration-300  focus:border-red-400/80" placeholder="${input.inputPlaceholder}"/>
+                     </div>
+
+                `,
+                   )
+                   .join(" ")}
+                   
+                   <div class='flex items-center justify-center w-full mb-6'> 
+                    <button type='submit' class='w-full text-sm rounded py-2.5 bg-gradient-to-l from-[#F75E05] to-[#FF3F3A] text-white'>${registrationData.intro.regButton.button}</button>
+                   </div>
+
+                   <p>${registrationData.intro.message}</p>
+            </form>
+        </div>
+
+                <div class="px-4 w-full h-full md:w-[60%] sm:max-h-[250px] md:max-h-[350px] lg:max-h-[600px]">
+                    <img class='w-full h-full object-cover' src="${registrationData.imagePart.image}"/>
+                </div>
+      </div>         
+        `;
+
+        registrationContainer.innerHTML = registrationHTML;
+        console.log(TALKABOUT);
+    }
+    updateRegistration();
+    // *************** Registration Section ***************
 });
