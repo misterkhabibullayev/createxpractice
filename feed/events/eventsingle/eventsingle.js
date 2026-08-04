@@ -98,6 +98,10 @@ window.addEventListener("DOMContentLoaded", () => {
 
     let currentLang = localStorage.getItem("selectedLang") || "en";
 
+    // making the LIST and GRID EVENTS PAGE interactive!
+    const params = new URLSearchParams(window.location.search);
+    const eventId = params.get("id");
+
     const translateData = {
         en: {
             langTitle: "EN",
@@ -489,6 +493,10 @@ window.addEventListener("DOMContentLoaded", () => {
     function updateTalkAbout() {
         const eventWithId0 = allEvents.find((event) => event.id === 0);
 
+        const selectedEvents = allEvents.find((event) => {
+            return event.id === Number(eventId);
+        });
+
         const talkAboutContent = document.createElement("div");
         talkAboutContent.className = "flex flex-col md:flex-row";
         talkAboutContent.classList.add("talkAbout-content");
@@ -497,11 +505,11 @@ window.addEventListener("DOMContentLoaded", () => {
         let talkAboutHTML = "";
         talkAboutHTML += `
             <div class='px-4 w-full md:max-w-[400px] lg:max-w-[550px] xl:max-w-[600px]'>
-                    <h2 class='text-3xl pb-0 md:text-4xl lg:text-5xl font-black md:pb-4 mb-6'>${eventWithId0.whatwilltalkabout[currentLang].title}</h2>
+                    <h2 class='text-3xl pb-0 md:text-4xl lg:text-5xl font-black md:pb-4 mb-6'>${selectedEvents.whatwilltalkabout[currentLang].title}</h2>
 
 
                     <div class='flex flex-col gap-3 md:max-w-[450px] xl:max-w-full'> 
-                        ${eventWithId0.whatwilltalkabout[currentLang].themes
+                        ${selectedEvents.whatwilltalkabout[currentLang].themes
                             .map(
                                 (event) => `
                             <div class='program-button flex items-center gap-2 xl:gap-3 text-[rgb(255,63,58)]'>
@@ -509,7 +517,7 @@ window.addEventListener("DOMContentLoaded", () => {
                                     <button class='minusBtn max-[580px]:self-start relative w-[18px] h-[18px] flex-shrink-0 '>
                                         <span class="absolute top-1/2 left-0 -translate-y-1/2 w-[18px] h-[2px] bg-[rgb(255,63,58)]"></span>
 
-                                        <span class="vertical absolute top-0 left-1/2 -translate-x-1/2 w-[2px] h-[18px] bg-[rgb(255,63,58)]"></ span>
+                                        <span class="vertical absolute top-0 left-1/2 -translate-x-1/2 w-[2px] h-[18px] bg-[rgb(255,63,58)]"></span>
 
                                     </button>
                                     
@@ -564,6 +572,10 @@ window.addEventListener("DOMContentLoaded", () => {
         lessonFunction();
 
         function updateDates() {
+            const selectedEvent = allEvents.find((event) => {
+                return event.id === Number(eventId);
+            });
+
             const talkAboutContent =
                 document.querySelector(".talkAbout-content");
             const dates = document.createElement("div");
@@ -572,33 +584,31 @@ window.addEventListener("DOMContentLoaded", () => {
 
             talkAboutContent.appendChild(dates);
 
-            const eventWithId0 = allEvents.find((event) => event.id === 0);
-
             datesHTML = `
         <div id="dates-container" class="dates-container flex flex-col h-fit   md:mx-[15px] p-6 shadow-2xl max-[992px]:w-full max-[992px]:ml-[0px] min-[992px]:ml-[80px] lg:max-w-[350px] xl:max-w-[505px] lg:ml-[80px] xl:ml-[105px]">
            <div class='w-full px-2 pt-4 mb-4'>
-           <h6 class='font-bold tracking-[1px] uppercase'>${eventWithId0.eventAbout[currentLang].timeTitle}</h6>
+           <h6 class='font-bold tracking-[1px] uppercase'>${selectedEvent.eventAbout[currentLang].timeTitle}</h6>
            <div class="flex items-center max-[947px]:flex max-[947px]:flex-col max-[947px]:items-start text-[rgb(255,63,58)] text-2xl font-bold mb-2">
           <h4 class="mr-1">August,</h4>
-           <p>${eventWithId0.eventAbout[currentLang].talkStartTime} - ${eventWithId0.eventAbout[currentLang].talkEndTime}</p>
+           <p>${selectedEvent.eventAbout[currentLang].talkStartTime} - ${selectedEvent.eventAbout[currentLang].talkEndTime}</p>
            </div>
 
-           <p class='text-[rgb(66,69,81)]'>${eventWithId0.eventAbout[currentLang].timeDescription}</p>
+           <p class='text-[rgb(66,69,81)]'>${selectedEvent.eventAbout[currentLang].timeDescription}</p>
            </div>
 
           <div class='px-2 pt-4 mb-4'>
-           <h6 class='font-bold tracking-[1px] uppercase'>${eventWithId0.eventAbout[currentLang].priceTitle}</h6>
+           <h6 class='font-bold tracking-[1px] uppercase'>${selectedEvent.eventAbout[currentLang].priceTitle}</h6>
 
-           <p class='text-2xl text-[rgb(255,63,58)] font-bold mb-2'>${eventWithId0.eventAbout[currentLang].price}</p>
-           <p class='text-[rgb(66,69,81)]'>${eventWithId0.eventAbout[currentLang].priceDescription}</p>
+           <p class='text-2xl text-[rgb(255,63,58)] font-bold mb-2'>${selectedEvent.eventAbout[currentLang].price}</p>
+           <p class='text-[rgb(66,69,81)]'>${selectedEvent.eventAbout[currentLang].priceDescription}</p>
            </div>
 
            <div>
-              <a class="text-[rgb(255,63,58)] font-bold underline uppercase leading-[21px]">${eventWithId0.eventAbout[currentLang].eventOn}</a>
+              <a class="text-[rgb(255,63,58)] font-bold underline uppercase leading-[21px]">${selectedEvent.eventAbout[currentLang].eventOn}</a>
            </div>
            
             <div class='text-center px-2 pt-6 mb-4'>
-            <button class='w-full px-8 py-2.5 bg-gradient-to-r from-[#FF3F3A] hover:shadow-xl to-[#F75E05] text-white rounded shadow-lg shadow-[#FF3F3A]/40 transition-all duration-300 hover:shadow-[#FF3F3A]/50'>${eventWithId0.eventAbout[currentLang].joinEvent}</button>
+            <button class='w-full px-8 py-2.5 bg-gradient-to-r from-[#FF3F3A] hover:shadow-xl to-[#F75E05] text-white rounded shadow-lg shadow-[#FF3F3A]/40 transition-all duration-300 hover:shadow-[#FF3F3A]/50'>${selectedEvent.eventAbout[currentLang].joinEvent}</button>
             </div>
         </div>
       `;
@@ -611,7 +621,9 @@ window.addEventListener("DOMContentLoaded", () => {
 
     // *************** SPEAKER SECTION ***************
     function updateSpeaker() {
-        const eventWithId0 = allEvents.find((event) => event.id === 0);
+        const selectedEvent = allEvents.find((event) => {
+            return event.id === Number(eventId);
+        });
 
         const SPEAKER = document.createElement("div");
         SPEAKER.className =
@@ -626,7 +638,7 @@ window.addEventListener("DOMContentLoaded", () => {
         tutorImageContainer.className = "w-full sm:w-[45%]";
         const tutorImage = document.createElement("img");
         tutorImage.className = "w-full h-full object-cover";
-        tutorImage.src = eventWithId0.tutorAbout.img;
+        tutorImage.src = selectedEvent.tutorAbout.img;
         tutorImage.alt = "Course Tutor image";
 
         tutorImageContainer.appendChild(tutorImage);
@@ -637,31 +649,31 @@ window.addEventListener("DOMContentLoaded", () => {
         speakerCourseInfo.className = "w-full sm:w-[50%]";
         const tutorInfoBadge = document.createElement("h6");
         tutorInfoBadge.textContent =
-            eventWithId0.tutorAbout[currentLang].subtitle;
+            selectedEvent.tutorAbout[currentLang].subtitle;
         tutorInfoBadge.className =
             "mb-2 text-[rgb(30,33,44)] uppercase font-bold mt-[30px]";
 
         const tutorName = document.createElement("h1");
         tutorName.className =
             "mb-4 text-3xl lg:text-4xl xl:text-5xl font-bold ";
-        tutorName.textContent = eventWithId0.tutorAbout[currentLang].name;
+        tutorName.textContent = selectedEvent.tutorAbout[currentLang].name;
 
         const tutorProfession = document.createElement("p");
         tutorProfession.className = "pb-2 mb-6 text-xl ";
         tutorProfession.textContent =
-            eventWithId0.tutorAbout[currentLang].jobTitle;
+            selectedEvent.tutorAbout[currentLang].jobTitle;
 
         const aboutCourse = document.createElement("p");
         aboutCourse.className = "text-[rgb(66,69,81)] pb-4 mb-6 w-full";
         aboutCourse.textContent =
-            eventWithId0.tutorAbout[currentLang].description;
+            selectedEvent.tutorAbout[currentLang].description;
 
         // const speakerDescription = document.createElement('p');
         // speakerDescription.textContent = eventWithId0.tutorAbout[currentLang].description;
 
         const socialMediaHTML = `
         <div class='flex items-center gap-4'>
-              ${Object.values(eventWithId0.tutorAbout.socialLinks)
+              ${Object.values(selectedEvent.tutorAbout.socialLinks)
                   .map(
                       (media) => `
                 <a
@@ -682,7 +694,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
         let speakerCollaboration = "";
 
-        Object.values(eventWithId0.tutorAbout.partners).forEach((info) => {
+        Object.values(selectedEvent.tutorAbout.partners).forEach((info) => {
             const svg = info.svg.replace(
                 "<svg",
                 `<svg class="w-[105px] h-[50px] max-[760px]:w-[52px] max-[760px]:h-[25px] block"`,
@@ -716,7 +728,13 @@ window.addEventListener("DOMContentLoaded", () => {
 
     // *************** Who benefits section ***************
     function updateBenefit() {
-        const eventWithId0 = allEvents.find((event) => event.id === 0);
+        const selectedEvent = allEvents.find((event) => {
+            event.id === Number(eventId);
+        });
+
+        console.log(eventId);
+        console.log(Number(eventId));
+        console.log(allEvents.map((e) => e.id));
         const benefitData = locale[currentLang].benefits;
 
         const BENEFITS = document.createElement("div");

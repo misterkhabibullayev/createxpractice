@@ -497,13 +497,13 @@ window.addEventListener("DOMContentLoaded", () => {
                   </div>
                     
                       <div class=" sm:m-6 sm:px-4 sm:py-2 flex-1 ">
-                        <a href="./eventsingle.eventsingle.html?id=${eachEvent.id}"
+                        <a href="./eventsingle/eventsingle.html?id=${eachEvent.id}"
                          class="block hover:text-[#F75E05] cursor-pointer mb-1 text-[rgb(30,33,44)] font-bold text-xl">${eachEvent.previewListGrid[currentLang].previewTitle}</a>
                         <span class="text-[rgb(120,122,128)] ">${eachEvent.previewListGrid[currentLang].category}</span>
                       </div>
 
                       <div class="max-[575px]:w-full  py-2  my-6">
-                      <a>
+                      <a href="./eventsingle/eventsingle.html?id=${eachEvent.id}">
                         <button class="w-full px-8 py-2.5 font-normal text-[16px] leading-8 tracking-[0.5px] text-[#F75E05] border-[1px] border-[#F75E05] rounded-[4px] hover:bg-[#F75E05] hover:text-white transition-all duration-300 hover:shadow-[0px4px4px0px#F75E0580]">${eachEvent.previewListGrid[currentLang].viewMore}</button>
                     </a>
                       </div>

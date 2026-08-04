@@ -504,8 +504,10 @@ window.addEventListener("DOMContentLoaded", () => {
                       </div>
 
                       <div class="px-6  py-3 w-full">
+                      <a href="../eventsingle/eventsingle.html?id=${eachEvent.id}">
                         <button class="w-full px-8 py-2.5 font-normal text-[16px] leading-8 tracking-[0.5px] text-[#F75E05] border-[1px] border-[#F75E05] rounded-[4px] hover:bg-[#F75E05] hover:text-white transition-all duration-300 hover:shadow-[0px4px4px0px#F75E0580]">${eachEvent.previewListGrid[currentLang].viewMore}</button>
                       </div>
+                      </a>
 
                   </div>
                 </div>
