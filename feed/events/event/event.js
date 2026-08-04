@@ -484,7 +484,8 @@ window.addEventListener("DOMContentLoaded", () => {
                 .map(
                     (eachEvent) => `
                 <div class="border mb-6 rounded flex items-stretch hover:shadow-xl transition-all duration-400">
-                  <div class="flex flex-col w-full grow items-start bo">
+
+                  <div class="flex flex-col w-full grow items-start">
 
                   <div class="flex w-full flex-col items-start pt-3 px-6 b">
                       <div class="flex items-center gap-2 mb-1 w-full">
@@ -497,8 +498,9 @@ window.addEventListener("DOMContentLoaded", () => {
                   </div>
                     
                       <div class="p-6  grow">
-                        <h3 class="mb-1 text-[rgb(30,33,44)] font-bold text-xl hover:text-[rgb(255,63,58)]">${eachEvent.previewListGrid[currentLang].previewTitle}</h3>
-                        <span class="text-[rgb(120,122,128)] ">${eachEvent.previewListGrid[currentLang].category}</span>
+                        <a href="../eventsingle/eventsingle.html?id=${eachEvent.id}"
+                        class="block mb-1 text-[rgb(30,33,44)] font-bold text-xl hover:text-[rgb(255,63,58)]">${eachEvent.previewListGrid[currentLang].previewTitle}</a>
+                        <span class="text-[rgb(120,122,128)]">${eachEvent.previewListGrid[currentLang].category}</span>
                       </div>
 
                       <div class="px-6  py-3 w-full">
