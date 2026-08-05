@@ -231,7 +231,7 @@ window.addEventListener("DOMContentLoaded", () => {
     >
         <div class="flex items-center gap-7 md:gap-10">
             <div class="">
-                <a href="#">
+                <a href="../../../../index.html">
                     <img
                         src="/Image/HomePagePhoto/logo.svg"
                         alt="logo image"
@@ -390,7 +390,7 @@ window.addEventListener("DOMContentLoaded", () => {
                     ${eventsViewData.sortings.eventCategory.option
                         .map(
                             (opt) => `
-                            <option>${opt.opt}</option>
+                            <option value="${opt.value}">${opt.opt}</option>
                         `,
                         )
                         .join(" ")}
@@ -479,11 +479,20 @@ window.addEventListener("DOMContentLoaded", () => {
 
         </form>
 
-          <div class="grid max-[575px]:grid-cols-1 max-[992px]:grid-cols-2 min-[992px]:grid-cols-3 gap-3">
-            ${allEvents
+          <div class="grid max-[575px]:grid-cols-1 max-[992px]:grid-cols-2 min-[992px]:grid-cols-3 gap-3" id="eventsContainer">
+            ${renderEvents(allEvents)}
+          </div>
+          
+        </div>
+        `;
+
+        EVENTSGRIDVIEW.innerHTML = eventsListContent;
+
+        function renderEvents(events) {
+            return events
                 .map(
                     (eachEvent) => `
-                <div class="border mb-6 rounded flex items-stretch hover:shadow-xl transition-all duration-400">
+                 <div class="border mb-6 rounded flex items-stretch hover:shadow-xl transition-all duration-400">
 
                   <div class="flex flex-col w-full grow items-start">
 
@@ -513,12 +522,71 @@ window.addEventListener("DOMContentLoaded", () => {
                 </div>
               `,
                 )
-                .join(" ")}
-          </div>
-        </div>
-        `;
+                .join(" ");
+        }
 
-        EVENTSGRIDVIEW.innerHTML = eventsListContent;
+        const categorySelect = document.querySelector("#event-category");
+        const sortSelect = document.querySelector("#event-sort");
+        const showSelect = document.querySelector("#event-show");
+
+        const months = {
+            November: 11,
+            December: 12,
+        };
+
+        function updateList() {
+            console.log("Category:", categorySelect.value);
+            console.log("Sort:", sortSelect.value);
+            console.log("Show:", showSelect.value);
+
+            let events = [...allEvents];
+
+            const selectedCategory = categorySelect.value;
+
+            // Category filter
+            if (selectedCategory !== "all") {
+                events = events.filter(
+                    (event) => event.category === selectedCategory,
+                );
+            }
+
+            console.log("After category filter:", events.length);
+
+            // Sort
+            const sort = sortSelect.value;
+
+            if (sort === "Newest") {
+                events.sort((a, b) => {
+                    return (
+                        (months[b.previewListGrid.en.month] || 0) -
+                        (months[a.previewListGrid.en.month] || 0)
+                    );
+                });
+            }
+
+            if (sort === "Oldest") {
+                events.sort((a, b) => {
+                    return (
+                        (months[a.previewListGrid.en.month] || 0) -
+                        (months[b.previewListGrid.en.month] || 0)
+                    );
+                });
+            }
+
+            // Show amount
+            const amount = Number(showSelect.value);
+            events = events.slice(0, amount);
+
+            document.querySelector("#eventsContainer").innerHTML =
+                renderEvents(events);
+        }
+
+        categorySelect.addEventListener("change", () => {
+            console.log("Category changed!");
+            updateList();
+        });
+        sortSelect.addEventListener("change", updateList);
+        showSelect.addEventListener("change", updateList);
 
         // select border style
         const selects = EVENTSGRIDVIEW.querySelectorAll(".selects");

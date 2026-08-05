@@ -522,7 +522,7 @@ window.addEventListener("DOMContentLoaded", () => {
                                     </button>
                                     
 
-                                    <p class='w-full text-xl text-[rgb(255,63,58)]'>${event.theme} <span class='button-line-text text-black ml-2 font-bold'>${event.themeTitle}</span></p>
+                                    <button class='bbb text-xl text-[rgb(255,63,58)]'>${event.theme} <span class='red text-black ml-2 font-bold'>${event.themeTitle}</span></button>
                             
                             </div>
 
@@ -546,6 +546,7 @@ window.addEventListener("DOMContentLoaded", () => {
                 const parent = minus.parentElement;
                 const description = parent.nextElementSibling;
                 const verticalBtn = minus.lastElementChild;
+                const bbb = minus.nextElementSibling;
 
                 minus.addEventListener("click", () => {
                     const wasOpen = description.classList.contains("max-h-96");
@@ -554,17 +555,22 @@ window.addEventListener("DOMContentLoaded", () => {
                     minusBtns.forEach((btn) => {
                         const parent = btn.parentElement;
                         const description = parent.nextElementSibling;
+                        const bbb = btn.nextElementSibling;
                         const verticalBtn = btn.lastElementChild;
 
                         description.classList.remove("max-h-96");
                         description.classList.add("max-h-0");
                         verticalBtn.classList.remove("hidden");
+                        bbb.querySelector("span").classList.remove(
+                            "text-red-500",
+                        );
                     });
 
                     if (!wasOpen) {
                         description.classList.remove("max-h-0");
                         description.classList.add("max-h-96");
                         verticalBtn.classList.add("hidden");
+                        bbb.querySelector("span").classList.add("text-red-500");
                     }
                 });
             });

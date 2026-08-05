@@ -231,7 +231,7 @@ window.addEventListener("DOMContentLoaded", () => {
     >
         <div class="flex items-center gap-7 md:gap-10">
             <div class="">
-                <a href="#">
+                <a href="../../../index.html">
                     <img
                         src="/Image/HomePagePhoto/logo.svg"
                         alt="logo image"
@@ -389,7 +389,7 @@ window.addEventListener("DOMContentLoaded", () => {
                     ${eventsViewData.sortings.eventCategory.option
                         .map(
                             (opt) => `
-                            <option value="${opt.opt}">${opt.opt}</option>
+                           <option value="${opt.value}">${opt.opt}</option>
                         `,
                         )
                         .join(" ")}
@@ -479,22 +479,32 @@ window.addEventListener("DOMContentLoaded", () => {
 
         </form>
 
-                  <div>
-            ${allEvents
+        <div id="eventsContainer">
+            ${renderEvents(allEvents)}
+        </div>
+
+        </div>
+        `;
+
+        EVENTSLISTVIEW.innerHTML = eventsListContent;
+
+        // event category SELECT
+        function renderEvents(events) {
+            return events
                 .map(
                     (eachEvent) => `
                 <div class="flex gap-4 border px-6 sm:px-12 mb-6 rounded items-stretch hover:shadow-xl transition-all duration-400">
-                  <div class="w-full  sm:flex justify-between  items-start md:items-center">
-
-                  <div class="flex items-center my-6 py-2">
-                    <div>
-                    <span class="text-5xl font-black text-[rgb(255,63,58)]">${eachEvent.previewListGrid.date}</span>
-                    </div>
-                      <div class="flex flex-col items-start ml-4">
+                
+                <div class="w-full  sm:flex justify-between  items-start md:items-center">
+                    <div class="flex items-center my-6 py-2">
+                        <div>
+                          <span class="text-5xl font-black text-[rgb(255,63,58)]">${eachEvent.previewListGrid.date}</span>
+                        </div>
+                        <div class="flex flex-col items-start ml-4">
                         <h6 class="text-xl font-bold mb-1 text-[rgb(30,33,44)] ">${eachEvent.previewListGrid[currentLang].month}</h6>
                         <span class="text-[rgb(120,122,128)]">${eachEvent.previewListGrid.startTime} ${eachEvent.previewListGrid.endTime}</span>
-                      </div>
-                  </div>
+                        </div>
+                    </div>
                     
                       <div class=" sm:m-6 sm:px-4 sm:py-2 flex-1 ">
                         <a href="./eventsingle/eventsingle.html?id=${eachEvent.id}"
@@ -512,14 +522,71 @@ window.addEventListener("DOMContentLoaded", () => {
                 </div>
               `,
                 )
-                .join(" ")}
-          </div>
+                .join(" ");
+        }
 
+        const categorySelect = document.querySelector("#event-category");
+        const sortSelect = document.querySelector("#event-sort");
+        const showSelect = document.querySelector("#event-show");
 
-        </div>
-        `;
+        const months = {
+            November: 11,
+            December: 12,
+        };
 
-        EVENTSLISTVIEW.innerHTML = eventsListContent;
+        function updateList() {
+            console.log("Category:", categorySelect.value);
+            console.log("Sort:", sortSelect.value);
+            console.log("Show:", showSelect.value);
+
+            let events = [...allEvents];
+
+            const selectedCategory = categorySelect.value;
+
+            // Category filter
+            if (selectedCategory !== "all") {
+                events = events.filter(
+                    (event) => event.category === selectedCategory,
+                );
+            }
+
+            console.log("After category filter:", events.length);
+
+            // Sort
+            const sort = sortSelect.value;
+
+            if (sort === "Newest") {
+                events.sort((a, b) => {
+                    return (
+                        (months[b.previewListGrid.en.month] || 0) -
+                        (months[a.previewListGrid.en.month] || 0)
+                    );
+                });
+            }
+
+            if (sort === "Oldest") {
+                events.sort((a, b) => {
+                    return (
+                        (months[a.previewListGrid.en.month] || 0) -
+                        (months[b.previewListGrid.en.month] || 0)
+                    );
+                });
+            }
+
+            // Show amount
+            const amount = Number(showSelect.value);
+            events = events.slice(0, amount);
+
+            document.querySelector("#eventsContainer").innerHTML =
+                renderEvents(events);
+        }
+
+        categorySelect.addEventListener("change", () => {
+            console.log("Category changed!");
+            updateList();
+        });
+        sortSelect.addEventListener("change", updateList);
+        showSelect.addEventListener("change", updateList);
 
         // select border style
         const selects = EVENTSLISTVIEW.querySelectorAll(".selects");
@@ -549,17 +616,6 @@ window.addEventListener("DOMContentLoaded", () => {
         });
     }
     updateEventsList();
-
-    const categorySelect = document.querySelector("#event-category");
-    function engineSelectCategory() {
-        const selected = categorySelect.value;
-
-        const filtered =
-            selected === "All events"
-                ? allEvents
-                : allEvents.filter((event) => event.category === selected);
-    }
-    engineSelectCategory();
     //  Events List View
 
     function updateSubscribe() {

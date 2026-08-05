@@ -1,17 +1,17 @@
 export const allEvents = [
     {
         id: 0,
-        category: "Online lecture",
+        category: "lecture",
 
         previewListGrid: {
             en: {
-                category: "Online lecture",
+                category: "lecture",
             },
             ru: {
-                category: "Онлайн-лекция",
+                category: "lecture",
             },
             uz: {
-                category: "Onlayn dars",
+                category: "lecture",
             },
             date: "05",
             startTime: "11:00",
@@ -238,17 +238,17 @@ export const allEvents = [
     },
     {
         id: 1,
-        category: "Online lecture",
+        category: "lecture",
 
         previewListGrid: {
             en: {
-                category: "Online lecture",
+                category: "lecture",
             },
             ru: {
-                category: "Онлайн-лекция",
+                category: "lecture",
             },
             uz: {
-                category: "Onlayn dars",
+                category: "lecture",
             },
             date: "12",
             startTime: "11:15",
@@ -473,16 +473,16 @@ export const allEvents = [
     },
     {
         id: 2,
-        category: "Online master-class",
+        category: "masterclass",
         previewListGrid: {
             en: {
-                category: "Online master-class",
+                category: "masterclass",
             },
             ru: {
-                category: "Онлайн мастер-класс",
+                category: "masterclass",
             },
             uz: {
-                category: "Onlayn master-klass",
+                category: "masterclass",
             },
             date: "18",
             startTime: "15:00",
@@ -714,16 +714,16 @@ export const allEvents = [
     },
     {
         id: 3,
-        category: "Online workshop",
+        category: "workshop",
         previewListGrid: {
             en: {
-                category: "Online workshop",
+                category: "workshop",
             },
             ru: {
-                category: "Онлайн-практикум",
+                category: "workshop",
             },
             uz: {
-                category: "Onlayn amaliy seminar",
+                category: "workshop",
             },
             date: "05",
             startTime: "19:00",
@@ -947,16 +947,16 @@ export const allEvents = [
     },
     {
         id: 4,
-        category: "Online workshop",
+        category: "workshop",
         previewListGrid: {
             en: {
-                category: "Online workshop",
+                category: "workshop",
             },
             ru: {
-                category: "Онлайн-практикум",
+                category: "workshop",
             },
             uz: {
-                category: "Onlayn amaliy seminar",
+                category: "workshop",
             },
             date: "18",
             startTime: "18:00",
@@ -1178,16 +1178,16 @@ export const allEvents = [
     },
     {
         id: 5,
-        category: "Online lecture",
+        category: "lecture",
         previewListGrid: {
             en: {
-                category: "Online lecture",
+                category: "lecture",
             },
             ru: {
-                category: "Онлайн-лекция",
+                category: "lecture",
             },
             uz: {
-                category: "Onlayn dars",
+                category: "lecture",
             },
             date: "12",
             startTime: "19:00",
@@ -1410,16 +1410,17 @@ export const allEvents = [
     },
     {
         id: 6,
-        category: "Online master-class",
+        category: "masterclass",
+
         previewListGrid: {
             en: {
-                category: "Online master-class",
+                category: "masterclass",
             },
             ru: {
-                category: "Онлайн мастер-класс",
+                category: "masterclass",
             },
             uz: {
-                category: "Onlayn master-klass",
+                category: "masterclass",
             },
             date: "08",
             startTime: "18:30",
@@ -1651,16 +1652,17 @@ export const allEvents = [
     },
     {
         id: 7,
-        category: "Online workshop",
+        category: "workshop",
+
         previewListGrid: {
             en: {
-                category: "Online workshop",
+                category: "workshop",
             },
             ru: {
-                category: "Онлайн-практикум",
+                category: "workshop",
             },
             uz: {
-                category: "Onlayn amaliy seminar",
+                category: "workshop",
             },
             date: "29",
             startTime: "11:00",
@@ -1882,16 +1884,16 @@ export const allEvents = [
     },
     {
         id: 8,
-        category: "Online master-class",
+        category: "masterclass",
         previewListGrid: {
             en: {
-                category: "Online master-class",
+                category: "masterclass",
             },
             ru: {
-                category: "Онлайн мастер-класс",
+                category: "masterclass",
             },
             uz: {
-                category: "Onlayn master-klass",
+                category: "masterclass",
             },
             date: "17",
             startTime: "19:00",
