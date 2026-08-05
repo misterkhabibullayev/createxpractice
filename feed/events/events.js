@@ -389,7 +389,7 @@ window.addEventListener("DOMContentLoaded", () => {
                     ${eventsViewData.sortings.eventCategory.option
                         .map(
                             (opt) => `
-                            <option>${opt.opt}</option>
+                            <option value="${opt.opt}">${opt.opt}</option>
                         `,
                         )
                         .join(" ")}
@@ -549,6 +549,17 @@ window.addEventListener("DOMContentLoaded", () => {
         });
     }
     updateEventsList();
+
+    const categorySelect = document.querySelector("#event-category");
+    function engineSelectCategory() {
+        const selected = categorySelect.value;
+
+        const filtered =
+            selected === "All events"
+                ? allEvents
+                : allEvents.filter((event) => event.category === selected);
+    }
+    engineSelectCategory();
     //  Events List View
 
     function updateSubscribe() {

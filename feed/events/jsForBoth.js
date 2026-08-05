@@ -14,7 +14,6 @@ export const locale = {
                     { opt: "Online master-class" },
                     { opt: "Online lecture" },
                     { opt: "Online workshop" },
-                    { opt: "Online workshop" },
                 ],
             },
             sortBy: {
