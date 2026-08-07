@@ -552,15 +552,15 @@ window.addEventListener("DOMContentLoaded", () => {
                 >${translateLang[currentLang].header.navCourses}</a>
                 <a
                     href="../../feed/events/events.html"
-                    class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
+                    class="font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
                 >${translateLang[currentLang].header.navEvents}</a>
                 <a
                     href="../../feed/blogs/blogs.html"
-                    class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
+                    class="font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
                 >${translateLang[currentLang].header.navBlog}</a>
                 <a
                     href="../../feed/contacts/contacts.html"
-                    class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
+                    class="font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
                 >${translateLang[currentLang].header.navContacts}</a>
             </nav>
         </div>
@@ -568,13 +568,12 @@ window.addEventListener("DOMContentLoaded", () => {
             <div class="flex items-center gap-3 md:gap-4">
                 <a
                     href="../../feed/contacts/contacts.html"
-                    class="font-[Lato] font-bold text-[12px] leading-8 tracking-[0.5px] text-white bg-gradient-to-r from-[#FF3F3A] to-[#F75E05] px-5 rounded-[4px] hidden sm:inline-block hover:bg-gradient-to-l hover:from-[#F75E05] hover:to-[#FF3F3A]"
-                >
+                    class="font-bold text-[12px] leading-8 tracking-[0.5px] text-white bg-gradient-to-r from-[#FF3F3A] to-[#F75E05] px-5 rounded-[4px] hidden sm:inline-block hover:bg-gradient-to-l hover:from-[#F75E05] hover:to-[#FF3F3A">
                     ${translateLang[currentLang].header.getConsultation}
                 </a>
                 <div class="relative">
                     <button
-                        class="loginModalBtn hidden lg:flex gap-2 items-center font-[Lato] font-bold text-3 lg:text-2 lg:leading-4 text-gray-800"
+                        class="loginModalBtn hidden lg:flex gap-2 items-center font-bold text-3 lg:text-2 lg:leading-4 text-gray-800"
                     >
                         <img
                             src="../../Image/HomePagePhoto/Profile.svg"
@@ -606,26 +605,26 @@ window.addEventListener("DOMContentLoaded", () => {
             <nav class="flex flex-col bg-white w-full">
                 <a
                     href="../../feed/about/about.html"
-                    class="block w-full px-4 py-2 font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
+                    class="block w-full px-4 py-2 font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
                 >${translateLang[currentLang].header.navAbout}</a>
                 <a
                     href="../../feed/courses/courses.html"
-                    class="inline-block w-full px-4 py-2 font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
+                    class="inline-block w-full px-4 py-2 font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
                 >${translateLang[currentLang].header.navCourses}</a>
                 <a
                     href="../../feed/events/events.html"
-                    class="inline-block w-full px-4 py-2 font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
+                    class="inline-block w-full px-4 py-2 font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
                 >${translateLang[currentLang].header.navEvents}</a>
                 <a
                     href="../../feed/blogs/blogs.html"
-                    class="inline-block w-full px-4 py-2 font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
+                    class="inline-block w-full px-4 py-2 font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
                 >${translateLang[currentLang].header.navBlog}</a>
                 <a
                     href="../../feed/contacts/contacts.html"
-                    class="inline-block w-full px-4 py-2 font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
+                    class="inline-block w-full px-4 py-2 font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
                 >${translateLang[currentLang].header.navContacts}</a>
                 <button
-                    class="loginModalBtn flex lg:hidden gap-2 items-center w-full px-4 py-2 font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
+                    class="loginModalBtn flex lg:hidden gap-2 items-center w-full px-4 py-2 font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
                 >
                     <img
                         src="../../Image/HomePagePhoto/Profile.svg"
@@ -634,11 +633,10 @@ window.addEventListener("DOMContentLoaded", () => {
                     />
                     ${translateLang[currentLang].header.loginRegister}
                 </button>
-                <div class="">
+                <div>
                     <a
                         href="../../feed/contacts/contacts.html"
-                        class="font-[Lato] font-bold text-[12px] leading-8 tracking-[0.5px] text-white bg-gradient-to-r from-[#FF3F3A] to-[#F75E05] px-5 rounded-[4px] inline-block mx-4 my-2 sm:hidden hover:bg-gradient-to-l hover:from-[#F75E05] hover:to-[#FF3F3A]"
-                    >
+                        class="font-bold text-[12px] leading-8 tracking-[0.5px] text-white bg-gradient-to-r from-[#FF3F3A] to-[#F75E05] px-5 rounded-[4px] inline-block mx-4 my-2 sm:hidden hover:bg-gradient-to-l hover:from-[#F75E05] hover:to-[#FF3F3A]">
                         ${translateLang[currentLang].header.getConsultation}
                     </a>
                 </div>
@@ -658,25 +656,25 @@ window.addEventListener("DOMContentLoaded", () => {
             <div class="">
                 <div class="flex flex-col items-center px-6 gap-6 mb-6">
                     <h1 id="signInUpTitle" class="text-center font-[Lato] font-bold text-[28px] leading-[150%] text-[#1E212C]">${translateLang[currentLang].header.signIn}</h1>
-                    <p class="text-center font-[Lato] font-normal text-[14px] leading-[150%] text-[#787A80]">${translateLang[currentLang].header.signInP}</p>
+                    <p class="text-center font-normal text-[14px] leading-[150%] text-[#787A80]">${translateLang[currentLang].header.signInP}</p>
                 </div>
                 <form class="flex flex-col gap-5 px-6">
                     <div id="fullNameDiv" class="hidden flex-col">
-                        <label for="fullNameInput" class="font-[Lato] font-normal text-[14px] leading-[150%] text-[#424551] mb-2">${translateLang[currentLang].header.fullName}</label>
-                        <input type="text" id="emailInput" placeholder="${translateLang[currentLang].header.yourFullName}" class="px-4 py-[13px] outline-none border border-[#D7DADD] focus:border-[#FF3F3A] focus:shadow-[0_0_8px_rgba(255,63,58,0.4)] rounded-[4px] font-[Lato] font-normal text-[16px] leading-[160%] text-black placeholder:text-[#9A9CA5]">
+                        <label for="fullNameInput" class="font-normal text-[14px] leading-[150%] text-[#424551] mb-2">${translateLang[currentLang].header.fullName}</label>
+                        <input type="text" id="emailInput" placeholder="${translateLang[currentLang].header.yourFullName}" class="px-4 py-[13px] outline-none border border-[#D7DADD] focus:border-[#FF3F3A] focus:shadow-[0_0_8px_rgba(255,63,58,0.4)] rounded-[4px] font-normal text-[16px] leading-[160%] text-black placeholder:text-[#9A9CA5]">
                     </div>
                     <div class="flex flex-col ">
-                        <label for="emailInput" class="font-[Lato] font-normal text-[14px] leading-[150%] text-[#424551] mb-2">${translateLang[currentLang].header.email}</label>
-                        <input type="text" id="emailInput" placeholder="${translateLang[currentLang].header.yourEmailAddress}" class="px-4 py-[13px] outline-none border border-[#D7DADD] focus:border-[#FF3F3A] focus:shadow-[0_0_8px_rgba(255,63,58,0.4)] rounded-[4px] font-[Lato] font-normal text-[16px] leading-[160%] text-black placeholder:text-[#9A9CA5]">
+                        <label for="emailInput" class="font-normal text-[14px] leading-[150%] text-[#424551] mb-2">${translateLang[currentLang].header.email}</label>
+                        <input type="text" id="emailInput" placeholder="${translateLang[currentLang].header.yourEmailAddress}" class="px-4 py-[13px] outline-none border border-[#D7DADD] focus:border-[#FF3F3A] focus:shadow-[0_0_8px_rgba(255,63,58,0.4)] rounded-[4px] font-normal text-[16px] leading-[160%] text-black placeholder:text-[#9A9CA5]">
                     </div>
                     <div>
-                        <label for="passwordInput" class="font-[Lato] font-normal text-[14px] leading-[150%] text-[#424551]">${translateLang[currentLang].header.password}</label>
+                        <label for="passwordInput" class="font-normal text-[14px] leading-[150%] text-[#424551]">${translateLang[currentLang].header.password}</label>
                         <div class="relative w-full mt-2">
                             <input 
                                 type="password" 
                                 id="passwordInput"
                                 placeholder="${translateLang[currentLang].header.passwordPlaceholder}"
-                                class="w-full px-4 py-[13px] outline-none border border-[#D7DADD] focus:border-[#FF3F3A] focus:shadow-[0_0_8px_rgba(255,63,58,0.4)] rounded-[4px] font-[Lato] font-normal text-[16px] leading-[160%] text-black placeholder:text-[#9A9CA5]"
+                                class="w-full px-4 py-[13px] outline-none border border-[#D7DADD] focus:border-[#FF3F3A] focus:shadow-[0_0_8px_rgba(255,63,58,0.4)] rounded-[4px] font-normal text-[16px] leading-[160%] text-black placeholder:text-[#9A9CA5]"
                             />
 
                             <button 
@@ -689,10 +687,8 @@ window.addEventListener("DOMContentLoaded", () => {
         
                                     input.type = isPassword ? 'text' : 'password';
                                     eyeOpen.classList.toggle('hidden', isPassword);
-                                    eyeClosed.classList.toggle('hidden', !isPassword);
-                                "
-                                class="absolute right-4 top-1/2 -translate-y-1/2 text-[#1E212C] hover:text-[#FF3F3A] transition-colors"
-                            >
+                                    eyeClosed.classList.toggle('hidden', !isPassword);"
+                                class="absolute right-4 top-1/2 -translate-y-1/2 text-[#1E212C] hover:text-[#FF3F3A] transition-colors">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" class="eye-open block">
 	                                <path d="M0 0h32v32H0z" fill="none" />
                                     <g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2">
@@ -700,7 +696,6 @@ window.addEventListener("DOMContentLoaded", () => {
 		                                <path d="M21 16a5 5 0 1 1-10 0a5 5 0 0 1 10 0Z" />
 	                                </g>
                                 </svg>
-
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" class="eye-closed hidden">
 	                                <path d="M0 0h24v24H0z" fill="none" />
 	                                <path fill="currentColor" fill-rule="evenodd" d="M1.606 6.08a1 1 0 0 1 1.313.526L2 7l.92-.394v-.001l.003.009l.021.045l.094.194c.086.172.219.424.4.729a13.4 13.4 0 0 0 1.67 2.237a12 12 0 0 0 .59.592C7.18 11.8 9.251 13 12 13a8.7 8.7 0 0 0 3.22-.602c1.227-.483 2.254-1.21 3.096-1.998a13 13 0 0 0 2.733-3.725l.027-.058l.005-.011a1 1 0 0 1 1.838.788L22 7l.92.394l-.003.005l-.004.008l-.011.026l-.04.087a14 14 0 0 1-.741 1.348a15.4 15.4 0 0 1-1.711 2.256l.797.797a1 1 0 0 1-1.414 1.415l-.84-.84a12 12 0 0 1-1.897 1.256l.782 1.202a1 1 0 1 1-1.676 1.091l-.986-1.514c-.679.208-1.404.355-2.176.424V16.5a1 1 0 0 1-2 0v-1.544c-.775-.07-1.5-.217-2.177-.425l-.985 1.514a1 1 0 0 1-1.676-1.09l.782-1.203c-.7-.37-1.332-.8-1.897-1.257l-.84.84a1 1 0 0 1-1.414-1.414l.797-.797a15.4 15.4 0 0 1-1.87-2.519a14 14 0 0 1-.591-1.107l-.033-.072l-.01-.021l-.002-.007l-.001-.002v-.001C1.08 7.395 1.08 7.394 2 7l-.919.395a1 1 0 0 1 .525-1.314" clip-rule="evenodd" />
@@ -709,17 +704,14 @@ window.addEventListener("DOMContentLoaded", () => {
                         </div>
                     </div>
                     <div id="confirmPasswordDiv" class="hidden">
-                        <label for="emailInput" class="font-[Lato] font-normal text-[14px] leading-[150%] text-[#424551]">${translateLang[currentLang].header.confirmPassword}</label>
+                        <label for="emailInput" class="font-normal text-[14px] leading-[150%] text-[#424551]">${translateLang[currentLang].header.confirmPassword}</label>
                         <div class="relative w-full mt-2">
                             <input 
                                 type="password" 
                                 id="confirmPasswordInput"
                                 placeholder="${translateLang[currentLang].header.confirmPasswordPlaceholder}"
-                                class="w-full px-4 py-[13px] outline-none border border-[#D7DADD] focus:border-[#FF3F3A] focus:shadow-[0_0_8px_rgba(255,63,58,0.4)] rounded-[4px] font-[Lato] font-normal text-[16px] leading-[160%] text-black placeholder:text-[#9A9CA5]"
-                            />
-
-                            <button 
-                                type="button" 
+                                class="w-full px-4 py-3 border border-[#D7DADD] focus:border-[#FF3F3A] focus:shadow-[0_0_8px_rgba(255,63,58,0.4)] rounded font-normal text-base leading-[160%] text-black placeholder:text-[#9A9CA5]" />
+                            <button type="button" 
                                 onclick="
                                     const input = document.getElementById('passwordInput');
                                     const eyeOpen = this.querySelector('.eye-open');
@@ -728,8 +720,7 @@ window.addEventListener("DOMContentLoaded", () => {
         
                                     input.type = isPassword ? 'text' : 'password';
                                     eyeOpen.classList.toggle('hidden', isPassword);
-                                    eyeClosed.classList.toggle('hidden', !isPassword);
-                                "
+                                    eyeClosed.classList.toggle('hidden', !isPassword);"
                                 class="absolute right-4 top-1/2 -translate-y-1/2 text-[#1E212C] hover:text-[#FF3F3A] transition-colors"
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" class="eye-open block">
