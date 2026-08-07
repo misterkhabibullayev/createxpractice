@@ -20,21 +20,21 @@ export const allEvents = [
                 previewTitle:
                     "Practical Network Defense: Mitigating Infrastructure Vulnerabilities and Cyber Threats with Jacob Jones.",
                 category: "Interactive Masterclass",
-                viewMore: "View Syllabus",
+                viewMore: "View more",
             },
             ru: {
                 month: "Январь",
                 previewTitle:
                     "Практическая защита сетей: Устранение уязвимостей инфраструктуры и киберугроз с Джейкобом Джонсом.",
                 category: "Интерактивный мастер-класс",
-                viewMore: "Смотреть программу",
+                viewMore: "Посмотреть больше",
             },
             uz: {
                 month: "Yanvar",
                 previewTitle:
                     "Amaliy tarmoq himoyasi: Jacob Jones bilan infratuzilma zaifliklari va kiber tahdidlardan himoyalanish.",
                 category: "Interaktiv mahorat darsi",
-                viewMore: "Dasturni ko'rish",
+                viewMore: "Batafsil koʻrish",
             },
         },
 
@@ -264,7 +264,7 @@ export const allEvents = [
                 previewTitle:
                     "Fundamentals of modern cybersecurity. Shielding corporate infrastructure from zero-day threats.",
                 category: "Live masterclass",
-                viewMore: "Explore details",
+                viewMore: "View more",
             },
             ru: {
                 month: "Ноябрь",
@@ -278,7 +278,7 @@ export const allEvents = [
                 previewTitle:
                     "Zamonaviy kiberxavfsizlik asoslari. Korporativ infratuzilmani nol kunlik tahdidlardan himoya qilish.",
                 category: "Jonli master-klass",
-                viewMore: "Tafsilotlarni ko'rish",
+                viewMore: "Batafsil ko'rish",
             },
         },
         whatwilltalkabout: {
@@ -498,21 +498,21 @@ export const allEvents = [
                 previewTitle:
                     "Applied Data Science: Deploying Deep Learning Models into Production Environments.",
                 category: "Tech Intensive",
-                viewMore: "See Full Agenda",
+                viewMore: "View more",
             },
             ru: {
                 month: "Октябрь",
                 previewTitle:
                     "Прикладная наука о данных: Развёртывание моделей глубокого обучения в продакшен-среде.",
                 category: "Технический интенсив",
-                viewMore: "Посмотреть программу",
+                viewMore: "ПоПосмотреть больше",
             },
             uz: {
                 month: "Oktabr",
                 previewTitle:
                     "Amaliy ma'lumotlar ilmi: Chuqur o'rganish modellarini ishlab chiqarish muhitiga joriy etish.",
                 category: "Texnik intensiv",
-                viewMore: "Dasturni ko'rish",
+                viewMore: "Batafsil koʻrish",
             },
         },
 
@@ -739,21 +739,21 @@ export const allEvents = [
                 previewTitle:
                     "Product Metrics Matrix: Tracking North Star and retention loops for SaaS.",
                 category: "Interactive Workshop",
-                viewMore: "View Syllabus",
+                viewMore: "View more",
             },
             ru: {
                 month: "Май",
                 previewTitle:
                     "Матрица продуктовых метрик: Отслеживание North Star и циклов удержания для SaaS.",
                 category: "Интерактивный воркшоп",
-                viewMore: "Смотреть программу",
+                viewMore: "Посмотреть больше",
             },
             uz: {
                 month: "May",
                 previewTitle:
                     "Mahsulot metrikasi matritsasi: SaaS uchun North Star va foydalanuvchilarni ushlab qolish davrlarini kuzatish.",
                 category: "Interaktiv seminar-trening",
-                viewMore: "Dasturni ko'rish",
+                viewMore: "Batafsil koʻrish",
             },
         },
 
@@ -972,21 +972,21 @@ export const allEvents = [
                 previewTitle:
                     "Advanced Essay Writing & Rhetoric: Master Academic and Professional Expression with Kristin Watson.",
                 category: "Interactive Masterclass",
-                viewMore: "View Syllabus",
+                viewMore: "View more",
             },
             ru: {
                 month: "Октябрь",
                 previewTitle:
                     "Продвинутое академическое эссе и риторика: Мастерство изложения мыслей на английском с Кристин Уотсон.",
                 category: "Интерактивный мастер-класс",
-                viewMore: "Смотреть программу",
+                viewMore: "Посмотреть больше",
             },
             uz: {
                 month: "Oktabr",
                 previewTitle:
                     "Mukammal akademik esse va ritorika: Kristin Uotson bilan ingliz tilida fikr bildirish mahorati.",
                 category: "Interaktiv mahorat darsi",
-                viewMore: "Dasturni ko'rish",
+                viewMore: "Batafsil koʻrish",
             },
         },
 
@@ -1203,21 +1203,21 @@ export const allEvents = [
                 previewTitle:
                     "Enterprise Business Intelligence: Building Scalable Data Models and Dashboards in Power BI with Kristin Watson.",
                 category: "Interactive Masterclass",
-                viewMore: "View Syllabus",
+                viewMore: "View more",
             },
             ru: {
                 month: "Ноябрь",
                 previewTitle:
                     "Бизнес-аналитика корпоративного уровня: Создание масштабируемых моделей данных и дашбордов в Power BI с Кристин Уотсон.",
                 category: "Интерактивный мастер-класс",
-                viewMore: "Смотреть программу",
+                viewMore: "Посмотреть больше",
             },
             uz: {
                 month: "Noyabr",
                 previewTitle:
                     "Korporativ biznes tahlili: Kristin Uotson bilan Power BI’da kengaytirgichli ma'lumotlar modellari va dashbordlar yaratish.",
                 category: "Interaktiv mahorat darsi",
-                viewMore: "Dasturni ko'rish",
+                viewMore: "Batafsil koʻrish",
             },
         },
 
@@ -1436,21 +1436,21 @@ export const allEvents = [
                 previewTitle:
                     "Building Scalable Backend Systems: NestJS Microservices and Event-Driven Architecture with Lesley Alexander.",
                 category: "Technical Masterclass",
-                viewMore: "View Syllabus",
+                viewMore: "View more",
             },
             ru: {
                 month: "Декабрь",
                 previewTitle:
                     "Построение масштабируемых бэкенд-систем: Микросервисы на NestJS и событийно-ориентированная архитектура с Лесли Александер.",
                 category: "Технический мастер-класс",
-                viewMore: "Смотреть программу",
+                viewMore: "Посмотреть больше",
             },
             uz: {
                 month: "Dekabr",
                 previewTitle:
                     "Masshtablanuvchi backend tizimlarini yaratish: Lesley Alexander bilan NestJS mikroservislari va event-driven arxitektura.",
                 category: "Texnik mahorat darsi",
-                viewMore: "Dasturni ko'rish",
+                viewMore: "Batafsil koʻrish",
             },
         },
 
@@ -1678,21 +1678,21 @@ export const allEvents = [
                 previewTitle:
                     "Who Is a Project Manager? Discover the PM Role, Career Path, and Whether It's Right for You.",
                 category: "Interactive Online Lecture",
-                viewMore: "View Syllabus",
+                viewMore: "View more",
             },
             ru: {
                 month: "Май",
                 previewTitle:
                     "Кто такой Project Manager? Разбираем профессию, карьерный путь и подходит ли она именно вам.",
                 category: "Интерактивная онлайн-лекция",
-                viewMore: "Смотреть программу",
+                viewMore: "Посмотреть больше",
             },
             uz: {
                 month: "May",
                 previewTitle:
                     "Project Manager kim? PM kasbi, martaba yo'li va bu kasb sizga mos keladimi?",
                 category: "Interaktiv onlayn ma'ruza",
-                viewMore: "Dasturni ko'rish",
+                viewMore: "Batafsil koʻrish",
             },
         },
 
@@ -1909,21 +1909,21 @@ export const allEvents = [
                 previewTitle:
                     "Practical Network Defense: Mitigating Infrastructure Vulnerabilities and Cyber Threats with Jacob Jones.",
                 category: "Interactive Masterclass",
-                viewMore: "View Syllabus",
+                viewMore: "View more",
             },
             ru: {
                 month: "Январь",
                 previewTitle:
                     "Практическая защита сетей: Устранение уязвимостей инфраструктуры и киберугроз с Джейкобом Джонсом.",
                 category: "Интерактивный мастер-класс",
-                viewMore: "Смотреть программу",
+                viewMore: "Посмотреть больше",
             },
             uz: {
                 month: "Yanvar",
                 previewTitle:
                     "Amaliy tarmoq himoyasi: Jacob Jones bilan infratuzilma zaifliklari va kiber tahdidlardan himoyalanish.",
                 category: "Interaktiv mahorat darsi",
-                viewMore: "Dasturni ko'rish",
+                viewMore: "Batafsil koʻrish",
             },
         },
 
@@ -2132,3 +2132,5 @@ export const allEvents = [
         },
     },
 ];
+
+// here 
