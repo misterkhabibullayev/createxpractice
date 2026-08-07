@@ -50,7 +50,7 @@ window.addEventListener("DOMContentLoaded", () => {
                 "We are accredited by international professional organizations and institutes:",
             bestTutorsHere: "Best tutors are all here",
             meetOurTema: "Meet our team",
-            testimonials: "Testimonials",
+            testimonials: "TESTIMONIALS",
             whatOurStudentsSay: "What our students say",
             ourBlog: "Our blog",
             latestPosts: "Latest posts",
@@ -223,41 +223,40 @@ window.addEventListener("DOMContentLoaded", () => {
             backtoTop: "Tepaga qaytish",
         },
     };
-
-    //  HEADER 
-    const headerMain = document.querySelector("#headerMain");
-    headerMain.innerHTML = `
+    function updateHeader() {
+        const headerMain = document.querySelector("#headerMain");
+        headerMain.innerHTML = `
     <div
-        class="w-full max-w-[1300px] mx-auto px-5 flex justify-between items-center py-5"
+        class=" w-full max-w-[1340px] mx-auto px-5 flex justify-between items-center py-5 relative z-10"
     >
         <div class="flex items-center gap-7 md:gap-10">
             <div class="">
-                <a href="../../../index.html">
+                <a href="../../../../index.html">
                     <img
-                        src="../../../Image/HomePagePhoto/logo.svg"
+                        src="/Image/HomePagePhoto/logo.svg"
                         alt="logo image"
                     />
                 </a>
             </div>
             <nav class="hidden lg:flex items-center gap-4 xl:gap-8">
                 <a
-                    href="../../../Pages/About/about.html"
-                    class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300 whitespace-nowrap"
+                    href="/feed/about/about.html"
+                    class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
                 >${translateData[currentLang].navAbout}</a>
                 <a
-                    href="../../../Pages/Courses/courses.html"
+                    href="/feed/courses/courses.html"
                     class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
                 >${translateData[currentLang].navCourses}</a>
                 <a
-                    href="../../../Pages/Events/events.html"
+                    href="/feed/events/events.html"
                     class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
                 >${translateData[currentLang].navEvents}</a>
                 <a
-                    href="../../../Pages/Blogs/blogs.html"
+                    href="/feed/blogs/blogs.html"
                     class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
                 >${translateData[currentLang].navBlog}</a>
                 <a
-                    href="../../../Pages/Contacts/contacts.html"
+                    href="/feed/contacts/contacts.html"
                     class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
                 >${translateData[currentLang].navContacts}</a>
             </nav>
@@ -265,8 +264,8 @@ window.addEventListener("DOMContentLoaded", () => {
         <div class="flex items-center gap-3 md:gap-4">
             <div class="flex items-center gap-3 md:gap-4">
                 <a
-                    href="../../../Pages/Contacts/contacts.html"
-                    class="font-[Lato] font-bold text-[12px] py-3 leading-4 tracking-[0.5px] text-white bg-gradient-to-r from-[#FF3F3A] to-[#F75E05] px-5 lg:px-3 rounded-[4px] hidden sm:inline-block hover:bg-gradient-to-l hover:from-[#F75E05] hover:to-[#FF3F3A]"
+                    href="/feed/contacts/contacts.html"
+                    class="font-[Lato] font-bold text-[12px] leading-8 tracking-[0.5px] text-white bg-gradient-to-r from-[#FF3F3A] to-[#F75E05] px-5 rounded-[4px] hidden sm:inline-block hover:bg-gradient-to-l hover:from-[#F75E05] hover:to-[#FF3F3A]"
                 >
                     ${translateData[currentLang].getConsultation}
                 </a>
@@ -275,14 +274,14 @@ window.addEventListener("DOMContentLoaded", () => {
                     class="hidden lg:flex gap-2 items-center font-[Lato] font-bold text-3 lg:text-2 lg:leading-4 text-gray-800"
                 >
                     <img
-                        src="../../../Image/HomePagePhoto/Profile.svg"
+                        src="/Image/HomePagePhoto/Profile.svg"
                         alt="profile icon"
                         class="hidden xl:block"
                     />
                     ${translateData[currentLang].loginRegister}
                 </a>
             </div>
-            <div class=" relative">
+            <div class="relative">
                 <button
                     class=" flex items-center gap-1 px-2 rounded-[20px]"
                     id="langBtn"
@@ -293,18 +292,83 @@ window.addEventListener("DOMContentLoaded", () => {
                     id="langModal"
                 ></div>
             </div>
-            <button class="block lg:hidden">
-                <img
-                    src="../../../Image/HomePagePhoto/stash--burger-classic-light.svg"
-                    alt="burger icon"
-                />
+            <button id="burgerBtn" class="relative flex flex-col items-end justify-center gap-[6px] lg:hidden w-[30px] h-[30px]">
+                <span id="burgerSpan1" class="w-[30px] h-[4px] rounded-full bg-[#424551] transition-all duration-300 origin-center"></span>
+                <span id="burgerSpan2" class="w-[23px] h-[4px] rounded-full bg-[#424551] transition-all duration-300 origin-center"></span>
             </button>
+            
+        </div>
+        <div id="burgerModal" class="absolute top-full left-0 px-5 w-full flex lg:hidden overflow-hidden transition-all duration-300 origin-top [transform:rotateX(90deg)]">
+            <nav class="flex flex-col bg-white w-full">
+                <a
+                    href="/feed/about/about.html"
+                    class="block w-full px-4 py-2 font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
+                >${translateData[currentLang].navAbout}</a>
+                <a
+                    href="/feed/courses/courses.html"
+                    class="inline-block w-full px-4 py-2 font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
+                >${translateData[currentLang].navCourses}</a>
+                <a
+                    href="/feed/events/events.html"
+                    class="inline-block w-full px-4 py-2 font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
+                >${translateData[currentLang].navEvents}</a>
+                <a
+                    href="/feed/blogs/blogs.html"
+                    class="inline-block w-full px-4 py-2 font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
+                >${translateData[currentLang].navBlog}</a>
+                <a
+                    href="/feed/contacts/contacts.html"
+                    class="inline-block w-full px-4 py-2 font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
+                >${translateData[currentLang].navContacts}</a>
+                <a
+                    href="#!"
+                    class="flex lg:hidden gap-2 items-center w-full px-4 py-2 font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
+                >
+                    <img
+                        src="/Image/HomePagePhoto/Profile.svg"
+                        alt="profile icon"
+                        class="block"
+                    />
+                    ${translateData[currentLang].loginRegister}
+                </a>
+                <div class="">
+                    <a
+                        href="/feed/contacts/contacts.html"
+                        class="font-[Lato] font-bold text-[12px] leading-8 tracking-[0.5px] text-white bg-gradient-to-r from-[#FF3F3A] to-[#F75E05] px-5 rounded-[4px] inline-block mx-4 my-2 sm:hidden hover:bg-gradient-to-l hover:from-[#F75E05] hover:to-[#FF3F3A]"
+                    >
+                        ${translateData[currentLang].getConsultation}
+                    </a>
+                </div>
+            </nav>
         </div>
     </div>
 `;
-    //  HEADER 
+        const burgerBtn = document.querySelector("#burgerBtn");
+        const burgerSpan1 = document.querySelector("#burgerSpan1");
+        const burgerSpan2 = document.querySelector("#burgerSpan2");
+        const burgerModal = document.querySelector("#burgerModal");
+        burgerBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            burgerSpan1.classList.toggle("translate-y-[5px]");
+            burgerSpan1.classList.toggle("rotate-45");
+            burgerSpan2.classList.toggle("-translate-y-[5px]");
+            burgerSpan2.classList.toggle("w-[30px]");
+            burgerSpan2.classList.toggle("-rotate-45");
+            burgerModal.classList.toggle("[transform:rotateX(90deg)]");
+        });
+        document.addEventListener("click", () => {
+            burgerSpan1.classList.remove("translate-y-[5px]", "rotate-45");
+            burgerSpan2.classList.remove(
+                "-translate-y-[5px]",
+                "-rotate-45",
+                "w-[30px]",
+            );
+            burgerModal.classList.add("[transform:rotateX(90deg)]");
+        });
+    }
+    updateHeader();
 
-    //  Events List View 
+    //  Events List View
     const EVENTSGRIDVIEW = document.getElementById("EVENTS-GRID-VIEW");
     EVENTSGRIDVIEW.classList.add("mt-[73px]", "pt-12");
     EVENTSGRIDVIEW.className =
@@ -326,7 +390,7 @@ window.addEventListener("DOMContentLoaded", () => {
                     ${eventsViewData.sortings.eventCategory.option
                         .map(
                             (opt) => `
-                            <option>${opt.opt}</option>
+                            <option value="${opt.value}">${opt.opt}</option>
                         `,
                         )
                         .join(" ")}
@@ -415,12 +479,22 @@ window.addEventListener("DOMContentLoaded", () => {
 
         </form>
 
-          <div class="grid max-[575px]:grid-cols-1 max-[992px]:grid-cols-2 min-[992px]:grid-cols-3 gap-3">
-            ${allEvents
+          <div class="grid max-[575px]:grid-cols-1 max-[992px]:grid-cols-2 min-[992px]:grid-cols-3 gap-3" id="eventsContainer">
+            ${renderEvents(allEvents)}
+          </div>
+          
+        </div>
+        `;
+
+        EVENTSGRIDVIEW.innerHTML = eventsListContent;
+
+        function renderEvents(events) {
+            return events
                 .map(
                     (eachEvent) => `
-                <div class="border mb-6 rounded flex items-stretch hover:shadow-xl transition-all duration-400">
-                  <div class="flex flex-col w-full grow items-start bo">
+                 <div class="border mb-6 rounded flex items-stretch hover:shadow-xl transition-all duration-400">
+
+                  <div class="flex flex-col w-full grow items-start">
 
                   <div class="flex w-full flex-col items-start pt-3 px-6 b">
                       <div class="flex items-center gap-2 mb-1 w-full">
@@ -433,24 +507,86 @@ window.addEventListener("DOMContentLoaded", () => {
                   </div>
                     
                       <div class="p-6  grow">
-                        <h3 class="mb-1 text-[rgb(30,33,44)] font-bold text-xl hover:text-[rgb(255,63,58)]">${eachEvent.previewListGrid[currentLang].previewTitle}</h3>
-                        <span class="text-[rgb(120,122,128)] ">${eachEvent.previewListGrid[currentLang].category}</span>
+                        <a href="../eventsingle/eventsingle.html?id=${eachEvent.id}"
+                        class="block mb-1 text-[rgb(30,33,44)] font-bold text-xl hover:text-[rgb(255,63,58)]">${eachEvent.previewListGrid[currentLang].previewTitle}</a>
+                        <span class="text-[rgb(120,122,128)]">${eachEvent.previewListGrid[currentLang].category}</span>
                       </div>
 
                       <div class="px-6  py-3 w-full">
+                      <a href="../eventsingle/eventsingle.html?id=${eachEvent.id}">
                         <button class="w-full px-8 py-2.5 font-normal text-[16px] leading-8 tracking-[0.5px] text-[#F75E05] border-[1px] border-[#F75E05] rounded-[4px] hover:bg-[#F75E05] hover:text-white transition-all duration-300 hover:shadow-[0px4px4px0px#F75E0580]">${eachEvent.previewListGrid[currentLang].viewMore}</button>
                       </div>
+                      </a>
 
                   </div>
                 </div>
               `,
                 )
-                .join(" ")}
-          </div>
-        </div>
-        `;
+                .join(" ");
+        }
 
-        EVENTSGRIDVIEW.innerHTML = eventsListContent;
+        const categorySelect = document.querySelector("#event-category");
+        const sortSelect = document.querySelector("#event-sort");
+        const showSelect = document.querySelector("#event-show");
+
+        const months = {
+            November: 11,
+            December: 12,
+        };
+
+        function updateList() {
+            console.log("Category:", categorySelect.value);
+            console.log("Sort:", sortSelect.value);
+            console.log("Show:", showSelect.value);
+
+            let events = [...allEvents];
+
+            const selectedCategory = categorySelect.value;
+
+            // Category filter
+            if (selectedCategory !== "all") {
+                events = events.filter(
+                    (event) => event.category === selectedCategory,
+                );
+            }
+
+            console.log("After category filter:", events.length);
+
+            // Sort
+            const sort = sortSelect.value;
+
+            if (sort === "Newest") {
+                events.sort((a, b) => {
+                    return (
+                        (months[b.previewListGrid.en.month] || 0) -
+                        (months[a.previewListGrid.en.month] || 0)
+                    );
+                });
+            }
+
+            if (sort === "Oldest") {
+                events.sort((a, b) => {
+                    return (
+                        (months[a.previewListGrid.en.month] || 0) -
+                        (months[b.previewListGrid.en.month] || 0)
+                    );
+                });
+            }
+
+            // Show amount
+            const amount = Number(showSelect.value);
+            events = events.slice(0, amount);
+
+            document.querySelector("#eventsContainer").innerHTML =
+                renderEvents(events);
+        }
+
+        categorySelect.addEventListener("change", () => {
+            console.log("Category changed!");
+            updateList();
+        });
+        sortSelect.addEventListener("change", updateList);
+        showSelect.addEventListener("change", updateList);
 
         // select border style
         const selects = EVENTSGRIDVIEW.querySelectorAll(".selects");
@@ -480,7 +616,7 @@ window.addEventListener("DOMContentLoaded", () => {
         });
     }
     updateEventsList();
-    //  Events List View 
+    //  Events List View
 
     function updateSubscribe() {
         const subscribeData = locale[currentLang].subscribe.intro;
@@ -519,21 +655,18 @@ window.addEventListener("DOMContentLoaded", () => {
 
     updateSubscribe();
 
-    //  Footer 
-    function updateFooter() {
-        const footerData = locale[currentLang].footer;
-
-        // footer
+    // *************** Footer ***************
+    function footer() {
         const footer = document.querySelector("#footer");
         footer.innerHTML = `
     <div class="bg-[#1E212C] pt-[50px] pb-[40px] lg:pt-[80px] lg:pb-[60px]">
-        <div class="w-full max-w-[1340px] mx-auto px-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-y-8 gap-x-6">
-            <div class="flex flex-col lg:col-span-3 sm:col-span-1 order-1 lg:order-1">
+        <div class="w-full max-w-[1340px] mx-auto px-5 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-12 gap-y-8 gap-x-6">
+            <div class="flex flex-col lg:col-span-3 sm:col-span-1 col-span-2 order-1 lg:order-1">
                 <a href="./index.html">
-                    <img src="../../../Image/HomePagePhoto/footerlogo.svg" alt="footer logo" class="" />
+                    <img src="/Image/HomePagePhoto/footerlogo.svg" alt="footer logo" class="" />
                 </a>
-                <p class="font-[Lato] font-normal text-[12px] leading-[150%] text-white opacity-60 max-w-[280px] line-clamp-5 mt-[24px] mb-[38px]">${footerData.footerDescription}</p>
-                <div class="flex items-center gap-5 mb-4">
+                <p class="font-[Lato] font-normal text-[12px] leading-[150%] text-white opacity-60 max-w-full line-clamp-5 mt-[24px] mb-[38px]">${translateData[currentLang].footerDescription}</p>
+                <div class="flex items-center gap-5 mb-4 flex-wrap">
                     <a href="https://facebook.com/" aria-label="Facebook">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="text-[#A5A6AB] hover:text-white transition-all duration-300">
                             <path d="M0 0h24v24H0z" fill="none" />
@@ -573,27 +706,27 @@ window.addEventListener("DOMContentLoaded", () => {
                 </div>
             </div>
             <div class="lg:col-span-2 sm:col-span-2 order-1 sm:order-4 lg:order-2">
-                <h3 class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] mb-[12px] text-white">${footerData.siteMap.toUpperCase()}</h3>
+                <h3 class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] mb-[12px] text-white">${translateData[currentLang].siteMap.toUpperCase()}</h3>
                 <div class="flex gap-6 sm:flex-row flex-col lg:flex-col lg:gap-2">
-                    <a href="Pages/About/about.html" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateData[currentLang].navAbout}</a>
-                    <a href="Pages/Courses/courses.html" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateData[currentLang].navCourses}</a>
-                    <a href="Pages/Events/events.html" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateData[currentLang].navEvents}</a>
-                    <a href="Pages/Blogs/blogs.html" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateData[currentLang].navBlog}</a>
-                    <a href="Pages/Contacts/contacts.html" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${footerData.navContacts}</a>
+                    <a href="/feed/about/about.html" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateData[currentLang].navAbout}</a>
+                    <a href="/feed/courses/courses.html" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateData[currentLang].navCourses}</a>
+                    <a href="/feed/events/events.html" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateData[currentLang].navEvents}</a>
+                    <a href="/feed/blogs/blogs.html" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateData[currentLang].navBlog}</a>
+                    <a href="/feed/contacts/contacts.html" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateData[currentLang].navContacts}</a>
                 </div>
             </div>
             <div class="lg:col-span-2 sm:col-span-2 order-2 sm:order-5 lg:order-3">
-                <h3 class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] mb-[12px] text-white">${footerData.courses.toUpperCase()}</h3>
+                <h3 class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] mb-[12px] text-white">${translateData[currentLang].courses.toUpperCase()}</h3>
                 <div class="flex gap-6 sm:flex-row flex-col lg:flex-col lg:gap-2">
-                    <a href="#!" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${footerData.marketing}</a>
-                    <a href="#!" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${footerData.management}</a>
-                    <a href="#!" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${footerData.hrRecruting}</a>
-                    <a href="#!" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${footerData.design}</a>
-                    <a href="#!" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${footerData.development}</a>
+                    <a href="#!" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateData[currentLang].marketing}</a>
+                    <a href="#!" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateData[currentLang].management}</a>
+                    <a href="#!" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateData[currentLang].hrRecruting}</a>
+                    <a href="#!" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateData[currentLang].design}</a>
+                    <a href="#!" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateData[currentLang].development}</a>
                 </div>
             </div>
-            <div class="lg:col-span-2 sm:col-span-1 order-3 sm:order-3 lg:order-4">
-                <h3 class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] mb-[12px] text-white">${footerData.contactUs.toUpperCase()}</h3>
+            <div class="lg:col-span-2 sm:col-span-1 col-span-2 order-3 sm:order-3 lg:order-4">
+                <h3 class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] mb-[12px] text-white">${translateData[currentLang].contactUs.toUpperCase()}</h3>
                 <div class="flex flex-col gap-2">
                     <a href="tel:(405) 555-0128" class="font-[Lato] font-normal text-[16px] leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300 group flex items-center gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
@@ -611,23 +744,23 @@ window.addEventListener("DOMContentLoaded", () => {
                     </a>
                 </div>
             </div>
-            <div class="lg:col-span-3 sm:col-span-1 order-4 sm:order-2 lg:order-5">
-                <h3 class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] mb-[12px] text-white">${footerData.signUpNewsLatter.toUpperCase()}</h3>
+            <div class="lg:col-span-3 col-span-2 sm:col-span-1 order-4 sm:order-2 lg:order-5">
+                <h3 class="font-[Lato] font-bold text-[16px] leading-[150%] tracking-[1px] mb-[12px] text-white">${translateData[currentLang].signUpNewsLatter.toUpperCase()}</h3>
                 <form>
                     <div class="flex items-center justify-end bg-[#393C46] border border-[#FFFFFF33] px-3 py-2.5 rounded-[4px] focus-within:border-[#ff3f3a] focus-within:bg-white transition-all duration-300">
-                        <input type="email" placeholder="${footerData.signUpNewsLatterPlaceholder}" class="flex-1 pr-3 bg-transparent font-[Lato] font-normal text-[12px] leading-[150%] text-white focus:text-black outline-none placeholder:text-[#A5A6AB]">
-                        <img src="/Image/HomePagePhoto/footerRight.svg" class="w-4 h-4"/>
+                        <input type="email" placeholder="${translateData[currentLang].signUpNewsLatterPlaceholder}" class="flex-1 pr-3 bg-transparent font-[Lato] font-normal text-[12px] leading-[150%] text-white focus:text-black outline-none placeholder:text-[#A5A6AB]">
+                        <img src="Image/HomePagePhoto/footerRight.svg" class="w-4 h-4"/>
                     </div>
-                    <p class="mt-[12px] font-[Lato] font-normal text-[10px] leading-[150%] text-white opacity-60 max-w-[290px] line-clamp-2">${translateData.en.signUpSubscribe}</p>
+                    <p class="mt-[12px] font-[Lato] font-normal text-[10px] leading-[150%] text-white opacity-60 max-w-[290px] line-clamp-2">${translateData[currentLang].signUpSubscribe}</p>
                 </form>
             </div>
         </div>
     </div>
     <div class="bg-[#292C37] py-[18px]">
         <div class="w-full max-w-[1340px] mx-auto px-5 flex items-center justify-between">
-            <p class="font-[Lato] font-normal text-[12px] leading-[150%] text-white">© ${footerData.copyRight}. ${footerData.madeWith}</p>
+            <p class="font-[Lato] font-normal text-[12px] leading-[150%] text-white">&copy; ${translateData[currentLang].copyRight}. ${translateData[currentLang].madeWith}</p>
             <div>
-                <button id="goToTopBtn" class="font-[Lato] font-bold text-[14px] leading-[150%] text-white">${footerData.backtoTop}</button>
+                <button id="goToTopBtn" class="font-[Lato] font-bold text-[14px] leading-[150%] text-white">${translateData[currentLang].backtoTop}</button>
             </div>
         </div>
     </div>
@@ -639,9 +772,7 @@ window.addEventListener("DOMContentLoaded", () => {
                 behavior: "smooth",
             });
         });
-        // footer end
     }
-    updateFooter();
-    //  Footer 
+    footer();
+    // *************** Footer ***************
 });
-

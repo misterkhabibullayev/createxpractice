@@ -10,11 +10,10 @@ export const locale = {
                 label: "Event category",
                 for: "event-category",
                 option: [
-                    { opt: "All events" },
-                    { opt: "Online master-class" },
-                    { opt: "Online lecture" },
-                    { opt: "Online workshop" },
-                    { opt: "Online workshop" },
+                    { opt: "All events", value: "all" },
+                    { opt: "Online master-class", value: "masterclass" },
+                    { opt: "Online lecture", value: "lecture" },
+                    { opt: "Online workshop", value: "workshop" },
                 ],
             },
             sortBy: {
