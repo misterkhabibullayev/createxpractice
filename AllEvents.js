@@ -2,180 +2,186 @@ export const allEvents = [
     {
         id: 0,
         category: "lecture",
-
         previewListGrid: {
             en: {
-                category: "lecture",
+                category: "masterclass",
             },
             ru: {
-                category: "lecture",
+                category: "masterclass",
             },
             uz: {
-                category: "lecture",
+                category: "masterclass",
             },
-            date: "05",
-            startTime: "11:00",
-            endTime: "14:00",
+            date: "17",
+            startTime: "19:00",
+            endTime: "21:30",
             en: {
-                month: "August",
+                month: "January",
                 previewTitle:
-                    "Formation of the organizational structure of the company in the face of uncertainty.",
-                category: "Online master class",
-                viewMore: "View more",
+                    "Practical Network Defense: Mitigating Infrastructure Vulnerabilities and Cyber Threats with Jacob Jones.",
+                category: "Interactive Masterclass",
+                viewMore: "View Syllabus",
             },
             ru: {
-                month: "Август",
+                month: "Январь",
                 previewTitle:
-                    "Формирование организационной структуры компании в условиях неопределенности.",
-                category: "Онлайн мастер-класс",
-                viewMore: "Подробнее",
+                    "Практическая защита сетей: Устранение уязвимостей инфраструктуры и киберугроз с Джейкобом Джонсом.",
+                category: "Интерактивный мастер-класс",
+                viewMore: "Смотреть программу",
             },
             uz: {
-                month: "Avgust",
+                month: "Yanvar",
                 previewTitle:
-                    "Noma'lumlik sharoitida kompaniyaning tashkiliy tuzilmasini shakllantirish.",
-                category: "Online mahorat darsi",
-                viewMore: "Batafsil ko'rish",
+                    "Amaliy tarmoq himoyasi: Jacob Jones bilan infratuzilma zaifliklari va kiber tahdidlardan himoyalanish.",
+                category: "Interaktiv mahorat darsi",
+                viewMore: "Dasturni ko'rish",
             },
         },
+
         whatwilltalkabout: {
             en: {
-                title: "What will we talk about?",
+                title: "Masterclass Agenda",
                 themes: [
                     {
-                        theme: "Theme 1",
-                        themeTitle: "Aliquet lectus urna viverra in odio.",
+                        theme: "Part 1",
+                        themeTitle:
+                            "Network Security Assessment & Vulnerability Analysis.",
                         description:
-                            "Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.",
+                            "Learn how security professionals identify infrastructure weaknesses using vulnerability scanners, penetration testing techniques, and risk assessment methodologies.",
                     },
                     {
-                        theme: "Theme 2",
+                        theme: "Part 2",
                         themeTitle:
-                            "Orci commodo, viverra orci mollis ut euismod.",
+                            "Firewalls, IDS/IPS & Secure Network Architecture.",
                         description:
-                            "Ipsum aspernatur officiis, obcaecati modi excepturi, consectetur adipisicing elit. Inventore porro molestiae nihil ad aut atque tempora tempore fugiat ipsum aspernatur officiis, obcaecati modi excepturi, aliquid reprehenderit? Sint ullam magni molestias?",
+                            "Configure enterprise-grade firewall rules, intrusion detection systems, and secure network segmentation to defend against unauthorized access.",
                     },
                     {
-                        theme: "Theme 3",
-                        themeTitle:
-                            "Sagittis vitae facilisi rutrum amet mauris.",
+                        theme: "Part 3",
+                        themeTitle: "Incident Response & Threat Hunting.",
                         description:
-                            "Doloribus quo sed beatae provident placeat voluptate corporis eligendi maxime laborum reprehenderit voluptatibus obcaecati recusandae illum, delectus ipsum ab vitae cum excepturi? Illo ad id mollitia, sit obcaecati qui laborum iste minima deserunt consequatur sunt neque aliquid, error aspernatur!",
+                            "Build an effective incident response workflow, investigate security breaches, analyze malware behavior, and proactively hunt advanced cyber threats.",
                     },
                     {
-                        theme: "Theme 4",
+                        theme: "Part 4",
                         themeTitle:
-                            "In id dolor quis nunc, urna hendrerit pharetra.",
+                            "Zero Trust Security & Cloud Infrastructure Protection.",
                         description:
-                            "Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.",
+                            "Implement Zero Trust principles, multi-factor authentication, privileged access management, and cloud security best practices for modern organizations.",
                     },
                 ],
             },
-
             ru: {
-                title: "О чем мы будем говорить?",
+                title: "План мастер-класса",
                 themes: [
                     {
-                        theme: "Тема 1",
+                        theme: "Часть 1",
                         themeTitle:
-                            "Правильное распределение ресурсов в условиях неопределенности.",
+                            "Анализ уязвимостей и аудит безопасности сети.",
                         description:
-                            "В современных рыночных условиях выбор правильной стратегии имеет решающее значение для обеспечения стабильности компании и снижения рисков. В этом разделе мы рассмотрим методы эффективного управления организационными ресурсами, повышения потенциала сотрудников и быстрой адаптации к непредвиденным изменениям.",
+                            "Изучим, как специалисты по кибербезопасности выявляют слабые места инфраструктуры с помощью сканеров уязвимостей, тестирования на проникновение и оценки рисков.",
                     },
                     {
-                        theme: "Тема 2",
+                        theme: "Часть 2",
                         themeTitle:
-                            "Оптимизация организационной структуры и автоматизация процессов.",
+                            "Межсетевые экраны, IDS/IPS и защищенная архитектура сети.",
                         description:
-                            "Пересмотр внутренних бизнес-процессов компании и устранение дублирующих функций позволяют существенно повысить эффективность работы. Мы обсудим методы грамотного делегирования задач и внедрение современных цифровых инструментов.",
+                            "Научимся настраивать корпоративные firewall, системы обнаружения вторжений и безопасную сегментацию сети для защиты от несанкционированного доступа.",
                     },
                     {
-                        theme: "Тема 3",
+                        theme: "Часть 3",
                         themeTitle:
-                            "Управление персоналом и поддержание мотивации в период кризиса.",
+                            "Реагирование на инциденты и поиск киберугроз.",
                         description:
-                            "В условиях неопределенности ключевая задача руководителя — объединить команду вокруг общей цели и обеспечить её психологическую устойчивость. В этом блоке мы разберем построение эффективной коммуникации и системы антикризисной мотивации.",
+                            "Разберем процесс реагирования на инциденты, расследование атак, анализ вредоносного ПО и методы активного поиска современных угроз.",
                     },
                     {
-                        theme: "Тема 4",
+                        theme: "Часть 4",
                         themeTitle:
-                            "Долгосрочное стратегическое планирование и управление рисками.",
+                            "Zero Trust и защита облачной инфраструктуры.",
                         description:
-                            "Несмотря на быстрые изменения рынка, компании необходимо иметь четкий вектор развития. В этом разделе мы научимся прогнозировать риски, анализировать возможные сценарии и формировать стратегию устойчивого роста.",
+                            "Изучим внедрение архитектуры Zero Trust, многофакторной аутентификации, управления привилегированным доступом и современных практик защиты облачных сервисов.",
                     },
                 ],
             },
-
             uz: {
-                title: "Nima haqida gaplashamiz?",
+                title: "Mahorat darsi rejasi",
                 themes: [
                     {
-                        theme: "1-Mavzu",
+                        theme: "1-Qism",
                         themeTitle:
-                            "Noma'lumlik sharoitida resurslarni to'g'ri taqsimlash.",
+                            "Tarmoq xavfsizligi auditi va zaifliklarni tahlil qilish.",
                         description:
-                            "Zamonaviy bozor sharoitida kompaniya barqarorligini ta'minlash va xatarlarni kamaytirish uchun to'g'ri strategiya tanlash o'ta muhimdir. Ushbu bo'limda biz tashkiliy resurslarni samarali boshqarish, xodimlarning salohiyatini oshirish hamda kutilmagan o'zgarishlarga tezkor moslashish usullarini ko'rib chiqamiz.",
+                            "Zaiflik skanerlari, penetration testing va risklarni baholash usullari yordamida infratuzilmadagi xavfli nuqtalarni aniqlashni o'rganamiz.",
                     },
                     {
-                        theme: "2-Mavzu",
+                        theme: "2-Qism",
                         themeTitle:
-                            "Tashkiliy tuzilmani optimallashtirish va jarayonlarni avtomatlashtirish.",
+                            "Firewall, IDS/IPS va xavfsiz tarmoq arxitekturasi.",
                         description:
-                            "Kompaniya ichki biznes-jarayonlarini qayta ko'rib chiqish va keraksiz bosqichlarni olib tashlash orqali ish samaradorligini keskin oshirish mumkin. Biz jamoadagi vazifalarni to'g'ri taqsimlash hamda zamonaviy raqamli vositalarni joriy etish usullarini muhokama qilamiz.",
+                            "Korporativ firewall sozlamalari, hujumlarni aniqlash tizimlari va tarmoq segmentatsiyasi orqali xavfsizlikni ta'minlash usullarini ko'rib chiqamiz.",
                     },
                     {
-                        theme: "3-Mavzu",
+                        theme: "3-Qism",
                         themeTitle:
-                            "Inqiroz davrida xodimlarni boshqarish va motivatsiyani saqlash.",
+                            "Kiberhodisalarga javob berish va tahdidlarni aniqlash.",
                         description:
-                            "Noma'lumlik sharoitida jamoani yagona maqsad atrofida birlashtirish va ularning ruhiy barqarorligini ta'minlash rahbarning asosiy vazifasidir. Bu yerda biz xodimlar bilan to'g'ri muloqot o'rnatish hamda inqirozga qarshi samarali motivatsiya tizimlarini ko'rib chiqamiz.",
+                            "Kiberhujumlarga javob berish jarayoni, zararli dasturlarni tahlil qilish va zamonaviy tahdidlarni faol izlash usullarini o'rganamiz.",
                     },
                     {
-                        theme: "4-Mavzu",
+                        theme: "4-Qism",
                         themeTitle:
-                            "Uzoq muddatli strategik rejalashtirish va xatarlarni boshqarish.",
+                            "Zero Trust va bulut infratuzilmasini himoyalash.",
                         description:
-                            "Bozordagi tezkor o'zgarishlarga qaramay, kompaniyaning aniq rivojlanish vektoriga ega bo'lishi muhimdir. Ushbu bo'limda xatarlarni oldindan bashorat qilish, ehtimoliy ssenariylarni tahlil qilish va barqaror o'sish strategiyasini tuzishni o'rganamiz.",
+                            "Zero Trust modeli, ko'p bosqichli autentifikatsiya, imtiyozli kirishlarni boshqarish va bulut xavfsizligining eng yaxshi amaliyotlarini o'rganamiz.",
                     },
                 ],
             },
         },
+
         eventAbout: {
             en: {
-                timeTitle: "Time",
-                talkMonth: "August 5,",
-                talkStartTime: "11:00",
-                talkEndTime: "14:00",
+                timeTitle: "Event Details",
+                talkMonth: "January 17,",
+                talkStartTime: "19:00",
+                talkEndTime: "21:30",
                 timeDescription:
-                    "Metus turpis sit lorem lacus, in elit tellus lacus.",
-                priceTitle: "Price",
-                price: "Free",
+                    "Join a live hands-on cybersecurity workshop on Zoom featuring real-world attack simulations, virtual security labs, and guided practical exercises.",
+                priceTitle: "Ticket Cost",
+                price: "$45 USD",
                 priceDescription:
-                    "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis.",
-                eventOn: "Event on Facebook",
-                joinEvent: "Join the event",
+                    "Standard participant ticket. Includes lifetime access to workshop recordings, security scripts, vulnerability assessment checklists, and downloadable lab materials.",
+                eventOn: "Join Our Cybersecurity Discord Community",
+                joinEvent: "Reserve My Ticket Now",
             },
             ru: {
-                timeTitle: "Время",
+                timeTitle: "Детали события",
+                talkMonth: "17 января,",
+                talkStartTime: "19:00",
+                talkEndTime: "21:30",
                 timeDescription:
-                    "Мероприятие начнется строго в указанное время, пожалуйста, подключайтесь вовремя.",
-                priceTitle: "Цена",
-                price: 0,
+                    "Практический мастер-класс в Zoom с моделированием реальных кибератак, виртуальными лабораториями и интерактивными заданиями.",
+                priceTitle: "Цена билета",
+                price: 580000,
                 priceDescription:
-                    "Участие абсолютно бесплатное. Количество мест может быть ограничено.",
-                eventOn: "Страница в Facebook",
-                joinEvent: "Присоединиться к мероприятию",
+                    "Стандартный билет участника. Включает бессрочный доступ к видеозаписи мастер-класса, скриптам безопасности, чек-листам и лабораторным материалам.",
+                eventOn:
+                    "Присоединяйтесь к нашему Cybersecurity Discord-сообществу",
+                joinEvent: "Забронировать билет",
             },
             uz: {
-                timeTitle: "Vaqti",
+                timeTitle: "Tadbir tafsilotlari",
+                talkMonth: "17-Yanvar,",
+                talkStartTime: "19:00",
+                talkEndTime: "21:30",
                 timeDescription:
-                    "Tadbir belgilangan vaqtda aniq boshlanadi, iltimos, o'z vaqtida qo'shiling.",
-                priceTitle: "Narxi",
-                price: 0,
+                    "Zoom platformasida haqiqiy kiberhujumlar simulyatsiyasi, virtual laboratoriyalar va amaliy mashg'ulotlarni o'z ichiga olgan jonli mahorat darsi.",
+                priceTitle: "Chipta narxi",
+                price: 580000,
                 priceDescription:
-                    "Ishtirok etish mutlaqo bepul. Joylar soni chegaralangan bo'lishi mumkin.",
-                eventOn: "Facebook'dagi sahifa",
-                joinEvent: "Tadbirga a'zo bo'lish",
+                    "Standart ishtirokchi chiptasi. Mahorat darsi videoyozuvi, xavfsizlik skriptlari, zaifliklarni tekshirish chek-listlari va laboratoriya materiallariga umrbod kirishni o'z ichiga oladi.",
+                eventOn: "Cybersecurity Discord hamjamiyatimizga qo'shiling",
+                joinEvent: "Chiptani hoziroq band qilish",
             },
         },
         tutorAbout: {
