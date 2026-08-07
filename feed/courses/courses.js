@@ -1048,7 +1048,7 @@ window.addEventListener("DOMContentLoaded", () => {
     function updateCertificateText() {
         const sertificateData = locale[currentLang].sertificate.intro;
         const sertificateLogoData =
-            locale[currentLang].sertificate.intro.ourCollaborations;
+            locale?.[currentLang].sertificate.intro.ourCollaborations;
 
         const badge = document.getElementById("sertificate-badge");
         const title = document.getElementById("sertificate-title");
