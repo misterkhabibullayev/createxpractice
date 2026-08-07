@@ -1,4 +1,4 @@
-import { allEvents } from "../../../AllEvents.js";
+import { allEvents } from "/AllEvents.js";
 
 window.addEventListener("DOMContentLoaded", () => {
     const locale = {
@@ -1503,12 +1503,14 @@ window.addEventListener("DOMContentLoaded", () => {
                   </div>
                     
                       <div class="p-6 flex-1">
-                        <h3 class="mb-1 text-[rgb(30,33,44)] font-bold text-xl hover:text-[rgb(255,63,58)]">${eachEvent.previewListGrid[currentLang].previewTitle}</h3>
+                        <h3 class="line-clamp-4 mb-1 text-[rgb(30,33,44)] font-bold text-xl hover:text-[rgb(255,63,58)]">${eachEvent.previewListGrid[currentLang].previewTitle}</h3>
                         <span class="text-[rgb(120,122,128)] ">${eachEvent.previewListGrid[currentLang].category}</span>
                       </div>
 
                       <div class="px-6  py-3 w-full">
-                        <button class="mt-auto w-full px-8 py-2.5 font-normal text-[16px] leading-8 tracking-[0.5px] text-[#F75E05] border-[1px] border-[#F75E05] rounded-[4px] hover:bg-[#F75E05] hover:text-white transition-all duration-300 hover:shadow-[0px4px4px0px#F75E0580]">${eachEvent.previewListGrid[currentLang].viewMore}</button>
+                        <a
+                        href="/feed/events/eventsingle/eventsingle.html?id=${eachEvent.id}"
+                        class="inline-block text-center mt-auto w-full px-8 py-2.5 font-normal text-[16px] leading-8 tracking-[0.5px] text-[#F75E05] border-[1px] border-[#F75E05] rounded-[4px] hover:bg-[#F75E05] hover:text-white transition-all duration-300 hover:shadow-[0px4px4px0px#F75E0580]">${eachEvent.previewListGrid[currentLang].viewMore}</a>
                       </div>
 
                   </div>
