@@ -1027,7 +1027,7 @@ window.addEventListener("DOMContentLoaded", () => {
         const button = document.createElement("button");
         button.innerHTML = subscribeDataEmail.button;
         button.className =
-            "bg-[#FF3F3A] text-white font-bold leading-[43px] tracikng-[0.5px] px-5 sm:px-10 rounded";
+            "bg-[#FF3F3A] text-white font-bold leading-[43px] tracikng-[0.5px] px-5 sm:px-10 rounded whitespace-nowrap";
 
         inputForm.appendChild(emailInput);
         inputForm.appendChild(button);

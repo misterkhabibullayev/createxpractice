@@ -1054,10 +1054,6 @@ window.addEventListener("DOMContentLoaded", () => {
         const sertificateLogoData =
             locale?.[currentLang].sertificate.intro.ourCollaborations;
 
-        console.log(locale[currentLang].sertificate);
-        console.log(locale[currentLang].sertificate.intro);
-        console.log(locale[currentLang].sertificate.intro.ourCollaborations);
-
         const badge = document.getElementById("sertificate-badge");
         const title = document.getElementById("sertificate-title");
         const description = document.getElementById("sertificate-description");

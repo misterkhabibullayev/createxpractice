@@ -1269,7 +1269,7 @@ window.addEventListener("DOMContentLoaded", () => {
                     </div>
                     <div class="flex flex-col md:flex-row md:justify-between md:items-center md:flex-1 md:gap-10">
                         <div>
-                            <a href="./feed/events/event.html" class="inline-block flex-shrink-0 font-[Lato] font-bold text-[20px] leading-[150%] text-[#1E212C] pb-[8px]">
+                            <a href="./feed/events/eventsingle/eventsingle.html?id=${item.id}" class="inline-block flex-shrink-0 font-[Lato] font-bold text-[20px] leading-[150%] text-[#1E212C] pb-[8px]">
                                 ${item.previewListGrid[currentLang].previewTitle}
                             </a>
                             <p class="font-[Lato] font-normal text-[16px] leading-[150%] text-[#1E212C]">
@@ -1278,9 +1278,10 @@ window.addEventListener("DOMContentLoaded", () => {
                         </div>
                         <div class="mt-5 md:mt-0 py-2">
                             <a
-                                href="./feed/events/event.html"
+                                href="./feed/events/eventsingle/eventsingle.html?id=${item.id}"
                                 class="inline-block w-full md:w-auto text-center py-1 px-[32px] font-[Lato] font-normal text-[16px] leading-8 tracking-[0.5px] text-[#F75E05] border-[1px] border-[#F75E05] rounded-[4px] bg-transparent  transition-all duration-300 hover:shadow-[0px_4px_4px_0px_#F75E0580] hover:bg-[#F75E05] hover:text-white whitespace-nowrap">
                                 ${item.previewListGrid[currentLang].viewMore}
+                                // o'zgarishlar bo'ldi shu tepada esingdan chiqmasin
                             </a>
                         </div> 
                     </div> 
@@ -1290,11 +1291,11 @@ window.addEventListener("DOMContentLoaded", () => {
                 .join(" ")}
         </div>
         <div class="mt-[60px] flex justify-center">
-            <div class="flex items-center gap-10">
-                <p class="font-[Lato] font-bold text-[28px] leading-[150%] text-[#1E212C]">
+            <div class="flex flex-col items-center gap-2 md:gap-10 min-[456px]:flex-row z-[2]">
+                <p class="font-[Lato] font-bold text-center text-[18px] md:text-[28px] leading-[150%] text-[#1E212C]">
                     ${translateData[currentLang].doyouwatnmore}
                 </p>
-                <a href="./feed/events/events.html" class="inline-block py-2 px-[32px] font-[Lato] font-normal text-[16px] leading-8 tracking-[0.5px] text-white border-[1px] border-[#F75E05] rounded-[4px] bg-[#F75E05] transition-all duration-300 hover:shadow-[0px_4px_4px_0px_#F75E0580]">
+                <a href="./feed/events/events.html" class="inline-block py-2 px-[32px] font-[Lato] font-normal text-[16px] leading-8 tracking-[0.5px] text-white border-[1px] border-[#F75E05] rounded-[4px] bg-[#F75E05] transition-all duration-300 hover:shadow-[0px_4px_4px_0px_#F75E0580] whitespace-nowrap">
                     ${translateData[currentLang].exploreAllEvents}
                 </a>
             </div>
@@ -1304,7 +1305,7 @@ window.addEventListener("DOMContentLoaded", () => {
     <div class="absolute top-[-10%] right-0 opacity-20 rotate-[-90deg]">
         <img src="Image/HomePagePhoto/circles (1).svg" alt="circles decoration" />
     </div>
-    <div class="absolute bottom-0 left-0">
+    <div class="absolute bottom-0 left-0 hidden md:block">
         <img src="Image/HomePagePhoto/dots (1).svg" alt="dots decoration" />
     </div>
 `;
@@ -1329,7 +1330,7 @@ window.addEventListener("DOMContentLoaded", () => {
                     ${translateData[currentLang].createXCertificateP}
                 </p>
             </div>
-            <div class="flex items-center gap-10 mt-[32px]">
+            <div class="flex flex-col items-start gap-2 min-[462px]:gap-10 min-[462px]:flex-row mt-[32px]">
                 <a href="#!" class="w-[105px] h-[50px] inline-block">
                     <img src="./Image/HomePagePhoto/certificat-section-img-1.svg" alt="certificate image" class="w-full h-full object-cover" />
                 </a>
