@@ -902,6 +902,10 @@ window.addEventListener("DOMContentLoaded", () => {
     function testimonialHeader() {
         const intro = locale[currentLang].testimonials.intro;
 
+        console.log(currentLang);
+        console.log(locale[currentLang]);
+        console.log(locale[currentLang].testimonials);
+
         const badge = document.getElementById("testimonials-badge");
         const description = document.getElementById("testimonials-description");
 
@@ -1050,6 +1054,10 @@ window.addEventListener("DOMContentLoaded", () => {
         const sertificateLogoData =
             locale[currentLang].sertificate.intro.ourCollaborations;
 
+        console.log(locale[currentLang].sertificate);
+        console.log(locale[currentLang].sertificate.intro);
+        console.log(locale[currentLang].sertificate.intro.ourCollaborations);
+
         const badge = document.getElementById("sertificate-badge");
         const title = document.getElementById("sertificate-title");
         const description = document.getElementById("sertificate-description");
@@ -1068,6 +1076,8 @@ window.addEventListener("DOMContentLoaded", () => {
         const collaborationLogos =
             document.getElementById("our-collaborations");
         let html = "";
+        console.log(sertificateLogoData);
+
         sertificateLogoData.forEach((logo) => {
             html += `
             <div>
