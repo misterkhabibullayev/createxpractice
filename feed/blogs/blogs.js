@@ -1,219 +1,220 @@
 import { allBlogPosts } from "../../AllBlogPosts.js";
+window.addEventListener("DOMContentLoaded", () => {
+    const translateLang = {
+        en: {
+            header: {
+                langTitle: "EN",
+                flag: "../../Image/HomePagePhoto/twemoji--flag-united-states.svg",
+                navAbout: "About Us",
+                navCourses: "Courses",
+                navEvents: "Events",
+                navBlog: "Blog",
+                navContacts: "Contacts",
+                getConsultation: "Get consultation",
+                loginRegister: "Log in / Register",
+                signIn: "Sign in",
+                signInP:
+                    "Sign in to your account using email and password provided during registration.",
+                email: "Email",
+                yourEmailAddress: "Your working email",
+                password: "Password",
+                passwordPlaceholder: "Your password",
+                rememberMe: "Remember me",
+                forgotPassword: "Forgot password?",
+                dontHaveAnAccount: "Don't have an account?",
+                orSignInWith: "Or sign in with",
+                signUp: "Sign up",
+                fullName: "Full name",
+                yourFullName: "Your full name",
+                confirmPassword: "Confirm Password",
+                confirmPasswordPlaceholder: "Confirm password",
+                alreadyAnAccount: "Already have an account?",
+            },
+            ourBlog: {
+                ourBlog: "OUR BLOG",
+                title: "Createx School Journal",
+                allBtn: "All",
+                articlesBtn: "Articles",
+                videosbtn: "Videos",
+                podcastsBtn: "Podcasts",
+                blogCategory: "Blog category",
+                allArticles: "All articles",
+                searchBlog: "search blog...",
+                loader: "Load more",
+            },
+            subscribe: {
+                subTitle:
+                    "Want to get the best articles weekly? Subscribe to our newsletter!",
+                placeholder: "Your working email",
+                subButton: "Subscribe",
+                checkbox:
+                    "I agree to receive communications from Createx Online School",
+            },
+            footer: {
+                footerDescription:
+                    "Createx Online School is a leader in online studying. We have lots of courses and programs from the main market experts. We provide relevant approaches to online learning, internships and employment in the largest companies in the country.",
+                siteMap: "SITE MAP",
+                courses: "COURSES",
+                marketing: "Marketing",
+                management: "Management",
+                hrRecruting: "HR & Recruting",
+                design: "Design",
+                development: "Development",
+                contactUs: "CONTACT US",
+                signUpNewsLatter: "SIGN UP TO OUR NEWSLETTER",
+                signUpNewsLatterPlaceholder: "Email address",
+                signUpSubscribe:
+                    "*Subscribe to our newsletter to receive communications and early updates from Createx SEO Agency.",
+                copyRight: "All rights reserved.",
+                madeWith: "Made with by Limon IT ",
+                backtoTop: "Back to top",
+            },
+        },
+        uz: {
+            header: {
+                langTitle: "UZ",
+                flag: "../../Image/HomePagePhoto/twemoji--flag-uzbekistan.svg",
+                navAbout: "Biz haqimizda",
+                navCourses: "Kurslar",
+                navEvents: "Tadbirlar",
+                navBlog: "Blog",
+                navContacts: "Kontaktlar",
+                getConsultation: "Konsultatsiya olish",
+                loginRegister: "Kirish / Ro'yxatdan o'tish",
+                signIn: "Kirish",
+                signInP:
+                    "Ro'yxatdan o'tish paytida ko'rsatilgan email va parol yordamida hisobingizga kiring.",
+                email: "Email",
+                yourEmailAddress: "Ishlayotgan emailingiz",
+                password: "Parol",
+                passwordPlaceholder: "Sizning parolingiz",
+                rememberMe: "Meni eslab qol",
+                forgotPassword: "Parolni unutdingizmi?",
+                dontHaveAnAccount: "Hisobingiz yo'qmi?",
+                orSignInWith: "Yoki ushbu usulda kiring",
+                signUp: "Ro'yxatdan o'tish",
+                fullName: "To'liq ism-sharif",
+                yourFullName: "Ism va familiyangiz",
+                confirmPassword: "Parolni tasdiqlang",
+                confirmPasswordPlaceholder: "Parolni tasdiqlang",
+                alreadyAnAccount: "Allaqachon hisobingiz bormi?",
+            },
+            ourBlog: {
+                ourBlog: "BIZNING BLOG",
+                title: "Createx School Jurnali",
+                allBtn: "Barchasi",
+                articlesBtn: "Maqolalar",
+                videosBtn: "Videolar",
+                podcastsBtn: "Podkastlar",
+                blogCategory: "Blog kategoriyasi",
+                allArticles: "Barcha maqolalar",
+                searchBlog: "Blogdan qidirish...",
+                loader: "Ko`proq yuklash",
+            },
+            subscribe: {
+                subTitle:
+                    "Har hafta eng yaxshi maqolalarni olishni xohlaysizmi? Axborot gazetamizga obuna bo'ling!",
+                placeholder: "Ishchi elektron pochtangiz",
+                subButton: "Obuna bo'lish",
+                checkbox:
+                    "Men Createx Online School'dan xabarlar olishga roziman",
+            },
+            footer: {
+                footerDescription:
+                    "Createx Onlayn Maktabi onlayn ta'lim sohasidagi yetakchilardan biridir. Biz zamonaviy ta'lim va ishga joylashish imkoniyatlarini taklif qilamiz.",
+                siteMap: "SAYT XARITASI",
+                courses: "KURSLAR",
+                marketing: "Marketing",
+                management: "Menejment",
+                hrRecruting: "HR va Rekruting",
+                design: "Dizayn",
+                development: "Dasturlash",
+                contactUs: "BOG'LANISH",
+                signUpNewsLatter: "YANGILIKLARGA OBUNA BO'LING",
+                signUpNewsLatterPlaceholder: "Email manzil",
+                signUpSubscribe:
+                    "*Yangiliklar va ilk yangilanishlarni olish uchun obuna bo'ling.",
+                copyRight: "Barcha huquqlar himoyalangan.",
+                madeWith: "Limon IT tomonidan yaratildi",
+                backtoTop: "Yuqoriga qaytish",
+            },
+        },
+        ru: {
+            header: {
+                langTitle: "RU",
+                flag: "../../Image/HomePagePhoto/twemoji--flag-russia.svg",
+                navAbout: "О нас",
+                navCourses: "Курсы",
+                navEvents: "Мероприятия",
+                navBlog: "Блог",
+                navContacts: "Контакты",
+                getConsultation: "Получить консультацию",
+                loginRegister: "Войти / Зарегистрироваться",
+                signIn: "Войти",
+                signInP:
+                    "Войдите в свой аккаунт, используя email и пароль, указанные при регистрации.",
+                email: "Email",
+                yourEmailAddress: "Ваш рабочий email",
+                password: "Пароль",
+                passwordPlaceholder: "Ваш пароль",
+                rememberMe: "Запомнить меня",
+                forgotPassword: "Забыли пароль?",
+                dontHaveAnAccount: "Нет аккаунта?",
+                orSignInWith: "Или войдите с помощью",
+                signUp: "Зарегистрироваться",
+                fullName: "Полное имя",
+                yourFullName: "Ваше полное имя",
+                confirmPassword: "Подтвердите пароль",
+                confirmPasswordPlaceholder: "Подтверждение пароля",
+                alreadyAnAccount: "Уже есть аккаунт?",
+            },
+            ourBlog: {
+                ourBlog: "НАШ БЛОГ",
+                title: "Журнал школы Createx",
+                allBtn: "Все",
+                articlesBtn: "Статьи",
+                videosBtn: "Видео",
+                podcastsBtn: "Подкасты",
+                blogCategory: "Категория блога",
+                allArticles: "Все статьи",
+                searchBlog: "Поиск по блогу...",
+                loader: "Загрузить ещё",
+            },
+            subscribe: {
+                subTitle:
+                    "Хотите получать лучшие статьи каждую неделю? Подпишитесь на нашу рассылку!",
+                placeholder: "Ваш рабочий email",
+                subButton: "Подписаться",
+                checkbox:
+                    "Я согласен(на) получать сообщения от Createx Online School",
+            },
+            footer: {
+                footerDescription:
+                    "Онлайн-школа Createx — лидер в сфере онлайн-образования. Мы предлагаем современные программы обучения и помощь в трудоустройстве.",
+                siteMap: "КАРТА САЙТА",
+                courses: "КУРСЫ",
+                marketing: "Маркетинг",
+                management: "Менеджмент",
+                hrRecruting: "HR и Рекрутинг",
+                design: "Дизайн",
+                development: "Разработка",
+                contactUs: "КОНТАКТЫ",
+                signUpNewsLatter: "ПОДПИШИТЕСЬ НА НОВОСТИ",
+                signUpNewsLatterPlaceholder: "Email адрес",
+                signUpSubscribe:
+                    "*Подпишитесь на нашу рассылку, чтобы получать новости и ранние обновления.",
+                copyRight: "Все права защищены.",
+                madeWith: "Создано Limon IT",
+                backtoTop: "Наверх",
+            },
+        },
+    };
 
-const translateLang = {
-    en: {
-        header: {
-            langTitle: "EN",
-            flag: "../../Image/HomePagePhoto/twemoji--flag-united-states.svg",
-            navAbout: "About Us",
-            navCourses: "Courses",
-            navEvents: "Events",
-            navBlog: "Blog",
-            navContacts: "Contacts",
-            getConsultation: "Get consultation",
-            loginRegister: "Log in / Register",
-            signIn: "Sign in",
-            signInP:
-                "Sign in to your account using email and password provided during registration.",
-            email: "Email",
-            yourEmailAddress: "Your working email",
-            password: "Password",
-            passwordPlaceholder: "Your password",
-            rememberMe: "Remember me",
-            forgotPassword: "Forgot password?",
-            dontHaveAnAccount: "Don't have an account?",
-            orSignInWith: "Or sign in with",
-            signUp: "Sign up",
-            fullName: "Full name",
-            yourFullName: "Your full name",
-            confirmPassword: "Confirm Password",
-            confirmPasswordPlaceholder: "Confirm password",
-            alreadyAnAccount: "Already have an account?",
-        },
-        ourBlog: {
-            ourBlog: "OUR BLOG",
-            title: "Createx School Journal",
-            allBtn: "All",
-            articlesBtn: "Articles",
-            videosbtn: "Videos",
-            podcastsBtn: "Podcasts",
-            blogCategory: "Blog category",
-            allArticles: "All articles",
-            searchBlog: "search blog...",
-            loader: "Load more",
-        },
-        subscribe: {
-            subTitle:
-                "Want to get the best articles weekly? Subscribe to our newsletter!",
-            placeholder: "Your working email",
-            subButton: "Subscribe",
-            checkbox:
-                "I agree to receive communications from Createx Online School",
-        },
-        footer: {
-            footerDescription:
-                "Createx Online School is a leader in online studying. We have lots of courses and programs from the main market experts. We provide relevant approaches to online learning, internships and employment in the largest companies in the country.",
-            siteMap: "SITE MAP",
-            courses: "COURSES",
-            marketing: "Marketing",
-            management: "Management",
-            hrRecruting: "HR & Recruting",
-            design: "Design",
-            development: "Development",
-            contactUs: "CONTACT US",
-            signUpNewsLatter: "SIGN UP TO OUR NEWSLETTER",
-            signUpNewsLatterPlaceholder: "Email address",
-            signUpSubscribe:
-                "*Subscribe to our newsletter to receive communications and early updates from Createx SEO Agency.",
-            copyRight: "All rights reserved.",
-            madeWith: "Made with by Limon IT ",
-            backtoTop: "Back to top",
-        },
-    },
-    uz: {
-        header: {
-            langTitle: "UZ",
-            flag: "../../Image/HomePagePhoto/twemoji--flag-uzbekistan.svg",
-            navAbout: "Biz haqimizda",
-            navCourses: "Kurslar",
-            navEvents: "Tadbirlar",
-            navBlog: "Blog",
-            navContacts: "Kontaktlar",
-            getConsultation: "Konsultatsiya olish",
-            loginRegister: "Kirish / Ro'yxatdan o'tish",
-            signIn: "Kirish",
-            signInP:
-                "Ro'yxatdan o'tish paytida ko'rsatilgan email va parol yordamida hisobingizga kiring.",
-            email: "Email",
-            yourEmailAddress: "Ishlayotgan emailingiz",
-            password: "Parol",
-            passwordPlaceholder: "Sizning parolingiz",
-            rememberMe: "Meni eslab qol",
-            forgotPassword: "Parolni unutdingizmi?",
-            dontHaveAnAccount: "Hisobingiz yo'qmi?",
-            orSignInWith: "Yoki ushbu usulda kiring",
-            signUp: "Ro'yxatdan o'tish",
-            fullName: "To'liq ism-sharif",
-            yourFullName: "Ism va familiyangiz",
-            confirmPassword: "Parolni tasdiqlang",
-            confirmPasswordPlaceholder: "Parolni tasdiqlang",
-            alreadyAnAccount: "Allaqachon hisobingiz bormi?",
-        },
-        ourBlog: {
-            ourBlog: "BIZNING BLOG",
-            title: "Createx School Jurnali",
-            allBtn: "Barchasi",
-            articlesBtn: "Maqolalar",
-            videosBtn: "Videolar",
-            podcastsBtn: "Podkastlar",
-            blogCategory: "Blog kategoriyasi",
-            allArticles: "Barcha maqolalar",
-            searchBlog: "Blogdan qidirish...",
-            loader: "Ko`proq yuklash",
-        },
-        subscribe: {
-            subTitle:
-                "Har hafta eng yaxshi maqolalarni olishni xohlaysizmi? Axborot gazetamizga obuna bo'ling!",
-            placeholder: "Ishchi elektron pochtangiz",
-            subButton: "Obuna bo'lish",
-            checkbox: "Men Createx Online School'dan xabarlar olishga roziman",
-        },
-        footer: {
-            footerDescription:
-                "Createx Onlayn Maktabi onlayn ta'lim sohasidagi yetakchilardan biridir. Biz zamonaviy ta'lim va ishga joylashish imkoniyatlarini taklif qilamiz.",
-            siteMap: "SAYT XARITASI",
-            courses: "KURSLAR",
-            marketing: "Marketing",
-            management: "Menejment",
-            hrRecruting: "HR va Rekruting",
-            design: "Dizayn",
-            development: "Dasturlash",
-            contactUs: "BOG'LANISH",
-            signUpNewsLatter: "YANGILIKLARGA OBUNA BO'LING",
-            signUpNewsLatterPlaceholder: "Email manzil",
-            signUpSubscribe:
-                "*Yangiliklar va ilk yangilanishlarni olish uchun obuna bo'ling.",
-            copyRight: "Barcha huquqlar himoyalangan.",
-            madeWith: "Limon IT tomonidan yaratildi",
-            backtoTop: "Yuqoriga qaytish",
-        },
-    },
-    ru: {
-        header: {
-            langTitle: "RU",
-            flag: "../../Image/HomePagePhoto/twemoji--flag-russia.svg",
-            navAbout: "О нас",
-            navCourses: "Курсы",
-            navEvents: "Мероприятия",
-            navBlog: "Блог",
-            navContacts: "Контакты",
-            getConsultation: "Получить консультацию",
-            loginRegister: "Войти / Зарегистрироваться",
-            signIn: "Войти",
-            signInP:
-                "Войдите в свой аккаунт, используя email и пароль, указанные при регистрации.",
-            email: "Email",
-            yourEmailAddress: "Ваш рабочий email",
-            password: "Пароль",
-            passwordPlaceholder: "Ваш пароль",
-            rememberMe: "Запомнить меня",
-            forgotPassword: "Забыли пароль?",
-            dontHaveAnAccount: "Нет аккаунта?",
-            orSignInWith: "Или войдите с помощью",
-            signUp: "Зарегистрироваться",
-            fullName: "Полное имя",
-            yourFullName: "Ваше полное имя",
-            confirmPassword: "Подтвердите пароль",
-            confirmPasswordPlaceholder: "Подтверждение пароля",
-            alreadyAnAccount: "Уже есть аккаунт?",
-        },
-        ourBlog: {
-            ourBlog: "НАШ БЛОГ",
-            title: "Журнал школы Createx",
-            allBtn: "Все",
-            articlesBtn: "Статьи",
-            videosBtn: "Видео",
-            podcastsBtn: "Подкасты",
-            blogCategory: "Категория блога",
-            allArticles: "Все статьи",
-            searchBlog: "Поиск по блогу...",
-            loader: "Загрузить ещё",
-        },
-        subscribe: {
-            subTitle:
-                "Хотите получать лучшие статьи каждую неделю? Подпишитесь на нашу рассылку!",
-            placeholder: "Ваш рабочий email",
-            subButton: "Подписаться",
-            checkbox:
-                "Я согласен(на) получать сообщения от Createx Online School",
-        },
-        footer: {
-            footerDescription:
-                "Онлайн-школа Createx — лидер в сфере онлайн-образования. Мы предлагаем современные программы обучения и помощь в трудоустройстве.",
-            siteMap: "КАРТА САЙТА",
-            courses: "КУРСЫ",
-            marketing: "Маркетинг",
-            management: "Менеджмент",
-            hrRecruting: "HR и Рекрутинг",
-            design: "Дизайн",
-            development: "Разработка",
-            contactUs: "КОНТАКТЫ",
-            signUpNewsLatter: "ПОДПИШИТЕСЬ НА НОВОСТИ",
-            signUpNewsLatterPlaceholder: "Email адрес",
-            signUpSubscribe:
-                "*Подпишитесь на нашу рассылку, чтобы получать новости и ранние обновления.",
-            copyRight: "Все права защищены.",
-            madeWith: "Создано Limon IT",
-            backtoTop: "Наверх",
-        },
-    },
-};
-
-let currentLang = localStorage.getItem("selectedLang") || "en";
-// header
-function headerMainFunc() {
-    const headerMain = document.querySelector("#headerMain");
-    headerMain.innerHTML = `
+    let currentLang = localStorage.getItem("selectedLang") || "en";
+    // header
+    function headerMainFunc() {
+        const headerMain = document.querySelector("#headerMain");
+        headerMain.innerHTML = `
     <div
         class=" w-full max-w-[1340px] mx-auto px-5 flex justify-between items-center py-5 relative"
     >
@@ -244,7 +245,7 @@ function headerMainFunc() {
                     class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
                 >${translateLang[currentLang].header.navBlog}</a>
                 <a
-                    href="./feed/contacts/contacts.html"
+                    href="../../feed/contacts/contacts.html"
                     class="font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
                 >${translateLang[currentLang].header.navContacts}</a>
             </nav>
@@ -488,159 +489,164 @@ function headerMainFunc() {
         </div>
     </div>
 `;
-    function loginSignFunc() {
-        const loginModalBtns = document.querySelectorAll(".loginModalBtn");
-        const loginModal = document.querySelector("#loginModal");
-        const closeBtn = document.querySelector("#closeBtn");
-        if (loginModalBtns.length > 0 && loginModal) {
-            loginModalBtns.forEach((btn) => {
-                btn.addEventListener("click", () => {
-                    document.body.classList.add("overflow-y-hidden");
-                    loginModal.classList.add("flex");
-                    loginModal.classList.remove("hidden");
+        function loginSignFunc() {
+            const loginModalBtns = document.querySelectorAll(".loginModalBtn");
+            const loginModal = document.querySelector("#loginModal");
+            const closeBtn = document.querySelector("#closeBtn");
+            if (loginModalBtns.length > 0 && loginModal) {
+                loginModalBtns.forEach((btn) => {
+                    btn.addEventListener("click", () => {
+                        document.body.classList.add("overflow-y-hidden");
+                        loginModal.classList.add("flex");
+                        loginModal.classList.remove("hidden");
+                    });
                 });
-            });
-        }
-        if (closeBtn && loginModal) {
-            closeBtn.addEventListener("click", () => {
-                document.body.classList.remove("overflow-y-hidden");
-                loginModal.classList.add("hidden");
-                loginModal.classList.remove("flex");
-            });
-        }
-        if (loginModal) {
-            loginModal.addEventListener("click", (e) => {
-                if (e.target === e.currentTarget) {
+            }
+            if (closeBtn && loginModal) {
+                closeBtn.addEventListener("click", () => {
                     document.body.classList.remove("overflow-y-hidden");
                     loginModal.classList.add("hidden");
                     loginModal.classList.remove("flex");
+                });
+            }
+            if (loginModal) {
+                loginModal.addEventListener("click", (e) => {
+                    if (e.target === e.currentTarget) {
+                        document.body.classList.remove("overflow-y-hidden");
+                        loginModal.classList.add("hidden");
+                        loginModal.classList.remove("flex");
+                    }
+                });
+            }
+
+            const signInUp = document.querySelector("#signInUp");
+            const signInUpTitle = document.querySelector("#signInUpTitle");
+            const signInP = document.querySelector("#loginModal p"); // Description text
+            const fullNameDiv = document.querySelector("#fullNameDiv");
+            const confirmPasswordDiv = document.querySelector(
+                "#confirmPasswordDiv",
+            );
+            const rememberDiv = document.querySelector("#rememberDiv");
+            const submitBtn = document.querySelector("#submitBtn");
+            const donthaveP = document.querySelector("#donthaveP");
+
+            let isSignUp = false;
+
+            signInUp.addEventListener("click", () => {
+                isSignUp = !isSignUp;
+
+                if (isSignUp) {
+                    signInUpTitle.innerHTML =
+                        translateLang[currentLang].header.signUp;
+                    signInP.innerHTML =
+                        translateLang[currentLang].header.signUpP ||
+                        translateLang[currentLang].header.signInP;
+
+                    fullNameDiv.classList.replace("hidden", "flex");
+                    confirmPasswordDiv.classList.replace("hidden", "block");
+                    rememberDiv.classList.add("hidden");
+
+                    submitBtn.innerHTML =
+                        translateLang[currentLang].header.signUp;
+                    donthaveP.innerHTML =
+                        translateLang[currentLang].header.alreadyAnAccount;
+                    signInUp.innerHTML =
+                        translateLang[currentLang].header.signIn;
+                } else {
+                    signInUpTitle.innerHTML =
+                        translateLang[currentLang].header.signIn;
+                    signInP.innerHTML =
+                        translateLang[currentLang].header.signInP;
+
+                    fullNameDiv.classList.replace("flex", "hidden");
+                    confirmPasswordDiv.classList.replace("block", "hidden");
+                    rememberDiv.classList.remove("hidden");
+
+                    submitBtn.innerHTML =
+                        translateLang[currentLang].header.signIn;
+                    donthaveP.innerHTML =
+                        translateLang[currentLang].header.dontHaveAnAccount;
+                    signInUp.innerHTML =
+                        translateLang[currentLang].header.signUp;
                 }
             });
         }
+        loginSignFunc();
 
-        const signInUp = document.querySelector("#signInUp");
-        const signInUpTitle = document.querySelector("#signInUpTitle");
-        const signInP = document.querySelector("#loginModal p"); // Description text
-        const fullNameDiv = document.querySelector("#fullNameDiv");
-        const confirmPasswordDiv = document.querySelector(
-            "#confirmPasswordDiv",
-        );
-        const rememberDiv = document.querySelector("#rememberDiv");
-        const submitBtn = document.querySelector("#submitBtn");
-        const donthaveP = document.querySelector("#donthaveP");
-
-        let isSignUp = false;
-
-        signInUp.addEventListener("click", () => {
-            isSignUp = !isSignUp;
-
-            if (isSignUp) {
-                signInUpTitle.innerHTML =
-                    translateLang[currentLang].header.signUp;
-                signInP.innerHTML =
-                    translateLang[currentLang].header.signUpP ||
-                    translateLang[currentLang].header.signInP;
-
-                fullNameDiv.classList.replace("hidden", "flex");
-                confirmPasswordDiv.classList.replace("hidden", "block");
-                rememberDiv.classList.add("hidden");
-
-                submitBtn.innerHTML = translateLang[currentLang].header.signUp;
-                donthaveP.innerHTML =
-                    translateLang[currentLang].header.alreadyAnAccount;
-                signInUp.innerHTML = translateLang[currentLang].header.signIn;
-            } else {
-                signInUpTitle.innerHTML =
-                    translateLang[currentLang].header.signIn;
-                signInP.innerHTML = translateLang[currentLang].header.signInP;
-
-                fullNameDiv.classList.replace("flex", "hidden");
-                confirmPasswordDiv.classList.replace("block", "hidden");
-                rememberDiv.classList.remove("hidden");
-
-                submitBtn.innerHTML = translateLang[currentLang].header.signIn;
-                donthaveP.innerHTML =
-                    translateLang[currentLang].header.dontHaveAnAccount;
-                signInUp.innerHTML = translateLang[currentLang].header.signUp;
-            }
-        });
-    }
-    loginSignFunc();
-
-    function burgerBtnFunc() {
-        const burgerBtn = document.querySelector("#burgerBtn");
-        const burgerSpan1 = document.querySelector("#burgerSpan1");
-        const burgerSpan2 = document.querySelector("#burgerSpan2");
-        const burgerModal = document.querySelector("#burgerModal");
-        burgerBtn.addEventListener("click", (e) => {
-            e.stopPropagation();
-            burgerSpan1.classList.toggle("translate-y-[5px]");
-            burgerSpan1.classList.toggle("rotate-45");
-            burgerSpan2.classList.toggle("-translate-y-[5px]");
-            burgerSpan2.classList.toggle("w-[30px]");
-            burgerSpan2.classList.toggle("-rotate-45");
-            if (burgerModal.style.transform === "rotateX(0deg)") {
+        function burgerBtnFunc() {
+            const burgerBtn = document.querySelector("#burgerBtn");
+            const burgerSpan1 = document.querySelector("#burgerSpan1");
+            const burgerSpan2 = document.querySelector("#burgerSpan2");
+            const burgerModal = document.querySelector("#burgerModal");
+            burgerBtn.addEventListener("click", (e) => {
+                e.stopPropagation();
+                burgerSpan1.classList.toggle("translate-y-[5px]");
+                burgerSpan1.classList.toggle("rotate-45");
+                burgerSpan2.classList.toggle("-translate-y-[5px]");
+                burgerSpan2.classList.toggle("w-[30px]");
+                burgerSpan2.classList.toggle("-rotate-45");
+                if (burgerModal.style.transform === "rotateX(0deg)") {
+                    burgerModal.style.transform = "rotateX(90deg)";
+                } else {
+                    burgerModal.style.transform = "rotateX(0deg)";
+                }
+            });
+            document.addEventListener("click", () => {
+                burgerSpan1.classList.remove("translate-y-[5px]", "rotate-45");
+                burgerSpan2.classList.remove(
+                    "-translate-y-[5px]",
+                    "-rotate-45",
+                    "w-[30px]",
+                );
                 burgerModal.style.transform = "rotateX(90deg)";
+            });
+        }
+        burgerBtnFunc();
+
+        window.addEventListener("scroll", function () {
+            const header = document.querySelector("header");
+            if (window.scrollY > 300) {
+                header.classList.add(
+                    "fixed",
+                    "top-0",
+                    "left-0",
+                    "bg-white",
+                    "shadow-[0px_8px_8px_0px_rgba(0,0,0,0.1)]",
+                );
+                header.classList.remove("bg-transparent");
             } else {
-                burgerModal.style.transform = "rotateX(0deg)";
+                header.classList.remove(
+                    "fixed",
+                    "top-0",
+                    "left-0",
+                    "bg-white",
+                    "shadow-[0px_8px_8px_0px_rgba(0,0,0,0.1)]",
+                );
+                header.classList.add("bg-transparent");
             }
         });
-        document.addEventListener("click", () => {
-            burgerSpan1.classList.remove("translate-y-[5px]", "rotate-45");
-            burgerSpan2.classList.remove(
-                "-translate-y-[5px]",
-                "-rotate-45",
-                "w-[30px]",
-            );
-            burgerModal.style.transform = "rotateX(90deg)";
-        });
-    }
-    burgerBtnFunc();
 
-    window.addEventListener("scroll", function () {
-        const header = document.querySelector("header");
-        if (window.scrollY > 300) {
-            header.classList.add(
-                "fixed",
-                "top-0",
-                "left-0",
-                "bg-white",
-                "shadow-[0px_8px_8px_0px_rgba(0,0,0,0.1)]",
-            );
-            header.classList.remove("bg-transparent");
-        } else {
-            header.classList.remove(
-                "fixed",
-                "top-0",
-                "left-0",
-                "bg-white",
-                "shadow-[0px_8px_8px_0px_rgba(0,0,0,0.1)]",
-            );
-            header.classList.add("bg-transparent");
+        const langBtn = document.querySelector("#langBtn");
+        const langModal = document.querySelector("#langModal");
+
+        const selectedLang = localStorage.getItem("selectedLang");
+
+        if (!localStorage.getItem("selectedLang")) {
+            localStorage.setItem("selectedLang", currentLang);
         }
-    });
+        mainLangButton();
 
-    const langBtn = document.querySelector("#langBtn");
-    const langModal = document.querySelector("#langModal");
+        function updateLangModal() {
+            langModal.innerHTML = "";
 
-    const selectedLang = localStorage.getItem("selectedLang");
+            Object.keys(translateLang).forEach((langKey) => {
+                if (langKey !== currentLang) {
+                    const targetLang = langKey;
 
-    if (!localStorage.getItem("selectedLang")) {
-        localStorage.setItem("selectedLang", currentLang);
-    }
-    mainLangButton();
-
-    function updateLangModal() {
-        langModal.innerHTML = "";
-
-        Object.keys(translateLang).forEach((langKey) => {
-            if (langKey !== currentLang) {
-                const targetLang = langKey;
-
-                const langModalOption = document.createElement("button");
-                langModalOption.className =
-                    "w-full flex items-center justify-center gap-1.5 group hover:bg-[#FF3F3A] rounded transition-all duration-300";
-                langModalOption.innerHTML = `
+                    const langModalOption = document.createElement("button");
+                    langModalOption.className =
+                        "w-full flex items-center justify-center gap-1.5 group hover:bg-[#FF3F3A] rounded transition-all duration-300";
+                    langModalOption.innerHTML = `
                 <img
                     src="${translateLang[targetLang].header.flag}"
                     alt="language button icon"
@@ -648,19 +654,19 @@ function headerMainFunc() {
                 <span class="text-white text-[12px]">${translateLang[targetLang].header.langTitle}</span>
             `;
 
-                langModalOption.addEventListener("click", () => {
-                    localStorage.setItem("selectedLang", targetLang);
-                    currentLang = targetLang;
-                    mainLangButton();
-                    updateLangModal();
-                    window.location.reload();
-                });
-                langModal.appendChild(langModalOption);
-            }
-        });
-    }
-    function mainLangButton() {
-        langBtn.innerHTML = `
+                    langModalOption.addEventListener("click", () => {
+                        localStorage.setItem("selectedLang", targetLang);
+                        currentLang = targetLang;
+                        mainLangButton();
+                        updateLangModal();
+                        window.location.reload();
+                    });
+                    langModal.appendChild(langModalOption);
+                }
+            });
+        }
+        function mainLangButton() {
+            langBtn.innerHTML = `
         <img
             src="${translateLang[currentLang].header.flag}"
             alt="language button icon"
@@ -672,31 +678,31 @@ function headerMainFunc() {
             />
         </span>
     `;
+        }
+
+        langBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            const downSpan = document.querySelector(".downSpan");
+            langModal.classList.toggle("hidden");
+            langModal.classList.toggle("flex");
+            downSpan.classList.toggle("rotate-180");
+        });
+        document.addEventListener("click", () => {
+            langModal.classList.add("hidden");
+            langModal.classList.remove("flex");
+            const downSpan = document.querySelector(".downSpan");
+            if (downSpan) downSpan.classList.remove("rotate-180");
+        });
+        updateLangModal();
     }
+    headerMainFunc();
 
-    langBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        const downSpan = document.querySelector(".downSpan");
-        langModal.classList.toggle("hidden");
-        langModal.classList.toggle("flex");
-        downSpan.classList.toggle("rotate-180");
-    });
-    document.addEventListener("click", () => {
-        langModal.classList.add("hidden");
-        langModal.classList.remove("flex");
-        const downSpan = document.querySelector(".downSpan");
-        if (downSpan) downSpan.classList.remove("rotate-180");
-    });
-    updateLangModal();
-}
-headerMainFunc();
+    // header end
 
-// header end
+    // our blog start
+    const blog = document.querySelector("#blog");
 
-// our blog start
-const blog = document.querySelector("#blog");
-
-blog.innerHTML = `
+    blog.innerHTML = `
 <div class="w-full max-w-[1340px] mx-auto px-5 mb-20">
     <div>
         <div class="mx-auto items-center text-center mt-10 mb-5 sm:mt-20 sm:mb-16">
@@ -748,16 +754,16 @@ blog.innerHTML = `
     <div id="blogCardlar" class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5'></div>
     <p class="mx-auto text-center mt-16 font-semibold text-base leading-[160%] text-[#424551] hover:text-red-700">${translateLang[currentLang].ourBlog.loader}</p>
 </div>`;
-const blogCardlar = document.querySelector("#blogCardlar");
-function hammaBlog(posts) {
-    blogCardlar.innerHTML = posts
-        .map((post) => {
-            let classes = "";
+    const blogCardlar = document.querySelector("#blogCardlar");
+    function hammaBlog(posts) {
+        blogCardlar.innerHTML = posts
+            .map((post) => {
+                let classes = "";
 
-            if (post.id === 4) {
-                classes = "sm:col-span-2";
-            }
-            return `
+                if (post.id === 4) {
+                    classes = "sm:col-span-2";
+                }
+                return `
 <div class="${classes}">
     <div class="w-full rounded relative md:mb-4 overflow-hidden">
         <a href="./blog/blog.html" class="inline-block w-full h-full overflow-hidden rounded">
@@ -790,32 +796,32 @@ function hammaBlog(posts) {
         </div>
     </div>
 </div>`;
-        })
-        .join(" ");
-}
+            })
+            .join(" ");
+    }
 
-hammaBlog(allBlogPosts);
+    hammaBlog(allBlogPosts);
 
-const filterBtns = document.querySelectorAll(".filter-btn");
-filterBtns.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-        e.preventDefault();
+    const filterBtns = document.querySelectorAll(".filter-btn");
+    filterBtns.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+            e.preventDefault();
 
-        const type = btn.dataset.type;
+            const type = btn.dataset.type;
 
-        const filterlangan =
-            type === "All"
-                ? allBlogPosts
-                : allBlogPosts.filter((post) => post.en.type === type);
+            const filterlangan =
+                type === "All"
+                    ? allBlogPosts
+                    : allBlogPosts.filter((post) => post.en.type === type);
 
-        hammaBlog(filterlangan);
+            hammaBlog(filterlangan);
+        });
     });
-});
-// our blog end
+    // our blog end
 
-// subscribe start
-const subscribe = document.querySelector("#subscribe");
-subscribe.innerHTML = `
+    // subscribe start
+    const subscribe = document.querySelector("#subscribe");
+    subscribe.innerHTML = `
  <div class="w-full max-w-[1340px] mx-auto px-5">
     <div class="mx-auto items-center pb-10 md:pb-5 md:flex md:justify-between">
         <div class="mx-auto md:px-5">
@@ -840,11 +846,11 @@ subscribe.innerHTML = `
         </div>
     </div>
 </div>`;
-// subscribe end
+    // subscribe end
 
-// footer start
-const footer = document.querySelector("#footer");
-footer.innerHTML = `
+    // footer start
+    const footer = document.querySelector("#footer");
+    footer.innerHTML = `
 <div class="bg-[#1E212C] pt-[50px] pb-10 lg:pt-20 lg:pb-16">
     <div class="w-full max-w-[1340px] mx-auto px-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-y-8 gap-x-6">
         <div class="flex flex-col lg:col-span-3 sm:col-span-1 order-1 lg:order-1">
@@ -944,11 +950,23 @@ footer.innerHTML = `
         </div>
     </div>
 </div>`;
-const goToTopBtn = document.querySelector("#goToTopBtn");
-goToTopBtn.addEventListener("click", () => {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth",
+    const goToTopBtn = document.querySelector("#goToTopBtn");
+    goToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
     });
+    // footer end
+    const loader = document.querySelector("#loader");
+
+    if (loader) {
+        setTimeout(() => {
+            loader.classList.add("opacity-0", "pointer-events-none");
+
+            setTimeout(() => {
+                loader.classList.add("hidden");
+            }, 1000);
+        }, 1000);
+    }
 });
-// footer end
