@@ -1021,11 +1021,11 @@ window.addEventListener("DOMContentLoaded", () => {
             ${translateLang[currentLang].heroSection.heroP}
         </p>
         <div class="flex flex-col items-center gap-[10px] sm:flex-row sm:mx-auto sm:mb-7 ml-0 sm:ml-32 md:ml-0">
-            <a href="../Events/events.html">
+            <a href="../../feed/events/events.html">
                 <button class="text-[#F75E05] border border-[#FF3F3A] hover:text-[white] hover:bg-[#FF3F3A] rounded-md transition-all duration-500 font-semibold leading-[40px] px-16 sm:px-[30px] lg:px-[40px]">
                     ${translateLang[currentLang].heroSection.explore_button}</button>
             </a>
-            <a href="../Courses/courses.html">
+            <a href="../../feed/courses/courses.html">
                 <button class="text-[#FFFFFF] bg-[#F75E05] border border-[#FF3F3A] hover:text-[#F75E05] hover:bg-[white] rounded-md transition-all duration-500 font-semibold leading-[40px] px-16 sm:px-[30px] lg:px-[40px]" >
                     ${translateLang[currentLang].heroSection.browse_button}</button>
             </a>
@@ -1136,9 +1136,11 @@ window.addEventListener("DOMContentLoaded", () => {
         <img class="w-full object-contain mx-auto"
              src="../../Image/aboutUs-photo/about.section4.card1.png"/>
         <div class="px-3 py-3 sm:px-6 sm:py-6 border border-[#E5E8ED]">
+           <a href="../../feed/courses/courses.html">
             <button class="bg-[#03CEA4] text-[#FFFFFF] hover:bg-[#ffffff] hover:text-[#03CEA4]  hover:border font-semibold text-base leading-[160%] rounded-[4px] px-2 mb-2 sm:mb-5">${translateLang[currentLang].section4.marketing_button}</button>
+            </a>
             <p class="font-normal text-base leading-[130%] text-[#424551] mb-2 sm:mb-5 sm:leading-[160%]">${translateLang[currentLang].section4.section4_card_text}</p>
-            <a href="../Courses/courses.html" class="flex gap-3 items-center">
+            <a href="../../feed/courses/courses.html" class="flex gap-3 items-center">
                 <button class="font-semibold text-base leading-[160%] text-[#1E212C] hover:text-red-500">${translateLang[currentLang].section4.check_button}</button>
                 <img src="../../Image/aboutUs-photo/about.section4.strelka.svg"/></a>
         </div>
@@ -1148,9 +1150,11 @@ window.addEventListener("DOMContentLoaded", () => {
         <img class="w-full object-contain mx-auto" 
              src="../../Image/aboutUs-photo/about.section4.card2.png"/>
         <div class="px-3 py-3 sm:px-6 sm:py-6 border border-[#E5E8ED]">
+           <a href="../../feed/courses/courses.html">
             <button class="bg-[#5A87FC] text-[#FFFFFF] hover:bg-[#ffffff] hover:text-[#5A87FC] hover:border font-semibold text-base leading-[160%] rounded-[4px] px-2 mb-2 sm:mb-5">${translateLang[currentLang].section4.management_button}</button>
+            </a>
             <p class="font-normal text-base leading-[130%] text-[#424551] mb-2 sm:mb-5 sm:leading-[160%]">${translateLang[currentLang].section4.section4_card_text}</p>
-            <a href="../Courses/courses.html" class="flex gap-3 items-center">
+            <a href="../../feed/courses/courses.html" class="flex gap-3 items-center">
                 <button class="font-semibold text-base leading-[160%] text-[#1E212C] hover:text-red-500">${translateLang[currentLang].section4.check_button}</button>
                 <img src="../../Image/aboutUs-photo/about.section4.strelka.svg"/></a>
         </div>
@@ -1160,9 +1164,11 @@ window.addEventListener("DOMContentLoaded", () => {
         <img class="w-full object-contain mx-auto" 
              src="../../Image/aboutUs-photo/about.section4.card3.png"/>
         <div class="px-3 py-3 sm:px-6 sm:py-6 border border-[#E5E8ED]">
+           <a href="../../feed/courses/courses.html">
             <button class="bg-[#F89828] text-[#FFFFFF] hover:bg-[#ffffff] hover:text-[#F89828] hover:border font-semibold text-base leading-[160%] rounded-[4px] px-2 mb-2 sm:mb-5">${translateLang[currentLang].section4.recruting_button}</button>
+            </a>
             <p class="font-normal text-base leading-[130%] text-[#424551] mb-2 sm:mb-5 sm:leading-[160%]">${translateLang[currentLang].section4.section4_card_text}</p>
-            <a href="../Courses/courses.html" class="flex gap-3 items-center">
+            <a href="../../feed/courses/courses.html" class="flex gap-3 items-center">
                 <button class="font-semibold text-base leading-[160%] text-[#1E212C] hover:text-red-500">${translateLang[currentLang].section4.check_button}</button>
                 <img src="../../Image/aboutUs-photo/about.section4.strelka.svg"/></a>
         </div>
@@ -1172,9 +1178,11 @@ window.addEventListener("DOMContentLoaded", () => {
         <img class="w-full object-contain mx-auto"
              src="../../Image/aboutUs-photo/about.section4.card4.png"/>
         <div class="px-3 py-3 sm:px-6 sm:py-6 border border-[#E5E8ED]">
+           <a href="../../feed/courses/courses.html">
             <button class="bg-[#F52F6E] text-[#FFFFFF] hover:bg-[#ffffff] hover:text-[#F52F6E] hover:border font-semibold text-base leading-[160%] rounded-[4px] px-2 mb-2 sm:mb-5">${translateLang[currentLang].section4.design_button}</button>
+            </a>
             <p class="font-normal text-base leading-[130%] text-[#424551] mb-2 sm:mb-5 sm:leading-[160%]">${translateLang[currentLang].section4.section4_card_text}</p>
-            <a href="../Courses/courses.html" class="flex gap-3 items-center">
+            <a href="../../feed/courses/courses.html" class="flex gap-3 items-center">
                 <button class="font-semibold text-base leading-[160%] text-[#1E212C] hover:text-red-500">${translateLang[currentLang].section4.check_button}</button>
                 <img src="../../Image/aboutUs-photo/about.section4.strelka.svg"/></a>
         </div>
@@ -1184,9 +1192,11 @@ window.addEventListener("DOMContentLoaded", () => {
         <img class="w-full object-contain mx-auto"
             src="../../Image/aboutUs-photo/about.section4.card5.png"/>
         <div class="px-3 py-3 sm:px-6 sm:py-6 border border-[#E5E8ED]">
+            <a href="../../feed/courses/courses.html">
             <button class="bg-[#7772F1] text-[#FFFFFF] hover:bg-[#ffffff] hover:text-[#7772F1] hover:border font-semibold text-base leading-[160%] rounded-[4px] px-2 mb-2 sm:mb-5">${translateLang[currentLang].section4.development_button}</button>
+            </a>
             <p class="font-normal text-base leading-[130%] text-[#424551] mb-2 sm:mb-5 sm:leading-[160%]">${translateLang[currentLang].section4.section4_card_text}</p>
-            <a href="../Courses/courses.html" class="flex gap-3 items-center">
+            <a href="../../feed/courses/courses.html" class="flex gap-3 items-center">
                 <button class="font-semibold text-base leading-[160%] text-[#1E212C] hover:text-red-500">${translateLang[currentLang].section4.check_button}</button>
                 <img src="../../Image/aboutUs-photo/about.section4.strelka.svg"/></a>
         </div>
@@ -1479,7 +1489,7 @@ window.addEventListener("DOMContentLoaded", () => {
             ${translateLang[currentLang].section8.ourBlog}</h6>
         <div class="flex justify-between items-center">
             <h1 class="text-[#1E212C] font-extrabold text-xl sm:leading-[130%] sm:text-3xl lg:font-black lg:text-4xl">${translateLang[currentLang].section8.latestPosts}</h1>
-            <a href="../Blogs/blogs.html">
+            <a href="../../feed/blogs/blogs.html">
                 <button class="bg-[#F75E05] text-white px-4 md:py-2 md:px-7 rounded hover:bg-white hover:text-[#F75E05] hover:border border-[#F75E05]" >
                   ${translateLang[currentLang].section8.goBlog}</button>
             </a>
