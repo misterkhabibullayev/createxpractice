@@ -8,13 +8,31 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
             rel="stylesheet"
         />
         <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"
         />
+        <style>
+            body {
+                font-family: "Lato", sans-serif;
+            }
+            :lang(ru) h1,
+            :lang(ru) h2,
+            :lang(ru) h3,
+            :lang(ru) h4,
+            :lang(ru) h5,
+            :lang(ru) h6,
+            :lang(ru) a,
+            :lang(ru) span,
+            :lang(ru) button,
+            :lang(ru) li,
+            :lang(ru) p {
+                font-family: "Montserrat", sans-serif;
+            }
+        </style>
     </head>
     <body class="relative">
         <header
@@ -66,7 +84,10 @@
         </main>
         <footer id="footer"></footer>
 
-        <div id="loader" class="fixed top-0 left-0 z-30 w-full h-screen bg-white flex flex-col items-center justify-center gap-4">
+        <div
+            id="loader"
+            class="fixed top-0 left-0 z-30 w-full h-screen bg-white flex flex-col items-center justify-center gap-4"
+        >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="80"
@@ -117,7 +138,11 @@
                     />
                 </circle>
             </svg>
-            <p class="font-[Lato] font-bold text-[20px] leading-[150%] text-[#787A80]">Loading...</p>
+            <p
+                class="font-[Lato] font-bold text-[20px] leading-[150%] text-[#787A80]"
+            >
+                Loading...
+            </p>
         </div>
         <a href="/feed/events/events.html"></a>
 
