@@ -19,16 +19,13 @@
     </style>
     <body>
         <div>
-            <header
-                class="w-full bg-transparent absolute top-0 left-0"
-                id="headerMain"
-            ></header>
+            <header class="w-full bg-transparent" id="headerMain"></header>
             <main>
                 <section id="EVENTS-GRID-VIEW"></section>
 
                 <section
                     id="subscribe"
-                    class="relative overflow-hidden bg-[url('../../../Image/HomePagePhoto/subscribe-bg.png')] bg-cover bg-no-repeat bg-bottom"
+                    class="overflow-hidden bg-[url('../../../Image/HomePagePhoto/subscribe-bg.png')] bg-cover bg-no-repeat bg-bottom"
                 >
                     <div
                         class="container mx-auto px-5 md:px-10 lg:px-20 flex flex-col items-center justify-center pt-[96px]"
@@ -48,11 +45,70 @@
                 </section>
             </main>
 
-    
             <footer id="footer"></footer>
         </div>
 
         <script type="module" src="./event.js"></script>
+
+        <div
+            id="loader"
+            class="fixed top-0 left-0 z-30 w-full h-screen bg-white flex flex-col items-center justify-center gap-4"
+        >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="80"
+                height="80"
+                viewBox="0 0 24 24"
+            >
+                <path d="M0 0h24v24H0z" fill="none" />
+                <circle cx="12" cy="12" r="0" fill="currentColor">
+                    <animate
+                        id="SVG0cdVlcnN"
+                        fill="freeze"
+                        attributeName="r"
+                        begin="0;SVGftllRbIv.begin+0.6s"
+                        calcMode="spline"
+                        dur="1.2s"
+                        keySplines=".52,.6,.25,.99"
+                        values="0;11"
+                    />
+                    <animate
+                        fill="freeze"
+                        attributeName="opacity"
+                        begin="0;SVGftllRbIv.begin+0.6s"
+                        calcMode="spline"
+                        dur="1.2s"
+                        keySplines=".52,.6,.25,.99"
+                        values="1;0"
+                    />
+                </circle>
+                <circle cx="12" cy="12" r="0" fill="currentColor">
+                    <animate
+                        id="SVGftllRbIv"
+                        fill="freeze"
+                        attributeName="r"
+                        begin="SVG0cdVlcnN.begin+0.6s"
+                        calcMode="spline"
+                        dur="1.2s"
+                        keySplines=".52,.6,.25,.99"
+                        values="0;11"
+                    />
+                    <animate
+                        fill="freeze"
+                        attributeName="opacity"
+                        begin="SVG0cdVlcnN.begin+0.6s"
+                        calcMode="spline"
+                        dur="1.2s"
+                        keySplines=".52,.6,.25,.99"
+                        values="1;0"
+                    />
+                </circle>
+            </svg>
+            <p
+                class="font-[Lato] font-bold text-[20px] leading-[150%] text-[#787A80]"
+            >
+                Loading...
+            </p>
+        </div>
     </body>
 </html>
-
