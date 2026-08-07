@@ -1034,7 +1034,7 @@ ourBlog.innerHTML = `
                     <div>
                         <a href="#" class="font-bold text-xl leading-[150%] text-[#1E212C] hover:text-[#ff3f3a] transition-all duration-300">${post[currentLang].title}</a>
                         <p class="line-clamp-2 font-normal text-base leading-[160%] text-[#424551] mt-2 mb-4">${post[currentLang].description}</p>
-                        <a href="#" class="font-bold text-base leading-[160%] text-[#1E212C] hover:text-[#ff3f3a] transition-all duration-300 flex items-center gap-2 hover:gap-4">${post[currentLang].action} 
+                        <a href="/feed/blogs/blogs.html" class="font-bold text-base leading-[160%] text-[#1E212C] hover:text-[#ff3f3a] transition-all duration-300 flex items-center gap-2 hover:gap-4">${post[currentLang].action} 
                             <img src="../../Image/HomePagePhoto/right.svg" /></a>
                     </div>
                 </div>
@@ -1135,11 +1135,11 @@ footer.innerHTML = `
         <div class="lg:col-span-2 sm:col-span-2 order-1 sm:order-4 lg:order-2">
             <h3 class="font-bold text-base leading-[150%] tracking-[1px] mb- text-white">${translateLang[currentLang].footer.siteMap}</h3>
             <div class="flex gap-6 sm:flex-row flex-col lg:flex-col lg:gap-2">
-                <a href="feed/about/about.html" class="font-normal text-base leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateLang[currentLang].header.navAbout}</a>
-                <a href="feed/courses/courses.html" class="font-normal text-base leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateLang[currentLang].header.navCourses}</a>
-                <a href="feed/events/events.html" class="font-normal text-base leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateLang[currentLang].header.navEvents}</a>
-                <a href="feed/blogs/blogs.html" class="font-normal text-base leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateLang[currentLang].header.navBlog}</a>
-                <a href="feed/contacts/contacts.html" class="font-normal text-base leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateLang[currentLang].header.navContacts}</a>
+                <a href="/feed/about/about.html" class="font-normal text-base leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateLang[currentLang].header.navAbout}</a>
+                <a href="/feed/courses/courses.html" class="font-normal text-base leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateLang[currentLang].header.navCourses}</a>
+                <a href="/feed/events/events.html" class="font-normal text-base leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateLang[currentLang].header.navEvents}</a>
+                <a href="/feed/blogs/blogs.html" class="font-normal text-base leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateLang[currentLang].header.navBlog}</a>
+                <a href="/feed/contacts/contacts.html" class="font-normal text-base leading-[160%] text-[#A5A6AB] hover:text-white transition-all duration-300">${translateLang[currentLang].header.navContacts}</a>
             </div>
         </div>
         <div class="lg:col-span-2 sm:col-span-2 order-2 sm:order-5 lg:order-3">
