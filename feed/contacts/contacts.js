@@ -160,7 +160,7 @@ function headerMainFunc() {
             <div class="">
                 <a href="#">
                     <img
-                        src="./Image/HomePagePhoto/logo.svg"
+                        src="/Image/HomePagePhoto/logo.svg"
                         alt="logo image"
                     />
                 </a>
@@ -201,7 +201,7 @@ function headerMainFunc() {
                         class="loginModalBtn hidden lg:flex gap-2 items-center font-[Lato] font-bold text-3 lg:text-2 lg:leading-4 text-gray-800"
                     >
                         <img
-                            src="./Image/HomePagePhoto/Profile.svg"
+                            src="/Image/HomePagePhoto/Profile.svg"
                             alt="profile icon"
                             class="hidden xl:block"
                         />
@@ -252,7 +252,7 @@ function headerMainFunc() {
                     class="loginModalBtn flex lg:hidden gap-2 items-center w-full px-4 py-2 font-[Lato] font-bold text-[16px] leading-[160%] text-[#424551] hover:text-[#FF3F3A] transition-all duration-300"
                 >
                     <img
-                        src="./Image/HomePagePhoto/Profile.svg"
+                        src="/Image/HomePagePhoto/Profile.svg"
                         alt="profile icon"
                         class="block"
                     />
@@ -607,7 +607,7 @@ function headerMainFunc() {
         />
         <span class="downSpan transition-all duration-300">
             <img
-                src="./Image/HomePagePhoto/icon-park-solid--down-one.svg"
+                src="/Image/HomePagePhoto/icon-park-solid--down-one.svg"
                 alt="down icon"
             />
         </span>
