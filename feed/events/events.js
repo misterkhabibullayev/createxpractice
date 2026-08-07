@@ -1,5 +1,6 @@
-import { locale } from "./jsForBoth.js";
 import { allEvents } from "../../AllEvents.js";
+import { locale } from "./jsForBoth.js";
+console.log(locale)
 
 window.addEventListener("DOMContentLoaded", () => {
     let currentLang = localStorage.getItem("selectedLang") || "en";
@@ -373,19 +374,20 @@ window.addEventListener("DOMContentLoaded", () => {
     EVENTSLISTVIEW.classList.add("mt-[73px]", "pt-12");
 
     function updateEventsList() {
-        const eventsViewData = locale[currentLang];
+        const eventsViewData = locale?.[currentLang];
 
         let eventsListContent = `
         <div>
-          <h6 class="text-[#1e212c] font-bold pb-2 uppercase tracking-[.0625rem] text-center">${eventsViewData.intro.badge}</h6>
-          <h1 class="font-black leading-tight text-[#1e212c] text-center uppercase  text-3xl md:text-4xl lg:text-[2.875rem] pb-2 mb-12">${eventsViewData.intro.title}</h1>
+          <h6 class="text-[#1e212c] font-bold pb-2 uppercase tracking-[.0625rem] text-center">
+          ${eventsViewData?.intro?.badge}</h6>
+          <h1 class="font-black leading-tight text-[#1e212c] text-center uppercase  text-3xl md:text-4xl lg:text-[2.875rem] pb-2 mb-12">${eventsViewData?.intro?.title}</h1>
 
 
            <form class="flex flex-wrap items-center gap-3 pb-6 justify-between">
             
                 <div class="max-[550px]:flex max-[550px]:flex-col max-[550px]:items-start flex-row gap-1 items-center grow">
-                    <label for="${eventsViewData.sortings.eventCategory.for}">${eventsViewData.sortings.eventCategory.label}</label>
-                    <select id="${eventsViewData.sortings.eventCategory.for}" class="max-[550px]:w-full grow selects cursor-pointer py-2.5 pl-4 pr-12 border rounded outline-none active:border-red-500">
+                    <label for="${eventsViewData?.sortings?.eventCategory?.for}">${eventsViewData?.sortings?.eventCategory?.label}</label>
+                    <select id="${eventsViewData?.sortings?.eventCategory?.for}" class="max-[550px]:w-full grow selects cursor-pointer py-2.5 pl-4 pr-12 border rounded outline-none active:border-red-500">
                     ${eventsViewData.sortings.eventCategory.option
                         .map(
                             (opt) => `

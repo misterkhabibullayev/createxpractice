@@ -191,15 +191,25 @@ if (blog) {
         </div>
     </div>
     
-    <div class='grid grid-cols-3 gap-5'>  
-    ${allBlogPosts
-        .map((post, index) => {
+    <div id="blogCardlar" class='grid grid-cols-3 gap-5'>  
+    
+    </div>
+</div>`;
+}
+
+const blogCardlar = document.querySelector("#blogCardlar");
+
+function hammaBlog(posts) {
+    blogCardlar.innerHTML = posts
+        .map((post) => {
             let classes = "";
-            if (index === 4) {
+
+            if (post.id === 4) {
                 classes = "col-span-2";
             }
+
             return `
-        <div class="${classes}">
+             <div class="${classes}">
             <div class="w-full h-auto rounded relative mb-4 overflow-hidden">
                 <a href="#!" class="inline-block w-full h-full overflow-hidden rounded">
                     <img src="${post.img}" class="w-full h-full min-h-[350px] object-cover rounded group-hover:scale-110 transition-all duration-300"/>
@@ -230,13 +240,30 @@ if (blog) {
                     </a>
                 </div>
             </div>
-        </div>`;
+        </div>
+            `;
         })
-        .join(" ")}
-    </div>
-</div>`;
+        .join(" ");
 }
-// BLOG END
+
+hammaBlog(allBlogPosts);
+
+const filterBtns = document.querySelectorAll(".filter-btn");
+filterBtns.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        const type = btn.dataset.type;
+
+        const filterlangan =
+            type === "All"
+                ? allBlogPosts
+                : allBlogPosts.filter((post) => post.en.type === type);
+
+        hammaBlog(filterlangan);
+    });
+});
+// our blog end
 
 // HEADER SCROLL LOGIC
 window.addEventListener("scroll", function () {
@@ -322,7 +349,6 @@ if (langBtn && langModal) {
         const downSpan = document.querySelector(".downSpan");
         if (downSpan) downSpan.classList.remove("rotate-180");
     });
-}
-
-mainLangButton();
-updateLangModal();
+    }
+    
+    updateLangModal();
