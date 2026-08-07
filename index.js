@@ -274,6 +274,7 @@ window.addEventListener("DOMContentLoaded", () => {
         },
     };
     let currentLang = localStorage.getItem("selectedLang") || "en";
+    document.body.setAttribute('lang', currentLang);
 
     // header
     function headerMainFunc() {

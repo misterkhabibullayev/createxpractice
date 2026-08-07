@@ -5,12 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Courses</title>
         <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-            rel="stylesheet"
-        />
 
         <script>
             tailwind.config = {
@@ -24,16 +18,37 @@
             };
         </script>
 
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
         <style>
             body {
                 font-family: "Lato", sans-serif;
+            }
+            :lang(ru) h1,
+            :lang(ru) h2,
+            :lang(ru) h3,
+            :lang(ru) h4,
+            :lang(ru) h5,
+            :lang(ru) h6,
+            :lang(ru) a,
+            :lang(ru) span,
+            :lang(ru) button,
+            :lang(ru) li,
+            :lang(ru) label,
+            :lang(ru) ::placeholder,
+            :lang(ru) p {
+                font-family: "Montserrat", sans-serif;
             }
         </style>
     </head>
     <body>
         <div>
             <header
-                class="w-full bg-transparent top-0 left-0"
+                class="w-full bg-transparent absolute top-0 left-0"
                 id="headerMain"
             ></header>
 
@@ -44,7 +59,7 @@
                     <div class="flex flex-col items-center">
                         <h5
                             id="online-course-badge"
-                            class="max-[576px]:text-base max-[576px]:font-bold font-bold leading-[150%] text-[#1E212C] uppercase tracking-[1px]"
+                            class="max-[576px]:text-base max-[576px]:font-bold font-bold leading-[150%] text-[#1E212C] uppercase tracking-[1px] mt-[80px]"
                         ></h5>
 
                         <p
@@ -283,7 +298,6 @@
                     Loading...
                 </p>
             </div>
-            
         </div>
 
         <script type="module" src="courses.js"></script>

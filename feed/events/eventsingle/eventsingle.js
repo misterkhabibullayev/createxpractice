@@ -279,6 +279,7 @@ window.addEventListener("DOMContentLoaded", () => {
     };
 
     let currentLang = localStorage.getItem("selectedLang") || "en";
+     document.body.setAttribute('lang', currentLang);
 
     // making the LIST and GRID EVENTS PAGE interactive!
     const params = new URLSearchParams(window.location.search);

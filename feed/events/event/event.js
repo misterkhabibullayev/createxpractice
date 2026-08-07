@@ -3,6 +3,7 @@ import { allEvents } from "../../../AllEvents.js";
 
 window.addEventListener("DOMContentLoaded", () => {
     let currentLang = localStorage.getItem("selectedLang") || "en";
+    document.body.setAttribute("lang", currentLang);
 
     const translateData = {
         en: {
@@ -756,8 +757,7 @@ window.addEventListener("DOMContentLoaded", () => {
     //  Events List View
     const EVENTSGRIDVIEW = document.getElementById("EVENTS-GRID-VIEW");
     EVENTSGRIDVIEW.classList.add("mt-[73px]", "pt-12");
-    EVENTSGRIDVIEW.className =
-        "w-full max-w-[1340px] mx-auto px-5 pt-[80px]";
+    EVENTSGRIDVIEW.className = "w-full max-w-[1340px] mx-auto px-5 pt-[80px]";
 
     function updateEventsList() {
         const eventsViewData = locale[currentLang];
@@ -1160,7 +1160,7 @@ window.addEventListener("DOMContentLoaded", () => {
     }
     footer();
 
-           const loader = document.querySelector("#loader");
+    const loader = document.querySelector("#loader");
 
     if (loader) {
         setTimeout(() => {

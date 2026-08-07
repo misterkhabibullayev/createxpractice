@@ -4,6 +4,7 @@ console.log(locale);
 
 window.addEventListener("DOMContentLoaded", () => {
     let currentLang = localStorage.getItem("selectedLang") || "en";
+     document.body.setAttribute('lang', currentLang);
 
     const translateData = {
         en: {

@@ -2,6 +2,7 @@ import { allCourses } from "../../../AllCourses.js";
 
 window.addEventListener("DOMContentLoaded", () => {
     const currentLang = localStorage.getItem("selectedLang");
+    document.body.setAttribute("lang", currentLang);
 
     const params = new URLSearchParams(window.location.search);
     const courseId = params.get("id");
