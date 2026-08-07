@@ -1052,7 +1052,7 @@ window.addEventListener("DOMContentLoaded", () => {
     function updateCertificateText() {
         const sertificateData = locale[currentLang].sertificate.intro;
         const sertificateLogoData =
-            locale[currentLang].sertificate.intro.ourCollaborations;
+            locale?.[currentLang].sertificate.intro.ourCollaborations;
 
         console.log(locale[currentLang].sertificate);
         console.log(locale[currentLang].sertificate.intro);
