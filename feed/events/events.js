@@ -7,7 +7,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const translateData = {
         en: {
             langTitle: "EN",
-            flag: "Image/HomePagePhoto/twemoji--flag-united-states.svg",
+            flag: "/Image/HomePagePhoto/twemoji--flag-united-states.svg",
             navAbout: "About Us",
             navCourses: "Courses",
             navEvents: "Events",
@@ -79,7 +79,7 @@ window.addEventListener("DOMContentLoaded", () => {
         },
         ru: {
             langTitle: "RU",
-            flag: "Image/HomePagePhoto/twemoji--flag-russia.svg",
+            flag: "/Image/HomePagePhoto/twemoji--flag-russia.svg",
             navAbout: "О нас",
             navCourses: "Курсы",
             navEvents: "Мероприятия",
@@ -152,7 +152,7 @@ window.addEventListener("DOMContentLoaded", () => {
         },
         uz: {
             langTitle: "UZ",
-            flag: "Image/HomePagePhoto/twemoji--flag-uzbekistan.svg",
+            flag: "/Image/HomePagePhoto/twemoji--flag-uzbekistan.svg",
             navAbout: "Biz haqimizda",
             navCourses: "Kurslar",
             navEvents: "Tadbirlar",
@@ -365,6 +365,98 @@ window.addEventListener("DOMContentLoaded", () => {
             );
             burgerModal.classList.add("[transform:rotateX(90deg)]");
         });
+
+        window.addEventListener("scroll", function () {
+            const header = document.querySelector("header");
+            if (window.scrollY > 300) {
+                header.classList.add(
+                    "fixed",
+                    "top-0",
+                    "left-0",
+                    "bg-white",
+                    "shadow-[0px_8px_8px_0px_rgba(0,0,0,0.1)]",
+                );
+                header.classList.remove("bg-transparent");
+            } else {
+                header.classList.remove(
+                    "fixed",
+                    "top-0",
+                    "left-0",
+                    "bg-white",
+                    "shadow-[0px_8px_8px_0px_rgba(0,0,0,0.1)]",
+                );
+                header.classList.add("bg-transparent");
+            }
+        });
+
+        const langBtn = document.querySelector("#langBtn");
+        const langModal = document.querySelector("#langModal");
+
+        const selectedLang = localStorage.getItem("selectedLang");
+
+        if (!localStorage.getItem("selectedLang")) {
+            localStorage.setItem("selectedLang", currentLang);
+        }
+        mainLangButton();
+
+        function updateLangModal() {
+            langModal.innerHTML = "";
+
+            Object.keys(translateData).forEach((langKey) => {
+                if (langKey !== currentLang) {
+                    const targetLang = langKey;
+
+                    const langModalOption = document.createElement("button");
+                    langModalOption.className =
+                        "w-full flex items-center justify-center gap-1.5 group hover:bg-[#FF3F3A] rounded transition-all duration-300";
+                    langModalOption.innerHTML = `
+                <img
+                    src="${translateData[targetLang].flag}"
+                    alt="language button icon"
+                />
+                <span class="text-white text-[12px]">${translateData[targetLang].langTitle}</span>
+            `;
+
+                    langModalOption.addEventListener("click", () => {
+                        localStorage.setItem("selectedLang", targetLang);
+                        currentLang = targetLang;
+                        mainLangButton();
+                        updateLangModal();
+                        window.location.reload();
+                    });
+                    langModal.appendChild(langModalOption);
+                }
+            });
+        }
+        function mainLangButton() {
+            langBtn.innerHTML = `
+        <img
+            src="${translateData[currentLang].flag}"
+            alt="language button icon"
+        />
+        <span class="downSpan transition-all duration-300">
+            <img
+                src="/Image/HomePagePhoto/icon-park-solid--down-one.svg"
+                alt="down icon"
+            />
+        </span>
+    `;
+        }
+
+        langBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            const downSpan = document.querySelector(".downSpan");
+            langModal.classList.toggle("hidden");
+            langModal.classList.toggle("flex");
+            downSpan.classList.toggle("rotate-180");
+        });
+        document.addEventListener("click", () => {
+            langModal.classList.add("hidden");
+            langModal.classList.remove("flex");
+            const downSpan = document.querySelector(".downSpan");
+            if (downSpan) downSpan.classList.remove("rotate-180");
+        });
+        updateLangModal();
     }
     updateHeader();
 

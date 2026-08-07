@@ -145,7 +145,7 @@ window.addEventListener("DOMContentLoaded", () => {
                     {
                         opinion:
                             "Suleyman's online course is an absolute game-changer! The material is presented in a very clear, structured way, and the practical assignments help you master the concepts quickly. He is an incredibly supportive tutor who always answers questions promptly. I highly recommend this course to everyone",
-                        image: "../../Image/courses-photo/slider-image/image.png",
+                        image: "../../../Image/courses-photo/slider-image/image.png",
                         braces: "../../../Image/courses-photo/slider-image/braces.png",
                         name: "Eleanor Pena",
                         completedCourse: "Position, Course",
