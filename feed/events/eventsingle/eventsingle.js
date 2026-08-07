@@ -87,6 +87,195 @@ window.addEventListener("DOMContentLoaded", () => {
                 },
             },
         },
+        ru: {
+            hero: {
+                info: {
+                    badge: "Онлайн лекция",
+                    title: "Формирование организационной структуры компании в условиях неопределенности",
+                },
+            },
+
+            talkAbout: {
+                intro: "На лекции мы поговорим о:",
+            },
+
+            benefits: {
+                intro: {
+                    badge: "Для кого?",
+                    title: "Кому будет полезно мероприятие:",
+                },
+
+                coreBenefit: [
+                    {
+                        icon: "../../../Image/course-images/aboutTheCourse/check.png",
+                        these: "Специалистам с опытом активной работы более 1 года",
+                    },
+                    {
+                        icon: "../../../Image/course-images/aboutTheCourse/check.png",
+                        these: "Дизайнерам мобильных приложений, которые хотят улучшить навыки решения бизнес-задач, создания и тестирования пользовательских интерфейсов",
+                    },
+                    {
+                        icon: "../../../Image/course-images/aboutTheCourse/check.png",
+                        these: "Профессиональным дизайнерам, которые хотят чувствовать себя увереннее в UX",
+                    },
+                ],
+            },
+
+            subscribeNoSkip: {
+                image: "../../../Image/eventSingle/illustration.png",
+
+                intro: {
+                    title: "Не хотите пропустить лучшие мероприятия? Подпишитесь на нашу рассылку!",
+                },
+
+                input: {
+                    inpPlaceholder: "Ваш рабочий email",
+                    button: "Подписаться",
+                    agreement:
+                        "Я согласен(-на) получать сообщения от Createx Online School",
+                },
+            },
+
+            registration: {
+                imagePart: {
+                    image: "../../../Image/eventSingle/registerImage.png",
+                },
+
+                intro: {
+                    description: "Не пропустите мероприятие",
+                    title: "Оставьте заявку",
+
+                    inputsInfo: [
+                        {
+                            input: "Полное имя",
+                            inputPlaceholder: "Ваше полное имя",
+                        },
+                        {
+                            input: "Email",
+                            inputPlaceholder: "Ваш рабочий email",
+                        },
+                        {
+                            input: "Телефон",
+                            inputPlaceholder: "Ваш номер телефона",
+                        },
+                    ],
+
+                    regButton: {
+                        button: "Записаться на курс",
+                    },
+
+                    message:
+                        "* После регистрации вы получите ссылку на онлайн-лекцию по электронной почте.",
+                },
+            },
+
+            otherOnlineEvent: {
+                intro: {
+                    badge: "Посмотрите другие онлайн-мероприятия",
+                    title: "Вам может быть интересно",
+                },
+
+                more: {
+                    title: "Хотите больше?",
+                    button: "Посмотреть все курсы",
+                },
+            },
+        },
+
+        uz: {
+            hero: {
+                info: {
+                    badge: "Onlayn ma'ruza",
+                    title: "Noaniqlik sharoitida kompaniyaning tashkiliy tuzilmasini shakllantirish",
+                },
+            },
+
+            talkAbout: {
+                intro: "Biz quyidagilar haqida gaplashamiz:",
+            },
+
+            benefits: {
+                intro: {
+                    badge: "Kimlar uchun?",
+                    title: "Tadbir kimlar uchun foydali:",
+                },
+
+                coreBenefit: [
+                    {
+                        icon: "../../../Image/course-images/aboutTheCourse/check.png",
+                        these: "Kamida 1 yillik ish tajribasiga ega mutaxassislar",
+                    },
+                    {
+                        icon: "../../../Image/course-images/aboutTheCourse/check.png",
+                        these: "Biznes muammolarini hal qilish, foydalanuvchi interfeyslarini yaratish va sinovdan o'tkazish bo'yicha ko'nikmalarini rivojlantirmoqchi bo'lgan mobil ilova dizaynerlari",
+                    },
+                    {
+                        icon: "../../../Image/course-images/aboutTheCourse/check.png",
+                        these: "UX bo'yicha o'ziga ko'proq ishonch hosil qilishni istagan professional dizaynerlar",
+                    },
+                ],
+            },
+
+            subscribeNoSkip: {
+                image: "../../../Image/eventSingle/illustration.png",
+
+                intro: {
+                    title: "Eng yaxshi tadbirlarni o'tkazib yuborishni xohlamaysizmi? Bizning yangiliklarimizga obuna bo'ling!",
+                },
+
+                input: {
+                    inpPlaceholder: "Ishchi emailingiz",
+                    button: "Obuna bo'lish",
+                    agreement:
+                        "Men Createx Online School'dan xabarlar olishga roziman",
+                },
+            },
+
+            registration: {
+                imagePart: {
+                    image: "../../../Image/eventSingle/registerImage.png",
+                },
+
+                intro: {
+                    description: "Tadbirni o'tkazib yubormang",
+                    title: "Ariza qoldiring",
+
+                    inputsInfo: [
+                        {
+                            input: "To'liq ism",
+                            inputPlaceholder: "To'liq ismingiz",
+                        },
+                        {
+                            input: "Email",
+                            inputPlaceholder: "Ishchi emailingiz",
+                        },
+                        {
+                            input: "Telefon",
+                            inputPlaceholder: "Telefon raqamingiz",
+                        },
+                    ],
+
+                    regButton: {
+                        button: "Kursga qo'shilish",
+                    },
+
+                    message:
+                        "* Ro'yxatdan o'tganingizdan so'ng, onlayn ma'ruzaga havola emailingizga yuboriladi.",
+                },
+            },
+
+            otherOnlineEvent: {
+                intro: {
+                    badge: "Boshqa onlayn tadbirlarni ko'ring",
+                    title: "Sizni qiziqtirishi mumkin",
+                },
+
+                more: {
+                    title: "Yana ko'proq xohlaysizmi?",
+                    button: "Barcha kurslarni ko'rish",
+                },
+            },
+        },
     };
 
     let currentLang = localStorage.getItem("selectedLang") || "en";

@@ -1162,7 +1162,7 @@ window.addEventListener("DOMContentLoaded", () => {
     }
     footer();
 
-       const loader = document.querySelector("#loader");
+    const loader = document.querySelector("#loader");
 
     if (loader) {
         setTimeout(() => {

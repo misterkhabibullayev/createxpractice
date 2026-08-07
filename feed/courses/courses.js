@@ -2,7 +2,7 @@ import { allCourses } from "../../AllCourses.js";
 import { locale } from "./locale.js";
 
 window.addEventListener("DOMContentLoaded", () => {
-    const currentLang = "en";
+     let currentLang = localStorage.getItem("selectedLang") || "en";
 
     const translateData = {
         en: {
