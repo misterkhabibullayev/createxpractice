@@ -4,6 +4,7 @@ console.log(locale);
 
 window.addEventListener("DOMContentLoaded", () => {
     let currentLang = localStorage.getItem("selectedLang") || "en";
+     document.body.setAttribute('lang', currentLang);
 
     const translateData = {
         en: {
@@ -1136,7 +1137,7 @@ window.addEventListener("DOMContentLoaded", () => {
                 <form>
                     <div class="flex items-center justify-end bg-[#393C46] border border-[#FFFFFF33] px-3 py-2.5 rounded-[4px] focus-within:border-[#ff3f3a] focus-within:bg-white transition-all duration-300">
                         <input type="email" placeholder="${translateData[currentLang].signUpNewsLatterPlaceholder}" class="flex-1 pr-3 bg-transparent font-[Lato] font-normal text-[12px] leading-[150%] text-white focus:text-black outline-none placeholder:text-[#A5A6AB]">
-                        <img src="Image/HomePagePhoto/footerRight.svg" class="w-4 h-4"/>
+                        <img src="/Image/HomePagePhoto/footerRight.svg" class="w-4 h-4"/>
                     </div>
                     <p class="mt-[12px] font-[Lato] font-normal text-[10px] leading-[150%] text-white opacity-60 max-w-[290px] line-clamp-2">${translateData[currentLang].signUpSubscribe}</p>
                 </form>
