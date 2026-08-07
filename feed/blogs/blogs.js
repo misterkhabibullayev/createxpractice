@@ -35,7 +35,7 @@ window.addEventListener("DOMContentLoaded", () => {
                 title: "Createx School Journal",
                 allBtn: "All",
                 articlesBtn: "Articles",
-                videosbtn: "Videos",
+                videosBtn: "Videos",
                 podcastsBtn: "Podcasts",
                 blogCategory: "Blog category",
                 allArticles: "All articles",
