@@ -279,7 +279,7 @@ window.addEventListener("DOMContentLoaded", () => {
     };
 
     let currentLang = localStorage.getItem("selectedLang") || "en";
-     document.body.setAttribute('lang', currentLang);
+    document.body.setAttribute("lang", currentLang);
 
     // making the LIST and GRID EVENTS PAGE interactive!
     const params = new URLSearchParams(window.location.search);
@@ -1270,22 +1270,24 @@ window.addEventListener("DOMContentLoaded", () => {
             document.createElement("div");
         courseInfoRateCoursesStudentsContainer.className =
             "pb-2 mb-4 md:pb-4 md:mb-4 flex gap-4";
-
         let speakerCollaboration = "";
 
         Object.values(selectedEvent.tutorAbout.partners).forEach((info) => {
-            const svg = info.svg.replace(
-                "<svg",
-                `<svg class="w-[105px] h-[50px] max-[760px]:w-[52px] max-[760px]:h-[25px] block"`,
-            );
+            const svg = info.svg
+                .replace(/width="[^"]*"/g, "")
+                .replace(/height="[^"]*"/g, "")
+                .replace(
+                    "<svg",
+                    `<svg viewBox="0 0 110 40" preserveAspectRatio="xMidYMid meet" class="w-full h-full block"`,
+                );
 
             speakerCollaboration += `
-            <div class="w-[105px] h-[50px] max-[760px]:w-[52px] max-[760px]:h-[25px] flex           items-center justify-center overflow-visible">
-                     <a class="${info.hoverColor} cursor-pointer">
-                         ${svg}
-                     </a>
-            </div>
-    `;
+    <div class="w-[105px] h-[50px] max-[760px]:w-[70px] max-[760px]:h-[32px] flex items-center justify-center">
+        <a class="${info.hoverColor} cursor-pointer w-full h-full flex items-center justify-center">
+            ${svg}
+        </a>
+    </div>
+`;
         });
 
         speakerCourseInfo.appendChild(tutorInfoBadge);
