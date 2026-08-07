@@ -365,6 +365,9 @@ window.addEventListener("DOMContentLoaded", () => {
                 getConsultation: "Получить консультацию",
                 loginRegister: "Войти / Зарегистрироваться",
                 email: "Email",
+                signIn: "Войти",
+                signInP:
+                    "Войдите в свой аккаунт, используя email и пароль, указанные при регистрации.",
                 yourEmailAddress: "Ваш рабочий email",
                 password: "Пароль",
                 passwordPlaceholder: "Ваш пароль",
