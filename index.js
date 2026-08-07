@@ -276,8 +276,9 @@ window.addEventListener("DOMContentLoaded", () => {
     let currentLang = localStorage.getItem("selectedLang") || "en";
 
     // header
-    const headerMain = document.querySelector("#headerMain");
-    headerMain.innerHTML = `
+    function headerMainFunc() {
+        const headerMain = document.querySelector("#headerMain");
+        headerMain.innerHTML = `
     <div
         class=" w-full max-w-[1340px] mx-auto px-5 flex justify-between items-center py-5 relative"
     >
@@ -553,112 +554,208 @@ window.addEventListener("DOMContentLoaded", () => {
     </div>
 `;
 
-    function loginSignFunc() {
-        const loginModalBtns = document.querySelectorAll(".loginModalBtn");
-        const loginModal = document.querySelector("#loginModal");
-        const closeBtn = document.querySelector("#closeBtn");
-        if (loginModalBtns.length > 0 && loginModal) {
-            loginModalBtns.forEach((btn) => {
-                btn.addEventListener("click", () => {
-                    document.body.classList.add("overflow-y-hidden");
-                    loginModal.classList.add("flex");
-                    loginModal.classList.remove("hidden");
+        function loginSignFunc() {
+            const loginModalBtns = document.querySelectorAll(".loginModalBtn");
+            const loginModal = document.querySelector("#loginModal");
+            const closeBtn = document.querySelector("#closeBtn");
+            if (loginModalBtns.length > 0 && loginModal) {
+                loginModalBtns.forEach((btn) => {
+                    btn.addEventListener("click", () => {
+                        document.body.classList.add("overflow-y-hidden");
+                        loginModal.classList.add("flex");
+                        loginModal.classList.remove("hidden");
+                    });
                 });
-            });
-        }
-        if (closeBtn && loginModal) {
-            closeBtn.addEventListener("click", () => {
-                document.body.classList.remove("overflow-y-hidden");
-                loginModal.classList.add("hidden");
-                loginModal.classList.remove("flex");
-            });
-        }
-        if (loginModal) {
-            loginModal.addEventListener("click", (e) => {
-                if (e.target === e.currentTarget) {
+            }
+            if (closeBtn && loginModal) {
+                closeBtn.addEventListener("click", () => {
                     document.body.classList.remove("overflow-y-hidden");
                     loginModal.classList.add("hidden");
                     loginModal.classList.remove("flex");
+                });
+            }
+            if (loginModal) {
+                loginModal.addEventListener("click", (e) => {
+                    if (e.target === e.currentTarget) {
+                        document.body.classList.remove("overflow-y-hidden");
+                        loginModal.classList.add("hidden");
+                        loginModal.classList.remove("flex");
+                    }
+                });
+            }
+
+            const signInUp = document.querySelector("#signInUp");
+            const signInUpTitle = document.querySelector("#signInUpTitle");
+            const signInP = document.querySelector("#loginModal p"); // Description text
+            const fullNameDiv = document.querySelector("#fullNameDiv");
+            const confirmPasswordDiv = document.querySelector(
+                "#confirmPasswordDiv",
+            );
+            const rememberDiv = document.querySelector("#rememberDiv");
+            const submitBtn = document.querySelector("#submitBtn");
+            const donthaveP = document.querySelector("#donthaveP");
+
+            let isSignUp = false;
+
+            signInUp.addEventListener("click", () => {
+                isSignUp = !isSignUp;
+
+                if (isSignUp) {
+                    signInUpTitle.innerHTML = translateData[currentLang].signUp;
+                    signInP.innerHTML =
+                        translateData[currentLang].signUpP ||
+                        translateData[currentLang].signInP;
+
+                    fullNameDiv.classList.replace("hidden", "flex");
+                    confirmPasswordDiv.classList.replace("hidden", "block");
+                    rememberDiv.classList.add("hidden");
+
+                    submitBtn.innerHTML = translateData[currentLang].signUp;
+                    donthaveP.innerHTML =
+                        translateData[currentLang].alreadyAnAccount;
+                    signInUp.innerHTML = translateData[currentLang].signIn;
+                } else {
+                    signInUpTitle.innerHTML = translateData[currentLang].signIn;
+                    signInP.innerHTML = translateData[currentLang].signInP;
+
+                    fullNameDiv.classList.replace("flex", "hidden");
+                    confirmPasswordDiv.classList.replace("block", "hidden");
+                    rememberDiv.classList.remove("hidden");
+
+                    submitBtn.innerHTML = translateData[currentLang].signIn;
+                    donthaveP.innerHTML =
+                        translateData[currentLang].dontHaveAnAccount;
+                    signInUp.innerHTML = translateData[currentLang].signUp;
                 }
             });
         }
+        loginSignFunc();
 
-        const signInUp = document.querySelector("#signInUp");
-        const signInUpTitle = document.querySelector("#signInUpTitle");
-        const signInP = document.querySelector("#loginModal p"); // Description text
-        const fullNameDiv = document.querySelector("#fullNameDiv");
-        const confirmPasswordDiv = document.querySelector(
-            "#confirmPasswordDiv",
-        );
-        const rememberDiv = document.querySelector("#rememberDiv");
-        const submitBtn = document.querySelector("#submitBtn");
-        const donthaveP = document.querySelector("#donthaveP");
+        function burgerBtnFunc() {
+            const burgerBtn = document.querySelector("#burgerBtn");
+            const burgerSpan1 = document.querySelector("#burgerSpan1");
+            const burgerSpan2 = document.querySelector("#burgerSpan2");
+            const burgerModal = document.querySelector("#burgerModal");
+            burgerBtn.addEventListener("click", (e) => {
+                e.stopPropagation();
+                burgerSpan1.classList.toggle("translate-y-[5px]");
+                burgerSpan1.classList.toggle("rotate-45");
+                burgerSpan2.classList.toggle("-translate-y-[5px]");
+                burgerSpan2.classList.toggle("w-[30px]");
+                burgerSpan2.classList.toggle("-rotate-45");
+                if (burgerModal.style.transform === "rotateX(0deg)") {
+                    burgerModal.style.transform = "rotateX(90deg)";
+                } else {
+                    burgerModal.style.transform = "rotateX(0deg)";
+                }
+            });
+            document.addEventListener("click", () => {
+                burgerSpan1.classList.remove("translate-y-[5px]", "rotate-45");
+                burgerSpan2.classList.remove(
+                    "-translate-y-[5px]",
+                    "-rotate-45",
+                    "w-[30px]",
+                );
+                burgerModal.style.transform = "rotateX(90deg)";
+            });
+        }
+        burgerBtnFunc();
 
-        let isSignUp = false;
-
-        signInUp.addEventListener("click", () => {
-            isSignUp = !isSignUp;
-
-            if (isSignUp) {
-                signInUpTitle.innerHTML = translateData[currentLang].signUp;
-                signInP.innerHTML =
-                    translateData[currentLang].signUpP ||
-                    translateData[currentLang].signInP;
-
-                fullNameDiv.classList.replace("hidden", "flex");
-                confirmPasswordDiv.classList.replace("hidden", "block");
-                rememberDiv.classList.add("hidden");
-
-                submitBtn.innerHTML = translateData[currentLang].signUp;
-                donthaveP.innerHTML =
-                    translateData[currentLang].alreadyAnAccount;
-                signInUp.innerHTML = translateData[currentLang].signIn;
+        window.addEventListener("scroll", function () {
+            const header = document.querySelector("header");
+            if (window.scrollY > 300) {
+                header.classList.add(
+                    "fixed",
+                    "top-0",
+                    "left-0",
+                    "bg-white",
+                    "shadow-[0px_8px_8px_0px_rgba(0,0,0,0.1)]",
+                    "z-10",
+                );
+                header.classList.remove("absolute", "bg-transparent");
             } else {
-                signInUpTitle.innerHTML = translateData[currentLang].signIn;
-                signInP.innerHTML = translateData[currentLang].signInP;
-
-                fullNameDiv.classList.replace("flex", "hidden");
-                confirmPasswordDiv.classList.replace("block", "hidden");
-                rememberDiv.classList.remove("hidden");
-
-                submitBtn.innerHTML = translateData[currentLang].signIn;
-                donthaveP.innerHTML =
-                    translateData[currentLang].dontHaveAnAccount;
-                signInUp.innerHTML = translateData[currentLang].signUp;
+                header.classList.remove(
+                    "fixed",
+                    "top-0",
+                    "left-0",
+                    "bg-white",
+                    "shadow-[0px_8px_8px_0px_rgba(0,0,0,0.1)]",
+                    "z-10",
+                );
+                header.classList.add("absolute", "bg-transparent");
             }
         });
-    }
-    loginSignFunc();
 
-    function burgerBtnFunc() {
-        const burgerBtn = document.querySelector("#burgerBtn");
-        const burgerSpan1 = document.querySelector("#burgerSpan1");
-        const burgerSpan2 = document.querySelector("#burgerSpan2");
-        const burgerModal = document.querySelector("#burgerModal");
-        burgerBtn.addEventListener("click", (e) => {
+        const langBtn = document.querySelector("#langBtn");
+        const langModal = document.querySelector("#langModal");
+
+        const selectedLang = localStorage.getItem("selectedLang");
+
+        if (!localStorage.getItem("selectedLang")) {
+            localStorage.setItem("selectedLang", currentLang);
+        }
+        mainLangButton();
+
+        function updateLangModal() {
+            langModal.innerHTML = "";
+
+            Object.keys(translateData).forEach((langKey) => {
+                if (langKey !== currentLang) {
+                    const targetLang = langKey;
+
+                    const langModalOption = document.createElement("button");
+                    langModalOption.className =
+                        "w-full flex items-center justify-center gap-1.5 group hover:bg-[#FF3F3A] rounded transition-all duration-300";
+                    langModalOption.innerHTML = `
+                <img
+                    src="${translateData[targetLang].flag}"
+                    alt="language button icon"
+                />
+                <span class="text-white text-[12px]">${translateData[targetLang].langTitle}</span>
+            `;
+
+                    langModalOption.addEventListener("click", () => {
+                        localStorage.setItem("selectedLang", targetLang);
+                        currentLang = targetLang;
+                        mainLangButton();
+                        updateLangModal();
+                        window.location.reload();
+                    });
+                    langModal.appendChild(langModalOption);
+                }
+            });
+        }
+        function mainLangButton() {
+            langBtn.innerHTML = `
+        <img
+            src="${translateData[currentLang].flag}"
+            alt="language button icon"
+        />
+        <span class="downSpan transition-all duration-300">
+            <img
+                src="./Image/HomePagePhoto/icon-park-solid--down-one.svg"
+                alt="down icon"
+            />
+        </span>
+    `;
+        }
+
+        langBtn.addEventListener("click", (e) => {
             e.stopPropagation();
-            burgerSpan1.classList.toggle("translate-y-[5px]");
-            burgerSpan1.classList.toggle("rotate-45");
-            burgerSpan2.classList.toggle("-translate-y-[5px]");
-            burgerSpan2.classList.toggle("w-[30px]");
-            burgerSpan2.classList.toggle("-rotate-45");
-            if (burgerModal.style.transform === "rotateX(0deg)") {
-                burgerModal.style.transform = "rotateX(90deg)";
-            } else {
-                burgerModal.style.transform = "rotateX(0deg)";
-            }
+            const downSpan = document.querySelector(".downSpan");
+            langModal.classList.toggle("hidden");
+            langModal.classList.toggle("flex");
+            downSpan.classList.toggle("rotate-180");
         });
         document.addEventListener("click", () => {
-            burgerSpan1.classList.remove("translate-y-[5px]", "rotate-45");
-            burgerSpan2.classList.remove(
-                "-translate-y-[5px]",
-                "-rotate-45",
-                "w-[30px]",
-            );
-            burgerModal.style.transform = "rotateX(90deg)";
+            langModal.classList.add("hidden");
+            langModal.classList.remove("flex");
+            const downSpan = document.querySelector(".downSpan");
+            if (downSpan) downSpan.classList.remove("rotate-180");
         });
-    }
-    burgerBtnFunc();
+        updateLangModal();
+    };
+    headerMainFunc()
     // header end
 
     // hero Section
@@ -1791,100 +1888,6 @@ window.addEventListener("DOMContentLoaded", () => {
         });
     });
     // footer end
-
-    window.addEventListener("scroll", function () {
-        const header = document.querySelector("header");
-        if (window.scrollY > 300) {
-            header.classList.add(
-                "fixed",
-                "top-0",
-                "left-0",
-                "bg-white",
-                "shadow-[0px_8px_8px_0px_rgba(0,0,0,0.1)]",
-                "z-10",
-            );
-            header.classList.remove("absolute", "bg-transparent");
-        } else {
-            header.classList.remove(
-                "fixed",
-                "top-0",
-                "left-0",
-                "bg-white",
-                "shadow-[0px_8px_8px_0px_rgba(0,0,0,0.1)]",
-                "z-10",
-            );
-            header.classList.add("absolute", "bg-transparent");
-        }
-    });
-
-    const langBtn = document.querySelector("#langBtn");
-    const langModal = document.querySelector("#langModal");
-
-    const selectedLang = localStorage.getItem("selectedLang");
-
-    if (!localStorage.getItem("selectedLang")) {
-        localStorage.setItem("selectedLang", currentLang);
-    }
-    mainLangButton();
-
-    function updateLangModal() {
-        langModal.innerHTML = "";
-
-        Object.keys(translateData).forEach((langKey) => {
-            if (langKey !== currentLang) {
-                const targetLang = langKey;
-
-                const langModalOption = document.createElement("button");
-                langModalOption.className =
-                    "w-full flex items-center justify-center gap-1.5 group hover:bg-[#FF3F3A] rounded transition-all duration-300";
-                langModalOption.innerHTML = `
-                <img
-                    src="${translateData[targetLang].flag}"
-                    alt="language button icon"
-                />
-                <span class="text-white text-[12px]">${translateData[targetLang].langTitle}</span>
-            `;
-
-                langModalOption.addEventListener("click", () => {
-                    localStorage.setItem("selectedLang", targetLang);
-                    currentLang = targetLang;
-                    mainLangButton();
-                    updateLangModal();
-                    window.location.reload();
-                });
-                langModal.appendChild(langModalOption);
-            }
-        });
-    }
-    function mainLangButton() {
-        langBtn.innerHTML = `
-        <img
-            src="${translateData[currentLang].flag}"
-            alt="language button icon"
-        />
-        <span class="downSpan transition-all duration-300">
-            <img
-                src="./Image/HomePagePhoto/icon-park-solid--down-one.svg"
-                alt="down icon"
-            />
-        </span>
-    `;
-    }
-
-    langBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        const downSpan = document.querySelector(".downSpan");
-        langModal.classList.toggle("hidden");
-        langModal.classList.toggle("flex");
-        downSpan.classList.toggle("rotate-180");
-    });
-    document.addEventListener("click", () => {
-        langModal.classList.add("hidden");
-        langModal.classList.remove("flex");
-        const downSpan = document.querySelector(".downSpan");
-        if (downSpan) downSpan.classList.remove("rotate-180");
-    });
-    updateLangModal();
 
     const loader = document.querySelector("#loader");
 
