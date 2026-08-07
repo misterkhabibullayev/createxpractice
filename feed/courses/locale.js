@@ -514,7 +514,7 @@ export const locale = {
     uz: {
         onlineCourse: {
             intro: {
-                badge: "O'qishingizdan zavqlaning!",
+                badge: "Ta'limingizdan zavqlaning!",
                 title: "Bizning onlayn kurslarimiz",
             },
 
@@ -529,59 +529,105 @@ export const locale = {
 
             tutors: [
                 {
+                    image: "../../Image/courses-photo/people/tutor1.png",
                     major: "Marketing",
-                    courseName: "Google Ads bo'yicha mukammal trening kursi",
+                    category: "marketing",
+                    courseNameBackgroundColor: "#03CEA4",
+                    courseName: "Google Ads bo'yicha mukammal o'quv kursi",
+                    currency: "$",
+                    price: 100,
                     tutorName: "Jerome Bell tomonidan",
                 },
 
                 {
+                    image: "../../Image/courses-photo/people/tutor2.png",
                     major: "Menejment",
-                    courseName: "Mahsulot boshqaruvi asoslari",
+                    category: "management",
+                    courseNameBackgroundColor: "#5A87FC",
+                    courseName: "Mahsulot menejmenti asoslari",
+                    currency: "$",
+                    price: 480,
                     tutorName: "Marvin McKinney tomonidan",
                 },
 
                 {
+                    image: "../../Image/courses-photo/people/tutor3.png",
                     major: "HR va Rekruting",
-                    courseName: "HR boshqaruvi va tahlil",
+                    category: "hr",
+                    courseNameBackgroundColor: "#F89828",
+                    courseName: "HR menejmenti va analitika",
+                    currency: "$",
+                    price: 210,
                     tutorName: "Leslie Alexander Li tomonidan",
                 },
 
                 {
+                    image: "../../Image/courses-photo/people/tutor4.png",
                     major: "Marketing",
-                    courseName: "Brend boshqaruvi va PR kommunikatsiyalari",
+                    category: "marketing",
+                    courseNameBackgroundColor: "#03CEA4",
+                    courseName: "Brend menejmenti va PR kommunikatsiyalari",
+                    currency: "$",
+                    price: 530,
                     tutorName: "Kristin Watson tomonidan",
                 },
 
                 {
+                    image: "../../Image/courses-photo/people/tutor5.png",
                     major: "Dizayn",
+                    category: "design",
+                    courseNameBackgroundColor: "#F52F6E",
                     courseName: "Grafik dizayn asoslari",
+                    currency: "$",
+                    price: 500,
                     tutorName: "Guy Hawkins tomonidan",
                 },
 
                 {
+                    image: "../../Image/courses-photo/people/tutor6.png",
                     major: "Menejment",
-                    courseName: "Biznes rivojlantirish boshqaruvi",
+                    category: "management",
+                    courseNameBackgroundColor: "#5A87FC",
+                    courseName: "Biznesni rivojlantirish menejmenti",
+                    currency: "$",
+                    price: 400,
                     tutorName: "Dianne Russell tomonidan",
                 },
 
                 {
+                    image: "../../Image/courses-photo/people/tutor7.png",
                     major: "Menejment",
-                    courseName: "Yuqori yuklamali dasturiy arxitektura",
+                    category: "management",
+                    courseNameBackgroundColor: "#5A87FC",
+                    courseName:
+                        "Yuqori yuklamali dasturiy ta'minot arxitekturasi",
+                    currency: "$",
+                    price: 600,
                     tutorName: "Brooklyn Simmons tomonidan",
                 },
 
                 {
+                    image: "../../Image/courses-photo/people/tutor8.png",
                     major: "HR va Rekruting",
+                    category: "hr",
+                    courseNameBackgroundColor: "#F89828",
                     courseName:
                         "Inson resurslari – tanlash va ishga qabul qilish",
+                    currency: "$",
+                    price: 150,
                     tutorName: "Kathryn Murphy tomonidan",
                 },
 
                 {
+                    image: "../../Image/courses-photo/people/tutor9.png",
                     major: "Dasturlash",
+                    category: "development",
+                    courseNameBackgroundColor: "#03CEA4",
                     courseName:
-                        "Zamonaviy web tajribaga ega frontend dasturchi",
-                    tutorName: "Suleyman Amanov tomonidan",
+                        "Zamonaviy veb texnologiyalar bilan Frontend dasturchi",
+                    currency: "$",
+                    price: 1000,
+                    tutorName: "Amanov Suleyman tomonidan",
                 },
             ],
         },
@@ -595,9 +641,20 @@ export const locale = {
             comment: [
                 {
                     opinion:
-                        "Suleymanning onlayn kursi haqiqiy o'zgarish olib keladi! Materiallar juda tushunarli va tartibli tarzda taqdim etilgan, amaliy topshiriqlar esa tushunchalarni tez o'zlashtirishga yordam beradi. U har doim savollarga tez javob beradigan va qo'llab-quvvatlaydigan ajoyib ustoz. Ushbu kursni hammaga tavsiya qilaman.",
+                        "Suleymanning onlayn kursi haqiqatan ham ajoyib! Materiallar juda tushunarli va tartibli tarzda tushuntirilgan, amaliy topshiriqlar esa mavzularni tez o'zlashtirishga yordam beradi. U har doim savollarga tez javob beradigan va qo'llab-quvvatlaydigan ajoyib ustoz. Ushbu kursni barchaga tavsiya qilaman.",
+                    image: "../../Image/courses-photo/slider-image/image.png",
+                    braces: "../../Image/courses-photo/slider-image/braces.png",
                     name: "Eleanor Pena",
-                    completedCourse: "Lavozim, Kurs",
+                    completedCourse: "Lavozimi, Kurs",
+                },
+
+                {
+                    opinion:
+                        "Suleymanning onlayn kursi haqiqatan ham ajoyib! Materiallar juda tushunarli va tartibli tarzda tushuntirilgan, amaliy topshiriqlar esa mavzularni tez o'zlashtirishga yordam beradi. U har doim savollarga tez javob beradigan va qo'llab-quvvatlaydigan ajoyib ustoz. Ushbu kursni barchaga tavsiya qilaman.",
+                    image: "../../Image/courses-photo/slider-image/image.png",
+                    braces: "../../Image/courses-photo/slider-image/braces.png",
+                    name: "Eleanor Pena",
+                    completedCourse: "Lavozimi, Kurs",
                 },
             ],
         },
@@ -605,9 +662,21 @@ export const locale = {
         sertificate: {
             intro: {
                 badge: "Createx sertifikati",
-                title: "Sizning tajribangiz tasdiqlanadi",
+                title: "Sizning malakangiz tasdiqlanadi",
                 description:
                     "Biz xalqaro professional tashkilotlar va institutlar tomonidan akkreditatsiyadan o'tganmiz:",
+
+                ourCollaborations: [
+                    {
+                        image: "../../Image/courses-photo/sertificate-section/logo1.png",
+                    },
+                    {
+                        image: "../../Image/courses-photo/sertificate-section/logo2.png",
+                    },
+                    {
+                        image: "../../Image/courses-photo/sertificate-section/logo3.png",
+                    },
+                ],
             },
 
             sertificateImagePart: {
@@ -618,18 +687,45 @@ export const locale = {
         subscribe: {
             intro: {
                 badge: "Hech narsani o'tkazib yubormang",
-                title: "Createx School e'lonlariga obuna bo'ling",
+                title: "Createx School yangiliklariga obuna bo'ling",
             },
 
             email: {
-                placeholder: "Ishchi emailingiz",
+                placeholder: "Ishchi elektron pochtangiz",
                 button: "Obuna bo'lish",
+            },
+
+            positioned: {
+                image1: "../../Image/courses-photo/subscribe/illustration.png",
+                image2: "../../Image/courses-photo/subscribe/illustration1.png",
             },
         },
 
         footer: {
             intro: {
-                text: "Createx Online School onlayn ta'lim sohasida yetakchi maktab hisoblanadi. Bizda bozorning asosiy mutaxassislari tomonidan tayyorlangan ko'plab kurslar va dasturlar mavjud. Biz mamlakatdagi eng yirik kompaniyalarda onlayn ta'lim, amaliyot va ishga joylashish uchun zamonaviy yondashuvlarni taqdim etamiz.",
+                logo: "../../Image/courses-photo/footer/logo.png",
+                text: "Createx Online School onlayn ta'lim sohasidagi yetakchi maktablardan biridir. Biz bozorning yetakchi mutaxassislari tomonidan tayyorlangan ko'plab kurslar va dasturlarni taklif qilamiz. Zamonaviy onlayn ta'lim usullari, amaliyot va mamlakatdagi yirik kompaniyalarda ishga joylashish imkoniyatlarini taqdim etamiz.",
+
+                socialMedia: [
+                    {
+                        media: "../../Image/courses-photo/footer/social-media/Facebook.png",
+                    },
+                    {
+                        media: "../../Image/courses-photo/footer/social-media/Twitter.png",
+                    },
+                    {
+                        media: "../../Image/courses-photo/footer/social-media/YouTube.png",
+                    },
+                    {
+                        media: "../../Image/courses-photo/footer/social-media/telegram.png",
+                    },
+                    {
+                        media: "../../Image/courses-photo/footer/social-media/Instagram.png",
+                    },
+                    {
+                        media: "../../Image/courses-photo/footer/social-media/Linked-In.png",
+                    },
+                ],
             },
 
             siteMapPart: {
@@ -638,7 +734,7 @@ export const locale = {
                 courses: "Kurslar",
                 events: "Tadbirlar",
                 blog: "Blog",
-                contacts: "Kontaktlar",
+                contacts: "Aloqa",
             },
 
             coursesPart: {
@@ -652,18 +748,31 @@ export const locale = {
 
             contactUsPart: {
                 title: "BIZ BILAN BOG'LANING",
+
+                info: [
+                    {
+                        icon: "../../Image/courses-photo/footer/contactUs/iPhone.png",
+                        info: "(405) 555-0128",
+                    },
+                    {
+                        icon: "../../Image/courses-photo/footer/contactUs/Mail.png",
+                        info: "hello@createx.com",
+                    },
+                ],
             },
 
             signUpPart: {
                 title: "YANGILIKLARIMIZGA OBUNA BO'LING",
-                placeholder: "Email manzili",
-                text: "*Createx SEO Agentligidan yangiliklar va dastlabki yangilanishlarni olish uchun bizning xabarnomamizga obuna bo'ling.",
+                placeholder: "Elektron pochta manzili",
+                text: "*Yangiliklarimizga obuna bo'ling va Createx SEO Agentligidan eng so'nggi xabarlar hamda eksklyuziv yangilanishlarni birinchilardan bo'lib oling.",
             },
 
             copyrightPart: {
-                copyright: "© Barcha huquqlar himoyalangan. Tayyorlangan",
+                copyright: "© Barcha huquqlar himoyalangan. Yaratilgan",
                 copyrightRemaining: "Createx Studio tomonidan",
-                goToTop: "YUQORIGA QAYTISH",
+                icon: "../../Image/courses-photo/footer/loveIcon.svg",
+                goToTop: "YUQORIGA",
+                button: "&Hat;",
             },
         },
     },

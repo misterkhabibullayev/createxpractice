@@ -902,6 +902,10 @@ window.addEventListener("DOMContentLoaded", () => {
     function testimonialHeader() {
         const intro = locale[currentLang].testimonials.intro;
 
+        console.log(currentLang);
+        console.log(locale[currentLang]);
+        console.log(locale[currentLang].testimonials);
+
         const badge = document.getElementById("testimonials-badge");
         const description = document.getElementById("testimonials-description");
 
@@ -1068,6 +1072,8 @@ window.addEventListener("DOMContentLoaded", () => {
         const collaborationLogos =
             document.getElementById("our-collaborations");
         let html = "";
+        console.log(sertificateLogoData);
+
         sertificateLogoData.forEach((logo) => {
             html += `
             <div>
