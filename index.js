@@ -1281,7 +1281,6 @@ window.addEventListener("DOMContentLoaded", () => {
                                 href="./feed/events/eventsingle/eventsingle.html?id=${item.id}"
                                 class="inline-block w-full md:w-auto text-center py-1 px-[32px] font-[Lato] font-normal text-[16px] leading-8 tracking-[0.5px] text-[#F75E05] border-[1px] border-[#F75E05] rounded-[4px] bg-transparent  transition-all duration-300 hover:shadow-[0px_4px_4px_0px_#F75E0580] hover:bg-[#F75E05] hover:text-white whitespace-nowrap">
                                 ${item.previewListGrid[currentLang].viewMore}
-                                // o'zgarishlar bo'ldi shu tepada esingdan chiqmasin
                             </a>
                         </div> 
                     </div> 
